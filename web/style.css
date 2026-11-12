@@ -61,3 +61,5 @@ dialog::backdrop{background:#302b2766;animation:backdrop-in .25s both}.detail>h1
 .card-filter.authority{font-size:16px;font-weight:800;line-height:1.4}
 .card-filter.authority.kochi_center,.card-filter.authority.kochi_cci,.card-filter.authority.jnet21{font-size:14px}
 @media(max-width:650px){.card-filter.status{white-space:normal}.card-filter{min-height:30px}.card-filter.category{padding:5px 8px}.card-tags .card-filter{padding:5px 9px}}
+
+.source-excerpt{white-space:pre-line;overflow-wrap:anywhere;line-height:1.9}

@@ -6,6 +6,7 @@ from pathlib import Path
 from datetime import datetime,timezone
 from urllib.parse import urljoin,urlsplit
 from bs4 import BeautifulSoup
+from extract_html import apply_extraction
 from sources import SOURCES,Fetcher,canonical,source_for,source_meta,safe_url
 ROOT=Path(__file__).resolve().parents[1]
 ORIGIN=SOURCES[0]['origin'];SEEDS=SOURCES[0]['seeds']
@@ -158,6 +159,7 @@ def main():
       if old and old.get('hash')==digest:r.update({k:old[k] for k in ['review_state','summary','amount','eligibility','rounds','evidence','checked_at','issuer_level','issuer_name'] if k in old})
       if old and old.get('hash')!=digest:run['changed'].append(key)
       if not old:run['new'].append(key)
+      apply_extraction(r,html)
       records[key]=r;run['candidates']+=1;stat['candidates']+=1
      remember_links(url,links,registry)
      if depth<3:
