@@ -1,0 +1,164 @@
+[
+  {
+    "id": "kochi_city",
+    "name": "高知市",
+    "level": "市",
+    "origin": "https://www.city.kochi.kochi.jp",
+    "hosts": [
+      "www.city.kochi.kochi.jp"
+    ],
+    "selectors": [
+      "#main_body",
+      "#main"
+    ],
+    "seeds": [
+      "/soshiki/117/ijusienkin.html",
+      "/soshiki/117/",
+      "/deeps/kochi-life/pages/support_hojokin.html",
+      "/soshiki/40/",
+      "/soshiki/186/",
+      "/soshiki/33/",
+      "/soshiki/29/",
+      "/life/1/182/1486/",
+      "/life/2/196/",
+      "/soshiki/",
+      "/soshiki/58/",
+      "/soshiki/58/hojyokiniriguchi.html",
+      "/life/1/174/1447/"
+    ],
+    "default_audiences": []
+  },
+  {
+    "id": "kochi_pref",
+    "name": "高知県",
+    "level": "県",
+    "origin": "https://www.pref.kochi.lg.jp",
+    "hosts": [
+      "www.pref.kochi.lg.jp"
+    ],
+    "selectors": [
+      "article.contentGpArticleDoc",
+      "#content",
+      "#main"
+    ],
+    "seeds": [
+      "/category/mokuteki/shinsei_todokede_hojokin/",
+      "/category/bunya/shigoto_sangyo/hojo_shien/",
+      "/doc/2024072600089/",
+      "/doc/2026022400299/",
+      "/soshiki/120000/120801/"
+    ],
+    "default_audiences": []
+  },
+  {
+    "id": "chusho",
+    "name": "中小企業庁",
+    "level": "国",
+    "origin": "https://www.chusho.meti.go.jp",
+    "hosts": [
+      "www.chusho.meti.go.jp"
+    ],
+    "selectors": [
+      "#main",
+      "main",
+      "#contents",
+      ".main"
+    ],
+    "seeds": [
+      "/koukai/hojyokin/kobo.html",
+      "/koukai/hojyokin/",
+      "/pamflet/support.html",
+      "/keiei/shokibo/jizoku/",
+      "/support/"
+    ],
+    "default_audiences": [
+      "事業者"
+    ]
+  },
+  {
+    "id": "kochi_center",
+    "name": "高知県産業振興センター",
+    "level": "支援機関",
+    "origin": "https://www.joho-kochi.or.jp",
+    "hosts": [
+      "www.joho-kochi.or.jp",
+      "joho-kochi.or.jp"
+    ],
+    "selectors": [
+      "main",
+      ".wrap",
+      "#main",
+      "#contents",
+      ".main",
+      "#content",
+      ".container",
+      "body"
+    ],
+    "seeds": [
+      "/",
+      "/center/hojyokin.php",
+      "/center/r8top.php",
+      "/center/kochi-fund-top.php"
+    ],
+    "default_audiences": [
+      "事業者"
+    ]
+  },
+  {
+    "id": "kochi_cci",
+    "name": "高知商工会議所",
+    "level": "支援機関",
+    "origin": "http://www.cciweb.or.jp",
+    "hosts": [
+      "www.cciweb.or.jp"
+    ],
+    "path_prefix": "/kochi/",
+    "selectors": [
+      "#main",
+      "#contents",
+      "#content",
+      ".main",
+      "body"
+    ],
+    "seeds": [
+      "/kochi/index.html",
+      "/kochi/sodan/joseikin.html",
+      "/kochi/sogyo/joseikin.html",
+      "/kochi/oshirase.html"
+    ],
+    "default_audiences": [
+      "事業者"
+    ],
+    "homepage_url": "http://www.cciweb.or.jp/kochi/index.html",
+    "preserve_index": true
+  },
+  {
+    "id": "jgrants",
+    "name": "Jグランツ（デジタル庁）",
+    "level": "国",
+    "origin": "https://www.jgrants-portal.go.jp",
+    "hosts": [
+      "www.jgrants-portal.go.jp",
+      "api.jgrants-portal.go.jp"
+    ],
+    "transport": "api",
+    "seeds": [],
+    "default_audiences": [
+      "事業者"
+    ]
+  },
+  {
+    "id": "jnet21",
+    "name": "J-Net21（中小機構）",
+    "level": "支援機関",
+    "origin": "https://j-net21.smrj.go.jp",
+    "hosts": [
+      "j-net21.smrj.go.jp"
+    ],
+    "transport": "rss",
+    "seeds": [],
+    "default_audiences": [
+      "事業者"
+    ]
+  }
+]
