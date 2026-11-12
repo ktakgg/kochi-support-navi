@@ -5,7 +5,7 @@
     "attempted": 40,
     "visited": 38,
     "candidates": 13,
-    "started_at": "2026-11-11T21:06:32.180158+00:00",
+    "started_at": "2026-11-12T10:28:12.811511+00:00",
     "lane_counts": {
       "new_candidate": 2,
       "discovery": 25,
@@ -13,7 +13,7 @@
     },
     "state": "ready",
     "robots": "取得済み",
-    "checked_at": "2026-11-11T21:14:48.133948+00:00"
+    "checked_at": "2026-11-12T10:29:47.892440+00:00"
   },
   "chusho": {
     "name": "中小企業庁",
@@ -21,7 +21,7 @@
     "attempted": 0,
     "visited": 0,
     "candidates": 0,
-    "started_at": "2026-11-11T21:06:38.403428+00:00",
+    "started_at": "2026-11-12T10:28:13.742498+00:00",
     "lane_counts": {
       "new_candidate": 0,
       "discovery": 0,
@@ -29,7 +29,7 @@
     },
     "state": "unavailable",
     "error": "robots.txt HTTP 403",
-    "checked_at": "2026-11-11T21:14:48.133948+00:00"
+    "checked_at": "2026-11-12T10:29:47.892440+00:00"
   },
   "kochi_center": {
     "name": "高知県産業振興センター",
@@ -37,7 +37,7 @@
     "attempted": 17,
     "visited": 17,
     "candidates": 13,
-    "started_at": "2026-11-11T21:06:42.866699+00:00",
+    "started_at": "2026-11-12T10:28:13.868972+00:00",
     "lane_counts": {
       "new_candidate": 0,
       "discovery": 4,
@@ -45,7 +45,7 @@
     },
     "state": "ready",
     "robots": "404（制限ファイルなし）",
-    "checked_at": "2026-11-11T21:14:48.133948+00:00"
+    "checked_at": "2026-11-12T10:29:47.892440+00:00"
   },
   "kochi_cci": {
     "name": "高知商工会議所",
@@ -53,15 +53,15 @@
     "attempted": 0,
     "visited": 0,
     "candidates": 0,
-    "started_at": "2026-11-11T21:06:47.807509+00:00",
+    "started_at": "2026-11-12T10:28:14.689924+00:00",
     "lane_counts": {
       "new_candidate": 0,
       "discovery": 0,
       "existing": 0
     },
     "state": "unavailable",
-    "error": "robots.txt HTTP 503",
-    "checked_at": "2026-11-11T21:14:48.133948+00:00"
+    "error": "<urlopen error timed out>",
+    "checked_at": "2026-11-12T10:29:47.892440+00:00"
   },
   "jgrants": {
     "state": "ready",
@@ -69,29 +69,27 @@
     "visited": 34,
     "items": 30,
     "errors": [],
-    "checked_at": "2026-11-11T21:02:49.252097+00:00",
-    "listed_relevant": 1931,
+    "checked_at": "2026-11-12T10:26:12.801561+00:00",
+    "listed_relevant": 1929,
     "pending_details": 0,
-    "published_items": 189,
-    "catalog_items": 191,
-    "excluded_items": 2
+    "published_items": 191
   },
   "jnet21": {
     "state": "ready",
     "transport": "rss",
     "visited": 1,
-    "items": 0,
-    "checked_at": "2026-11-11T21:06:20.666939+00:00",
-    "feed_items": 5,
+    "items": 1,
+    "checked_at": "2026-11-12T10:28:10.876700+00:00",
+    "feed_items": 12,
     "note": "RSSは新着のみ。対象地域が全国・四国地方・高知県の補助金等を抽出。"
   },
   "kochi_city": {
     "name": "高知市",
     "level": "市",
     "attempted": 40,
-    "visited": 36,
-    "candidates": 13,
-    "started_at": "2026-11-11T21:06:27.138376+00:00",
+    "visited": 39,
+    "candidates": 14,
+    "started_at": "2026-11-12T10:28:12.203573+00:00",
     "lane_counts": {
       "new_candidate": 1,
       "discovery": 26,
@@ -99,6 +97,6 @@
     },
     "state": "ready",
     "robots": "404（制限ファイルなし）",
-    "checked_at": "2026-11-11T21:14:48.133948+00:00"
+    "checked_at": "2026-11-12T10:29:47.892440+00:00"
   }
 }

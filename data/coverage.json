@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-11T21:14:48.155212+00:00",
+  "generated_at": "2026-11-12T10:29:47.921194+00:00",
   "unresolved_count": 60,
   "unresolved": [
     {
       "url": "https://www.joho-kochi.or.jp/center/kochi-fund-top.php",
       "title": "令和8年度事業戦略等推進事業費補助金のご案内",
       "discovered_from": "https://www.joho-kochi.or.jp/",
-      "fetched_at": "2026-11-11T21:08:05.971367+00:00",
+      "fetched_at": "2026-11-12T10:28:40.575835+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -342,7 +342,7 @@
       "url": "https://www.pref.kochi.lg.jp/doc/2026072100125/",
       "title": "補助金の詳細（要綱等）はこちら！",
       "discovered_from": "https://www.pref.kochi.lg.jp/category/mokuteki/shinsei_todokede_hojokin/",
-      "fetched_at": "2026-11-07T21:05:03.449943+00:00",
+      "fetched_at": "2026-11-12T10:28:34.963675+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -350,7 +350,7 @@
       "url": "https://www.pref.kochi.lg.jp/richi/support/",
       "title": "企業立地促進事業費補助金【高知県企業立地課】",
       "discovered_from": "https://www.joho-kochi.or.jp/center/hojyokin.php",
-      "fetched_at": "2026-11-07T21:06:38.253379+00:00",
+      "fetched_at": "2026-11-12T10:29:07.485089+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -358,7 +358,7 @@
       "url": "https://www.joho-kochi.or.jp/digital/hojokin_r4b.php",
       "title": "R4補正デジタル技術活用促進事業費補助金のページこちらから（現在受付終了）",
       "discovered_from": "https://www.joho-kochi.or.jp/digital/hojokin.php",
-      "fetched_at": "2026-11-11T21:08:59.218299+00:00",
+      "fetched_at": "2026-11-12T10:28:49.924892+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -382,7 +382,7 @@
       "url": "https://www.pref.kochi.lg.jp/doc/2015031700247/",
       "title": "［過去の補助金の活用例の紹介］",
       "discovered_from": "https://www.pref.kochi.lg.jp/doc/2024011100113/",
-      "fetched_at": "2026-11-07T21:07:01.078027+00:00",
+      "fetched_at": "2026-11-12T10:29:14.205595+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
