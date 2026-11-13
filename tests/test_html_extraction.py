@@ -3,7 +3,7 @@ import sys
 import unittest
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from extract_html import apply_extraction, extract_sections
+from extract_html import apply_extraction, extract_sections, project_sections
 
 URL = 'https://www.city.kochi.kochi.jp/soshiki/40/hataiku.html'
 FIXTURE = Path(__file__).parent / 'fixtures/hataiku.html'
@@ -47,3 +47,33 @@ class HtmlExtractionTests(unittest.TestCase):
 
     def test_no_article_container_does_not_extract_sidebar(self):
         self.assertEqual(extract_sections(URL, '<aside><h2>支援内容</h2><p>他の制度</p></aside>'), [])
+
+    def test_official_body_populates_summary_and_business_recipient(self):
+        r = dict(url=URL, title='はたいく給付金', hash='same', fetched_at='now',
+                 audiences=['対象者を確認'], purposes=['その他'], checked_at=None,
+                 summary='制度の詳細条件は掲載元の公式ページをご確認ください。')
+        apply_extraction(r, FIXTURE.read_text())
+        self.assertIn('男性従業員の育児休業', r['summary'])
+        self.assertEqual(r['audiences'], ['事業者'])
+        self.assertIn('創業・事業支援', r['purposes'])
+        self.assertIn('子育て・教育', r['purposes'])
+        self.assertNotIn('target_area', r)  # Do not infer the area from the publisher.
+        self.assertIsNone(r['checked_at'])
+
+    def test_table_labels_without_headings(self):
+        sections = extract_sections(URL, '<div id="main_body"><table><tr><th>対象者</th><td>市内事業者</td></tr><tr><th>補助金額</th><td>上限10万円</td></tr></table></div>')
+        self.assertEqual([(s['kind'],s['text']) for s in sections], [('eligibility','市内事業者'),('amount','上限10万円')])
+
+    def test_existing_version_one_sections_are_projected_without_refetch(self):
+        r = dict(hash='same', title='給付金', html_extraction={'version':1,'source_hash':'same',
+            'sections':[{'heading':'概要','kind':'overview','text':'事業者の育児支援を助成します。'},
+                        {'heading':'対象者','kind':'eligibility','text':'市内企業。ただし、子育て世帯は対象外。'}]})
+        project_sections(r)
+        self.assertEqual(r['audiences'], ['事業者'])
+        self.assertEqual(r['summary'], '事業者の育児支援を助成します。')
+
+    def test_stale_hash_does_not_project_previous_conditions(self):
+        r = dict(hash='new', title='給付金', amount=None, html_extraction={'source_hash':'old',
+            'sections':[{'heading':'給付金額','kind':'amount','text':'10万円'}]})
+        project_sections(r)
+        self.assertIsNone(r['amount'])

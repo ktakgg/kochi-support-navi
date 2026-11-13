@@ -24,6 +24,14 @@ class PagesBuildTests(unittest.TestCase):
                 detail = next((output / 'support').glob('*/index.html')).read_text()
                 self.assertIn(f"from'{prefix}/core.mjs'", detail)
                 self.assertTrue((output / '.nojekyll').exists())
+                hataiku=(output/'support/6a16f5f36647c945/index.html').read_text()
+                self.assertNotIn('制度の詳細条件は掲載元の公式ページをご確認ください。',hataiku)
+                self.assertNotIn('対象地域：公式案内',hataiku)
+                self.assertIn('<td>10万円</td>',hataiku)
+                self.assertIn('<td>30万円</td>',hataiku)
+                self.assertIn('高知市税を滞納',hataiku)
+                self.assertIn('令和7年10月2日以後',hataiku)
+                self.assertIn('認証等後6か月以内',hataiku)
 
 
 if __name__ == '__main__':

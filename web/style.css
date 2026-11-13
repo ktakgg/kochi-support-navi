@@ -63,3 +63,5 @@ dialog::backdrop{background:#302b2766;animation:backdrop-in .25s both}.detail>h1
 @media(max-width:650px){.card-filter.status{white-space:normal}.card-filter{min-height:30px}.card-filter.category{padding:5px 8px}.card-tags .card-filter{padding:5px 9px}}
 
 .source-excerpt{white-space:pre-line;overflow-wrap:anywhere;line-height:1.9}
+
+.card .amount{align-items:flex-start}.card .amount strong{white-space:pre-line;overflow-wrap:anywhere}.card .eligibility{font-size:11px;line-height:1.9;margin:12px 0;color:var(--ink)}.card .eligibility b{display:block;font-size:10px;color:var(--muted)}.card .eligibility span{white-space:pre-line;overflow-wrap:anywhere}.card-detail-note{font-size:10px;color:var(--muted);margin:6px 0}.source-table{overflow-x:auto;margin:12px 0}.source-table table{border-collapse:collapse;width:100%;font-size:13px}.source-table td{border:1px solid var(--line);padding:10px;vertical-align:top}.source-table td:last-child{min-width:6em}.detail h3{font-size:14px;margin:18px 0 8px}.detail .source-excerpt{margin:6px 0}

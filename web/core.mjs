@@ -27,3 +27,25 @@ export function filterRecords(records,state,now=new Date()){
  return records.filter(r=>queryMatches(r,state.q||'')&&['audiences','purposes','levels','sources'].every(k=>!state[k]?.length||state[k].some(v=>facetValues(r,k).includes(v)))&&(!state.status?.length||state.status.includes(statusOf(r,now))));
 }
 export function dateLabel(s){if(!s)return '未確認';return new Date(s).toLocaleDateString('ja-JP',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'});}
+
+function excerpt(text,limit){
+ const full=String(text||'').trim();
+ return {text:full.length>limit?full.slice(0,limit)+'…':full,partial:full.length>limit};
+}
+export function cardDetails(r){
+ const extraction=r.html_extraction;
+ const sections=extraction?.source_hash===r.hash&&r.review_state!=='reviewed'?extraction.sections||[]:[];
+ const overview=sections.find(s=>s.kind==='overview')?.text.split('\n')[0]||'';
+ const summary=excerpt(r.summary==='制度の詳細条件は掲載元の公式ページをご確認ください。'?overview:r.summary||overview,160);
+ const amountSections=sections.filter(s=>s.kind==='amount');
+ // Keep a table's conditions paired with each amount. Never list the amounts alone.
+ let selectedRows=false;
+ const amount=amountSections.map(s=>{
+  const rows=s.text.split('\n').filter(line=>line.includes(' ｜ ')&&/[0-9０-９].*(?:円|%|％)|[0-9０-９]+\s*[分割]/.test(line));
+  if(rows.length&&rows.join('\n')!==s.text)selectedRows=true;
+  return rows.length?rows.join('\n'):s.text;
+ }).join('\n\n')||r.amount||'';
+ const eligibility=sections.filter(s=>s.kind==='eligibility').map(s=>s.text).join('\n\n')||r.eligibility||'';
+ const support=excerpt(amount,320);support.partial ||= selectedRows;
+ return {summary,support,eligibility:excerpt(eligibility,180),area:r.target_area||''};
+}
