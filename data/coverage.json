@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-12T10:29:47.921194+00:00",
-  "unresolved_count": 60,
+  "generated_at": "2026-11-13T01:41:22.563505+00:00",
+  "unresolved_count": 58,
   "unresolved": [
     {
       "url": "https://www.joho-kochi.or.jp/center/kochi-fund-top.php",
       "title": "令和8年度事業戦略等推進事業費補助金のご案内",
       "discovered_from": "https://www.joho-kochi.or.jp/",
-      "fetched_at": "2026-11-12T10:28:40.575835+00:00",
+      "fetched_at": "2026-11-13T01:40:22.888598+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -358,7 +358,7 @@
       "url": "https://www.joho-kochi.or.jp/digital/hojokin_r4b.php",
       "title": "R4補正デジタル技術活用促進事業費補助金のページこちらから（現在受付終了）",
       "discovered_from": "https://www.joho-kochi.or.jp/digital/hojokin.php",
-      "fetched_at": "2026-11-12T10:28:49.924892+00:00",
+      "fetched_at": "2026-11-13T01:40:31.784131+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -432,22 +432,6 @@
       "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/37/",
       "fetched_at": "2026-11-11T21:09:57.015216+00:00",
       "state": "fetched_not_listed",
-      "error": null
-    },
-    {
-      "url": "https://www.city.kochi.kochi.jp/site/bukkakoutoushien/chouseikyufu.html",
-      "title": "「高知市定額減税補足給付金（調整給付）」について詳しくはこちら",
-      "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/26/husokugakukyufu.html",
-      "fetched_at": null,
-      "state": "not_fetched",
-      "error": null
-    },
-    {
-      "url": "https://www.city.kochi.kochi.jp/soshiki/26/seikatusien3.html",
-      "title": "「高知市生活支援給付金（第3期）」について詳しくはこちら",
-      "discovered_from": "https://www.city.kochi.kochi.jp/site/bukkakoutoushien/kkyuhu.html",
-      "fetched_at": null,
-      "state": "not_fetched",
       "error": null
     },
     {
