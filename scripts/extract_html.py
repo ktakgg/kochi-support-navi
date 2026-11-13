@@ -88,7 +88,7 @@ PLACEHOLDER = '制度の詳細条件は掲載元の公式ページをご確認�
 def project_sections(record):
     """Use the same current source sections for cards and detail pages, including v1 data."""
     extraction = record.get('html_extraction') or {}
-    if extraction.get('source_hash') != record.get('hash'):
+    if not extraction or extraction.get('source_hash') != record.get('hash'):
         return record
     sections = extraction.get('sections', [])
     # Recompute even when the source hash is unchanged: old versions stored null fields.

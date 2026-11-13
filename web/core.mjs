@@ -34,7 +34,7 @@ function excerpt(text,limit){
 }
 export function cardDetails(r){
  const extraction=r.html_extraction;
- const sections=extraction?.source_hash===r.hash&&r.review_state!=='reviewed'?extraction.sections||[]:[];
+ const sections=extraction&&extraction.source_hash===r.hash&&r.review_state!=='reviewed'?extraction.sections||[]:[];
  const overview=sections.find(s=>s.kind==='overview')?.text.split('\n')[0]||'';
  const summary=excerpt(r.summary==='制度の詳細条件は掲載元の公式ページをご確認ください。'?overview:r.summary||overview,160);
  const amountSections=sections.filter(s=>s.kind==='amount');
