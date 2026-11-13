@@ -1,0 +1,16 @@
+{
+  "started_at": "2026-11-13T04:07:23.300133+00:00",
+  "version": 3,
+  "selected": 163,
+  "already_current": 0,
+  "succeeded": 163,
+  "reused_snapshots": 0,
+  "with_sections": 127,
+  "errors": [],
+  "finished_at": "2026-11-13T04:10:27.116500+00:00",
+  "remaining": 0,
+  "total_html_records": 163,
+  "current_version": 163,
+  "with_sections_total": 127,
+  "without_sections_total": 36
+}
