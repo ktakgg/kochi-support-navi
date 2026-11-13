@@ -54,6 +54,8 @@ jobs:
       - name: Collect PDF evidence
         if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.refresh)
         run: python scripts/collect_pdfs.py --max-files 20
+      - name: Re-extract records saved by older HTML parsers
+        run: python scripts/refresh_html.py --all --workers 4
       - name: Read Pages configuration
         id: pages
         uses: actions/configure-pages@v5
@@ -70,7 +72,6 @@ jobs:
           BASE_PATH: ${{ steps.pages.outputs.base_path }}
         run: python scripts/validate_site.py --baseline "$RUNNER_TEMP/catalog-before.json"
       - name: Save collected state
-        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.refresh)
         run: |
           git add data/
           if ! git diff --cached --quiet; then

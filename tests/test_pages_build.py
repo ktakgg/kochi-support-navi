@@ -32,6 +32,9 @@ class PagesBuildTests(unittest.TestCase):
                 self.assertIn('高知市税を滞納',hataiku)
                 self.assertIn('令和7年10月2日以後',hataiku)
                 self.assertIn('認証等後6か月以内',hataiku)
+                marriage=(output/'support/c4599b1192ac691d/index.html').read_text()
+                for content in ['家賃や引越費用を支援します。','1世帯あたり30万円','45万円','39歳以下','500万円未満','2年以上継続','令和9年2月26日','令和9年2月28日']:
+                    self.assertIn(content,marriage)
 
 
 if __name__ == '__main__':

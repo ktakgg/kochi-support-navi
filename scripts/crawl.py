@@ -6,7 +6,7 @@ from pathlib import Path
 from datetime import datetime,timezone
 from urllib.parse import urljoin,urlsplit
 from bs4 import BeautifulSoup
-from extract_html import apply_extraction
+from extract_html import VERSION, apply_extraction
 from sources import SOURCES,Fetcher,canonical,source_for,source_meta,safe_url
 ROOT=Path(__file__).resolve().parents[1]
 ORIGIN=SOURCES[0]['origin'];SEEDS=SOURCES[0]['seeds']
@@ -80,7 +80,7 @@ def remember_links(parent,links,registry):
   entry.setdefault('discovered_from',parent);entry.setdefault('discovered_at',now())
   if label:entry['link_title']=label
 
-def next_page(queue,registry,known,turn):
+def next_page(queue,registry,known,turn,versions=None):
  # Three reserved lanes: unfetched program candidates, discovery, existing programs.
  def lane(item):
   url=item[0];entry=registry.get(url,{})
@@ -91,7 +91,7 @@ def next_page(queue,registry,known,turn):
   target=(turn+offset)%3
   items=[item for item in queue if lane(item)==target]
   if items:
-   chosen=min(items,key=lambda item:registry.get(item[0],{}).get('fetched_at') or registry.get(item[0],{}).get('failed_at') or '')
+   chosen=min(items,key=lambda item:((versions or {}).get(item[0],0)>=VERSION if target==2 else False,registry.get(item[0],{}).get('fetched_at') or registry.get(item[0],{}).get('failed_at') or ''))
    queue.remove(chosen);return chosen,target
  raise IndexError('empty crawl queue')
 
@@ -114,6 +114,7 @@ def main():
   snapshot=raw/(hashlib.sha256(parent.encode()).hexdigest()[:16]+'.html')
   if snapshot.exists():remember_links(parent,parse_page(parent,snapshot.read_text())[2],registry)
  known={r['url'] for r in previous.values()}
+ versions={r['url']:(r.get('html_extraction') or {}).get('version',0) for r in previous.values()}
  run={'started_at':now(),'visited':0,'candidates':0,'errors':[],'changed':[],'new':[],'scope':'高知市・高知県・中小企業庁・高知県産業振興センター・高知商工会議所の登録した巡回元。全件収集は確認中。','sources':source_runs}
  for src in selected:
   sid=src['id'];existing=[(r['url'],0) for r in previous.values() if source_meta(r['url'])['source_id']==sid];pending=[(u,d) for u,d in frontier if source_meta(u)['source_id']==sid]
@@ -143,7 +144,7 @@ def main():
     if not q:continue
     active=True
     if sum(x['attempted'] for x in source_runs.values())>=args.max_pages or time.monotonic()-start>=args.time_budget:break
-    (url,depth),lane=next_page(q,registry,known,stat['attempted']%3);url=canonical(url);seen.add(url);stat['attempted']+=1
+    (url,depth),lane=next_page(q,registry,known,stat['attempted']%3,versions);url=canonical(url);seen.add(url);stat['attempted']+=1
     stat['lane_counts'][('new_candidate','discovery','existing')[lane]]+=1
     try:
      blob,charset=fetcher.get(url);html=str(BeautifulSoup(blob,'html.parser',from_encoding=charset));title,text,links,pdfs,updated=parse_page(url,html)
@@ -160,6 +161,7 @@ def main():
       if old and old.get('hash')!=digest:run['changed'].append(key)
       if not old:run['new'].append(key)
       apply_extraction(r,html)
+      registry[url]['html_extraction_version']=VERSION
       records[key]=r;run['candidates']+=1;stat['candidates']+=1
      remember_links(url,links,registry)
      if depth<3:

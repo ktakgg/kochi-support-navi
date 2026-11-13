@@ -37,7 +37,7 @@ export function cardDetails(r){
  const sections=extraction&&extraction.source_hash===r.hash&&r.review_state!=='reviewed'?extraction.sections||[]:[];
  const overview=sections.find(s=>s.kind==='overview')?.text.split('\n')[0]||'';
  const summary=excerpt(r.summary==='制度の詳細条件は掲載元の公式ページをご確認ください。'?overview:r.summary||overview,160);
- const amountSections=sections.filter(s=>s.kind==='amount');
+ const amountSections=sections.filter(s=>s.kind==='amount').sort((a,b)=>Number(/上限|金額|補助額|助成額|給付額|支給額/.test(b.heading||''))-Number(/上限|金額|補助額|助成額|給付額|支給額/.test(a.heading||'')));
  // Keep a table's conditions paired with each amount. Never list the amounts alone.
  let selectedRows=false;
  const amount=amountSections.map(s=>{
@@ -47,5 +47,5 @@ export function cardDetails(r){
  }).join('\n\n')||r.amount||'';
  const eligibility=sections.filter(s=>s.kind==='eligibility').map(s=>s.text).join('\n\n')||r.eligibility||'';
  const support=excerpt(amount,320);support.partial ||= selectedRows;
- return {summary,support,eligibility:excerpt(eligibility,180),area:r.target_area||''};
+ return {summary,support,eligibility:excerpt(eligibility,240),area:r.target_area||''};
 }

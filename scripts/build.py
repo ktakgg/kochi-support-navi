@@ -3,7 +3,7 @@ import json,re,html,shutil,os
 from datetime import datetime,timezone
 from zoneinfo import ZoneInfo
 from sources import SOURCES,source_meta
-from extract_html import project_sections
+from extract_html import VERSION, project_sections
 ROOT=Path(__file__).resolve().parents[1];DIST=ROOT/'dist'
 def e(s):return html.escape(str(s or ''))
 def local_date(value):
@@ -76,6 +76,9 @@ def main():
  pdf_status={'attempted':sum(v.get('fetched_at','')>run['started_at'] or v.get('failed_at','')>run['started_at'] for v in pdfdata.values()),'succeeded':sum(v.get('fetched_at','')>run['started_at'] for v in pdfdata.values()),'errors':[{'url':u,'error':v.get('error')} for u,v in pdfdata.items() if v.get('failed_at','')>run['started_at']],'pending':sum(not pdfdata.get(u,{}).get('fetched_at') for u in pdf_urls),'scope':'登録済みPDFリンクの一部。全PDFの確認は未完了。'}
  pdf_status['ocr_required']=sum(v.get('state')=='ocr_required' for v in pdfdata.values())
  public={'pdf_status':pdf_status,'coverage':{'unresolved_count':coverage.get('unresolved_count',0),'generated_at':coverage.get('generated_at')},'structured_run':json.loads((ROOT/'data/structured-run.json').read_text()) if (ROOT/'data/structured-run.json').exists() else {},'sources':[{k:s[k] for k in ['id','name','level','origin','homepage_url'] if k in s}|({'path_prefix':s['path_prefix']} if s.get('path_prefix') else {}) for s in SOURCES],'source_status':source_status,'generated_at':catalog['generated_at'],'scope':catalog['scope'],'run':{'visited':run['visited'],'total_records':len(records),'errors':len(run['errors']),'finished_at':run['finished_at']},'records':records}
+ html_records=[r for r in records if not r.get('data_kind')]
+ current=[r for r in html_records if (r.get('html_extraction') or {}).get('version',0)>=VERSION]
+ public['html_extraction_status']={'version':VERSION,'total':len(html_records),'current':len(current),'pending':len(html_records)-len(current),'with_sections':sum(bool(r['html_extraction']['sections']) for r in current),'without_sections':sum(not r['html_extraction']['sections'] for r in current)}
  (DIST/'data.json').write_text(json.dumps(public,ensure_ascii=False))
  (DIST/'all').mkdir(exist_ok=True)
  (DIST/'all/index.html').write_text('<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>制度一覧｜こうち支援ナビ</title><link rel="stylesheet" href="/style.css"><main class="detail"><a href="/">検索へ戻る</a><h1>掲載制度一覧</h1><p>収集試行中です。全件の掲載は確認できていません。</p><ul>'+''.join(f'<li><a href="/support/{r["id"]}/">[{e(r['source_level'])}・{e(r['source_name'])}] {e(r["title"])}</a></li>' for r in records)+'</ul></main></html>')

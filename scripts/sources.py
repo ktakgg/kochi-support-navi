@@ -1,5 +1,5 @@
 """Source identity is provenance, not proof of a program's implementing agency."""
-import json,re,time,urllib.request,urllib.error,urllib.robotparser
+import json,re,time,threading,urllib.request,urllib.error,urllib.robotparser
 from pathlib import Path
 from urllib.parse import urlsplit,urlunsplit,urljoin
 ROOT=Path(__file__).resolve().parents[1]
@@ -36,11 +36,13 @@ class SafeRedirect(urllib.request.HTTPRedirectHandler):
   return super().redirect_request(req,fp,code,msg,headers,target)
 class Fetcher:
  def __init__(self,delay=1.5,timeout=15):
-  self.delay=delay;self.timeout=timeout;self.last={};self.robots={};self.status={};self.opener=urllib.request.build_opener(SafeRedirect())
+  self.delay=delay;self.timeout=timeout;self.last={};self.robots={};self.status={};self.opener=urllib.request.build_opener(SafeRedirect());self.rate_lock=threading.Lock()
  def raw(self,url,limit=8_000_000):
   u=safe_url(url)
   if not u:raise ValueError('outside source allowlist')
-  host=urlsplit(u).hostname;time.sleep(max(0,self.delay-(time.monotonic()-self.last.get(host,0))));self.last[host]=time.monotonic()
+  host=urlsplit(u).hostname
+  with self.rate_lock:
+   time.sleep(max(0,self.delay-(time.monotonic()-self.last.get(host,0))));self.last[host]=time.monotonic()
   with self.opener.open(urllib.request.Request(u,headers={'User-Agent':UA}),timeout=self.timeout) as resp:
    data=resp.read(limit+1)
    if len(data)>limit:raise ValueError('document size limit exceeded')

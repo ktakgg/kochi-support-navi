@@ -3,17 +3,21 @@ import re
 import unicodedata
 from bs4 import BeautifulSoup, NavigableString, Tag
 from sources import source_for
-VERSION = 2
+VERSION = 3
 
 
 def section_kind(heading):
     h = re.sub(r'[\s\u200b\ufeff]+', '', unicodedata.normalize('NFKC', heading))
-    if re.search(r'補助額|補助率|給付額|給付金額|支給額|助成額|助成率|補助金額|支援内容|助成内容|補助内容|給付内容|対象経費', h):
+    if re.search(r'継続補助制度|資格認定を受けた方|申請に必要|申請書類|申請前に', h):
+        return 'conditions'
+    if re.search(r'補助(?:金)?上限額|助成(?:金)?上限額|支給上限額|補助限度額|助成限度額|手当(?:の)?額|手当月額|補助額|補助率|給付額|給付金額|支給額|助成額|助成率|補助金額|支援内容|助成内容|補助内容|給付内容|対象経費', h):
         return 'amount'
     if re.search(r'対象者|対象事業者|対象企業|対象団体|対象となる方|利用できる方|申請できる方|申請資格|補助対象|助成対象|交付対象|支給対象', h):
         return 'eligibility'
-    if re.search(r'注意事項|留意事項|申請期間|申請期限|募集期間|申請方法|申請手続|対象要件|給付要件|支給要件|補助要件', h):
+    if re.search(r'注意事項|留意事項|重要なお知らせ|申請期間|申請期限|募集期間|申請受付|申請方法|申請手続|申請の流れ|申請に必要|申請書類|新規申請|支給時期|支給制限|必要なもの|対象要件|給付要件|支給要件|補助要件|申請前に|継続補助制度|資格認定を受けた方', h):
         return 'conditions'
+    if re.search(r'(?:支援|補助|助成|給付)します[。！!]?$', h):
+        return 'overview'
     if re.search(r'について$|概要$|制度の目的$|制度の内容$', h):
         return 'overview'
     return None
@@ -33,11 +37,12 @@ def extract_sections(url, html):
     # Without a known article body, avoid collecting navigation or unrelated sidebar tables.
     if body is None:
         return []
-    for el in body.select('script,style,nav,header,footer'):
+    for el in body.select('script,style,nav,header,footer,#section_footer,#hyouka_area_box,.pdf_download,#content_footer'):
         el.decompose()
     sections = []
     current = {'heading': '制度の概要', 'kind': 'overview', 'lines': []}
     sections.append(current)
+    parents = []
 
     def walk(node):
         nonlocal current
@@ -50,18 +55,35 @@ def extract_sections(url, html):
             return
         if re.fullmatch(r'h[1-6]', node.name):
             heading = node.get_text(' ', strip=True)
-            current = {'heading': heading, 'kind': section_kind(heading), 'lines': []}
+            level = int(node.name[1])
+            while parents and parents[-1][0] >= level:
+                parents.pop()
+            inherited = parents[-1][1] if parents and parents[-1][1] in ('amount', 'eligibility', 'conditions') else None
+            kind = inherited or section_kind(heading)
+            # A sentence used as the heading is itself the overview, not a label.
+            lines = [heading] if kind == 'overview' and re.search(r'(?:支援|補助|助成|給付)します[。！!]?$', heading) else []
+            current = {'heading': heading, 'kind': kind, 'lines': lines}
             sections.append(current)
+            parents.append((level, kind, heading))
         elif node.name == 'tr':
             # Keep each label and amount on the same row, including nested inline tags.
             cells = [block_text(c) for c in node.find_all(['th', 'td'], recursive=False)]
             # Some articles put field labels in table cells instead of headings.
-            kind = section_kind(cells[0]) if len(cells) > 1 else None
+            kind = section_kind(cells[0]) if len(cells) > 1 and len(cells[0]) < 30 and (not parents or parents[-1][1] in (None, 'overview')) else None
             if kind:
                 sections.append({'heading': cells[0], 'kind': kind, 'lines': [' ｜ '.join(cells[1:])]})
             elif current is not None:
                 current['lines'].append(' ｜ '.join(cells))
         elif node.name in ('p', 'li', 'dt', 'dd') and not node.find(re.compile(r'^h[1-6]$')):
+            # CMS editors also use bold paragraphs as headings instead of h2/h3.
+            label = node.get_text(' ', strip=True)
+            bold = node.find(['strong', 'b'])
+            kind = section_kind(label) if bold and len(label) <= 60 and label == bold.get_text(' ', strip=True) else None
+            if kind:
+                context = [p[2] for p in parents if p[1] is None]
+                current = {'heading': ' / '.join(context + [label]), 'kind': kind, 'lines': []}
+                sections.append(current)
+                return
             if current is not None:
                 current['lines'].append(block_text(node))
         else:
@@ -104,7 +126,7 @@ def project_sections(record):
     positive = re.split(r'ただし|次の.*対象外|対象外', eligible)[0]
     if re.search(r'企業|事業者|法人|事業主|事業所|中小企業', positive):
         record['audiences'] = ['事業者']
-    elif re.search(r'世帯|保護者|児童の.*親|ひとり親', positive):
+    elif re.search(r'世帯|夫婦|婚姻|パートナーシップ|保護者|児童の.*親|ひとり親', positive):
         record['audiences'] = ['個人・世帯']
         if re.search(r'児童|子ども|子育て|ひとり親', positive):
             record['audiences'].append('子育て世帯')
@@ -117,6 +139,8 @@ def project_sections(record):
         purposes.append('創業・事業支援')
     if re.search(r'子育て|育児|保育|就学|教育', text) and '子育て・教育' not in purposes:
         purposes.append('子育て・教育')
+    if re.search(r'住宅|住まい|家賃|引越|住宅賃借|新生活', text) and '住まい' not in purposes:
+        purposes.append('住まい')
     record['purposes'] = purposes or ['その他']
     record['review_scope'] = '公式HTMLの見出し・表から自動抽出。人による内容確認と現在の受付状況は未確認。'
     return record

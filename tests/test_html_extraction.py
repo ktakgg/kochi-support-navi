@@ -77,3 +77,35 @@ class HtmlExtractionTests(unittest.TestCase):
             'sections':[{'heading':'給付金額','kind':'amount','text':'10万円'}]})
         project_sections(r)
         self.assertIsNone(r['amount'])
+
+    def test_marriage_program_has_heading_only_overview_cap_and_all_nine_conditions(self):
+        url='https://www.city.kochi.kochi.jp/soshiki/150/shinseikatsu.html'
+        r=dict(url=url,title='高知市結婚新生活支援事業補助金',hash='same',fetched_at='now',audiences=['対象者を確認'],purposes=['その他'])
+        apply_extraction(r,(Path(__file__).parent/'fixtures/shinseikatsu.html').read_text())
+        self.assertIn('家賃や引越費用を支援します。',r['summary'])
+        self.assertIn('1世帯あたり30万円。ただし、親世帯と同居または近居',r['amount'])
+        self.assertIn('45万円',r['amount'])
+        self.assertIn('敷金は対象となりません',r['amount'])
+        for text in ['(1)','(2)','(3)','(4)','(5)','(6)','(7)','(8)','(9)','39歳以下','500万円未満','2年以上継続']:
+            self.assertIn(text,r['eligibility'])
+        conditions='\n'.join(s['heading']+'\n'+s['text'] for s in r['html_extraction']['sections'] if s['kind']=='conditions')
+        for text in ['令和9年2月26日','令和9年2月28日','お二人それぞれが受講','すべての方','奨学金返還証明書']:
+            self.assertIn(text,conditions)
+        self.assertNotIn('こども政策課直通',conditions)
+        self.assertEqual(r['audiences'],['個人・世帯'])
+        self.assertIn('住まい',r['purposes'])
+
+    def test_child_headings_inherit_condition_context_instead_of_becoming_payment(self):
+        page='<div id="main_body"><h2>申請に必要な書類</h2><h3>すべての方</h3><p>身分証明書</p><h3>補助金額30万円を申請する方</h3><p>領収書</p><h2>補助上限額</h2><p>30万円</p></div>'
+        ss=extract_sections(URL,page)
+        self.assertEqual([s['kind'] for s in ss],['conditions','conditions','amount'])
+
+    def test_label_table_under_overview_and_money_row_remain_distinct(self):
+        page='<div id="main_body"><h2>概要</h2><table><tr><th>対象者</th><td>市内世帯</td></tr></table><h2>補助金額</h2><table><tr><td>補助対象者A</td><td>30万円</td></tr></table></div>'
+        ss=extract_sections(URL,page)
+        self.assertEqual(ss[0]['kind'],'eligibility')
+        self.assertEqual(ss[1]['text'],'補助対象者A ｜ 30万円')
+
+    def test_bold_paragraph_headings_keep_the_name_of_each_program(self):
+        ss=extract_sections(URL,'<div id="main_body"><h2>手当A</h2><p><strong>【対象者】</strong></p><p>対象A</p><p><strong>【手当の額】</strong></p><p>1万円</p><h2>手当B</h2><p><strong>【対象者】</strong></p><p>対象B</p><p><strong>【手当の額】</strong></p><p>2万円</p></div>')
+        self.assertEqual([(s['heading'],s['kind'],s['text']) for s in ss],[('手当A / 【対象者】','eligibility','対象A'),('手当A / 【手当の額】','amount','1万円'),('手当B / 【対象者】','eligibility','対象B'),('手当B / 【手当の額】','amount','2万円')])
