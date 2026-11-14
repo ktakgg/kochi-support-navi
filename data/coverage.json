@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-13T01:41:22.563505+00:00",
-  "unresolved_count": 58,
+  "generated_at": "2026-11-14T01:16:00.239386+00:00",
+  "unresolved_count": 55,
   "unresolved": [
     {
       "url": "https://www.joho-kochi.or.jp/center/kochi-fund-top.php",
       "title": "令和8年度事業戦略等推進事業費補助金のご案内",
       "discovered_from": "https://www.joho-kochi.or.jp/",
-      "fetched_at": "2026-11-13T01:40:22.888598+00:00",
+      "fetched_at": "2026-11-14T01:15:00.141041+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -339,14 +339,6 @@
       "error": null
     },
     {
-      "url": "https://www.pref.kochi.lg.jp/doc/2026072100125/",
-      "title": "補助金の詳細（要綱等）はこちら！",
-      "discovered_from": "https://www.pref.kochi.lg.jp/category/mokuteki/shinsei_todokede_hojokin/",
-      "fetched_at": "2026-11-12T10:28:34.963675+00:00",
-      "state": "fetched_not_listed",
-      "error": null
-    },
-    {
       "url": "https://www.pref.kochi.lg.jp/richi/support/",
       "title": "企業立地促進事業費補助金【高知県企業立地課】",
       "discovered_from": "https://www.joho-kochi.or.jp/center/hojyokin.php",
@@ -358,7 +350,7 @@
       "url": "https://www.joho-kochi.or.jp/digital/hojokin_r4b.php",
       "title": "R4補正デジタル技術活用促進事業費補助金のページこちらから（現在受付終了）",
       "discovered_from": "https://www.joho-kochi.or.jp/digital/hojokin.php",
-      "fetched_at": "2026-11-13T01:40:31.784131+00:00",
+      "fetched_at": "2026-11-14T01:15:10.561882+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -435,22 +427,6 @@
       "error": null
     },
     {
-      "url": "https://www.city.kochi.kochi.jp/soshiki/26/kochi-seikatusien2-kyufu.html",
-      "title": "「高知市生活支援給付金（第2期）」について詳しくはこちら",
-      "discovered_from": "https://www.city.kochi.kochi.jp/site/bukkakoutoushien/kkyuhu.html",
-      "fetched_at": null,
-      "state": "not_fetched",
-      "error": null
-    },
-    {
-      "url": "https://www.city.kochi.kochi.jp/soshiki/26/seikatusien4.html",
-      "title": "「高知市生活支援給付金（第4期）」について詳しくはこちら",
-      "discovered_from": "https://www.city.kochi.kochi.jp/site/bukkakoutoushien/kkyuhu.html",
-      "fetched_at": null,
-      "state": "not_fetched",
-      "error": null
-    },
-    {
       "url": "https://www.pref.kochi.lg.jp/soshiki/162201/2014051900187.html",
       "title": "高知県農業政策課（多面的機能支払交付金）",
       "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/105/tamenteki.html",
@@ -462,7 +438,7 @@
       "url": "https://www.pref.kochi.lg.jp/doc/2023032900542/",
       "title": "高知県医師養成奨学貸付金",
       "discovered_from": "https://www.pref.kochi.lg.jp/doc/Shogakukin/",
-      "fetched_at": "2026-11-10T21:03:12.049955+00:00",
+      "fetched_at": "2026-11-14T01:15:23.684439+00:00",
       "state": "fetched_not_listed",
       "error": null
     }

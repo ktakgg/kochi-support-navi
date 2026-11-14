@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-13T01:38:30.741157+00:00",
+  "started_at": "2026-11-14T01:13:12.093112+00:00",
   "sources": {
     "jgrants": {
       "state": "ready",
@@ -7,20 +7,20 @@
       "visited": 34,
       "items": 30,
       "errors": [],
-      "checked_at": "2026-11-13T01:38:30.741300+00:00",
-      "listed_relevant": 1929,
+      "checked_at": "2026-11-14T01:13:12.093264+00:00",
+      "listed_relevant": 1930,
       "pending_details": 0,
-      "published_items": 191
+      "published_items": 192
     },
     "jnet21": {
       "state": "ready",
       "transport": "rss",
       "visited": 1,
       "items": 1,
-      "checked_at": "2026-11-13T01:39:55.053143+00:00",
-      "feed_items": 12,
+      "checked_at": "2026-11-14T01:14:28.119877+00:00",
+      "feed_items": 13,
       "note": "RSSは新着のみ。対象地域が全国・四国地方・高知県の補助金等を抽出。"
     }
   },
-  "finished_at": "2026-11-13T01:39:56.163452+00:00"
+  "finished_at": "2026-11-14T01:14:29.456227+00:00"
 }

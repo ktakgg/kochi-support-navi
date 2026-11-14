@@ -1,7 +1,7 @@
 {
-  "started_at": "2026-11-13T01:39:56.403224+00:00",
-  "visited": 94,
-  "candidates": 39,
+  "started_at": "2026-11-14T01:14:29.630465+00:00",
+  "visited": 93,
+  "candidates": 38,
   "errors": [
     {
       "source_id": "chusho",
@@ -14,11 +14,6 @@
       "error": "<urlopen error timed out>"
     },
     {
-      "source_id": "kochi_city",
-      "url": "https://www.city.kochi.kochi.jp/soshiki/186/r7tikudenti.html",
-      "error": "HTTP Error 404: Not Found"
-    },
-    {
       "source_id": "kochi_pref",
       "url": "https://www.pref.kochi.lg.jp/soshiki/070401/2022011800156.html",
       "error": "HTTP Error 404: Not Found"
@@ -27,15 +22,27 @@
       "source_id": "kochi_pref",
       "url": "https://www.pref.kochi.lg.jp/soshiki/162201/2014051900187.html",
       "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "source_id": "kochi_city",
+      "url": "https://www.city.kochi.kochi.jp/soshiki/186/r7tikudenti.html",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "source_id": "kochi_pref",
+      "url": "https://www.pref.kochi.lg.jp/doc/2019061100114/",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "source_id": "kochi_city",
+      "url": "https://www.city.kochi.kochi.jp/soshiki/77/houkagoshien.html",
+      "error": "HTTP Error 404: Not Found"
     }
   ],
-  "changed": [
-    "32e21e8f2e2dfc8f",
-    "99c1992c2a742be4"
-  ],
+  "changed": [],
   "new": [
-    "06fcb4b553e5ea21",
-    "d4bf703b6aad77f3"
+    "dbe8c1b118586e0c",
+    "286d5bbdfa549a05"
   ],
   "scope": "高知市・高知県・中小企業庁・高知県産業振興センター・高知商工会議所の登録した巡回元。全件収集は確認中。",
   "sources": {
@@ -43,9 +50,9 @@
       "name": "高知市",
       "level": "市",
       "attempted": 40,
-      "visited": 39,
-      "candidates": 13,
-      "started_at": "2026-11-13T01:39:56.408821+00:00",
+      "visited": 38,
+      "candidates": 12,
+      "started_at": "2026-11-14T01:14:29.633347+00:00",
       "lane_counts": {
         "new_candidate": 3,
         "discovery": 24,
@@ -58,9 +65,9 @@
       "name": "高知県",
       "level": "県",
       "attempted": 40,
-      "visited": 38,
+      "visited": 37,
       "candidates": 13,
-      "started_at": "2026-11-13T01:39:57.066291+00:00",
+      "started_at": "2026-11-14T01:14:30.438092+00:00",
       "lane_counts": {
         "new_candidate": 2,
         "discovery": 25,
@@ -75,7 +82,7 @@
       "attempted": 0,
       "visited": 0,
       "candidates": 0,
-      "started_at": "2026-11-13T01:39:57.906143+00:00",
+      "started_at": "2026-11-14T01:14:31.054370+00:00",
       "lane_counts": {
         "new_candidate": 0,
         "discovery": 0,
@@ -87,13 +94,13 @@
     "kochi_center": {
       "name": "高知県産業振興センター",
       "level": "支援機関",
-      "attempted": 17,
-      "visited": 17,
+      "attempted": 18,
+      "visited": 18,
       "candidates": 13,
-      "started_at": "2026-11-13T01:39:58.424354+00:00",
+      "started_at": "2026-11-14T01:14:31.220472+00:00",
       "lane_counts": {
         "new_candidate": 0,
-        "discovery": 4,
+        "discovery": 5,
         "existing": 13
       },
       "state": "ready",
@@ -105,7 +112,7 @@
       "attempted": 0,
       "visited": 0,
       "candidates": 0,
-      "started_at": "2026-11-13T01:39:59.043477+00:00",
+      "started_at": "2026-11-14T01:14:31.981915+00:00",
       "lane_counts": {
         "new_candidate": 0,
         "discovery": 0,
@@ -115,8 +122,8 @@
       "error": "<urlopen error timed out>"
     }
   },
-  "finished_at": "2026-11-13T01:41:22.533635+00:00",
-  "attempted": 97,
-  "total_records": 362,
-  "remaining_queue": 280
+  "finished_at": "2026-11-14T01:16:00.219372+00:00",
+  "attempted": 98,
+  "total_records": 366,
+  "remaining_queue": 314
 }
