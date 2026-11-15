@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-14T01:16:00.239386+00:00",
-  "unresolved_count": 55,
+  "generated_at": "2026-11-15T00:43:21.103757+00:00",
+  "unresolved_count": 52,
   "unresolved": [
     {
       "url": "https://www.joho-kochi.or.jp/center/kochi-fund-top.php",
       "title": "令和8年度事業戦略等推進事業費補助金のご案内",
       "discovered_from": "https://www.joho-kochi.or.jp/",
-      "fetched_at": "2026-11-14T01:15:00.141041+00:00",
+      "fetched_at": "2026-11-15T00:42:22.333767+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -17,38 +17,6 @@
       "fetched_at": null,
       "state": "fetch_failed",
       "error": "HTTP Error 404: Not Found"
-    },
-    {
-      "url": "https://www.city.kochi.kochi.jp/soshiki/12/jisyubouhozyokin.html",
-      "title": "令和8年度　自主防災組織及び自主防災組織連合会に対する補助制度",
-      "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/12/",
-      "fetched_at": null,
-      "state": "not_fetched",
-      "error": null
-    },
-    {
-      "url": "https://www.city.kochi.kochi.jp/soshiki/12/kanshinbraker.html",
-      "title": "感震ブレーカー設置に係る補助金制度について",
-      "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/12/",
-      "fetched_at": null,
-      "state": "not_fetched",
-      "error": null
-    },
-    {
-      "url": "https://www.city.kochi.kochi.jp/soshiki/12/minkanjigiyou.html",
-      "title": "高知市民間事業者防災資機材等整備費補助金について（令和8年度受付）",
-      "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/12/",
-      "fetched_at": null,
-      "state": "not_fetched",
-      "error": null
-    },
-    {
-      "url": "https://www.city.kochi.kochi.jp/soshiki/12/katsuyouzyoukyou.html",
-      "title": "高知市民間事業者防災資機材等整備費補助金　活用事業者について",
-      "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/12/",
-      "fetched_at": null,
-      "state": "not_fetched",
-      "error": null
     },
     {
       "url": "https://www.city.kochi.kochi.jp/soshiki/193/r07kakuhoijikaizenjigyou.html",
@@ -339,10 +307,18 @@
       "error": null
     },
     {
+      "url": "https://www.pref.kochi.lg.jp/doc/2026072100125/",
+      "title": "補助金の詳細（要綱等）はこちら！",
+      "discovered_from": "https://www.pref.kochi.lg.jp/category/mokuteki/shinsei_todokede_hojokin/",
+      "fetched_at": "2026-11-15T00:43:00.104836+00:00",
+      "state": "fetched_not_listed",
+      "error": null
+    },
+    {
       "url": "https://www.pref.kochi.lg.jp/richi/support/",
       "title": "企業立地促進事業費補助金【高知県企業立地課】",
       "discovered_from": "https://www.joho-kochi.or.jp/center/hojyokin.php",
-      "fetched_at": "2026-11-12T10:29:07.485089+00:00",
+      "fetched_at": "2026-11-15T00:43:16.511550+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -350,7 +326,7 @@
       "url": "https://www.joho-kochi.or.jp/digital/hojokin_r4b.php",
       "title": "R4補正デジタル技術活用促進事業費補助金のページこちらから（現在受付終了）",
       "discovered_from": "https://www.joho-kochi.or.jp/digital/hojokin.php",
-      "fetched_at": "2026-11-14T01:15:10.561882+00:00",
+      "fetched_at": "2026-11-15T00:42:31.667815+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -374,7 +350,7 @@
       "url": "https://www.pref.kochi.lg.jp/doc/2015031700247/",
       "title": "［過去の補助金の活用例の紹介］",
       "discovered_from": "https://www.pref.kochi.lg.jp/doc/2024011100113/",
-      "fetched_at": "2026-11-12T10:29:14.205595+00:00",
+      "fetched_at": "2026-11-15T00:43:21.051045+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -414,7 +390,7 @@
       "url": "https://www.pref.kochi.lg.jp/doc/2026031000152/",
       "title": "高知県大学生等交流促進事業費補助金交付要綱",
       "discovered_from": "https://www.pref.kochi.lg.jp/doc/2026032500538/",
-      "fetched_at": "2026-11-10T21:06:52.940247+00:00",
+      "fetched_at": "2026-11-15T00:42:15.044151+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
