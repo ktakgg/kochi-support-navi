@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-15T00:43:21.103757+00:00",
-  "unresolved_count": 52,
+  "generated_at": "2026-11-16T00:42:59.739233+00:00",
+  "unresolved_count": 47,
   "unresolved": [
     {
       "url": "https://www.joho-kochi.or.jp/center/kochi-fund-top.php",
       "title": "令和8年度事業戦略等推進事業費補助金のご案内",
       "discovered_from": "https://www.joho-kochi.or.jp/",
-      "fetched_at": "2026-11-15T00:42:22.333767+00:00",
+      "fetched_at": "2026-11-16T00:42:03.880083+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -17,46 +17,6 @@
       "fetched_at": null,
       "state": "fetch_failed",
       "error": "HTTP Error 404: Not Found"
-    },
-    {
-      "url": "https://www.city.kochi.kochi.jp/soshiki/193/r07kakuhoijikaizenjigyou.html",
-      "title": "令和7年度地域公共交通確保維持改善事業に関する事業評価（地域内フィーダー系統確保維持費国庫補助金）",
-      "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/193/",
-      "fetched_at": null,
-      "state": "not_fetched",
-      "error": null
-    },
-    {
-      "url": "https://www.city.kochi.kochi.jp/soshiki/193/r06kakuhoijikaizenjigyou.html",
-      "title": "令和6年度地域公共交通確保維持改善事業に関する事業評価（地域内フィーダー系統確保維持費国庫補助金）",
-      "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/193/",
-      "fetched_at": null,
-      "state": "not_fetched",
-      "error": null
-    },
-    {
-      "url": "https://www.city.kochi.kochi.jp/soshiki/193/r05kakuhoijikaizenjigyou.html",
-      "title": "令和5年度地域公共交通確保維持改善事業に関する事業評価（地域内フィーダー系統確保維持費国庫補助金）",
-      "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/193/",
-      "fetched_at": null,
-      "state": "not_fetched",
-      "error": null
-    },
-    {
-      "url": "https://www.city.kochi.kochi.jp/soshiki/193/r04kakuhoijikaizenjigyou.html",
-      "title": "令和4年度地域公共交通確保維持改善事業に関する事業評価（地域内フィーダー系統確保維持費国庫補助金）",
-      "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/193/",
-      "fetched_at": null,
-      "state": "not_fetched",
-      "error": null
-    },
-    {
-      "url": "https://www.city.kochi.kochi.jp/soshiki/193/r03kakuhoijikaizenjigyou.html",
-      "title": "令和3年度地域公共交通確保維持改善事業に関する事業評価（地域内フィーダー系統確保維持費国庫補助金）",
-      "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/193/",
-      "fetched_at": null,
-      "state": "not_fetched",
-      "error": null
     },
     {
       "url": "https://www.city.kochi.kochi.jp/soshiki/186/r8tikudenti.html",
@@ -326,7 +286,7 @@
       "url": "https://www.joho-kochi.or.jp/digital/hojokin_r4b.php",
       "title": "R4補正デジタル技術活用促進事業費補助金のページこちらから（現在受付終了）",
       "discovered_from": "https://www.joho-kochi.or.jp/digital/hojokin.php",
-      "fetched_at": "2026-11-15T00:42:31.667815+00:00",
+      "fetched_at": "2026-11-16T00:42:12.141290+00:00",
       "state": "fetched_not_listed",
       "error": null
     },

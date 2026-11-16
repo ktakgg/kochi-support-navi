@@ -1,7 +1,7 @@
 {
-  "started_at": "2026-11-15T00:41:54.994136+00:00",
+  "started_at": "2026-11-16T00:41:35.812334+00:00",
   "visited": 95,
-  "candidates": 43,
+  "candidates": 44,
   "errors": [
     {
       "source_id": "chusho",
@@ -31,10 +31,11 @@
   ],
   "changed": [],
   "new": [
-    "76d7a35cec13e43e",
-    "093c3682e496739e",
-    "00d01d8c2f345200",
-    "88c0c08cee48e2e6"
+    "b5a8801d7d71534e",
+    "d9a0e9dc439cc0a4",
+    "0e39bd67090f2346",
+    "f4bb52b30401db66",
+    "71f30562f1205176"
   ],
   "scope": "高知市・高知県・中小企業庁・高知県産業振興センター・高知商工会議所の登録した巡回元。全件収集は確認中。",
   "sources": {
@@ -43,11 +44,11 @@
       "level": "市",
       "attempted": 40,
       "visited": 39,
-      "candidates": 17,
-      "started_at": "2026-11-15T00:41:54.997571+00:00",
+      "candidates": 18,
+      "started_at": "2026-11-16T00:41:35.816484+00:00",
       "lane_counts": {
-        "new_candidate": 5,
-        "discovery": 22,
+        "new_candidate": 6,
+        "discovery": 21,
         "existing": 13
       },
       "state": "ready",
@@ -59,7 +60,7 @@
       "attempted": 40,
       "visited": 38,
       "candidates": 13,
-      "started_at": "2026-11-15T00:41:55.692196+00:00",
+      "started_at": "2026-11-16T00:41:36.712382+00:00",
       "lane_counts": {
         "new_candidate": 2,
         "discovery": 25,
@@ -74,7 +75,7 @@
       "attempted": 0,
       "visited": 0,
       "candidates": 0,
-      "started_at": "2026-11-15T00:41:56.424643+00:00",
+      "started_at": "2026-11-16T00:41:37.249451+00:00",
       "lane_counts": {
         "new_candidate": 0,
         "discovery": 0,
@@ -89,7 +90,7 @@
       "attempted": 18,
       "visited": 18,
       "candidates": 13,
-      "started_at": "2026-11-15T00:41:56.451540+00:00",
+      "started_at": "2026-11-16T00:41:37.801689+00:00",
       "lane_counts": {
         "new_candidate": 0,
         "discovery": 5,
@@ -104,7 +105,7 @@
       "attempted": 0,
       "visited": 0,
       "candidates": 0,
-      "started_at": "2026-11-15T00:41:57.127199+00:00",
+      "started_at": "2026-11-16T00:41:38.428488+00:00",
       "lane_counts": {
         "new_candidate": 0,
         "discovery": 0,
@@ -114,8 +115,8 @@
       "error": "<urlopen error timed out>"
     }
   },
-  "finished_at": "2026-11-15T00:43:21.079727+00:00",
+  "finished_at": "2026-11-16T00:42:59.700653+00:00",
   "attempted": 98,
-  "total_records": 370,
-  "remaining_queue": 290
+  "total_records": 375,
+  "remaining_queue": 270
 }
