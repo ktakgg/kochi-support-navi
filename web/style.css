@@ -65,3 +65,20 @@ dialog::backdrop{background:#302b2766;animation:backdrop-in .25s both}.detail>h1
 .source-excerpt{white-space:pre-line;overflow-wrap:anywhere;line-height:1.9}
 
 .card .amount{align-items:flex-start}.card .amount strong{white-space:pre-line;overflow-wrap:anywhere}.card .eligibility{font-size:11px;line-height:1.9;margin:12px 0;color:var(--ink)}.card .eligibility b{display:block;font-size:10px;color:var(--muted)}.card .eligibility span{white-space:pre-line;overflow-wrap:anywhere}.card-detail-note{font-size:10px;color:var(--muted);margin:6px 0}.source-table{overflow-x:auto;margin:12px 0}.source-table table{border-collapse:collapse;width:100%;font-size:13px}.source-table td{border:1px solid var(--line);padding:10px;vertical-align:top}.source-table td:last-child{min-width:6em}.detail h3{font-size:14px;margin:18px 0 8px}.detail .source-excerpt{margin:6px 0}
+
+/* Compact search cards; the detail page retains the complete conditions. */
+.cards{gap:14px}.cards .card{min-height:0;padding:16px;min-width:0}
+.cards .authority-line{margin-bottom:8px;gap:6px}.cards .card-filter.authority{font-size:14px}
+.cards .card-filter.authority.kochi_center,.cards .card-filter.authority.kochi_cci,.cards .card-filter.authority.jnet21{font-size:12px}
+.cards .card-filter.source-filter{font-size:11px}.cards .card-top{gap:8px}
+.cards .card-filter.category{font-size:10px;padding:2px 6px}.cards .card-filter.status{padding:2px 6px}
+.cards .card h3{font-size:14px;line-height:1.6;margin:10px 0 6px}
+.cards .card h3 a,.cards .summary,.cards .amount strong,.cards .eligibility span{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;overflow-wrap:anywhere}
+.cards .summary{font-size:11px;line-height:1.7;margin-bottom:8px}
+.cards .amount,.cards .eligibility{display:grid;grid-template-columns:52px minmax(0,1fr);gap:8px;align-items:start}
+.cards .amount{padding-top:8px;margin-top:auto}.cards .amount strong{font-size:12px;line-height:1.7;white-space:normal}
+.cards .eligibility{font-size:11px;line-height:1.7;margin:8px 0}.cards .eligibility b{font-size:10px;white-space:nowrap}.cards .eligibility span{white-space:normal}
+.cards .region{font-size:10px;margin:4px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cards .card-tags{margin:8px 0;gap:4px}.cards .card-tags .card-filter{padding:2px 6px}
+.cards .card-bottom{padding-top:8px;gap:8px}.cards .card-bottom a{white-space:nowrap}
+@media(max-width:650px){.cards .card{padding:16px}.cards .card-filter{min-height:28px}.cards .card h3{font-size:14px}}

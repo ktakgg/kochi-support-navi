@@ -3,12 +3,13 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {cardDetails,filterRecords,statusOf} from '../dist/core.mjs';
 
-test('はたいくのカードは公式本文と同じ認証条件・金額・事業者を使う',()=>{
+test('カードの省略後も詳細データに元の認証条件と金額を保持する',()=>{
  const records=JSON.parse(readFileSync(new URL('../dist/data.json',import.meta.url))).records;
  const r=records.find(r=>r.id==='6a16f5f36647c945'),card=cardDetails(r);
  assert.match(card.summary.text,/男性従業員の育児休業/);
  assert.match(card.support.text,/男性育休推進部門の認証 ｜ 10万円/);
- assert.match(card.support.text,/いずれかの認定 ｜ 30万円/);
+ assert.ok(card.support.text.endsWith('…'));
+ assert.match(r.amount,/いずれかの認定 ｜ 30万円/);
  assert.match(card.eligibility.text,/常時雇用する労働者/);
  assert.deepEqual(r.audiences,['事業者']);
  assert.equal(filterRecords([r],{audiences:['子育て世帯']}).length,0);
@@ -53,11 +54,13 @@ test('対象経費の説明が長くても上限額と加算条件をカード�
  assert.equal(card.support.partial,true);
 });
 
-test('結婚新生活支援のカードに上限額・加算条件・年齢・所得条件を表示する',()=>{
+test('結婚新生活支援の条件を省略表示し、詳細データは全文のまま保持する',()=>{
  const records=JSON.parse(readFileSync(new URL('../dist/data.json',import.meta.url))).records;
  const r=records.find(r=>r.id==='c4599b1192ac691d'),card=cardDetails(r);
  for(const word of ['30万円','同居または近居','45万円'])assert.ok(card.support.text.includes(word));
- for(const word of ['39歳以下','500万円未満'])assert.ok(card.eligibility.text.includes(word));
+ for(const word of ['39歳以下','500万円未満'])assert.ok(r.eligibility.includes(word));
+ assert.ok(card.eligibility.text.endsWith('…'));
+ assert.ok(Array.from(card.eligibility.text).length<=61);
  assert.deepEqual(r.audiences,['個人・世帯']);
  assert.ok(r.purposes.includes('住まい'));
  assert.equal(card.eligibility.partial,true);
