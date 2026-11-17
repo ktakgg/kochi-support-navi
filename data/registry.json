@@ -2,7 +2,7 @@
   "https://www.city.kochi.kochi.jp/soshiki/186/r8tikudentikouhukettei.html": {
     "discovered_from": "https://www.city.kochi.kochi.jp/life/1/182/1486/",
     "discovered_at": "2026-10-29T14:29:16.443286+00:00",
-    "link_title": "【受付終了】令和8年度高知市住宅用蓄電池設備等導入促進事業費補助金の予算残額について",
+    "link_title": "【お知らせ】令和8年度高知市住宅用蓄電池設備等導入促進事業費補助金の予算残額について",
     "title": "【受付終了】令和8年度高知市住宅用蓄電池設備等導入促進事業費補助金の予算残額について",
     "state": "candidate",
     "reason": "制度候補語を検出",
@@ -166,7 +166,7 @@
     "title": "子ども医療費助成事業",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-13T04:08:31.505161+00:00",
+    "fetched_at": "2026-11-17T03:25:10.272573+00:00",
     "hash": "73a27392c941f017f7441229fcbf94efa873f6c2b3c5b46bc8f0908e9e518c23",
     "pdfs": [],
     "source_id": "kochi_city",
@@ -285,7 +285,7 @@
     "title": "企業立地助成金",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-13T04:08:39.005862+00:00",
+    "fetched_at": "2026-11-17T03:25:33.963640+00:00",
     "hash": "6777eddc8cfe477df7b94c689358afeb201bbfa05b6056b6bd3f761d45739010",
     "pdfs": [],
     "source_id": "kochi_city",
@@ -300,7 +300,7 @@
     "title": "【令和7年度に申込の資格のみ対象】高知市資格取得助成金のご案内",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-13T04:08:42.007595+00:00",
+    "fetched_at": "2026-11-17T03:25:43.122859+00:00",
     "hash": "253890a33ca8b70309d4b43358c2fb335348b58eb3fb4daa4f3f42eb4a5dacdd",
     "pdfs": [
       {
@@ -480,14 +480,18 @@
     "html_extraction_version": 3
   },
   "https://www.city.kochi.kochi.jp/soshiki/186/r8taiyoukou.html": {
-    "title": "【抽選結果】令和8年度高知市住宅用自家消費型太陽光発電設備導入促進事業費補助金",
-    "fetched_at": "2026-10-29T05:00:46.819706+00:00",
-    "hash": "f2fbda5ba55e4a211f6b7c0696169b23eaf4e03df1783056e018e0d877a33057",
-    "pdfs": [],
-    "state": "discovery",
     "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/186/r8hojyokinn.html",
     "discovered_at": "2026-10-29T14:29:16.962601+00:00",
-    "link_title": "【抽選結果】令和8年度高知市住宅用自家消費型太陽光発電設備導入促進事業費補助金"
+    "link_title": "【抽選結果】令和8年度高知市住宅用自家消費型太陽光発電設備導入促進事業費補助金",
+    "title": "【抽選結果】令和8年度高知市住宅用自家消費型太陽光発電設備導入促進事業費補助金",
+    "state": "discovery",
+    "reason": "発見元または対象外",
+    "fetched_at": "2026-11-17T03:25:11.923897+00:00",
+    "hash": "f2fbda5ba55e4a211f6b7c0696169b23eaf4e03df1783056e018e0d877a33057",
+    "pdfs": [],
+    "source_id": "kochi_city",
+    "source_level": "市",
+    "source_name": "高知市"
   },
   "https://www.city.kochi.kochi.jp/soshiki/12/": {
     "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/",
@@ -576,14 +580,18 @@
     "html_extraction_version": 3
   },
   "https://www.city.kochi.kochi.jp/life/2/196/1573/": {
-    "title": "健康情報（事業者）",
-    "fetched_at": "2026-10-29T05:00:46.886841+00:00",
-    "hash": "4643aa7088765cc87ebeb35dbf5dc84cd7971d79c85a242e92ac59ce9f106540",
-    "pdfs": [],
-    "state": "discovery",
     "discovered_from": "https://www.city.kochi.kochi.jp/life/2/196/",
     "discovered_at": "2026-10-29T14:29:17.207922+00:00",
-    "link_title": "健康情報（事業者）の一覧"
+    "link_title": "健康情報（事業者）の一覧",
+    "title": "健康情報（事業者）",
+    "state": "discovery",
+    "reason": "発見元または対象外",
+    "fetched_at": "2026-11-17T03:25:13.778686+00:00",
+    "hash": "4643aa7088765cc87ebeb35dbf5dc84cd7971d79c85a242e92ac59ce9f106540",
+    "pdfs": [],
+    "source_id": "kochi_city",
+    "source_level": "市",
+    "source_name": "高知市"
   },
   "https://www.city.kochi.kochi.jp/soshiki/40/hataiku.html": {
     "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/40/",
@@ -634,14 +642,18 @@
     "source_name": "高知市"
   },
   "https://www.city.kochi.kochi.jp/life/2/196/1539/": {
-    "title": "卸売市場",
-    "fetched_at": "2026-10-29T05:00:46.937641+00:00",
-    "hash": "207fef212049ece7ada739504ecaf94f8f863fda5465a42357a3d847de7d99b4",
-    "pdfs": [],
-    "state": "discovery",
     "discovered_from": "https://www.city.kochi.kochi.jp/life/2/196/",
     "discovered_at": "2026-10-29T14:29:17.207974+00:00",
-    "link_title": "卸売市場の一覧"
+    "link_title": "卸売市場の一覧",
+    "title": "卸売市場",
+    "state": "discovery",
+    "reason": "発見元または対象外",
+    "fetched_at": "2026-11-17T03:25:16.409074+00:00",
+    "hash": "9df828010f93e3dd8604063bdeb41fd788a34eb9a942cda827c1bf03dc687ce0",
+    "pdfs": [],
+    "source_id": "kochi_city",
+    "source_level": "市",
+    "source_name": "高知市"
   },
   "https://www.city.kochi.kochi.jp/soshiki/186/r8taiyoukouhojyo.html": {
     "discovered_from": "https://www.city.kochi.kochi.jp/life/1/182/1486/",
@@ -770,24 +782,32 @@
     "source_name": "高知市"
   },
   "https://www.city.kochi.kochi.jp/life/2/196/1534/": {
-    "title": "産業団地",
-    "fetched_at": "2026-10-29T05:00:47.003594+00:00",
-    "hash": "2868bdc5ea2a68890b708b9eba1f7311ab13a8033add261d1208ec57fe909958",
-    "pdfs": [],
-    "state": "discovery",
     "discovered_from": "https://www.city.kochi.kochi.jp/life/2/196/",
     "discovered_at": "2026-10-29T14:29:17.207821+00:00",
-    "link_title": "産業団地の一覧"
+    "link_title": "産業団地の一覧",
+    "title": "産業団地",
+    "state": "discovery",
+    "reason": "発見元または対象外",
+    "fetched_at": "2026-11-17T03:25:21.087575+00:00",
+    "hash": "2868bdc5ea2a68890b708b9eba1f7311ab13a8033add261d1208ec57fe909958",
+    "pdfs": [],
+    "source_id": "kochi_city",
+    "source_level": "市",
+    "source_name": "高知市"
   },
   "https://www.city.kochi.kochi.jp/soshiki/186/r8hojyokinn.html": {
-    "title": "令和8年度補助金情報",
-    "fetched_at": "2026-10-29T05:00:47.018407+00:00",
-    "hash": "ef80588628b8b7da92f38edadd669c32e475cc25c44239fcc73028b26f6d273d",
-    "pdfs": [],
-    "state": "discovery",
     "discovered_from": "https://www.city.kochi.kochi.jp/life/2/196/1535/",
     "discovered_at": "2026-10-29T14:29:17.089732+00:00",
-    "link_title": "令和8年度補助金情報"
+    "link_title": "令和8年度補助金情報",
+    "title": "令和8年度補助金情報",
+    "state": "discovery",
+    "reason": "発見元または対象外",
+    "fetched_at": "2026-11-17T03:25:22.918865+00:00",
+    "hash": "ef80588628b8b7da92f38edadd669c32e475cc25c44239fcc73028b26f6d273d",
+    "pdfs": [],
+    "source_id": "kochi_city",
+    "source_level": "市",
+    "source_name": "高知市"
   },
   "https://www.city.kochi.kochi.jp/soshiki/176/": {
     "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/",
@@ -818,14 +838,18 @@
     "source_name": "高知市"
   },
   "https://www.city.kochi.kochi.jp/life/2/196/1535/": {
-    "title": "その他事業支援に関すること",
-    "fetched_at": "2026-10-29T05:00:47.065270+00:00",
-    "hash": "4914fbfc27c9a5306821fd5d2e30feae2f350dcbc15bd474c2ab421c104ebe71",
-    "pdfs": [],
-    "state": "discovery",
     "discovered_from": "https://www.city.kochi.kochi.jp/life/2/196/",
     "discovered_at": "2026-10-29T14:29:17.207950+00:00",
-    "link_title": "その他事業支援に関することの一覧"
+    "link_title": "その他事業支援に関することの一覧",
+    "title": "その他事業支援に関すること",
+    "state": "discovery",
+    "reason": "発見元または対象外",
+    "fetched_at": "2026-11-17T03:25:32.529436+00:00",
+    "hash": "4914fbfc27c9a5306821fd5d2e30feae2f350dcbc15bd474c2ab421c104ebe71",
+    "pdfs": [],
+    "source_id": "kochi_city",
+    "source_level": "市",
+    "source_name": "高知市"
   },
   "https://www.city.kochi.kochi.jp/soshiki/4/": {
     "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/",
@@ -842,14 +866,18 @@
     "source_name": "高知市"
   },
   "https://www.city.kochi.kochi.jp/soshiki/2/": {
-    "title": "政策企画課",
-    "fetched_at": "2026-10-29T05:00:47.102831+00:00",
-    "hash": "999538820d4c939113726bea7e9f82debbc2d1b2022694302bd0394e74551ceb",
-    "pdfs": [],
-    "state": "discovery",
     "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/",
     "discovered_at": "2026-10-29T14:29:16.596783+00:00",
-    "link_title": "政策企画課"
+    "link_title": "政策企画課",
+    "title": "政策企画課",
+    "state": "discovery",
+    "reason": "発見元または対象外",
+    "fetched_at": "2026-11-17T03:24:54.605160+00:00",
+    "hash": "12f7056343961fe8eac9f4270ecbf6cf31d6549812f4dfcd1c2079f7149b9a81",
+    "pdfs": [],
+    "source_id": "kochi_city",
+    "source_level": "市",
+    "source_name": "高知市"
   },
   "https://www.city.kochi.kochi.jp/soshiki/33/iryou2.html": {
     "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/33/",
@@ -868,20 +896,28 @@
   },
   "https://www.city.kochi.kochi.jp/life/2/196/": {
     "title": "事業者支援・農林水産支援・卸売市場・街路市",
-    "fetched_at": "2026-10-29T05:00:47.133432+00:00",
-    "hash": "5a8a272728fba52fd5972ac4f95d9179429a939fe56faa12dc22f9deb53b5ee2",
+    "state": "discovery",
+    "reason": "発見元または対象外",
+    "fetched_at": "2026-11-17T03:25:02.988958+00:00",
+    "hash": "cccbf62e5b3c1db99424f09ce83e8e18a332957ea74f716ad44bff75ac50d51c",
     "pdfs": [],
-    "state": "discovery"
+    "source_id": "kochi_city",
+    "source_level": "市",
+    "source_name": "高知市"
   },
   "https://www.city.kochi.kochi.jp/life/2/196/1551/": {
-    "title": "街路市出店者向け情報",
-    "fetched_at": "2026-10-29T05:00:47.143834+00:00",
-    "hash": "cfa7c843d54d629212efb246c404b43a828ca788ed9834c4a567cc4dd2a17926",
-    "pdfs": [],
-    "state": "discovery",
     "discovered_from": "https://www.city.kochi.kochi.jp/life/2/196/",
     "discovered_at": "2026-10-29T14:29:17.208048+00:00",
-    "link_title": "街路市出店者向け情報の一覧"
+    "link_title": "街路市出店者向け情報の一覧",
+    "title": "街路市出店者向け情報",
+    "state": "discovery",
+    "reason": "発見元または対象外",
+    "fetched_at": "2026-11-17T03:25:41.943076+00:00",
+    "hash": "cfa7c843d54d629212efb246c404b43a828ca788ed9834c4a567cc4dd2a17926",
+    "pdfs": [],
+    "source_id": "kochi_city",
+    "source_level": "市",
+    "source_name": "高知市"
   },
   "https://www.city.kochi.kochi.jp/site/bukkakoutoushien/keieikaizen.html": {
     "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/40/",
@@ -908,14 +944,18 @@
     "html_extraction_version": 3
   },
   "https://www.city.kochi.kochi.jp/soshiki/33/": {
-    "title": "子育て給付課",
-    "fetched_at": "2026-10-29T05:00:47.174354+00:00",
-    "hash": "2b82bcde324e57e2fbfcaadcd46cb7400c3c17ec60025fe10020ffd8a98c011d",
-    "pdfs": [],
-    "state": "discovery",
     "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/33/iryou1.html",
     "discovered_at": "2026-10-29T14:29:16.490962+00:00",
-    "link_title": "子育て給付課"
+    "link_title": "子育て給付課",
+    "title": "子育て給付課",
+    "state": "discovery",
+    "reason": "発見元または対象外",
+    "fetched_at": "2026-11-17T03:25:44.618977+00:00",
+    "hash": "223d2d39dddf12276a688afdf7b0cfa3bae5f4ad0ba59c95cca74e09592bc7db",
+    "pdfs": [],
+    "source_id": "kochi_city",
+    "source_level": "市",
+    "source_name": "高知市"
   },
   "https://www.city.kochi.kochi.jp/soshiki/40/r8kochicity-wakate.html": {
     "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/40/",
@@ -1345,7 +1385,7 @@
     "title": "申請（電子申請を含む）・届出・補助金等",
     "state": "discovery",
     "reason": "発見元または対象外",
-    "fetched_at": "2026-11-14T01:15:17.559466+00:00",
+    "fetched_at": "2026-11-17T03:25:40.823760+00:00",
     "hash": "d084051b85ca585762207154ac02df4b419500045e54f831994f8542bc5cd5a9",
     "pdfs": [],
     "source_id": "kochi_pref",
@@ -1356,7 +1396,7 @@
     "title": "（公財）高知県産業振興センター",
     "state": "discovery",
     "reason": "発見元または対象外",
-    "fetched_at": "2026-11-16T00:41:56.182819+00:00",
+    "fetched_at": "2026-11-17T03:24:38.180494+00:00",
     "hash": "3913c270506c5391792bd1030c210d25cfaa2c2d174af0442c4e3bda1758ee21",
     "pdfs": [
       {
@@ -1419,7 +1459,7 @@
     "title": "補助金・助成金",
     "state": "discovery",
     "reason": "発見元または対象外",
-    "fetched_at": "2026-11-16T00:42:02.238607+00:00",
+    "fetched_at": "2026-11-17T03:24:44.427854+00:00",
     "hash": "992f42bfcdaa3abaffbfc2e5bb2c3fec0797d21c5ff3470296b860cd4be92541",
     "pdfs": [],
     "source_id": "kochi_center",
@@ -1455,7 +1495,7 @@
     "title": "令和８年度 事業戦略等推進事業費補助金",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-16T00:42:07.281011+00:00",
+    "fetched_at": "2026-11-17T03:24:50.358205+00:00",
     "hash": "80f2f15150591bda38e7b1fb69fe765bf7d520d1dcb8e6997c7f70ae1af25600",
     "pdfs": [
       {
@@ -1519,7 +1559,7 @@
     "title": "こうち産業振興基金事業",
     "state": "discovery",
     "reason": "発見元または対象外",
-    "fetched_at": "2026-11-16T00:42:03.880083+00:00",
+    "fetched_at": "2026-11-17T03:24:46.156444+00:00",
     "hash": "7f2ae258d0085a95a286d860d7f02bb8a84570855712902437b1dd4f01ebcbe5",
     "pdfs": [],
     "source_id": "kochi_center",
@@ -1549,7 +1589,7 @@
     "title": "令和７年度高知県デジタル技術活用促進事業費補助金",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-16T00:42:09.027306+00:00",
+    "fetched_at": "2026-11-17T03:24:52.483205+00:00",
     "hash": "f39a480338e8e6daafea1af16573bbb2cd185f5449fa8425e61475380559b8dc",
     "pdfs": [
       {
@@ -1585,7 +1625,7 @@
   "https://www.pref.kochi.lg.jp/doc/2026102000166/": {
     "discovered_from": "https://www.pref.kochi.lg.jp/category/mokuteki/shinsei_todokede_hojokin/",
     "discovered_at": "2026-10-29T14:29:17.835542+00:00",
-    "link_title": "令和８年度支援策活用ガイド",
+    "link_title": "生産性向上等に活用可能な支援策",
     "title": "生産性向上等に活用可能な支援策",
     "state": "discovery",
     "reason": "発見元または対象外",
@@ -1608,7 +1648,7 @@
     "title": "令和５年度新事業チャレンジ支援事業費補助金（２次公募）",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-16T00:42:14.338698+00:00",
+    "fetched_at": "2026-11-17T03:24:58.129931+00:00",
     "hash": "9aecacdcdbb719a18b4bed8f89ef4aff477d6c58b93c9b2e9bc022b02ac504ba",
     "pdfs": [
       {
@@ -1667,7 +1707,7 @@
     "title": "高知県ものづくり省力化設備投資支援事業費補助金",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-16T00:42:22.676356+00:00",
+    "fetched_at": "2026-11-17T03:25:08.193481+00:00",
     "hash": "62254db4803d9d51c483282fc1e7b547d2776e701d0bc402500eb23af2ed863b",
     "pdfs": [],
     "source_id": "kochi_center",
@@ -1701,7 +1741,7 @@
     "title": "高知県省エネルギー設備投資支援事業費補助金",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-16T00:42:17.600055+00:00",
+    "fetched_at": "2026-11-17T03:25:02.488019+00:00",
     "hash": "371f220bdf2e571f04b4c8cf2f7ce994cd52b1cc160303b3ade392825f32dc9f",
     "pdfs": [
       {
@@ -1760,7 +1800,7 @@
     "title": "高知県原油高騰緊急対策設備投資支援事業費補助金",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-16T00:42:20.759104+00:00",
+    "fetched_at": "2026-11-17T03:25:06.534575+00:00",
     "hash": "3d22aad8caf17a3795645220f635f2229206e66384011bab9ff20a5527f60d1f",
     "pdfs": [
       {
@@ -1827,7 +1867,7 @@
     "title": "「高知市地方創生移住支援金」の支給について（東京圏からの移住者が対象）※転入前に、高知市移住・定住促進課への事前相談が必須となります。",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-13T04:08:25.658375+00:00",
+    "fetched_at": "2026-11-17T03:24:46.711036+00:00",
     "hash": "105fa92fc3c1b9a8248269845bbc47edeea63cec6c0ca29560798174b53d02cf",
     "pdfs": [
       {
@@ -1908,7 +1948,7 @@
   },
   "https://www.city.kochi.kochi.jp/soshiki/186/r7tikudenti.html": {
     "last_error": "HTTP Error 404: Not Found",
-    "failed_at": "2026-11-16T00:41:54.102316+00:00",
+    "failed_at": "2026-11-17T03:24:36.686812+00:00",
     "source_id": "kochi_city",
     "source_level": "市",
     "source_name": "高知市",
@@ -5554,7 +5594,7 @@
   "https://www.city.kochi.kochi.jp/soshiki/40/r8kochicity-wakateshikaku.html": {
     "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/40/sikakusyutoku.html",
     "discovered_at": "2026-10-29T14:29:16.627569+00:00",
-    "link_title": "（2）　高知市若手人材定着支援事業資格取得助成金（はたくら補助金【資格取得助成金】）",
+    "link_title": "資格取得助成金　新制度（令和8年度4月1日～）",
     "title": "はたくら補助金【資格取得助成金】「高知ではたらく、くらす若者を応援！」のご案内",
     "state": "candidate",
     "reason": "制度候補語を検出",
@@ -6128,13 +6168,31 @@
     "html_extraction_version": 3
   },
   "https://www.city.kochi.kochi.jp/soshiki/106/kannrenngyousyabosyuu.html": {
-    "source_id": "kochi_city",
-    "source_level": "市",
-    "source_name": "高知市",
-    "state": "queued",
     "discovered_from": "https://www.city.kochi.kochi.jp/life/2/196/1539/",
     "discovered_at": "2026-10-29T14:29:16.874367+00:00",
-    "link_title": "関連事業者の募集"
+    "link_title": "関連事業者の募集",
+    "title": "関連事業者の募集",
+    "state": "discovery",
+    "reason": "発見元または対象外",
+    "fetched_at": "2026-11-17T03:25:17.938897+00:00",
+    "hash": "2c4c36c891d70b12320b4677f256b273852cd87577d5a00cc0d3e8473a0edda8",
+    "pdfs": [
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/life/212570_838480_misc.pdf",
+        "title": "関連事業者新規出店募集!!"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/life/212570_839058_misc.pdf",
+        "title": "時間別自動車入場量"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/life/212570_842295_misc.pdf",
+        "title": "全体図面"
+      }
+    ],
+    "source_id": "kochi_city",
+    "source_level": "市",
+    "source_name": "高知市"
   },
   "https://www.city.kochi.kochi.jp/soshiki/106/nakaorosibosyuu.html": {
     "discovered_from": "https://www.city.kochi.kochi.jp/life/2/196/1539/",
@@ -6427,31 +6485,186 @@
     "source_name": "高知市"
   },
   "https://www.city.kochi.kochi.jp/soshiki/186/r8tikudenti.html": {
-    "source_id": "kochi_city",
-    "source_level": "市",
-    "source_name": "高知市",
-    "state": "queued",
     "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/186/r8hojyokinn.html",
     "discovered_at": "2026-10-29T14:29:16.962641+00:00",
-    "link_title": "【三次募集受付終了】令和8年度高知市住宅用蓄電池設備等導入促進事業費補助金について"
+    "link_title": "【三次募集・受付終了】令和8年度高知市住宅用蓄電池設備等導入促進事業費補助金について",
+    "title": "【三次募集受付終了】令和8年度高知市住宅用蓄電池設備等導入促進事業費補助金について",
+    "state": "candidate",
+    "reason": "制度候補語を検出",
+    "fetched_at": "2026-11-17T03:25:25.755859+00:00",
+    "hash": "17a0fe39a4d87ef29bf0b3debb9b6b7821759ece18bcc3dd076b375fc018746b",
+    "pdfs": [
+      {
+        "url": "https://www.pref.kochi.lg.jp/doc/2025033100099/file_contents/file_20264175105138_1.pdf",
+        "title": "https://www.pref.kochi.lg.jp/doc/2025033100099/file_contents/file_20264175105138_1.pdf"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/182529.pdf",
+        "title": "交付要綱 [PDFファイル／177KB]"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/182588.pdf",
+        "title": "募集要領 [PDFファイル／321KB]"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/180868.pdf",
+        "title": "チェックリスト [PDFファイル／112KB]"
+      },
+      {
+        "url": "https://www.pref.kochi.lg.jp/doc/2025033100099/file_contents/file_2026421293643_1.pdf",
+        "title": "https://www.cev-pc.or.jp/hojo/v2h-v2lpdf/R6ho/R6h v2hmeigaragotojougen.pdf"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/182589.pdf",
+        "title": "募集要領 [PDFファイル／321KB]"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/182591.pdf",
+        "title": "募集要領 [PDFファイル／321KB]"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/182530.pdf",
+        "title": "交付要綱 [PDFファイル／177KB]"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/182592.pdf",
+        "title": "募集要領 [PDFファイル／321KB]"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/183250.pdf",
+        "title": "よくあるご質問 [PDFファイル／80KB]"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/176372.pdf",
+        "title": "PDF [PDFファイル／69KB]"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/176373.pdf",
+        "title": "PDF [PDFファイル／51KB]"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/176386.pdf",
+        "title": "PDF [PDFファイル／312KB]"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/180866.pdf",
+        "title": "PDF [PDFファイル／112KB]"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/180867.pdf",
+        "title": "PDF [PDFファイル／354KB]"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/176378.pdf",
+        "title": "PDF [PDFファイル／61KB]"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/176380.pdf",
+        "title": "PDF [PDFファイル／47KB]"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/176382.pdf",
+        "title": "PDF [PDFファイル／59KB]"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/176388.pdf",
+        "title": "PDF [PDFファイル／75KB]"
+      }
+    ],
+    "source_id": "kochi_city",
+    "source_level": "市",
+    "source_name": "高知市",
+    "html_extraction_version": 3
   },
   "https://www.city.kochi.kochi.jp/soshiki/186/r8koukouritsu.html": {
-    "source_id": "kochi_city",
-    "source_level": "市",
-    "source_name": "高知市",
-    "state": "queued",
     "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/186/r8hojyokinn.html",
     "discovered_at": "2026-10-29T14:29:16.962645+00:00",
-    "link_title": "令和8年度高知市事業者用高効率機器導入促進事業費補助金の交付決定について"
+    "link_title": "令和8年度高知市事業者用高効率機器導入促進事業費補助金の交付決定について",
+    "title": "令和8年度高知市事業者用高効率機器導入促進事業費補助金の交付決定について",
+    "state": "discovery",
+    "reason": "発見元または対象外",
+    "fetched_at": "2026-11-17T03:25:27.273274+00:00",
+    "hash": "9b694c62274166d2b589b936e3c9393008b5a52360924d287ffefbd1368b9717",
+    "pdfs": [],
+    "source_id": "kochi_city",
+    "source_level": "市",
+    "source_name": "高知市"
   },
   "https://www.city.kochi.kochi.jp/soshiki/186/r8koukouritu.html": {
+    "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/186/r8hojyokinn.html",
+    "discovered_at": "2026-10-29T14:29:16.962667+00:00",
+    "link_title": "【受付は終了しました】令和8年度高知市事業者用高効率機器導入促進事業費補助金について",
+    "title": "【受付は終了しました】令和8年度高知市事業者用高効率機器導入促進事業費補助金について",
+    "state": "candidate",
+    "reason": "制度候補語を検出",
+    "fetched_at": "2026-11-17T03:25:30.617416+00:00",
+    "hash": "bd654f059514f118613c9d6391062599440005a27aa8535274340036ca0aa43c",
+    "pdfs": [
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/176407.pdf",
+        "title": "交付要綱 [PDFファイル／170KB]"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/177092.pdf",
+        "title": "募集要領 [PDFファイル／450KB]"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/177153.pdf",
+        "title": "チェックリスト [PDFファイル／178KB]"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/176408.pdf",
+        "title": "交付要綱 [PDFファイル／170KB]"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/177094.pdf",
+        "title": "募集要領 [PDFファイル／450KB]"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/176555.pdf",
+        "title": "「（給湯器用）省Co2効果算定資料（例）」 [PDFファイル／289KB]"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/176556.pdf",
+        "title": "「（空調用）省Co2効果算定資料（例） [PDFファイル／276KB]"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/177095.pdf",
+        "title": "募集要領 [PDFファイル／450KB]"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/177098.pdf",
+        "title": "募集要領 [PDFファイル／450KB]"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/176429.pdf",
+        "title": "見積書作成例（参考） [PDFファイル／465KB]"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/177096.pdf",
+        "title": "募集要領 [PDFファイル／450KB]"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/176431.pdf",
+        "title": "交付要綱 [PDFファイル／170KB]"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/177097.pdf",
+        "title": "募集要領 [PDFファイル／450KB]"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/176774.pdf",
+        "title": "高知市事業者用高効率機器導入促進事業Q＆A [PDFファイル／467KB]"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/177157.pdf",
+        "title": "令和8年度高知市事業者用高効率機器導入促進事業費補助金チェックリスト [PDFファイル／178KB]"
+      }
+    ],
     "source_id": "kochi_city",
     "source_level": "市",
     "source_name": "高知市",
-    "state": "queued",
-    "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/186/r8hojyokinn.html",
-    "discovered_at": "2026-10-29T14:29:16.962667+00:00",
-    "link_title": "【受付は終了しました】令和8年度高知市事業者用高効率機器導入促進事業費補助金について"
+    "html_extraction_version": 3
   },
   "https://www.city.kochi.kochi.jp/soshiki/176/koubunsyokanri1tokubetsusiengakkou.html": {
     "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/176/",
@@ -6551,31 +6764,73 @@
     "source_name": "高知市"
   },
   "https://www.city.kochi.kochi.jp/soshiki/104/tosayamaoffice.html": {
-    "source_id": "kochi_city",
-    "source_level": "市",
-    "source_name": "高知市",
-    "state": "queued",
     "discovered_from": "https://www.city.kochi.kochi.jp/life/2/196/1535/",
     "discovered_at": "2026-10-29T14:29:17.089792+00:00",
-    "link_title": "高知市土佐山庁舎貸事務室（シェアオフィス）の募集について"
+    "link_title": "高知市土佐山庁舎貸事務室（シェアオフィス）の募集について",
+    "title": "高知市土佐山庁舎貸事務室（シェアオフィス）の募集について",
+    "state": "discovery",
+    "reason": "発見元または対象外",
+    "fetched_at": "2026-11-17T03:25:35.559981+00:00",
+    "hash": "c95afd6217ebdd9699e39ba35b4551930abb4905689e9fbbb2bdd26fff4bf7a7",
+    "pdfs": [
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/life/224933_904139_misc.pdf",
+        "title": "高知市中山間地域シェアオフィス利用推進事業に係る募集要項"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/life/224933_904131_misc.pdf",
+        "title": "高知市中山間地域シェアオフィス利用推進事業費補助金交付要綱"
+      }
+    ],
+    "source_id": "kochi_city",
+    "source_level": "市",
+    "source_name": "高知市"
   },
   "https://www.city.kochi.kochi.jp/soshiki/194/cm-traininngschedule.html": {
-    "source_id": "kochi_city",
-    "source_level": "市",
-    "source_name": "高知市",
-    "state": "queued",
     "discovered_from": "https://www.city.kochi.kochi.jp/life/2/196/1535/",
     "discovered_at": "2026-10-29T14:29:17.089800+00:00",
-    "link_title": "令和8年度介護支援専門年間研修スケジュールに関するお知らせ"
-  },
-  "https://www.city.kochi.kochi.jp/soshiki/194/careerrudderquestionnaire.html": {
+    "link_title": "令和8年度介護支援専門年間研修スケジュールに関するお知らせ",
+    "title": "令和8年度介護支援専門年間研修スケジュールに関するお知らせ",
+    "state": "discovery",
+    "reason": "発見元または対象外",
+    "fetched_at": "2026-11-17T03:25:37.284943+00:00",
+    "hash": "040943c66929810381b855d8b48b07301c953a47c9efff058534438a85fe2543",
+    "pdfs": [
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/life/264639_1136760_misc.pdf",
+        "title": "令和8年度高知市介護支援専門員　研修年間スケジュール表(6月16日更新版)"
+      }
+    ],
     "source_id": "kochi_city",
     "source_level": "市",
-    "source_name": "高知市",
-    "state": "queued",
+    "source_name": "高知市"
+  },
+  "https://www.city.kochi.kochi.jp/soshiki/194/careerrudderquestionnaire.html": {
     "discovered_from": "https://www.city.kochi.kochi.jp/life/2/196/1535/",
     "discovered_at": "2026-10-29T14:29:17.089807+00:00",
-    "link_title": "高知市介護支援専門員キャリアラダーモデル及び高知市共通アセスメント様式の活用状況等に関するアンケート調査結果について"
+    "link_title": "高知市介護支援専門員キャリアラダーモデル及び高知市共通アセスメント様式の活用状況等に関するアンケート調査結果について",
+    "title": "高知市介護支援専門員キャリアラダーモデル及び高知市共通アセスメント様式の活用状況等に関するアンケート調査結果について",
+    "state": "discovery",
+    "reason": "発見元または対象外",
+    "fetched_at": "2026-11-17T03:25:40.127652+00:00",
+    "hash": "a46261fa7a8120e657d1f4c0c53d65a0aaf0ac73c74871f818af0b010dc00ea9",
+    "pdfs": [
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/life/229964_932346_misc.pdf",
+        "title": "令和6年度「高知市介護支援専門員キャリアラダーモデル」及び 「高知市共通アセスメント様式」に関する アンケート調査結果"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/life/229964_932341_misc.pdf",
+        "title": "令和5年度高知市介護支援専門員キャリアラダーモデル等に関する アンケート調査及びヒアリング調査結果報告"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/life/229964_932342_misc.pdf",
+        "title": "令和4年度高知市介護支援専門員キャリアラダーモデル等に関する アンケート調査及びヒアリング調査結果報告"
+      }
+    ],
+    "source_id": "kochi_city",
+    "source_level": "市",
+    "source_name": "高知市"
   },
   "https://www.city.kochi.kochi.jp/soshiki/4/siteikannridonyu26.html": {
     "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/4/",
@@ -6762,67 +7017,198 @@
     "source_name": "高知市"
   },
   "https://www.city.kochi.kochi.jp/soshiki/4/shokuinteian06.html": {
-    "source_id": "kochi_city",
-    "source_level": "市",
-    "source_name": "高知市",
-    "state": "queued",
     "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/4/",
     "discovered_at": "2026-10-29T14:29:17.123359+00:00",
-    "link_title": "令和6年度高知市職員提案制度について"
+    "link_title": "令和6年度高知市職員提案制度について",
+    "title": "令和6年度高知市職員提案制度について",
+    "state": "discovery",
+    "reason": "発見元または対象外",
+    "fetched_at": "2026-11-17T03:24:38.626549+00:00",
+    "hash": "badcdbf888b4d854a8ca07d3d8c86723c66b305e4e388f7d31205d50fbcb0308",
+    "pdfs": [
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/154430.pdf",
+        "title": "令和6年度高知市職員提案制度実施要領 [PDFファイル／236KB]"
+      }
+    ],
+    "source_id": "kochi_city",
+    "source_level": "市",
+    "source_name": "高知市"
   },
   "https://www.city.kochi.kochi.jp/soshiki/4/shokuinteian05.html": {
-    "source_id": "kochi_city",
-    "source_level": "市",
-    "source_name": "高知市",
-    "state": "queued",
     "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/4/",
     "discovered_at": "2026-10-29T14:29:17.123363+00:00",
-    "link_title": "令和5年度高知市職員提案制度について"
+    "link_title": "令和5年度高知市職員提案制度について",
+    "title": "令和5年度高知市職員提案制度について",
+    "state": "discovery",
+    "reason": "発見元または対象外",
+    "fetched_at": "2026-11-17T03:24:43.161714+00:00",
+    "hash": "2ca885f622049c022beb5e39f9ceea659467c57623ea21e7784bc3980efcf90f",
+    "pdfs": [
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/142946.pdf",
+        "title": "令和5年度高知市職員提案制度実施要領 [PDFファイル／180KB]"
+      }
+    ],
+    "source_id": "kochi_city",
+    "source_level": "市",
+    "source_name": "高知市"
   },
   "https://www.city.kochi.kochi.jp/soshiki/4/shokuinteian01.html": {
-    "source_id": "kochi_city",
-    "source_level": "市",
-    "source_name": "高知市",
-    "state": "queued",
     "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/4/",
     "discovered_at": "2026-10-29T14:29:17.123367+00:00",
-    "link_title": "令和元年度高知市職員提案制度について"
+    "link_title": "令和元年度高知市職員提案制度について",
+    "title": "令和元年度高知市職員提案制度について",
+    "state": "discovery",
+    "reason": "発見元または対象外",
+    "fetched_at": "2026-11-17T03:24:44.938281+00:00",
+    "hash": "5f6fde9b1485c5828f1f0a73df75e0d886e4168089fe75363b70132ce57f9b6d",
+    "pdfs": [
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/84238.pdf",
+        "title": "令和元年度高知市職員提案制度実施要領 [PDFファイル／320KB]"
+      }
+    ],
+    "source_id": "kochi_city",
+    "source_level": "市",
+    "source_name": "高知市"
   },
   "https://www.city.kochi.kochi.jp/soshiki/4/shokuinteian30.html": {
-    "source_id": "kochi_city",
-    "source_level": "市",
-    "source_name": "高知市",
-    "state": "queued",
     "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/4/",
     "discovered_at": "2026-10-29T14:29:17.123371+00:00",
-    "link_title": "平成30年度高知市職員提案制度について"
+    "link_title": "平成30年度高知市職員提案制度について",
+    "title": "平成30年度高知市職員提案制度について",
+    "state": "discovery",
+    "reason": "発見元または対象外",
+    "fetched_at": "2026-11-17T03:24:48.383113+00:00",
+    "hash": "92731ccc8ded214d0a29581e75c17b196b9174c2c5ab9892bbaf9e947d2362e9",
+    "pdfs": [
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/70517.pdf",
+        "title": "平成30年度職員提案集"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/70518.pdf",
+        "title": "平成30年度高知市職員提案制度実施要領"
+      }
+    ],
+    "source_id": "kochi_city",
+    "source_level": "市",
+    "source_name": "高知市"
   },
   "https://www.city.kochi.kochi.jp/soshiki/4/shokuinteian.html": {
-    "source_id": "kochi_city",
-    "source_level": "市",
-    "source_name": "高知市",
-    "state": "queued",
     "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/4/",
     "discovered_at": "2026-10-29T14:29:17.123375+00:00",
-    "link_title": "平成29年度高知市職員提案制度について"
+    "link_title": "平成29年度高知市職員提案制度について",
+    "title": "平成29年度高知市職員提案制度について",
+    "state": "discovery",
+    "reason": "発見元または対象外",
+    "fetched_at": "2026-11-17T03:24:50.802942+00:00",
+    "hash": "da8b917e4a4da59122eb2f517a14522e74dfc2dd34abdef49c550a1d9c1176a3",
+    "pdfs": [
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/61807.pdf",
+        "title": "平成29年度高知市職員提案集"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/61808.pdf",
+        "title": "平成29年度高知市職員提案制度実施要領"
+      }
+    ],
+    "source_id": "kochi_city",
+    "source_level": "市",
+    "source_name": "高知市"
   },
   "https://www.city.kochi.kochi.jp/soshiki/2/rinjikouhukin.html": {
-    "source_id": "kochi_city",
-    "source_level": "市",
-    "source_name": "高知市",
-    "state": "queued",
     "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/2/",
     "discovered_at": "2026-10-29T14:29:17.156080+00:00",
-    "link_title": "地方創生臨時交付金活用事業について"
-  },
-  "https://www.city.kochi.kochi.jp/soshiki/2/teijukaisan.html": {
+    "link_title": "地方創生臨時交付金活用事業について",
+    "title": "地方創生臨時交付金活用事業について",
+    "state": "candidate",
+    "reason": "制度候補語を検出",
+    "fetched_at": "2026-11-17T03:25:01.179189+00:00",
+    "hash": "a90ca3e6c0c90ff011ecec8d8bb2dc97147eb305c61adc9712742b141a0edb41",
+    "pdfs": [
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/174215.pdf",
+        "title": "令和6年度実施計画（最終版）"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/174216.pdf",
+        "title": "令和7年度実施計画（最終版）"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/183200.pdf",
+        "title": "令和8年度実施計画（第2回）"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/184189.pdf",
+        "title": "交付金の活用状況 [PDFファイル／103KB]"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/life/270753_1167124_misc.pdf",
+        "title": "令和6年度　特定事業者支援に関する公表様式（公共交通緊急支援事業費補助金）"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/life/270753_1167125_misc.pdf",
+        "title": "令和6年度　特定事業者支援に関する公表様式（鉄道軌道輸送対策緊急支援事業費補助金）"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/life/270753_1167127_misc.pdf",
+        "title": "令和7年度　特定事業者支援に関する公表様式（公共交通施設整備等緊急支援事業費補助金）"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/life/270753_1167129_misc.pdf",
+        "title": "令和8年度　特定事業者支援に関する公表様式（公共交通施設等整備緊急支援事業費補助金）"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/life/270753_1167113_misc.pdf",
+        "title": "令和2年度　新型コロナウイルス感染症対応地方創生臨時交付金活用事業の実施状況・効果検証"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/life/270753_1167114_misc.pdf",
+        "title": "令和3年度　新型コロナウイルス感染症対応地方創生臨時交付金活用事業の実施状況・効果検証"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/life/270753_1167115_misc.pdf",
+        "title": "令和4年度　新型コロナウイルス感染症対応地方創生臨時交付金活用事業の実施状況・効果検証"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/life/270753_1167116_misc.pdf",
+        "title": "令和5年度　新型コロナウイルス感染症対応地方創生臨時交付金活用事業の実施状況・効果検証"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/life/270753_1167126_misc.pdf",
+        "title": "令和5年度　物価高騰対応重点支援地方創生臨時交付金活用事業の実施状況・効果検証"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/life/270753_1167128_misc.pdf",
+        "title": "令和6年度　物価高騰対応重点支援地方創生臨時交付金活用事業の実施状況・効果検証"
+      }
+    ],
     "source_id": "kochi_city",
     "source_level": "市",
     "source_name": "高知市",
-    "state": "queued",
+    "html_extraction_version": 3
+  },
+  "https://www.city.kochi.kochi.jp/soshiki/2/teijukaisan.html": {
     "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/2/",
     "discovered_at": "2026-10-29T14:29:17.156160+00:00",
-    "link_title": "高知中央広域定住自立圏の解散について"
+    "link_title": "高知中央広域定住自立圏の解散について",
+    "title": "高知中央広域定住自立圏の解散について",
+    "state": "discovery",
+    "reason": "発見元または対象外",
+    "fetched_at": "2026-11-17T03:24:56.616780+00:00",
+    "hash": "afdb5ddc35629e728cca74e3e4a6a66791133794df60a381395b279b7fdce113",
+    "pdfs": [
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/life/99779_265107_misc.pdf",
+        "title": "第二次高知中央広域定住自立圏共生ビジョンの取組に関する報告"
+      }
+    ],
+    "source_id": "kochi_city",
+    "source_level": "市",
+    "source_name": "高知市"
   },
   "https://www.city.kochi.kochi.jp/soshiki/40/ikujikaigo.html": {
     "source_id": "kochi_city",
@@ -6857,13 +7243,28 @@
     "source_name": "高知市"
   },
   "https://www.city.kochi.kochi.jp/soshiki/104/r7jissizyokyo-hokoku.html": {
+    "discovered_from": "https://www.city.kochi.kochi.jp/life/2/196/",
+    "discovered_at": "2026-10-29T14:29:17.207999+00:00",
+    "link_title": "令和7年度高知市中山間地域等直接支払交付金集落協定の概要及び実施状況の公表について",
+    "title": "令和7年度高知市中山間地域等直接支払交付金集落協定の概要及び実施状況の公表について",
+    "state": "candidate",
+    "reason": "制度候補語を検出",
+    "fetched_at": "2026-11-17T03:25:06.962390+00:00",
+    "hash": "1c6346b67b81039d15abd892ba1fc2390f22c8ea77078526da5ddcae78f3258b",
+    "pdfs": [
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/life/270820_1167481_misc.pdf",
+        "title": "1_集落協定の概要及び交付面積・交付額"
+      },
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/life/270820_1170233_misc.pdf",
+        "title": "2_集落ごとの実施状況一覧"
+      }
+    ],
     "source_id": "kochi_city",
     "source_level": "市",
     "source_name": "高知市",
-    "state": "queued",
-    "discovered_from": "https://www.city.kochi.kochi.jp/life/2/196/",
-    "discovered_at": "2026-10-29T14:29:17.207999+00:00",
-    "link_title": "令和7年度高知市中山間地域等直接支払交付金集落協定の概要及び実施状況の公表について"
+    "html_extraction_version": 3
   },
   "https://www.city.kochi.kochi.jp/soshiki/103/syoyuusya.html": {
     "discovered_from": "https://www.city.kochi.kochi.jp/life/2/196/",
@@ -6899,13 +7300,23 @@
     "source_name": "高知市"
   },
   "https://www.city.kochi.kochi.jp/site/gairoichi/group.html": {
-    "source_id": "kochi_city",
-    "source_level": "市",
-    "source_name": "高知市",
-    "state": "queued",
     "discovered_from": "https://www.city.kochi.kochi.jp/life/2/196/",
     "discovered_at": "2026-10-29T14:29:17.208054+00:00",
-    "link_title": "グループ出店制度について"
+    "link_title": "グループ出店制度について",
+    "title": "グループ出店制度について",
+    "state": "discovery",
+    "reason": "発見元または対象外",
+    "fetched_at": "2026-11-17T03:25:08.607765+00:00",
+    "hash": "5b2bc066ab76f521599da3365dc1c31038093a3b0a2c7966cce90c050ba53c62",
+    "pdfs": [
+      {
+        "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/62944.pdf",
+        "title": "グループ出店届出書"
+      }
+    ],
+    "source_id": "kochi_city",
+    "source_level": "市",
+    "source_name": "高知市"
   },
   "https://www.city.kochi.kochi.jp/soshiki/33/boshi-ikusei-iryou.html": {
     "source_id": "kochi_city",
@@ -7964,7 +8375,7 @@
     "title": "高知県放置自動車適正処理推進事業費補助金交付要綱",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-15T00:42:29.155360+00:00",
+    "fetched_at": "2026-11-17T03:25:39.669144+00:00",
     "hash": "d2ea143a5221fdf170d99db81d9a2fff2404630d6607e2ad18b0dd24222db4ea",
     "pdfs": [
       {
@@ -7980,7 +8391,7 @@
   "https://www.pref.kochi.lg.jp/doc/2026072100125/": {
     "discovered_from": "https://www.pref.kochi.lg.jp/category/mokuteki/shinsei_todokede_hojokin/",
     "discovered_at": "2026-10-29T14:29:17.835732+00:00",
-    "link_title": "補助金の詳細（要綱等）はこちら！",
+    "link_title": "高知県電気自動車等導入促進事業費補助金交付要綱の一部改正について",
     "title": "高知県電気自動車等導入促進事業費補助金交付要綱の一部改正について",
     "state": "discovery",
     "reason": "発見元または対象外",
@@ -8019,7 +8430,7 @@
   "https://www.pref.kochi.lg.jp/doc/2024011100113/": {
     "discovered_from": "https://www.pref.kochi.lg.jp/category/mokuteki/shinsei_todokede_hojokin/",
     "discovered_at": "2026-10-29T14:29:17.835738+00:00",
-    "link_title": "「【募集開始のお知らせ】高知県太陽光発電設備等導入推進事業費補助金（令和８年度実施分：事業者用）」",
+    "link_title": "【募集期間延長（11/30まで）のお知らせ】高知県太陽光発電設備等導入推進事業費補助金（令和８年度実施分：事業者用）",
     "title": "【募集期間延長（11/30まで）のお知らせ】高知県太陽光発電設備等導入推進事業費補助金（令和８年度実施分：事業者用）",
     "state": "candidate",
     "reason": "制度候補語を検出",
@@ -8493,7 +8904,7 @@
   "https://www.pref.kochi.lg.jp/doc/2026031600130/": {
     "discovered_from": "https://www.pref.kochi.lg.jp/category/mokuteki/shinsei_todokede_hojokin/",
     "discovered_at": "2026-10-29T14:29:17.835883+00:00",
-    "link_title": "補助率・補助限度額・補助対象経費",
+    "link_title": "【申請受付を終了しました】高知県求人情報発信等支援事業費補助金について",
     "title": "【申請受付を終了しました】高知県求人情報発信等支援事業費補助金について",
     "state": "candidate",
     "reason": "制度候補語を検出",
@@ -9090,7 +9501,7 @@
     "title": "高知県種子生産者育成支援事業費補助金交付要綱の制定について",
     "state": "discovery",
     "reason": "発見元または対象外",
-    "fetched_at": "2026-11-13T01:40:52.581470+00:00",
+    "fetched_at": "2026-11-17T03:24:39.093761+00:00",
     "hash": "f9895a40e2d968f487e45c78134b9a12fcfbd956af8fb5e65b213ec39ea7b9ea",
     "pdfs": [
       {
@@ -9109,7 +9520,7 @@
     "title": "高知県農業労働力確保対策事業費補助金交付要綱の一部改正について",
     "state": "discovery",
     "reason": "発見元または対象外",
-    "fetched_at": "2026-11-13T01:40:55.460036+00:00",
+    "fetched_at": "2026-11-17T03:24:45.426652+00:00",
     "hash": "a3db8fca52933b496b35430d8fefb807c136fef497df19088e36636ef330a160",
     "pdfs": [
       {
@@ -9132,7 +9543,7 @@
     "title": "高知県農業支援サービス事業等推進事業費補助金交付要綱の制定について",
     "state": "discovery",
     "reason": "発見元または対象外",
-    "fetched_at": "2026-11-13T01:40:57.076078+00:00",
+    "fetched_at": "2026-11-17T03:24:51.586509+00:00",
     "hash": "d0b2fd448a1acbd7b708e1a61106127523a75c0a6f580299aa9934422c91501a",
     "pdfs": [
       {
@@ -9151,7 +9562,7 @@
     "title": "農業就労環境整備事業費補助金交付要綱の制定について",
     "state": "discovery",
     "reason": "発見元または対象外",
-    "fetched_at": "2026-11-13T01:40:59.918124+00:00",
+    "fetched_at": "2026-11-17T03:24:55.424460+00:00",
     "hash": "df0b176cbf0bad9f832601a1d8774a62318efaa197063efefcf85173a0d305be",
     "pdfs": [
       {
@@ -9202,7 +9613,7 @@
     "title": "高知県農産物輸出促進事業費補助金交付要綱の一部改正について",
     "state": "discovery",
     "reason": "発見元または対象外",
-    "fetched_at": "2026-11-13T01:41:01.511158+00:00",
+    "fetched_at": "2026-11-17T03:24:57.110170+00:00",
     "hash": "efeb24d2a6509df14edc8174a4f1526b92f8c27c5fb94597b3614aa83193b067",
     "pdfs": [
       {
@@ -9233,7 +9644,7 @@
     "title": "高知県農産物輸出促進事業費補助金交付要綱の一部改正について",
     "state": "discovery",
     "reason": "発見元または対象外",
-    "fetched_at": "2026-11-13T01:41:04.495373+00:00",
+    "fetched_at": "2026-11-17T03:25:01.672844+00:00",
     "hash": "d42abcef79da5bb3fb7784a28f41d03cf1c5a0e76f57fbb245ff06dfb26d0403",
     "pdfs": [
       {
@@ -9339,7 +9750,7 @@
     "title": "高知県公立学校情報機器整備事業費補助金交付要綱の制定について",
     "state": "discovery",
     "reason": "発見元または対象外",
-    "fetched_at": "2026-11-13T01:41:05.742588+00:00",
+    "fetched_at": "2026-11-17T03:25:03.470889+00:00",
     "hash": "fe7a02291e3c8c2b3d402669e8518c7828c6dba7209d6b27d86cd15fd6162710",
     "pdfs": [
       {
@@ -9358,7 +9769,7 @@
     "title": "高等学校活性化推進事業費補助金交付要綱の改正について",
     "state": "discovery",
     "reason": "発見元または対象外",
-    "fetched_at": "2026-11-13T01:41:09.060576+00:00",
+    "fetched_at": "2026-11-17T03:25:07.462296+00:00",
     "hash": "3574f480610671d4c54d2aca7268afd86527323c653aab03c39784467ba6c676",
     "pdfs": [
       {
@@ -9389,7 +9800,7 @@
     "title": "地域みらい留学等促進事業費補助金交付要綱の一部改正について",
     "state": "discovery",
     "reason": "発見元または対象外",
-    "fetched_at": "2026-11-13T01:41:10.209686+00:00",
+    "fetched_at": "2026-11-17T03:25:09.100503+00:00",
     "hash": "abd0a6233c68fcce713b4220e0c6bc606ec7a48153269b928fa32dfdf72dae49",
     "pdfs": [
       {
@@ -9416,7 +9827,7 @@
     "title": "高知県教育委員会地域おこし協力隊起業支援事業費補助金交付要綱の制定について",
     "state": "discovery",
     "reason": "発見元または対象外",
-    "fetched_at": "2026-11-13T01:41:13.314156+00:00",
+    "fetched_at": "2026-11-17T03:25:12.420438+00:00",
     "hash": "cc6202a27603d92cd58f263cced4c891b30fceb9b719f42f265c5b1032dab300",
     "pdfs": [
       {
@@ -9435,7 +9846,7 @@
     "title": "地域みらい留学等促進事業費補助金交付要綱の制定について",
     "state": "discovery",
     "reason": "発見元または対象外",
-    "fetched_at": "2026-11-13T01:41:15.002802+00:00",
+    "fetched_at": "2026-11-17T03:25:14.250249+00:00",
     "hash": "a50a324ea069a5b20a06f1673bac361fe6126153716b5d9592d12dd33b3616b1",
     "pdfs": [
       {
@@ -9493,7 +9904,7 @@
     "title": "物部川水源の森整備事業費補助金について［電気工水課］",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-14T01:15:19.717531+00:00",
+    "fetched_at": "2026-11-17T03:24:41.471077+00:00",
     "hash": "20f35129676bea34dabffd54fe7548f2624dd733f8c8207512eaef1a2386639e",
     "pdfs": [],
     "source_id": "kochi_pref",
@@ -9708,7 +10119,7 @@
     "title": "県営水力発電所を活用した「高知家応援でんき」第2期（2025～2027年度)を受付しています［電気工水課］",
     "state": "discovery",
     "reason": "発見元または対象外",
-    "fetched_at": "2026-11-13T01:41:18.014899+00:00",
+    "fetched_at": "2026-11-17T03:25:17.251278+00:00",
     "hash": "14c264226f881320470a0f9dd954878f4a194f0e4df307746987f148b5d44990",
     "pdfs": [
       {
@@ -9777,7 +10188,7 @@
     "title": "令和７年度高知県デジタル技術活用促進事業費補助金【一般枠】",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-16T00:42:05.735291+00:00",
+    "fetched_at": "2026-11-17T03:24:47.939596+00:00",
     "hash": "f7a91eb15ad809229c3b2697ff53a67ca77eb710c70807c6874240e6078ca9df",
     "pdfs": [
       {
@@ -9809,7 +10220,7 @@
     "title": "令和４年度 高知県デジタル化計画実行支援事業費補助金 募集",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-16T00:41:59.812047+00:00",
+    "fetched_at": "2026-11-17T03:24:42.334308+00:00",
     "hash": "40295bc8e611da339a2a5e9f3b0e64fe011700916e4b1784fa3ad79215ae632a",
     "pdfs": [
       {
@@ -9841,7 +10252,7 @@
     "title": "※9月分の募集はありません",
     "state": "discovery",
     "reason": "発見元または対象外",
-    "fetched_at": "2026-11-16T00:42:12.141290+00:00",
+    "fetched_at": "2026-11-17T03:24:56.207732+00:00",
     "hash": "785fd8f6e7f4f471bb60e21e5ed10de9b2c29d43f334d2ebe8f25008e704ca5d",
     "pdfs": [
       {
@@ -9896,7 +10307,7 @@
     "title": "令和6年8月1日(木)から一般枠のみ追加募集します！ 【予算額：約1100万円】 ※令和4年度・令和5年度デジタル技術活用促進事業費補助金の交付を受けていない事業者に限り申請可能です。",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-16T00:42:10.710456+00:00",
+    "fetched_at": "2026-11-17T03:24:54.181862+00:00",
     "hash": "72cf5bd3ad5a6b1406185378c40ac9324cf9d6060156e562f104026cb1098de1",
     "pdfs": [
       {
@@ -9965,7 +10376,7 @@
     "title": "令和４年度新事業チャレンジ支援事業費補助金",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-16T00:42:16.101530+00:00",
+    "fetched_at": "2026-11-17T03:25:00.431559+00:00",
     "hash": "10c2039b21e6e06ca6d885c5c621850c0b31f3cb33dd373629ce77c6cb545dd3",
     "pdfs": [
       {
@@ -10013,7 +10424,7 @@
     "title": "新事業チャレンジ支援事業費補助金",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-16T00:42:19.125164+00:00",
+    "fetched_at": "2026-11-17T03:25:04.310621+00:00",
     "hash": "2264fcabf96107538e5d89b3b550ab3d1e0551c8fed5c171737eacf6e1f45785",
     "pdfs": [
       {
@@ -10070,8 +10481,8 @@
     "title": "企業の魅力発信支援事業（マッチング支援）について",
     "state": "discovery",
     "reason": "発見元または対象外",
-    "fetched_at": "2026-11-09T21:10:40.654893+00:00",
-    "hash": "c3abc8d61bea6dbcb6e997d750fc1470f8b02e8fa6d1c9987d91fbc99c4a7222",
+    "fetched_at": "2026-11-17T03:24:49.526857+00:00",
+    "hash": "e62458de7de180f6d5a92658030b2d0d4b302c84e3b89f5a5689236a58cbb02d",
     "pdfs": [
       {
         "url": "https://www.pref.kochi.lg.jp/soshiki/151401/file_contents/file_202672939847_1.pdf",
@@ -10094,8 +10505,8 @@
         "title": "高知県地方創生移住支援事業等実施要領[PDF：127KB]"
       },
       {
-        "url": "https://www.pref.kochi.lg.jp/soshiki/151401/file_contents/file_202610191103256_1.pdf",
-        "title": "登録企業一覧（R8.10.21）[PDF：263KB]"
+        "url": "https://www.pref.kochi.lg.jp/soshiki/151401/file_contents/file_202611102171011_1.pdf",
+        "title": "登録企業一覧（R8.11.12）[PDF：264KB]"
       },
       {
         "url": "https://www.pref.kochi.lg.jp/soshiki/151401/file_contents/file_20245201162535_1.pdf",
@@ -10124,7 +10535,7 @@
   "https://www.city.kochi.kochi.jp/soshiki/117/uimagoturn.html": {
     "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/117/ijusienkin.html",
     "discovered_at": "2026-10-29T14:29:18.131482+00:00",
-    "link_title": "高知市ＵＩ孫ターン支援事業費補助金",
+    "link_title": "高知市ＵI孫ターン支援事業費補助金",
     "title": "「高知市UI孫ターン支援事業費補助金」の支給について※転入前に、高知市移住・定住促進課への事前相談が必須となります。",
     "state": "candidate",
     "reason": "制度候補語を検出",
@@ -10152,7 +10563,7 @@
   "https://www.city.kochi.kochi.jp/soshiki/150/shinseikatsu.html": {
     "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/117/ijusienkin.html",
     "discovered_at": "2026-10-29T14:29:18.131486+00:00",
-    "link_title": "ライフデザイン支援講座などを受講",
+    "link_title": "高知市結婚新生活支援事業費補助金",
     "title": "高知市結婚新生活支援事業補助金",
     "state": "candidate",
     "reason": "制度候補語を検出",
@@ -10254,7 +10665,7 @@
     "discovered_at": "2026-10-29T14:29:18.131496+00:00",
     "link_title": "地方創生移住支援事業（移住支援金）について",
     "last_error": "HTTP Error 404: Not Found",
-    "failed_at": "2026-11-16T00:41:55.252834+00:00"
+    "failed_at": "2026-11-17T03:24:37.239995+00:00"
   },
   "https://www.city.kochi.kochi.jp/soshiki/117/bocchirituushin.html": {
     "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/117/",
@@ -11247,7 +11658,7 @@
     "title": "高知県地域外プロフェッショナル人材活用促進事業費助成金（プロ人材助成金）",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-14T01:15:36.182812+00:00",
+    "fetched_at": "2026-11-17T03:24:59.474828+00:00",
     "hash": "e1f774e1920776f5ac83aa5533e1c103271bc52c0cb64ecc6f4973e0c2133433",
     "pdfs": [
       {
@@ -11288,7 +11699,7 @@
     "title": "高知県漁業就業支援事業費補助金交付要綱の一部改正について",
     "state": "discovery",
     "reason": "発見元または対象外",
-    "fetched_at": "2026-11-13T01:41:19.285432+00:00",
+    "fetched_at": "2026-11-17T03:25:19.175843+00:00",
     "hash": "c30d602524066831ae24ff8a2f817a72d8744c8dd22e9e52fccf553d95bfaeba",
     "pdfs": [
       {
@@ -11311,7 +11722,7 @@
     "title": "高知県漁船導入支援事業費補助金交付要綱及び実施要領の一部改正について",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-14T01:15:25.714739+00:00",
+    "fetched_at": "2026-11-17T03:24:47.217871+00:00",
     "hash": "18834ad793a88492d3f7813d6a3a8280500db490ebb9bb54bddd4ca9456ff215",
     "pdfs": [
       {
@@ -11343,7 +11754,7 @@
     "title": "高知県水産業強化支援事業費補助金交付要綱の制定について",
     "state": "discovery",
     "reason": "発見元または対象外",
-    "fetched_at": "2026-11-13T01:41:22.497174+00:00",
+    "fetched_at": "2026-11-17T03:25:22.172373+00:00",
     "hash": "660aac860b1d0b06f6a4c7b82e3a5b538d03f8f2481487d5960b960c4e187d90",
     "pdfs": [
       {
@@ -11370,7 +11781,7 @@
     "title": "高知県燃油等高騰緊急対策機器導入支援事業費補助金交付要綱の制定について",
     "state": "discovery",
     "reason": "発見元または対象外",
-    "fetched_at": "2026-11-14T01:14:52.842158+00:00",
+    "fetched_at": "2026-11-17T03:25:23.862814+00:00",
     "hash": "bc72533fc7548840e9a99ecfc47bb2170135730717012d0d642af1621b38d2a4",
     "pdfs": [
       {
@@ -11389,7 +11800,7 @@
     "title": "高知県ものづくり省力化設備投資支援事業費補助金【一般枠】",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-16T00:42:24.430022+00:00",
+    "fetched_at": "2026-11-17T03:25:09.850321+00:00",
     "hash": "84018d85f5fa325aefb5323b6ec91bf11dcc74f0b1166fa3b6e6f6d5f9f01a38",
     "pdfs": [
       {
@@ -11417,7 +11828,7 @@
     "title": "高知県ものづくり省力化設備投資支援事業費補助金【DX推進枠】",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-16T00:42:26.400599+00:00",
+    "fetched_at": "2026-11-17T03:25:11.502535+00:00",
     "hash": "c4c4239f1f648fcf9860a449f119be63a8d24454d51aa8290a105ad81cd2149e",
     "pdfs": [
       {
@@ -11459,7 +11870,7 @@
     "title": "高知県サテライトオフィス等立地促進事業費補助金について",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-14T01:15:44.714920+00:00",
+    "fetched_at": "2026-11-17T03:25:10.772495+00:00",
     "hash": "3a066ab4f4b019549f6f43ecc11d4461eee0be051b563dd48a8a01906d684722",
     "pdfs": [
       {
@@ -11487,7 +11898,7 @@
     "title": "高知県住宅用太陽光発電設備等導入推進事業費補助金交付要綱の一部改定について（令和８年度実施分）",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-14T01:15:53.894779+00:00",
+    "fetched_at": "2026-11-17T03:25:20.492907+00:00",
     "hash": "d134ec394ac07ea7aabb57c12ba7bc4e12b270a27e9f84242b35b8afe0c901d7",
     "pdfs": [
       {
@@ -11511,11 +11922,11 @@
   "https://www.pref.kochi.lg.jp/doc/2024031400644/": {
     "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/40/syougakukin.html",
     "discovered_at": "2026-10-29T21:14:33.077927+00:00",
-    "link_title": "こうち奨学金返還支援事業について",
+    "link_title": "こうち奨学金返還支援事業",
     "title": "こうち奨学金返還支援事業について",
     "state": "discovery",
     "reason": "発見元または対象外",
-    "fetched_at": "2026-11-14T01:14:59.383336+00:00",
+    "fetched_at": "2026-11-17T03:25:26.510823+00:00",
     "hash": "e5d4439cd5835f0a6f869441ad97f082a09b24a3a5c83597f8daa5bab3840815",
     "pdfs": [
       {
@@ -11546,7 +11957,7 @@
     "title": "こうち奨学金返還支援事業・募集情報について",
     "state": "discovery",
     "reason": "発見元または対象外",
-    "fetched_at": "2026-11-14T01:15:03.524040+00:00",
+    "fetched_at": "2026-11-17T03:25:28.025589+00:00",
     "hash": "a8096f03dc6f672040a7c65019275a9f73a67907e40f88ad742bd950298a3ce1",
     "pdfs": [],
     "source_id": "kochi_pref",
@@ -13808,7 +14219,7 @@
     "title": "中途採用力向上セミナー開催及び個別フォロー支援実施のお知らせ",
     "state": "discovery",
     "reason": "発見元または対象外",
-    "fetched_at": "2026-11-14T01:15:11.798176+00:00",
+    "fetched_at": "2026-11-17T03:25:36.175013+00:00",
     "hash": "58f69893705d9d1ee7021d803b6d161d971313dba9986578ac187695b0596517",
     "pdfs": [
       {
@@ -13827,7 +14238,7 @@
     "title": "地方創生移住支援事業（移住支援金）について",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-15T00:42:17.159800+00:00",
+    "fetched_at": "2026-11-17T03:25:30.204334+00:00",
     "hash": "83a30cac0022e2a405d3400cb58a59bbcf9f85d738f9988a8c2b054eeb3b8a40",
     "pdfs": [
       {
@@ -13851,11 +14262,11 @@
   "https://www.pref.kochi.lg.jp/doc/2024031900304/": {
     "discovered_from": "https://www.pref.kochi.lg.jp/doc/2024031400644/",
     "discovered_at": "2026-10-31T21:15:06.422253+00:00",
-    "link_title": "こうち奨学金返還支援事業・支援対象者事前登録後の各種手続きについて",
+    "link_title": "支援対象者の認定内容の変更",
     "title": "こうち奨学金返還支援事業・支援対象者事前登録後の各種手続きについて",
     "state": "discovery",
     "reason": "発見元または対象外",
-    "fetched_at": "2026-11-14T01:15:05.362253+00:00",
+    "fetched_at": "2026-11-17T03:25:32.091660+00:00",
     "hash": "5be900dcf0818fc50a853643b54ea82bc1986e3761547198285fda3c6786a4c1",
     "pdfs": [],
     "source_id": "kochi_pref",
@@ -13869,7 +14280,7 @@
     "title": "企業の魅力発信支援事業（マッチング支援）について",
     "state": "discovery",
     "reason": "発見元または対象外",
-    "fetched_at": "2026-11-14T01:15:09.573795+00:00",
+    "fetched_at": "2026-11-17T03:25:33.211870+00:00",
     "hash": "e62458de7de180f6d5a92658030b2d0d4b302c84e3b89f5a5689236a58cbb02d",
     "pdfs": [
       {
@@ -13951,7 +14362,7 @@
     "discovered_at": "2026-10-31T21:16:15.963772+00:00",
     "link_title": "高知県コンテナ苗生産基盤施設等整備事業費補助金交付要綱の一部改正について",
     "last_error": "HTTP Error 404: Not Found",
-    "failed_at": "2026-11-14T01:15:15.451842+00:00"
+    "failed_at": "2026-11-17T03:25:37.565878+00:00"
   },
   "https://www.pref.kochi.lg.jp/doc/2026030800012/": {
     "discovered_from": "https://www.pref.kochi.lg.jp/soshiki/030301/",
@@ -14886,11 +15297,11 @@
   "https://www.pref.kochi.lg.jp/doc/2026021300101/": {
     "discovered_from": "https://www.pref.kochi.lg.jp/soshiki/120000/120801/",
     "discovered_at": "2026-11-02T21:08:48.800424+00:00",
-    "link_title": "所得向上推進企業等総合支援事業費補助金",
+    "link_title": "制度概要",
     "title": "所得向上推進企業等総合支援事業費補助金",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-14T01:15:30.925065+00:00",
+    "fetched_at": "2026-11-17T03:24:53.405738+00:00",
     "hash": "c57ab39f96e8fbd4779161112ab54f0870ecfd827a51e11e7c8c3aa0bdd9b571",
     "pdfs": [
       {
@@ -14962,7 +15373,7 @@
   "https://www.pref.kochi.lg.jp/doc/2026022600255/": {
     "discovered_from": "https://www.pref.kochi.lg.jp/soshiki/120000/120801/",
     "discovered_at": "2026-11-02T21:08:48.800452+00:00",
-    "link_title": "高知県100億企業登録制度",
+    "link_title": "高知県100億企業登録制度（随時募集中）",
     "title": "高知県100億企業登録制度",
     "state": "discovery",
     "reason": "発見元または対象外",
@@ -15036,7 +15447,7 @@
     "title": "高知県産業振興推進総合支援事業費補助金について",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-14T01:15:40.383770+00:00",
+    "fetched_at": "2026-11-17T03:25:05.679447+00:00",
     "hash": "a467a9ce3a6fe10aea4ea434ce50844fdd5ebd41f9ebd955a80476aec0d783d5",
     "pdfs": [],
     "source_id": "kochi_pref",
@@ -15129,7 +15540,7 @@
     "title": "「高知県大学生等交流促進事業費補助金」事業募集のお知らせ",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-14T01:15:49.426066+00:00",
+    "fetched_at": "2026-11-17T03:25:15.760137+00:00",
     "hash": "ace75057f73cb2a6e12910f96d5dedb61ca20ef1ea975df1b7033302db5a73de",
     "pdfs": [
       {
@@ -15329,7 +15740,7 @@
     "title": "高知県産業振興推進総合支援事業費補助金活用ガイドの一部改訂（令和８年４月改訂）",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-14T01:15:59.110622+00:00",
+    "fetched_at": "2026-11-17T03:25:25.027123+00:00",
     "hash": "c6d4f335b50f7521d4c4d0a15482da737e81abc55fbcb18c4086922e8f6a314a",
     "pdfs": [
       {
@@ -15349,7 +15760,7 @@
     "title": "高知県産業振興推進総合支援事業費補助金交付要綱等の一部改正について",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-15T00:42:23.308628+00:00",
+    "fetched_at": "2026-11-17T03:25:34.680601+00:00",
     "hash": "499abbaa3b121bd81ff834195cf71e67d024e4d970c8b110089b636c789538b0",
     "pdfs": [
       {
@@ -15381,7 +15792,7 @@
     "title": "高知県産業振興推進総合支援事業費補助金交付決定状況等",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-15T00:42:35.642113+00:00",
+    "fetched_at": "2026-11-17T03:25:43.925267+00:00",
     "hash": "7d50771f5b73c582e536a85250ce5df67741f67f50e60006ebbf0a5f9588f9c1",
     "pdfs": [
       {
@@ -15820,7 +16231,7 @@
     "title": "令和元年度地方消費税交付金（増収分）の使途状況（決算）",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-13T04:08:24.013909+00:00",
+    "fetched_at": "2026-11-17T03:24:40.498438+00:00",
     "hash": "ae0d4c200b8be3897d306cc370ac7d887717396306ece670370845d5c46b63be",
     "pdfs": [
       {
@@ -15840,7 +16251,7 @@
     "title": "令和2年度地方消費税交付金（増収分）の使途状況",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-13T04:08:28.789527+00:00",
+    "fetched_at": "2026-11-17T03:24:58.915919+00:00",
     "hash": "09211f55ba7900d0156b683d9bdb687b04f98767f2ed78fb05d34c38bfe5a312",
     "pdfs": [
       {
@@ -15860,7 +16271,7 @@
     "title": "平成30年度地方消費税交付金（増収分）の使途状況（決算）",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-13T04:08:36.078870+00:00",
+    "fetched_at": "2026-11-17T03:25:24.278095+00:00",
     "hash": "1e772d55e6c0ec1e7e0c65906e4f49e15fbd1af34620bd12129f9d44afe95a9d",
     "pdfs": [
       {
@@ -15880,7 +16291,7 @@
     "title": "平成31年度地方消費税交付金（増収分）の使途状況",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-13T04:08:40.526485+00:00",
+    "fetched_at": "2026-11-17T03:25:38.647691+00:00",
     "hash": "922f33495d27316275c3ab860719c6cd9f49e38a788f1da84527d3426133f9a5",
     "pdfs": [
       {
@@ -19230,7 +19641,7 @@
     "discovered_at": "2026-11-07T21:06:00.558302+00:00",
     "link_title": "高知県農業政策課（多面的機能支払交付金）",
     "last_error": "HTTP Error 404: Not Found",
-    "failed_at": "2026-11-16T00:42:01.647634+00:00"
+    "failed_at": "2026-11-17T03:24:43.700309+00:00"
   },
   "https://www.city.kochi.kochi.jp/soshiki/91/08kaisei.html": {
     "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/91/",
@@ -19993,7 +20404,7 @@
     "title": "高知市就学援助の入学前支給（新入学準備費）について（令和9年4月に小学校へ入学する新1年生対象）",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-13T04:08:27.339885+00:00",
+    "fetched_at": "2026-11-17T03:24:52.880354+00:00",
     "hash": "431032ae902e90a473900dabcc4fdf903f5535a945d3280ff072679322c316a8",
     "pdfs": [
       {
@@ -20029,7 +20440,7 @@
     "title": "(公立学校対象)令和8年度　高知市就学援助の新規申請について",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-13T04:08:30.044221+00:00",
+    "fetched_at": "2026-11-17T03:25:04.761721+00:00",
     "hash": "28132e56d40a9ae714d3077ed87317b00bc1e7de8292b8bdb0deba1feb1b13a6",
     "pdfs": [
       {
@@ -20073,7 +20484,7 @@
     "title": "令和8年度　高知市就学援助制度について",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-13T04:08:33.035584+00:00",
+    "fetched_at": "2026-11-17T03:25:14.963971+00:00",
     "hash": "d74721ba71aca25dba80dc36f0e4199845d66065aeda6f995c15fe7435a32df3",
     "pdfs": [
       {
@@ -20093,7 +20504,7 @@
     "title": "(公立学校対象) 高知市就学援助の対象費目、援助額、支給方法などについて​",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-13T04:08:34.907656+00:00",
+    "fetched_at": "2026-11-17T03:25:19.986057+00:00",
     "hash": "b8b08ceb85787ffc85429129797c3ed9be689a672c4ba65ba8d05af3ad6e1aae",
     "pdfs": [
       {
@@ -20113,7 +20524,7 @@
     "title": "（私立学校対象）令和8年度　高知市就学援助の新規申請について",
     "state": "candidate",
     "reason": "制度候補語を検出",
-    "fetched_at": "2026-11-13T04:08:37.536781+00:00",
+    "fetched_at": "2026-11-17T03:25:29.682304+00:00",
     "hash": "361bc9c3ae890a88ac2d2666342028e6593ccf6212a226607cad9c9d315550b3",
     "pdfs": [
       {
@@ -20463,7 +20874,7 @@
     "title": "進学費用を支える主な制度",
     "state": "discovery",
     "reason": "発見元または対象外",
-    "fetched_at": "2026-11-14T01:15:21.857091+00:00",
+    "fetched_at": "2026-11-17T03:25:42.464614+00:00",
     "hash": "845e3944b09faad667017dc98945d6806f22fcadfbfe4bc2eb56171f18515d1e",
     "pdfs": [],
     "source_id": "kochi_pref",
@@ -20477,7 +20888,7 @@
     "title": "医師を目指す方への奨学金",
     "state": "discovery",
     "reason": "発見元または対象外",
-    "fetched_at": "2026-11-14T01:15:23.684439+00:00",
+    "fetched_at": "2026-11-17T03:25:45.431278+00:00",
     "hash": "909a3b3365bb4cd483ee1cbf4ab4dbebc171e824b45a2078f09742d889c48c61",
     "pdfs": [
       {
@@ -20817,7 +21228,7 @@
     "title": "（公財）高知県産業振興センター",
     "state": "discovery",
     "reason": "発見元または対象外",
-    "fetched_at": "2026-11-16T00:41:58.393701+00:00",
+    "fetched_at": "2026-11-17T03:24:39.819573+00:00",
     "hash": "ba3ec8d5ae368faa64b555ea7b01c0935d676a3216b342cee2343a89d2f8ffba",
     "pdfs": [
       {

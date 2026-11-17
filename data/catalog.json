@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T00:42:59.700653+00:00",
+  "generated_at": "2026-11-17T03:25:45.458611+00:00",
   "scope": "高知市・高知県・中小企業庁・高知県産業振興センター・高知商工会議所の登録した巡回元。全件収集は確認中。",
   "records": [
     {
@@ -229,7 +229,7 @@
         "健康・福祉"
       ],
       "source_updated_at": "更新日：2026年1月27日更新",
-      "fetched_at": "2026-11-13T04:08:31.505161+00:00",
+      "fetched_at": "2026-11-17T03:25:10.272610+00:00",
       "hash": "73a27392c941f017f7441229fcbf94efa873f6c2b3c5b46bc8f0908e9e518c23",
       "pdfs": [],
       "review_state": "pending",
@@ -248,7 +248,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "73a27392c941f017f7441229fcbf94efa873f6c2b3c5b46bc8f0908e9e518c23",
-        "fetched_at": "2026-11-13T04:08:31.505161+00:00",
+        "fetched_at": "2026-11-17T03:25:10.272610+00:00",
         "sections": [
           {
             "heading": "1．制度の概要",
@@ -285,8 +285,7 @@
             "kind": "overview",
             "text": "〇高知市内での転居\n受給者証の住所変更が必要です。\n受給者証を持参し、手続きしてください。地域窓口センターでも受付可能です。\n〇高知市外への転出\n転出（予定）日の前日が有効期限です。\n受給者証をお返しください。地域窓口センターでも受付可能です。\n[[add-template-pdf]]\n[[add-template-windowsmediaplayer]]\nページの評価ここから\nページの評価ここまで"
           }
-        ],
-        "reused_snapshot": false
+        ]
       },
       "review_scope": "公式HTMLの見出し・表から自動抽出。人による内容確認と現在の受付状況は未確認。"
     },
@@ -301,7 +300,7 @@
         "創業・事業支援"
       ],
       "source_updated_at": "更新日：2023年4月1日更新",
-      "fetched_at": "2026-11-13T04:08:39.005862+00:00",
+      "fetched_at": "2026-11-17T03:25:33.963675+00:00",
       "hash": "6777eddc8cfe477df7b94c689358afeb201bbfa05b6056b6bd3f761d45739010",
       "pdfs": [],
       "review_state": "pending",
@@ -320,15 +319,14 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "6777eddc8cfe477df7b94c689358afeb201bbfa05b6056b6bd3f761d45739010",
-        "fetched_at": "2026-11-13T04:08:39.005862+00:00",
+        "fetched_at": "2026-11-17T03:25:33.963675+00:00",
         "sections": [
           {
             "heading": "制度の概要",
             "kind": "overview",
             "text": "誘致支援\n立地支援\n[[add-template-pdf]]\n[[add-template-windowsmediaplayer]]\nページの評価ここから\nページの評価ここまで"
           }
-        ],
-        "reused_snapshot": false
+        ]
       },
       "review_scope": "公式HTMLの見出し・表から自動抽出。人による内容確認と現在の受付状況は未確認。"
     },
@@ -343,7 +341,7 @@
         "創業・事業支援"
       ],
       "source_updated_at": "更新日：2024年11月15日更新",
-      "fetched_at": "2026-11-13T04:08:42.007595+00:00",
+      "fetched_at": "2026-11-17T03:25:43.122898+00:00",
       "hash": "253890a33ca8b70309d4b43358c2fb335348b58eb3fb4daa4f3f42eb4a5dacdd",
       "pdfs": [
         {
@@ -371,7 +369,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "253890a33ca8b70309d4b43358c2fb335348b58eb3fb4daa4f3f42eb4a5dacdd",
-        "fetched_at": "2026-11-13T04:08:42.007595+00:00",
+        "fetched_at": "2026-11-17T03:25:43.122898+00:00",
         "sections": [
           {
             "heading": "制度の概要",
@@ -403,8 +401,7 @@
             "kind": "conditions",
             "text": "・1労働者につき年度内に申請できるのは1回限りです。\n・同一年度内に労働者2名分の申請ができます。\n・資格等については、令和6年10月1日以降に取得したものに限ります。\n・交付申請期間は、資格取得後6か月以内となります。\n・予算が無くなり次第終了します。"
           }
-        ],
-        "reused_snapshot": false
+        ]
       },
       "review_scope": "公式HTMLの見出し・表から自動抽出。人による内容確認と現在の受付状況は未確認。"
     },
@@ -1846,7 +1843,7 @@
         "創業・事業支援"
       ],
       "source_updated_at": "更新日：2026年7月28日",
-      "fetched_at": "2026-11-16T00:42:07.281052+00:00",
+      "fetched_at": "2026-11-17T03:24:50.358240+00:00",
       "hash": "80f2f15150591bda38e7b1fb69fe765bf7d520d1dcb8e6997c7f70ae1af25600",
       "pdfs": [
         {
@@ -1878,7 +1875,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "80f2f15150591bda38e7b1fb69fe765bf7d520d1dcb8e6997c7f70ae1af25600",
-        "fetched_at": "2026-11-16T00:42:07.281052+00:00",
+        "fetched_at": "2026-11-17T03:24:50.358240+00:00",
         "sections": [
           {
             "heading": "申請の流れ",
@@ -2002,7 +1999,7 @@
         "創業・事業支援"
       ],
       "source_updated_at": null,
-      "fetched_at": "2026-11-16T00:42:09.027354+00:00",
+      "fetched_at": "2026-11-17T03:24:52.483251+00:00",
       "hash": "f39a480338e8e6daafea1af16573bbb2cd185f5449fa8425e61475380559b8dc",
       "pdfs": [
         {
@@ -2046,7 +2043,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "f39a480338e8e6daafea1af16573bbb2cd185f5449fa8425e61475380559b8dc",
-        "fetched_at": "2026-11-16T00:42:09.027354+00:00",
+        "fetched_at": "2026-11-17T03:24:52.483251+00:00",
         "sections": [
           {
             "heading": "補助制度概要",
@@ -2083,7 +2080,7 @@
         "創業・事業支援"
       ],
       "source_updated_at": null,
-      "fetched_at": "2026-11-16T00:42:14.338742+00:00",
+      "fetched_at": "2026-11-17T03:24:58.129969+00:00",
       "hash": "9aecacdcdbb719a18b4bed8f89ef4aff477d6c58b93c9b2e9bc022b02ac504ba",
       "pdfs": [
         {
@@ -2127,7 +2124,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "9aecacdcdbb719a18b4bed8f89ef4aff477d6c58b93c9b2e9bc022b02ac504ba",
-        "fetched_at": "2026-11-16T00:42:14.338742+00:00",
+        "fetched_at": "2026-11-17T03:24:58.129969+00:00",
         "sections": [
           {
             "heading": "県内に本社又は主たる事業所を有する中小企業及び中堅企業（個人事業主含む）で 以下のいずれかに該当する者 ○新型コロナウイルス感染症の影響によって 売上高が10％以上又は営業利益額が15%以上減少 （令和2年4月以降の連続する6ヶ月のうち、任意の3ヶ月とコロナ以前の同3ヶ月を比較） ○原油価格・物価高騰等の影響によって 売上高が5％以上又は営業利益額が7.5%以上減少 （令和4年1月以降の連続する6ヶ月のうち、任意の3ヶ月と原油高等等以前の同3ヶ月を比較）",
@@ -2200,7 +2197,7 @@
         "創業・事業支援"
       ],
       "source_updated_at": null,
-      "fetched_at": "2026-11-16T00:42:17.600098+00:00",
+      "fetched_at": "2026-11-17T03:25:02.488057+00:00",
       "hash": "371f220bdf2e571f04b4c8cf2f7ce994cd52b1cc160303b3ade392825f32dc9f",
       "pdfs": [
         {
@@ -2236,7 +2233,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "371f220bdf2e571f04b4c8cf2f7ce994cd52b1cc160303b3ade392825f32dc9f",
-        "fetched_at": "2026-11-16T00:42:17.600098+00:00",
+        "fetched_at": "2026-11-17T03:25:02.488057+00:00",
         "sections": [
           {
             "heading": "制度の概要",
@@ -2293,7 +2290,7 @@
         "創業・事業支援"
       ],
       "source_updated_at": null,
-      "fetched_at": "2026-11-16T00:42:20.759148+00:00",
+      "fetched_at": "2026-11-17T03:25:06.534615+00:00",
       "hash": "3d22aad8caf17a3795645220f635f2229206e66384011bab9ff20a5527f60d1f",
       "pdfs": [
         {
@@ -2329,7 +2326,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "3d22aad8caf17a3795645220f635f2229206e66384011bab9ff20a5527f60d1f",
-        "fetched_at": "2026-11-16T00:42:20.759148+00:00",
+        "fetched_at": "2026-11-17T03:25:06.534615+00:00",
         "sections": [
           {
             "heading": "制度の概要",
@@ -2402,7 +2399,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-16T00:40:41.711717+00:00",
       "list_hash": "de47ff0102b9e6f068b4956e9b11915e0e40a9e4c92afadb378a9e682956b62e",
-      "last_listed_at": "2026-11-16T00:40:41.711717+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.110130+00:00"
     },
     {
       "id": "jg-a0WfQ000003qYNFUA2",
@@ -2451,7 +2448,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-16T00:40:47.279973+00:00",
       "list_hash": "08c9706ceda042b61d116e85f9c23d15da8b0bad5247e7ac04889e8c469d7cd4",
-      "last_listed_at": "2026-11-16T00:40:47.279973+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.110299+00:00"
     },
     {
       "id": "jg-a0WfQ000003mzyjUAA",
@@ -2500,7 +2497,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-16T00:40:50.549059+00:00",
       "list_hash": "09ecd503d91873039f29e1f1308b43fcd034f6065290055ba195ef405715f6f9",
-      "last_listed_at": "2026-11-16T00:40:50.549059+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.112100+00:00"
     },
     {
       "id": "jg-a0WfQ000003myubUAA",
@@ -2549,7 +2546,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-16T00:40:53.841901+00:00",
       "list_hash": "9f34b64cc35c7cf681999ad56c72d54a9e742d8eaf3e57ff0dcbd88e851ca22c",
-      "last_listed_at": "2026-11-16T00:40:53.841901+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.112278+00:00"
     },
     {
       "id": "jg-a0WfQ000003lu8IUAQ",
@@ -2598,7 +2595,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-16T00:40:55.267140+00:00",
       "list_hash": "2152c594e7fdc100b1f7290f60d8ffd7ee19b2ada98c0431c5e9b8e07bae4004",
-      "last_listed_at": "2026-11-16T00:40:55.267140+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.112450+00:00"
     },
     {
       "id": "jg-a0WfQ000003iZLKUA2",
@@ -2647,7 +2644,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-16T00:40:57.920971+00:00",
       "list_hash": "8fbf5035a8282fadce1ecf46845032193a0d229f64b210b8a3409859e74fce0a",
-      "last_listed_at": "2026-11-16T00:40:57.920971+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.112826+00:00"
     },
     {
       "id": "jg-a0WfQ000003cYWnUAM",
@@ -2696,7 +2693,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-16T00:41:02.814013+00:00",
       "list_hash": "fa187d22510953362ab628d3c4e394dd126c3f2adaa1532996f01910d91828c0",
-      "last_listed_at": "2026-11-16T00:41:02.814013+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.113304+00:00"
     },
     {
       "id": "jg-a0WfQ000003cAFxUAM",
@@ -2745,7 +2742,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-16T00:41:04.222728+00:00",
       "list_hash": "32426bbbd412314e8fe4e755419c3a12e075e8f79b8c915b29fa32910985ddee",
-      "last_listed_at": "2026-11-16T00:41:04.222728+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.113487+00:00"
     },
     {
       "id": "jg-a0WfQ000003aZqLUAU",
@@ -2794,7 +2791,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-16T00:41:06.442818+00:00",
       "list_hash": "05d504ebbccc60f6e2275cf57f0051432bee30f93b0059b7f64f0c4a60312395",
-      "last_listed_at": "2026-11-16T00:41:06.442818+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.113658+00:00"
     },
     {
       "id": "jg-a0WfQ000003N8hVUAS",
@@ -2843,7 +2840,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-16T00:41:09.848629+00:00",
       "list_hash": "36bfc61d92fb585055897ce5f75ae8b728d73efae63051e3f3497b73f93cdb2b",
-      "last_listed_at": "2026-11-16T00:41:09.848629+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.113844+00:00"
     },
     {
       "id": "jg-a0WfQ000003N1RVUA0",
@@ -2892,7 +2889,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-16T00:41:11.408537+00:00",
       "list_hash": "4adc381b23c492707156a314c75c856f7ae35b5e375865f6fa989ce74df9e9d3",
-      "last_listed_at": "2026-11-16T00:41:11.408537+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.128391+00:00"
     },
     {
       "id": "jg-a0WfQ000003N1RbUAK",
@@ -2941,7 +2938,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-16T00:41:12.865821+00:00",
       "list_hash": "d3d432aa67b6895a1988a1b5a1581940906dbe943a350a66c0ecbf946b7baccb",
-      "last_listed_at": "2026-11-16T00:41:12.865821+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.127406+00:00"
     },
     {
       "id": "jg-a0WfQ000003N1RaUAK",
@@ -2990,7 +2987,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-16T00:41:15.841180+00:00",
       "list_hash": "aaaf3cc2a8db52035cd8acc7dcb7d165e6591d9e6df824d3e57e211fe9ede2af",
-      "last_listed_at": "2026-11-16T00:41:15.841180+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.127614+00:00"
     },
     {
       "id": "jg-a0WfQ000003N1RZUA0",
@@ -3039,7 +3036,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-16T00:41:17.291727+00:00",
       "list_hash": "37be89516c0283282fdb4dcddae4c902c6dac6777c8d839dd62b02968b99a278",
-      "last_listed_at": "2026-11-16T00:41:17.291727+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.127835+00:00"
     },
     {
       "id": "jg-a0WfQ000003N1RYUA0",
@@ -3088,7 +3085,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-16T00:41:18.749555+00:00",
       "list_hash": "95e13cd5fcd4a79a4bc539fc10cb2e855995a2631e233a68cb8f6dd57b0aec9a",
-      "last_listed_at": "2026-11-16T00:41:18.749555+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.128027+00:00"
     },
     {
       "id": "jg-a0WfQ000003N1RXUA0",
@@ -3137,7 +3134,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-16T00:41:20.206767+00:00",
       "list_hash": "83e6ff5daaaa51321ab81a4d0c019f0baf04bbef9f683fcbcc64a85e8640b45e",
-      "last_listed_at": "2026-11-16T00:41:20.206767+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.128207+00:00"
     },
     {
       "id": "jg-a0WfQ000003N1RWUA0",
@@ -3186,7 +3183,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-16T00:41:14.381907+00:00",
       "list_hash": "d0f66226f37952c114f5f217318f1f67522319e4ec2adc1a11d6dd50c78418e0",
-      "last_listed_at": "2026-11-16T00:41:14.381907+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.114014+00:00"
     },
     {
       "id": "jg-a0WfQ000003JPtqUAG",
@@ -3235,7 +3232,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-16T00:41:23.610728+00:00",
       "list_hash": "27fe1326df48dc0dff951dcc2477807492f24c2e1424b1cadf137cab3e7aba1c",
-      "last_listed_at": "2026-11-16T00:41:23.610728+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.128660+00:00"
     },
     {
       "id": "jg-a0WfQ000003GpG9UAK",
@@ -3284,7 +3281,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-16T00:41:26.109848+00:00",
       "list_hash": "3537eb3d42bf82255d9c9ec790371328b1363c173eabdf68d4697123fe120433",
-      "last_listed_at": "2026-11-16T00:41:26.109848+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.128853+00:00"
     },
     {
       "id": "jg-a0WfQ000003EZsDUAW",
@@ -3333,7 +3330,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-16T00:41:29.592453+00:00",
       "list_hash": "71d688249fa29a2fd403f9c0f25b41ddebdb67c98843e13bf3f7546ff5177507",
-      "last_listed_at": "2026-11-16T00:41:29.592453+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.129039+00:00"
     },
     {
       "id": "jg-a0WfQ000003EVJxUAO",
@@ -3382,7 +3379,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-16T00:41:30.942032+00:00",
       "list_hash": "7376cbc31c8ff904b67fcee23fbdf6acad4f1b5fa3a93468fb5d0ba8fd298068",
-      "last_listed_at": "2026-11-16T00:41:30.942032+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.129221+00:00"
     },
     {
       "id": "jg-a0WfQ000003ENsfUAG",
@@ -3390,7 +3387,7 @@
       "url": "https://www.jgrants-portal.go.jp/subsidy/a0WfQ000003ENsfUAG",
       "title": "【三次公募】令和８年度　天然ガス利用設備による強靱性向上対策事業費補助金",
       "hash": "bc8d18f007d95c617bbb181cc0605b206028d5592aa4ea8ea59359f76479c9bc",
-      "fetched_at": "2026-11-10T21:08:14.193517+00:00",
+      "fetched_at": "2026-11-17T03:23:07.576325+00:00",
       "source_updated_at": null,
       "source_id": "jgrants",
       "source_name": "Jグランツ（デジタル庁）",
@@ -3429,9 +3426,9 @@
       "evidence": [],
       "api_url": "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/a0WfQ000003ENsfUAG",
       "data_detail": "full",
-      "api_detail_at": "2026-11-10T21:08:14.193517+00:00",
+      "api_detail_at": "2026-11-17T03:23:07.576325+00:00",
       "list_hash": "f900f65dc996ad8a0686ccb4ba451d608aeed407e424349e5030e2c5c32689ce",
-      "last_listed_at": "2026-11-16T00:40:34.041303+00:00"
+      "last_listed_at": "2026-11-17T03:23:07.576325+00:00"
     },
     {
       "id": "jg-a0WfQ000003CVHdUAO",
@@ -3480,7 +3477,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-16T00:41:33.601459+00:00",
       "list_hash": "afdcb4eef603aaabf85a6b7bed93c5b08fb745e83a6b3b6efdea339974a1613b",
-      "last_listed_at": "2026-11-16T00:41:33.601459+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.129576+00:00"
     },
     {
       "id": "jg-a0WfQ000003BpWvUAK",
@@ -3488,7 +3485,7 @@
       "url": "https://www.jgrants-portal.go.jp/subsidy/a0WfQ000003BpWvUAK",
       "title": "【令和8年度】省CO2型システムへの改修支援事業（三次公募）",
       "hash": "ee38b6107e25aa2d0caf1467af8cbf3cbcbe3352d43cb25b898d98f12666d73c",
-      "fetched_at": "2026-11-10T21:00:13.441296+00:00",
+      "fetched_at": "2026-11-17T03:22:57.168072+00:00",
       "source_updated_at": null,
       "source_id": "jgrants",
       "source_name": "Jグランツ（デジタル庁）",
@@ -3527,9 +3524,9 @@
       "evidence": [],
       "api_url": "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/a0WfQ000003BpWvUAK",
       "data_detail": "full",
-      "api_detail_at": "2026-11-10T21:00:13.441296+00:00",
+      "api_detail_at": "2026-11-17T03:22:57.168072+00:00",
       "list_hash": "1e6b61c428f097fce2b59d6ddecca3b5bb8b46a5a1087d4848d3dccf2e136781",
-      "last_listed_at": "2026-11-16T00:40:34.041772+00:00"
+      "last_listed_at": "2026-11-17T03:22:57.168072+00:00"
     },
     {
       "id": "jg-a0WJ200000CDeZuMAL",
@@ -3537,7 +3534,7 @@
       "url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDeZuMAL",
       "title": "令和８年度データセンターのゼロエミッション化・レジリエンス強化促進事業（二次公募）",
       "hash": "d83eea915fb3d6fb288e74a2e76d59df1600f04a1de8ed0d73a5c41bea8db0c7",
-      "fetched_at": "2026-11-10T21:00:18.050941+00:00",
+      "fetched_at": "2026-11-17T03:23:00.183193+00:00",
       "source_updated_at": null,
       "source_id": "jgrants",
       "source_name": "Jグランツ（デジタル庁）",
@@ -3576,9 +3573,9 @@
       "evidence": [],
       "api_url": "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/a0WJ200000CDeZuMAL",
       "data_detail": "full",
-      "api_detail_at": "2026-11-10T21:00:18.050941+00:00",
+      "api_detail_at": "2026-11-17T03:23:00.183193+00:00",
       "list_hash": "9bdd2cda40b510b49e52b38fc636e6d11889c2d4fb998e0f61a3463f893ab4bf",
-      "last_listed_at": "2026-11-16T00:40:34.041953+00:00"
+      "last_listed_at": "2026-11-17T03:23:00.183193+00:00"
     },
     {
       "id": "jg-a0WJ200000CDeXgMAL",
@@ -3586,7 +3583,7 @@
       "url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDeXgMAL",
       "title": "【二次公募】令和８年度　天然ガス利用設備による強靱性向上対策事業費補助金",
       "hash": "2deb9b3cd425957e8d4aeeccdf18d3ef3b7cbbfd5d9270a90b0e45dc5048f5c9",
-      "fetched_at": "2026-11-10T21:00:25.101307+00:00",
+      "fetched_at": "2026-11-17T03:23:01.683123+00:00",
       "source_updated_at": null,
       "source_id": "jgrants",
       "source_name": "Jグランツ（デジタル庁）",
@@ -3625,9 +3622,9 @@
       "evidence": [],
       "api_url": "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/a0WJ200000CDeXgMAL",
       "data_detail": "full",
-      "api_detail_at": "2026-11-10T21:00:25.101307+00:00",
+      "api_detail_at": "2026-11-17T03:23:01.683123+00:00",
       "list_hash": "53660602681bb236479455daa9518e5637477af667fa43789eddd9d5f33f5f67",
-      "last_listed_at": "2026-11-16T00:40:34.042130+00:00"
+      "last_listed_at": "2026-11-17T03:23:01.683123+00:00"
     },
     {
       "id": "jg-a0WJ200000CDeVtMAL",
@@ -3635,7 +3632,7 @@
       "url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDeVtMAL",
       "title": "令和８年度_グリーンスローモビリティ等導入促進事業",
       "hash": "c4e85ac1a34d572248a1ce0b4d52abac04d15beae86bfb1a4beec5542f8bbcf7",
-      "fetched_at": "2026-11-10T21:00:29.367002+00:00",
+      "fetched_at": "2026-11-17T03:23:03.181935+00:00",
       "source_updated_at": null,
       "source_id": "jgrants",
       "source_name": "Jグランツ（デジタル庁）",
@@ -3674,9 +3671,9 @@
       "evidence": [],
       "api_url": "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/a0WJ200000CDeVtMAL",
       "data_detail": "full",
-      "api_detail_at": "2026-11-10T21:00:29.367002+00:00",
+      "api_detail_at": "2026-11-17T03:23:03.181935+00:00",
       "list_hash": "becfb4aa0d908fbe7ac798665a763a1f00473c57bbcc8f850343fb5a91f01060",
-      "last_listed_at": "2026-11-16T00:40:34.042317+00:00"
+      "last_listed_at": "2026-11-17T03:23:03.181935+00:00"
     },
     {
       "id": "jg-a0WJ200000CDeUbMAL",
@@ -3684,7 +3681,7 @@
       "url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDeUbMAL",
       "title": "重要経済安保情報保護活用民間企業等情報保全施設導入支援補助金（令和８年度第２回公募）",
       "hash": "81452db08bfcf48a5cb68ebbc3efe1e68b06f2c05e7bcb824418f6c09fbb65fe",
-      "fetched_at": "2026-11-10T21:00:35.360147+00:00",
+      "fetched_at": "2026-11-17T03:23:06.089379+00:00",
       "source_updated_at": null,
       "source_id": "jgrants",
       "source_name": "Jグランツ（デジタル庁）",
@@ -3723,9 +3720,9 @@
       "evidence": [],
       "api_url": "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/a0WJ200000CDeUbMAL",
       "data_detail": "full",
-      "api_detail_at": "2026-11-10T21:00:35.360147+00:00",
+      "api_detail_at": "2026-11-17T03:23:06.089379+00:00",
       "list_hash": "a2656fae911a10c2fea9bf6641d0c4ea8fa3fb47f63d49c7aa537eed1df3d6fc",
-      "last_listed_at": "2026-11-16T00:40:34.042486+00:00"
+      "last_listed_at": "2026-11-17T03:23:06.089379+00:00"
     },
     {
       "id": "jg-a0WJ200000CDeS9MAL",
@@ -3733,7 +3730,7 @@
       "url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDeS9MAL",
       "title": "令和７年度（補正予算）地域共生を目指したデータセンター脱炭素化設備導入支援事業（三次公募）",
       "hash": "5d811af640eb7bd91565f6b8b82e5096c0dacaede3413016ee432b5e3f5ed1e3",
-      "fetched_at": "2026-11-11T21:03:22.544704+00:00",
+      "fetched_at": "2026-11-17T03:23:13.712527+00:00",
       "source_updated_at": null,
       "source_id": "jgrants",
       "source_name": "Jグランツ（デジタル庁）",
@@ -3773,9 +3770,9 @@
       "evidence": [],
       "api_url": "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/a0WJ200000CDeS9MAL",
       "data_detail": "full",
-      "api_detail_at": "2026-11-11T21:03:22.544704+00:00",
+      "api_detail_at": "2026-11-17T03:23:13.712527+00:00",
       "list_hash": "0a1e1b2642f86d4feb32d658bf9df9a91c5643a6ca23bab1f131e692245f7a02",
-      "last_listed_at": "2026-11-16T00:40:34.042822+00:00"
+      "last_listed_at": "2026-11-17T03:23:13.712527+00:00"
     },
     {
       "id": "jg-a0WJ200000CDeO6MAL",
@@ -3783,7 +3780,7 @@
       "url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDeO6MAL",
       "title": "令和8年度_産油国石油精製技術等対策事業費補助金（石油天然ガス権益・安定供給の確保に向けた資源国との関係強化支援事業のうち産油・産ガス国産業協力等事業に係るもの）_第3回公募",
       "hash": "7db75ced0ee670ea947f370a78b4d7680f88133a762ed2203e307ef417f68f2b",
-      "fetched_at": "2026-11-11T21:03:28.041732+00:00",
+      "fetched_at": "2026-11-17T03:23:16.771534+00:00",
       "source_updated_at": null,
       "source_id": "jgrants",
       "source_name": "Jグランツ（デジタル庁）",
@@ -3822,9 +3819,9 @@
       "evidence": [],
       "api_url": "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/a0WJ200000CDeO6MAL",
       "data_detail": "full",
-      "api_detail_at": "2026-11-11T21:03:28.041732+00:00",
+      "api_detail_at": "2026-11-17T03:23:16.771534+00:00",
       "list_hash": "181ba191c5ca5fa8df8ee7694a1f1dffe754aedafbadb7004a8f8db87472b26e",
-      "last_listed_at": "2026-11-16T00:40:34.043078+00:00"
+      "last_listed_at": "2026-11-17T03:23:16.771534+00:00"
     },
     {
       "id": "jg-a0WJ200000CDeO1MAL",
@@ -3832,7 +3829,7 @@
       "url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDeO1MAL",
       "title": "令和8年度_資源国脱炭素化・エネルギー転換技術等支援事業費補助金_第3回公募",
       "hash": "a39e198f983553fc453d028c55d89d32bea2a72d34b7783c2d71d862d880912e",
-      "fetched_at": "2026-11-11T21:03:33.290197+00:00",
+      "fetched_at": "2026-11-17T03:23:19.785624+00:00",
       "source_updated_at": null,
       "source_id": "jgrants",
       "source_name": "Jグランツ（デジタル庁）",
@@ -3871,9 +3868,9 @@
       "evidence": [],
       "api_url": "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/a0WJ200000CDeO1MAL",
       "data_detail": "full",
-      "api_detail_at": "2026-11-11T21:03:33.290197+00:00",
+      "api_detail_at": "2026-11-17T03:23:19.785624+00:00",
       "list_hash": "a33aafe246d7e2ae6173c606cac41eeaba53b4b0a29b2b5205ee8a471955c7c6",
-      "last_listed_at": "2026-11-16T00:40:34.043259+00:00"
+      "last_listed_at": "2026-11-17T03:23:19.785624+00:00"
     },
     {
       "id": "jg-a0WJ200000CDeNwMAL",
@@ -3881,7 +3878,7 @@
       "url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDeNwMAL",
       "title": "令和7年度_産油国石油精製技術等対策事業費補助金（石油天然ガス権益・安定供給の確保に向けた資源国との関係強化支援事業のうち産油・産ガス国産業協力等事業に係るもの）_第5回公募",
       "hash": "9591030eba45c91f89ef15263a59c659a7a7778c545974c39747ca706613fd4e",
-      "fetched_at": "2026-11-11T21:03:38.339969+00:00",
+      "fetched_at": "2026-11-17T03:23:22.833466+00:00",
       "source_updated_at": null,
       "source_id": "jgrants",
       "source_name": "Jグランツ（デジタル庁）",
@@ -3920,9 +3917,9 @@
       "evidence": [],
       "api_url": "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/a0WJ200000CDeNwMAL",
       "data_detail": "full",
-      "api_detail_at": "2026-11-11T21:03:38.339969+00:00",
+      "api_detail_at": "2026-11-17T03:23:22.833466+00:00",
       "list_hash": "1f4f77117b090a8bbfd88a9c8ce0172a151d7722f1ad09523eddb437f3fecd55",
-      "last_listed_at": "2026-11-16T00:40:34.043429+00:00"
+      "last_listed_at": "2026-11-17T03:23:22.833466+00:00"
     },
     {
       "id": "jg-a0WJ200000CDeNSMA1",
@@ -3930,7 +3927,7 @@
       "url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDeNSMA1",
       "title": "令和7年度_資源国脱炭素化・エネルギー転換技術等支援事業費補助金_第5回公募",
       "hash": "b7e91c8addcb7eaeda1937bb64c77601405a6f249807d0f1d13cf1c982bcfdb3",
-      "fetched_at": "2026-11-11T21:03:43.688215+00:00",
+      "fetched_at": "2026-11-17T03:23:25.845519+00:00",
       "source_updated_at": null,
       "source_id": "jgrants",
       "source_name": "Jグランツ（デジタル庁）",
@@ -3969,9 +3966,9 @@
       "evidence": [],
       "api_url": "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/a0WJ200000CDeNSMA1",
       "data_detail": "full",
-      "api_detail_at": "2026-11-11T21:03:43.688215+00:00",
+      "api_detail_at": "2026-11-17T03:23:25.845519+00:00",
       "list_hash": "6c883519e916eb13af0887ba899f9d2f7bfa305ff8ecb8be6d8f27bcad25c994",
-      "last_listed_at": "2026-11-16T00:40:34.043597+00:00"
+      "last_listed_at": "2026-11-17T03:23:25.845519+00:00"
     },
     {
       "id": "jg-a0WJ200000CDe7xMAD",
@@ -3979,7 +3976,7 @@
       "url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDe7xMAD",
       "title": "令和８年度運輸部門におけるエネルギーの使用合理化・非化石エネルギー転換推進事業費補助金（内航船革新的運航効率化・非化石エネルギー転換推進事業）（三次公募）",
       "hash": "1c1d6d4b3f579f0d38255aa2705e276bba1a479a22a3c074e6b1d1711d43acbf",
-      "fetched_at": "2026-11-11T21:03:48.898580+00:00",
+      "fetched_at": "2026-11-17T03:23:29.040471+00:00",
       "source_updated_at": null,
       "source_id": "jgrants",
       "source_name": "Jグランツ（デジタル庁）",
@@ -4024,9 +4021,9 @@
       "evidence": [],
       "api_url": "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/a0WJ200000CDe7xMAD",
       "data_detail": "full",
-      "api_detail_at": "2026-11-11T21:03:48.898580+00:00",
+      "api_detail_at": "2026-11-17T03:23:29.040471+00:00",
       "list_hash": "6c80e7500c948316e76c1a602eac94a15c22fa47c7c6d0eda3b1cb6581399886",
-      "last_listed_at": "2026-11-16T00:40:34.043759+00:00"
+      "last_listed_at": "2026-11-17T03:23:29.040471+00:00"
     },
     {
       "id": "jg-a0WJ200000CDe4JMAT",
@@ -4034,7 +4031,7 @@
       "url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDe4JMAT",
       "title": "令和７年度補正　再生可能エネルギー導入拡大・系統用蓄電池等電力貯蔵システム導入支援事業費補助金　系統用蓄電システム等導入支援事業",
       "hash": "a43ea3ee6f20ebf55e499f914428f23138f5527e580b5cf1c9d8d5d359ded334",
-      "fetched_at": "2026-11-11T21:03:57.439121+00:00",
+      "fetched_at": "2026-11-17T03:23:33.704780+00:00",
       "source_updated_at": null,
       "source_id": "jgrants",
       "source_name": "Jグランツ（デジタル庁）",
@@ -4073,9 +4070,9 @@
       "evidence": [],
       "api_url": "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/a0WJ200000CDe4JMAT",
       "data_detail": "full",
-      "api_detail_at": "2026-11-11T21:03:57.439121+00:00",
+      "api_detail_at": "2026-11-17T03:23:33.704780+00:00",
       "list_hash": "bc83d54e4bf63a401939886a94d8b1659854cd101def741707b798c2296e9706",
-      "last_listed_at": "2026-11-16T00:40:34.043922+00:00"
+      "last_listed_at": "2026-11-17T03:23:33.704780+00:00"
     },
     {
       "id": "jg-a0WJ200000CDe3zMAD",
@@ -4083,7 +4080,7 @@
       "url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDe3zMAD",
       "title": "【令和８年度・第４回】INPIT外国出願補助金",
       "hash": "5d78e6a943d4d75a67ba689bf355088f32887127590465bcc38176b09f7918ed",
-      "fetched_at": "2026-11-11T21:04:02.804120+00:00",
+      "fetched_at": "2026-11-17T03:23:36.745582+00:00",
       "source_updated_at": null,
       "source_id": "jgrants",
       "source_name": "Jグランツ（デジタル庁）",
@@ -4122,9 +4119,9 @@
       "evidence": [],
       "api_url": "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/a0WJ200000CDe3zMAD",
       "data_detail": "full",
-      "api_detail_at": "2026-11-11T21:04:02.804120+00:00",
+      "api_detail_at": "2026-11-17T03:23:36.745582+00:00",
       "list_hash": "96c7f0768c48c565129fd48e748514cde745428b903508e5d4805072675480f2",
-      "last_listed_at": "2026-11-16T00:40:34.044175+00:00"
+      "last_listed_at": "2026-11-17T03:23:36.745582+00:00"
     },
     {
       "id": "jg-a0WJ200000CDdu0MAD",
@@ -4377,7 +4374,7 @@
       "url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDdtRMAT",
       "title": "【令和７年度補正予算・令和８年度】二酸化炭素排出抑制対策事業費等補助金（新築建築物のZEB普及促進支援事業/既存建築物のZEB化普及促進支援事業（令和７年度補正予算三次公募・令和８年度二次公募））",
       "hash": "97317b5d74a057751917b4a67fa1c9506958a40cffcfe3893fdc4aaf8535319c",
-      "fetched_at": "2026-11-11T21:04:14.041762+00:00",
+      "fetched_at": "2026-11-17T03:23:39.725899+00:00",
       "source_updated_at": null,
       "source_id": "jgrants",
       "source_name": "Jグランツ（デジタル庁）",
@@ -4416,9 +4413,9 @@
       "evidence": [],
       "api_url": "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/a0WJ200000CDdtRMAT",
       "data_detail": "full",
-      "api_detail_at": "2026-11-11T21:04:14.041762+00:00",
+      "api_detail_at": "2026-11-17T03:23:39.725899+00:00",
       "list_hash": "419a28ed7e8c8e0895c542eed493219a3d515c5f6dd5481110bf33676b773011",
-      "last_listed_at": "2026-11-16T00:40:34.044353+00:00"
+      "last_listed_at": "2026-11-17T03:23:39.725899+00:00"
     },
     {
       "id": "jg-a0WJ200000CDdtMMAT",
@@ -4426,7 +4423,7 @@
       "url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDdtMMAT",
       "title": "【経済産業省】ものづくり・商業・サービス生産性向上促進補助金（23次締切）",
       "hash": "7deae2d65e156c8e10f3f2065aef35b0398da40147af147312f27bffad08cf30",
-      "fetched_at": "2026-11-11T21:04:23.669306+00:00",
+      "fetched_at": "2026-11-17T03:23:42.729345+00:00",
       "source_updated_at": null,
       "source_id": "jgrants",
       "source_name": "Jグランツ（デジタル庁）",
@@ -4465,9 +4462,9 @@
       "evidence": [],
       "api_url": "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/a0WJ200000CDdtMMAT",
       "data_detail": "full",
-      "api_detail_at": "2026-11-11T21:04:23.669306+00:00",
+      "api_detail_at": "2026-11-17T03:23:42.729345+00:00",
       "list_hash": "5378e74881a82f1bc6577ca5d0d0f1e92f9a835ef5f45cfce0f59e62104d7149",
-      "last_listed_at": "2026-11-16T00:40:34.044527+00:00"
+      "last_listed_at": "2026-11-17T03:23:42.729345+00:00"
     },
     {
       "id": "jg-a0WJ200000CDdqyMAD",
@@ -4475,7 +4472,7 @@
       "url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDdqyMAD",
       "title": "【応募事業者】令和８年度 プラスチック等資源循環システム構築実証事業　＜三次公募＞",
       "hash": "022170a67334ce000a312dcc105eceaa40c25f268f15e875e049a94ab566a9d5",
-      "fetched_at": "2026-11-11T21:04:31.014198+00:00",
+      "fetched_at": "2026-11-17T03:23:47.428091+00:00",
       "source_updated_at": null,
       "source_id": "jgrants",
       "source_name": "Jグランツ（デジタル庁）",
@@ -4517,9 +4514,9 @@
       "evidence": [],
       "api_url": "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/a0WJ200000CDdqyMAD",
       "data_detail": "full",
-      "api_detail_at": "2026-11-11T21:04:31.014198+00:00",
+      "api_detail_at": "2026-11-17T03:23:47.428091+00:00",
       "list_hash": "0e37dab014b3fbb97a712792465dff707748cb7045c4baa4fc96a85b7b57e380",
-      "last_listed_at": "2026-11-16T00:40:34.044691+00:00"
+      "last_listed_at": "2026-11-17T03:23:47.428091+00:00"
     },
     {
       "id": "jg-a0WJ200000CDdnJMAT",
@@ -4527,7 +4524,7 @@
       "url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDdnJMAT",
       "title": "令和７年度(補正予算) ゼロエミッション船等の建造促進事業 2次公募",
       "hash": "01e6d854f263c086398cace95e1b919e7fd69dde8f7f5e01e7f69269cc262bce",
-      "fetched_at": "2026-11-11T21:04:37.422496+00:00",
+      "fetched_at": "2026-11-17T03:23:51.554865+00:00",
       "source_updated_at": null,
       "source_id": "jgrants",
       "source_name": "Jグランツ（デジタル庁）",
@@ -4566,9 +4563,9 @@
       "evidence": [],
       "api_url": "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/a0WJ200000CDdnJMAT",
       "data_detail": "full",
-      "api_detail_at": "2026-11-11T21:04:37.422496+00:00",
+      "api_detail_at": "2026-11-17T03:23:51.554865+00:00",
       "list_hash": "1ba41f7aeb2e715fd39a1fbca1dfcea58ac11161f3ceedcd7a5fe9716b412f16",
-      "last_listed_at": "2026-11-16T00:40:34.044879+00:00"
+      "last_listed_at": "2026-11-17T03:23:51.554865+00:00"
     },
     {
       "id": "jg-a0WJ200000CDdmpMAD",
@@ -4576,7 +4573,7 @@
       "url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDdmpMAD",
       "title": "令和８年度　ＦＳ調査事業　第３次公募　【　廃棄物処理施設を核とした地域循環共生圏構築促進事業　】",
       "hash": "2c1d525518998ee089b64bb97603bee9374b819237b218021d8824f0552139f7",
-      "fetched_at": "2026-11-11T21:04:45.572025+00:00",
+      "fetched_at": "2026-11-17T03:23:56.158637+00:00",
       "source_updated_at": null,
       "source_id": "jgrants",
       "source_name": "Jグランツ（デジタル庁）",
@@ -4615,9 +4612,9 @@
       "evidence": [],
       "api_url": "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/a0WJ200000CDdmpMAD",
       "data_detail": "full",
-      "api_detail_at": "2026-11-11T21:04:45.572025+00:00",
+      "api_detail_at": "2026-11-17T03:23:56.158637+00:00",
       "list_hash": "57e4aad40fda3db907468bab99d70bb8ec842d54af1044287a1f31d8366877fb",
-      "last_listed_at": "2026-11-16T00:40:34.045038+00:00"
+      "last_listed_at": "2026-11-17T03:23:56.158637+00:00"
     },
     {
       "id": "jg-a0WJ200000CDdmfMAD",
@@ -4625,7 +4622,7 @@
       "url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDdmfMAD",
       "title": "令和８年度　熱利活用事業（単年度事業分）　第３次公募　【　廃棄物処理施設を核とした地域循環共生圏構築促進事業　】",
       "hash": "3e0067a7534d2d10be2386ac6750c0eefade75e89803845144141d7c0d775b97",
-      "fetched_at": "2026-11-11T21:04:53.383567+00:00",
+      "fetched_at": "2026-11-17T03:24:00.876774+00:00",
       "source_updated_at": null,
       "source_id": "jgrants",
       "source_name": "Jグランツ（デジタル庁）",
@@ -4664,9 +4661,9 @@
       "evidence": [],
       "api_url": "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/a0WJ200000CDdmfMAD",
       "data_detail": "full",
-      "api_detail_at": "2026-11-11T21:04:53.383567+00:00",
+      "api_detail_at": "2026-11-17T03:24:00.876774+00:00",
       "list_hash": "6958c1fbe0b4d1849de6701329cb53d20a8b94d6b4a36b8932723e1aca1c1ccc",
-      "last_listed_at": "2026-11-16T00:40:34.045198+00:00"
+      "last_listed_at": "2026-11-17T03:24:00.876774+00:00"
     },
     {
       "id": "jg-a0WJ200000CDdmVMAT",
@@ -4674,7 +4671,7 @@
       "url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDdmVMAT",
       "title": "令和８年度　電力利活用事業（単年度事業分）　第３次公募　【　廃棄物処理施設を核とした地域循環共生圏構築促進事業　】",
       "hash": "4a1b896053afecca5223018cf28f8563d010deef39f0ff182e876f1dbddb54fb",
-      "fetched_at": "2026-11-11T21:05:01.122561+00:00",
+      "fetched_at": "2026-11-17T03:24:05.242996+00:00",
       "source_updated_at": null,
       "source_id": "jgrants",
       "source_name": "Jグランツ（デジタル庁）",
@@ -4713,9 +4710,9 @@
       "evidence": [],
       "api_url": "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/a0WJ200000CDdmVMAT",
       "data_detail": "full",
-      "api_detail_at": "2026-11-11T21:05:01.122561+00:00",
+      "api_detail_at": "2026-11-17T03:24:05.242996+00:00",
       "list_hash": "94e16b64212726014f6e06e6cdf8360c8b4ae67539d28ed5ee41bfa07de93f3d",
-      "last_listed_at": "2026-11-16T00:40:34.045474+00:00"
+      "last_listed_at": "2026-11-17T03:24:05.242996+00:00"
     },
     {
       "id": "jg-a0WJ200000CDdjzMAD",
@@ -4723,7 +4720,7 @@
       "url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDdjzMAD",
       "title": "地域社会ＤＸ推進パッケージ事業（補助事業）",
       "hash": "6562d157a9902a846c0b1bc6a3235e70d71eca42a73048f81d01f99a87492501",
-      "fetched_at": "2026-11-11T21:05:06.598495+00:00",
+      "fetched_at": "2026-11-17T03:24:08.481916+00:00",
       "source_updated_at": null,
       "source_id": "jgrants",
       "source_name": "Jグランツ（デジタル庁）",
@@ -4763,9 +4760,9 @@
       "evidence": [],
       "api_url": "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/a0WJ200000CDdjzMAD",
       "data_detail": "full",
-      "api_detail_at": "2026-11-11T21:05:06.598495+00:00",
+      "api_detail_at": "2026-11-17T03:24:08.481916+00:00",
       "list_hash": "43f854871064bda2e7b0b917aa26d85a23f0e87155f3bfcff32a670196fd1502",
-      "last_listed_at": "2026-11-16T00:40:34.045657+00:00"
+      "last_listed_at": "2026-11-17T03:24:08.481916+00:00"
     },
     {
       "id": "jg-a0WJ200000CDdgsMAD",
@@ -4773,7 +4770,7 @@
       "url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDdgsMAD",
       "title": "令和８年度皮革産業振興対策事業費補助金（団体・グループ）（２次公募）",
       "hash": "d4b81dcbb444b0055a6e3df268eab1603fbb67db671ec0fa9fbac914fcda1a22",
-      "fetched_at": "2026-11-11T21:05:11.516194+00:00",
+      "fetched_at": "2026-11-17T03:24:10.165025+00:00",
       "source_updated_at": null,
       "source_id": "jgrants",
       "source_name": "Jグランツ（デジタル庁）",
@@ -4812,9 +4809,9 @@
       "evidence": [],
       "api_url": "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/a0WJ200000CDdgsMAD",
       "data_detail": "full",
-      "api_detail_at": "2026-11-11T21:05:11.516194+00:00",
+      "api_detail_at": "2026-11-17T03:24:10.165025+00:00",
       "list_hash": "6496b491560bb983bb690da0069263e50089f775d72c49df4047f1b9a446763f",
-      "last_listed_at": "2026-11-16T00:40:34.045865+00:00"
+      "last_listed_at": "2026-11-17T03:24:10.165025+00:00"
     },
     {
       "id": "jg-a0WJ200000CDderMAD",
@@ -4822,7 +4819,7 @@
       "url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDderMAD",
       "title": "令和8年度SDS電子化補助金",
       "hash": "025799975dc6c68741c4d85ef15faddd83545b303f663da38b34bd9b480ca6cf",
-      "fetched_at": "2026-11-11T21:05:16.409659+00:00",
+      "fetched_at": "2026-11-17T03:24:11.660980+00:00",
       "source_updated_at": null,
       "source_id": "jgrants",
       "source_name": "Jグランツ（デジタル庁）",
@@ -4861,9 +4858,9 @@
       "evidence": [],
       "api_url": "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/a0WJ200000CDderMAD",
       "data_detail": "full",
-      "api_detail_at": "2026-11-11T21:05:16.409659+00:00",
+      "api_detail_at": "2026-11-17T03:24:11.660980+00:00",
       "list_hash": "eaaf1957c00f5495fb495666d27b5f9e411f9dfa5913806d28fe31855f56ba82",
-      "last_listed_at": "2026-11-16T00:40:34.046036+00:00"
+      "last_listed_at": "2026-11-17T03:24:11.660980+00:00"
     },
     {
       "id": "jg-a0WJ200000CDdbJMAT",
@@ -4871,7 +4868,7 @@
       "url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDdbJMAT",
       "title": "令和８年度　ＺＥＢ実証事業（二次公募）",
       "hash": "39bd37f0308b87fff74f1df80293257f708d2267165e070bedda2d6da80f8a23",
-      "fetched_at": "2026-11-11T21:05:22.491217+00:00",
+      "fetched_at": "2026-11-17T03:24:14.964547+00:00",
       "source_updated_at": null,
       "source_id": "jgrants",
       "source_name": "Jグランツ（デジタル庁）",
@@ -4910,9 +4907,9 @@
       "evidence": [],
       "api_url": "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/a0WJ200000CDdbJMAT",
       "data_detail": "full",
-      "api_detail_at": "2026-11-11T21:05:22.491217+00:00",
+      "api_detail_at": "2026-11-17T03:24:14.964547+00:00",
       "list_hash": "28e6b68a26c784a6b2be1c75c462e7eba8b59dba53672b04176ebc2026c906a0",
-      "last_listed_at": "2026-11-16T00:40:34.046196+00:00"
+      "last_listed_at": "2026-11-17T03:24:14.964547+00:00"
     },
     {
       "id": "jg-a0WJ200000CDdSBMA1",
@@ -4920,7 +4917,7 @@
       "url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDdSBMA1",
       "title": "令和7年度補正　デジタルライフライン整備加速事業（ドローン航路整備事業）",
       "hash": "42a4a2fc01a6e09dd3fe2a11488f49bacef5de50a96751ac760b26479cb0c0c5",
-      "fetched_at": "2026-11-11T21:05:27.422641+00:00",
+      "fetched_at": "2026-11-17T03:24:16.466807+00:00",
       "source_updated_at": null,
       "source_id": "jgrants",
       "source_name": "Jグランツ（デジタル庁）",
@@ -4959,9 +4956,9 @@
       "evidence": [],
       "api_url": "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/a0WJ200000CDdSBMA1",
       "data_detail": "full",
-      "api_detail_at": "2026-11-11T21:05:27.422641+00:00",
+      "api_detail_at": "2026-11-17T03:24:16.466807+00:00",
       "list_hash": "83cefd087cdfbde316e5cf5f3242adc4937123d8290c451b8b5db851c03a35e3",
-      "last_listed_at": "2026-11-16T00:40:34.046392+00:00"
+      "last_listed_at": "2026-11-17T03:24:16.466807+00:00"
     },
     {
       "id": "jg-a0WJ200000CDdRmMAL",
@@ -5010,7 +5007,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-11T21:05:32.847846+00:00",
       "list_hash": "a01290575f9afcad691907f404d5521417647039f5dd190fbd6ce031744f44d8",
-      "last_listed_at": "2026-11-16T00:40:34.046661+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.134794+00:00"
     },
     {
       "id": "jg-a0WJ200000CDdRHMA1",
@@ -5066,7 +5063,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-11T21:05:39.395092+00:00",
       "list_hash": "97de602201aee4c1088eaf4004483ac822174693382ab018a6280b8c8ea96616",
-      "last_listed_at": "2026-11-16T00:40:34.046841+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.134987+00:00"
     },
     {
       "id": "jg-a0WJ200000CDdR2MAL",
@@ -5115,7 +5112,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-11T21:05:45.184492+00:00",
       "list_hash": "a48c01eb4de51f214bc716ce35023dc62666833b787d5a68d1c28e7c02b76caa",
-      "last_listed_at": "2026-11-16T00:40:34.047007+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.135160+00:00"
     },
     {
       "id": "jg-a0WJ200000CDdQxMAL",
@@ -5164,7 +5161,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-11T21:05:51.548229+00:00",
       "list_hash": "728ce9aa0f9a9a30fe4319e8a4f06df8fefb9cc19a8f0b83df57ba940a47e9dc",
-      "last_listed_at": "2026-11-16T00:40:34.047170+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.135331+00:00"
     },
     {
       "id": "jg-a0WJ200000CDdPBMA1",
@@ -5220,7 +5217,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-11T21:05:58.068898+00:00",
       "list_hash": "0fa6023f8dc71f3df7d82dcb7a3c53da8fac895a3fbe9d5bcccbcf6d4da1ab36",
-      "last_listed_at": "2026-11-16T00:40:34.047369+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.135512+00:00"
     },
     {
       "id": "jg-a0WJ200000CDdNjMAL",
@@ -5269,7 +5266,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-11T21:06:04.012472+00:00",
       "list_hash": "4c22963260a3b4392caf435084733095430e70bb6a05b263158c533a91b13190",
-      "last_listed_at": "2026-11-16T00:40:34.047537+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.135686+00:00"
     },
     {
       "id": "jg-a0WJ200000CDdNKMA1",
@@ -5318,7 +5315,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-11T21:06:19.632646+00:00",
       "list_hash": "108479ea30bb772f7aa44ec27a80af783e9e087eb82d982278c9d4c375e8ac26",
-      "last_listed_at": "2026-11-16T00:40:34.047701+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.135874+00:00"
     },
     {
       "id": "jg-a0WJ200000CDdKuMAL",
@@ -5367,7 +5364,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-12T10:26:26.511470+00:00",
       "list_hash": "7ba64546339bba7b313e35ab9aee17fd74157c663186f5c0fa9e0c103061e31b",
-      "last_listed_at": "2026-11-16T00:40:34.047962+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.136136+00:00"
     },
     {
       "id": "jg-a0WJ200000CDdJhMAL",
@@ -5416,7 +5413,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-12T10:26:28.163165+00:00",
       "list_hash": "057711b17f0a913b86589751dc79d59b658d25d4701ffb051bb1add0a8e9b5ce",
-      "last_listed_at": "2026-11-16T00:40:34.048125+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.136303+00:00"
     },
     {
       "id": "jg-a0WJ200000CDdAaMAL",
@@ -5465,7 +5462,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-12T10:26:31.767209+00:00",
       "list_hash": "e326fd8cc724344c69aa981cc5df77efbf7200ff9f08181a1168456da7121035",
-      "last_listed_at": "2026-11-16T00:40:34.048301+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.136474+00:00"
     },
     {
       "id": "jg-a0WJ200000CDdABMA1",
@@ -5514,7 +5511,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-12T10:26:35.187868+00:00",
       "list_hash": "4d8ffb39c7cc215d057ee8a8bf8d5bb93db2d1c412ed93035c1b0ac90621a25d",
-      "last_listed_at": "2026-11-16T00:40:34.048471+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.136646+00:00"
     },
     {
       "id": "jg-a0WJ200000CDdA6MAL",
@@ -5563,7 +5560,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-12T10:26:39.075519+00:00",
       "list_hash": "9addca89737ee4f71b7bfde2982923b2e6454004947599c8378ab4c956de4f41",
-      "last_listed_at": "2026-11-16T00:40:34.048632+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.136838+00:00"
     },
     {
       "id": "jg-a0WJ200000CDd9xMAD",
@@ -5612,7 +5609,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-12T10:26:42.905919+00:00",
       "list_hash": "532412fe883dfe9b667ea56efd8ac490427f4360cda01af6cb3985ecdddaaa03",
-      "last_listed_at": "2026-11-16T00:40:34.048799+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.137022+00:00"
     },
     {
       "id": "jg-a0WJ200000CDd9wMAD",
@@ -5661,7 +5658,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-12T10:26:54.538054+00:00",
       "list_hash": "c88c0d1b7e2154c71d95409f4d1fb1923f89e6a4615844e5da092b2330d7b961",
-      "last_listed_at": "2026-11-16T00:40:34.049056+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.137286+00:00"
     },
     {
       "id": "jg-a0WJ200000CDd5XMAT",
@@ -5710,7 +5707,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-12T10:26:46.664495+00:00",
       "list_hash": "b3e4362219791639051246df9692ad8fa9eef1f82c819e49228f41fb1467ca58",
-      "last_listed_at": "2026-11-16T00:40:34.049234+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.137453+00:00"
     },
     {
       "id": "jg-a0WJ200000CDd5SMAT",
@@ -5759,7 +5756,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-12T10:26:50.811935+00:00",
       "list_hash": "8faaee43da0db68727ec98a50e94d00b81a739e00fff061c2cd8fa119881ce18",
-      "last_listed_at": "2026-11-16T00:40:34.049402+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.137621+00:00"
     },
     {
       "id": "jg-a0WJ200000CDd3YMAT",
@@ -5808,7 +5805,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-12T10:27:06.791150+00:00",
       "list_hash": "c60eead43ec6844df9942c2af5de62fbf14ed1717d67fd9e4e75e93e1af762e2",
-      "last_listed_at": "2026-11-16T00:40:34.049569+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.137810+00:00"
     },
     {
       "id": "jg-a0WJ200000CDd3OMAT",
@@ -5857,7 +5854,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-15T00:41:00.454671+00:00",
       "list_hash": "52d6fbeba25144aab5b5e889f7540aec06618b749233b57b66da30f1a361d0c8",
-      "last_listed_at": "2026-11-16T00:40:34.068816+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.157741+00:00"
     },
     {
       "id": "jg-a0WJ200000CDczgMAD",
@@ -5906,7 +5903,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-12T10:27:10.443615+00:00",
       "list_hash": "1fc898471bf40ede69299fddd206287390fc01e60cd2722e615dde58618bb3ff",
-      "last_listed_at": "2026-11-16T00:40:34.049733+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.137983+00:00"
     },
     {
       "id": "jg-a0WJ200000CDczMMAT",
@@ -5956,7 +5953,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-12T10:27:15.183811+00:00",
       "list_hash": "a36c2d455b68092b3f316bcddd8282a3ab62440ea79454724fff680c7e699dbe",
-      "last_listed_at": "2026-11-16T00:40:34.049901+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.138152+00:00"
     },
     {
       "id": "jg-a0WJ200000CDczHMAT",
@@ -6006,7 +6003,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-12T10:27:22.068986+00:00",
       "list_hash": "77011b9eb2a6cdb486f73c1fe19d13e2174eca9b5bb460ec0db9df8112414b1d",
-      "last_listed_at": "2026-11-16T00:40:34.050062+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.138317+00:00"
     },
     {
       "id": "jg-a0WJ200000CDctfMAD",
@@ -6055,7 +6052,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-12T10:27:25.162186+00:00",
       "list_hash": "4fbc877b9cb267dd4c48c9de268819bee3648fbfcbaec0892628175d18c85f65",
-      "last_listed_at": "2026-11-16T00:40:34.050330+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.138599+00:00"
     },
     {
       "id": "jg-a0WJ200000CDcQsMAL",
@@ -6104,7 +6101,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-12T10:27:28.721067+00:00",
       "list_hash": "d8cdf22c871fc99e19972b7fb63f6ea015528abab760144375b9b9dd2e2862b2",
-      "last_listed_at": "2026-11-16T00:40:34.050497+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.138793+00:00"
     },
     {
       "id": "jg-a0WJ200000CDcQOMA1",
@@ -6153,7 +6150,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-12T10:27:30.408614+00:00",
       "list_hash": "9feb4c3605f21668698e6ac5e8b71951766b4d06063433acf296f190e97c7326",
-      "last_listed_at": "2026-11-16T00:40:34.050660+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.138966+00:00"
     },
     {
       "id": "jg-a0WJ200000CDcODMA1",
@@ -6202,7 +6199,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-12T10:27:34.040440+00:00",
       "list_hash": "887c5f69f1f365e3d6439dee074c44159c3795c36f28ee986e2852052ce9db35",
-      "last_listed_at": "2026-11-16T00:40:34.050822+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.139138+00:00"
     },
     {
       "id": "jg-a0WJ200000CDcFAMA1",
@@ -6251,7 +6248,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-12T10:27:37.019731+00:00",
       "list_hash": "7d8fb9bb83736a3522a807f12286510eea6016ad46120122a2b62cd139f12ce7",
-      "last_listed_at": "2026-11-16T00:40:34.050985+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.139310+00:00"
     },
     {
       "id": "jg-a0WJ200000CDc0YMAT",
@@ -6300,7 +6297,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-12T10:27:41.047817+00:00",
       "list_hash": "3e9988247198f625568dcd0df3e9fae17809736ae2e18627ffa4f310a05abe65",
-      "last_listed_at": "2026-11-16T00:40:34.051162+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.139493+00:00"
     },
     {
       "id": "jg-a0WJ200000CDc0OMAT",
@@ -6350,7 +6347,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-12T10:27:44.226881+00:00",
       "list_hash": "ee9635ae63a807a0bbcd995efd75fba9d839a5e2470b40faa08d7be49fdaf250",
-      "last_listed_at": "2026-11-16T00:40:34.051439+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.139769+00:00"
     },
     {
       "id": "jg-a0WJ200000CDbyjMAD",
@@ -6399,7 +6396,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-12T10:27:47.181271+00:00",
       "list_hash": "ce53b50ab99fc6e200475a89e1a1bbdb165f485acc8435b35d343d1b7787dac0",
-      "last_listed_at": "2026-11-16T00:40:34.051616+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.139949+00:00"
     },
     {
       "id": "jg-a0WJ200000CDbq0MAD",
@@ -6448,7 +6445,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-12T10:27:51.012400+00:00",
       "list_hash": "ecc3aaa137e148f162de346425eeed5053ded5d4f8fa7f62ca9ff26509593abc",
-      "last_listed_at": "2026-11-16T00:40:34.051781+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.140120+00:00"
     },
     {
       "id": "jg-a0WJ200000CDbpvMAD",
@@ -6498,7 +6495,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-12T10:27:54.812385+00:00",
       "list_hash": "92c186b9fa3c9264a25d24c94f9d3a77776f973690e78d73eda4f2808116f50e",
-      "last_listed_at": "2026-11-16T00:40:34.051946+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.140289+00:00"
     },
     {
       "id": "jg-a0WJ200000CDbPBMA1",
@@ -6547,7 +6544,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-12T10:27:58.319889+00:00",
       "list_hash": "6c1c82018c4583ef9e7dac51cbc21fd34073ea38329e4707689064804b5c7af1",
-      "last_listed_at": "2026-11-16T00:40:34.052112+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.140460+00:00"
     },
     {
       "id": "jg-a0WJ200000CDb8QMAT",
@@ -6596,7 +6593,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-12T10:28:01.714321+00:00",
       "list_hash": "d7eab7434f86a4d0fde5f3363b94580745cb0e0066bb7a5d65677126877a1dbc",
-      "last_listed_at": "2026-11-16T00:40:34.052295+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.140633+00:00"
     },
     {
       "id": "jg-a0WJ200000CDb6JMAT",
@@ -6694,7 +6691,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-12T10:28:06.085620+00:00",
       "list_hash": "6190dd42815d78ee830f6a3cb2b45df72464f38b7936bedf139aaba16a189b89",
-      "last_listed_at": "2026-11-16T00:40:34.052458+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.140818+00:00"
     },
     {
       "id": "jg-a0WJ200000CDaotMAD",
@@ -6743,7 +6740,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-12T10:28:09.839397+00:00",
       "list_hash": "c0e48dd03a245ff5c0e5eb76bed0986f176383b9c25beca56011a77b1664277e",
-      "last_listed_at": "2026-11-16T00:40:34.052732+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.141108+00:00"
     },
     {
       "id": "jg-a0WJ200000CDaT7MAL",
@@ -6792,7 +6789,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-13T01:38:41.385785+00:00",
       "list_hash": "4b9d944150ff150a5549f74d895efb10a73409ceef8976925903dfa37e8615f2",
-      "last_listed_at": "2026-11-16T00:40:34.052896+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.141284+00:00"
     },
     {
       "id": "jg-a0WJ200000CDaMVMA1",
@@ -6841,7 +6838,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-13T01:38:43.655118+00:00",
       "list_hash": "3ae70cc7120beb3389c036fc0fc1516cd3bd9a090047dc7099fd4eb8ae870582",
-      "last_listed_at": "2026-11-16T00:40:34.053065+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.141456+00:00"
     },
     {
       "id": "jg-a0WJ200000CDaMQMA1",
@@ -6890,7 +6887,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-13T01:38:45.008846+00:00",
       "list_hash": "0e6a5a63b42e95a5dc3208e7e53216aaa847832174a5e7506789ba4931fde510",
-      "last_listed_at": "2026-11-16T00:40:34.053244+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.141626+00:00"
     },
     {
       "id": "jg-a0WJ200000CDaLwMAL",
@@ -6939,7 +6936,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-13T01:38:48.776840+00:00",
       "list_hash": "003c735b0c1ba08c3319234cab2a7820138c43d80b5947fa1c831b4c9cf483b6",
-      "last_listed_at": "2026-11-16T00:40:34.053410+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.141829+00:00"
     },
     {
       "id": "jg-a0WJ200000CDa1bMAD",
@@ -6988,7 +6985,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-16T00:40:43.110085+00:00",
       "list_hash": "3fab4d6254143849624d2302aa8d525db9ad5978e96c03916c8c5892df2316c9",
-      "last_listed_at": "2026-11-16T00:40:43.110085+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.141998+00:00"
     },
     {
       "id": "jg-a0WJ200000CDZzQMAX",
@@ -7037,7 +7034,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-13T01:38:51.248267+00:00",
       "list_hash": "992150ae39403813f7352bc1e1c7da929843f7ab506a943668c7ee92a77377d2",
-      "last_listed_at": "2026-11-16T00:40:34.053831+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.142257+00:00"
     },
     {
       "id": "jg-a0WJ200000CDZDHMA5",
@@ -7086,7 +7083,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-13T01:38:53.720949+00:00",
       "list_hash": "23716ea7aedff0282690a0f2a8c93af93d29144a16c26a38e185c9caf7198466",
-      "last_listed_at": "2026-11-16T00:40:34.054000+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.142424+00:00"
     },
     {
       "id": "jg-a0WJ200000CDZDCMA5",
@@ -7135,7 +7132,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-13T01:38:56.262919+00:00",
       "list_hash": "fee5cc22434d13b3917c55487fee16d5a086ff0c0e495a7e1cd47a952996f6ec",
-      "last_listed_at": "2026-11-16T00:40:34.054168+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.142595+00:00"
     },
     {
       "id": "jg-a0WJ200000CDZ2OMAX",
@@ -7184,7 +7181,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-13T01:38:57.652800+00:00",
       "list_hash": "1cdb2dc293eea030856d95a9ec86ee6fcf1457eb8901709b36ea1182d978ff72",
-      "last_listed_at": "2026-11-16T00:40:34.054346+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.142784+00:00"
     },
     {
       "id": "jg-a0WJ200000CDZ1GMAX",
@@ -7233,7 +7230,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-13T01:39:00.112696+00:00",
       "list_hash": "8cfd1873d475eedc7e0f1a17349dbec6f2e6f6dc3fd5e9aac39eac97913a0b86",
-      "last_listed_at": "2026-11-16T00:40:34.054506+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.142956+00:00"
     },
     {
       "id": "jg-a0WJ200000CDZ04MAH",
@@ -7282,7 +7279,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-13T01:39:02.733651+00:00",
       "list_hash": "854a4108a48c5c38ab0c1a3ad791400212d31e2d2a02bad5d9f8536c4c431592",
-      "last_listed_at": "2026-11-16T00:40:34.054668+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.143122+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYzVMAX",
@@ -7331,7 +7328,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-13T01:39:05.178782+00:00",
       "list_hash": "fbb6b22a6c16c1a54fc47cba13f1cb369c87955d8cafa8a661563f0dc02081af",
-      "last_listed_at": "2026-11-16T00:40:34.054837+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.143291+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYzQMAX",
@@ -7380,7 +7377,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-13T01:39:08.006046+00:00",
       "list_hash": "c43728905e52b8d35cde35558d0b0829a66ff8ac02f0a8791b37a1d45fff64fb",
-      "last_listed_at": "2026-11-16T00:40:34.055109+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.143547+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYvnMAH",
@@ -7429,7 +7426,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-13T01:39:10.515659+00:00",
       "list_hash": "098343984302869a5797340f030e80e943eadcbe32c5623f8d649309933f6485",
-      "last_listed_at": "2026-11-16T00:40:34.055291+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.143731+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYviMAH",
@@ -7478,7 +7475,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-13T01:39:13.030176+00:00",
       "list_hash": "b178099885f58275bf8fd8a5cd9a557b5ce9a3b847f55983c2ce72a5ae777261",
-      "last_listed_at": "2026-11-16T00:40:34.055457+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.143906+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYurMAH",
@@ -7527,7 +7524,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-13T01:39:15.338816+00:00",
       "list_hash": "6efca28a5f7eae2674b298ee6096379ee5b1755494ead792bb56af6267dbbc51",
-      "last_listed_at": "2026-11-16T00:40:34.055625+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.144078+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYumMAH",
@@ -7576,7 +7573,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-13T01:39:17.284292+00:00",
       "list_hash": "760b185931f1f66f88a369dca5e6d78795cc69e518be40781b63770a7d75233d",
-      "last_listed_at": "2026-11-16T00:40:34.055790+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.144248+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYuhMAH",
@@ -7625,7 +7622,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-13T01:39:19.588043+00:00",
       "list_hash": "ecd99fa0e7905a54b4386a60cbe059aa71cebe6d8b1bb1587b7bd479744c54f9",
-      "last_listed_at": "2026-11-16T00:40:34.055953+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.144414+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYucMAH",
@@ -7674,7 +7671,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-13T01:39:22.001697+00:00",
       "list_hash": "76e5d1f2281e4a282ad690227e747484b4c88e19ddc79f8061c27b94dd39f1a6",
-      "last_listed_at": "2026-11-16T00:40:34.056205+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.144668+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYuXMAX",
@@ -7723,7 +7720,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-13T01:39:24.368434+00:00",
       "list_hash": "433431e85a8208e13727dbcd0fbdfd8d3cf1209ee2ec25db46ac03c2176bd68f",
-      "last_listed_at": "2026-11-16T00:40:34.056386+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.144850+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYuSMAX",
@@ -7772,7 +7769,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-13T01:39:26.652115+00:00",
       "list_hash": "3b00586b5bfe90b436db83edc324e9f5a4669520dbac5057873e6ed363028f4e",
-      "last_listed_at": "2026-11-16T00:40:34.056549+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.145038+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYuIMAX",
@@ -7821,7 +7818,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-13T01:39:29.042103+00:00",
       "list_hash": "4e3a91c7ec811b5948a1ea3ad2c7cc27d08f9397909e8052e46fbec9792100da",
-      "last_listed_at": "2026-11-16T00:40:34.056709+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.145219+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYu3MAH",
@@ -7870,7 +7867,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-13T01:39:31.494494+00:00",
       "list_hash": "e64848627c3f05aad0ea5760deeaf266d37a59c089594487d5bae42e8b893a3a",
-      "last_listed_at": "2026-11-16T00:40:34.056870+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.145388+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYq2MAH",
@@ -7920,7 +7917,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-13T01:39:33.354827+00:00",
       "list_hash": "21e72d3b849587e5307be5dddcf2cba7d36814210209b40ecce29069626d5ccd",
-      "last_listed_at": "2026-11-16T00:40:34.057036+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.145563+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYlTMAX",
@@ -7969,7 +7966,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-13T01:39:36.752828+00:00",
       "list_hash": "393adf7e65249526869c0f10b3044e1e9079b06bf68f155a5f8bd71491eb258e",
-      "last_listed_at": "2026-11-16T00:40:34.057299+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.145829+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYkHMAX",
@@ -8019,7 +8016,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-13T01:39:39.963550+00:00",
       "list_hash": "886caf7e40a7e50233017b76a871975c44eba4cfd3c9e07c16495cfc979b17ea",
-      "last_listed_at": "2026-11-16T00:40:34.057472+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.146002+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYkCMAX",
@@ -8069,7 +8066,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-13T01:39:42.912374+00:00",
       "list_hash": "3bc40b7648442b1b9ee07c7c2397944ba0f29cc687d7cef7d5bae30466a0d9d4",
-      "last_listed_at": "2026-11-16T00:40:34.057639+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.146173+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYk0MAH",
@@ -8118,7 +8115,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-13T01:39:46.065223+00:00",
       "list_hash": "65310e741283ee24436abe6f7a048becd67ce3de9f5ce1a1bc8616e9e1b59dc6",
-      "last_listed_at": "2026-11-16T00:40:34.057801+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.146346+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYjRMAX",
@@ -8167,7 +8164,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-13T01:39:49.421874+00:00",
       "list_hash": "74b6337ce1c99a722586e27268a06de55efe28d5006035c545225b67f0629866",
-      "last_listed_at": "2026-11-16T00:40:34.057964+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.146518+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYiwMAH",
@@ -8216,7 +8213,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-13T01:39:52.670519+00:00",
       "list_hash": "d7918d5b575c9ed6b0f643de829c815d5dbc40e9ae35b53b16589ab9282593b9",
-      "last_listed_at": "2026-11-16T00:40:34.058132+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.146688+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYimMAH",
@@ -8265,7 +8262,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-13T01:39:54.021296+00:00",
       "list_hash": "02de30888cf723d9e46cc34b37d9ef035989e6dd76a9676e6a76da8116f2b56f",
-      "last_listed_at": "2026-11-16T00:40:34.058338+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.146877+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYbNMAX",
@@ -8320,7 +8317,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-14T01:13:26.075022+00:00",
       "list_hash": "f677a8e54b5d74b93ce66a2be3d88a63674ed5dc719bf5b23b7f8f264a4ea058",
-      "last_listed_at": "2026-11-16T00:40:34.058609+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.147137+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYaFMAX",
@@ -8369,7 +8366,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-14T01:13:27.572472+00:00",
       "list_hash": "86f35d3481d630cf8fc71587c9580a7417e8cf6f95a3ca694351ffe7cb4c9743",
-      "last_listed_at": "2026-11-16T00:40:34.058780+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.147303+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYSUMA5",
@@ -8418,7 +8415,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-14T01:13:30.006804+00:00",
       "list_hash": "74907c5660c7c4804e5fcd8ff1ffb6b9bc3490fa598c3093b89b4586c0bb637b",
-      "last_listed_at": "2026-11-16T00:40:34.058950+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.147472+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYSPMA5",
@@ -8467,7 +8464,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-14T01:13:31.534206+00:00",
       "list_hash": "18a6d170d1ffa133e2f02a7ac4e6cdf7fe5b7d2b048ff4ab9ff439b857c119d0",
-      "last_listed_at": "2026-11-16T00:40:34.059118+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.147640+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYSKMA5",
@@ -8516,7 +8513,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-14T01:13:33.848219+00:00",
       "list_hash": "63f1836cb478434de4c99e11c95efbaabb020edd713dd316f3e4dd236b6d8d46",
-      "last_listed_at": "2026-11-16T00:40:34.059297+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.147827+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYSFMA5",
@@ -8565,7 +8562,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-14T01:13:35.375152+00:00",
       "list_hash": "986b3770180361e8bef0640cac5cdd93cfb11c1dc9848206d3d1f5cc38b9acb4",
-      "last_listed_at": "2026-11-16T00:40:34.059462+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.148000+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYSAMA5",
@@ -8614,7 +8611,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-14T01:13:36.828747+00:00",
       "list_hash": "998d2ccda182e0e5cb513238b252c46af540ae9a7f6fee575f16dece2871aee5",
-      "last_listed_at": "2026-11-16T00:40:34.059714+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.148257+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYEGMA5",
@@ -8939,7 +8936,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-14T01:13:39.902292+00:00",
       "list_hash": "6237918f50c38e1686089f33ceae2865a7b2103506debbc7238fe972d85171ce",
-      "last_listed_at": "2026-11-16T00:40:34.059884+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.148422+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYDcMAP",
@@ -8988,7 +8985,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-15T00:40:55.898597+00:00",
       "list_hash": "98047b1ae571e02669571204bf482116dabde76cbe39ce9bf6efadddd911a8d5",
-      "last_listed_at": "2026-11-16T00:40:34.060050+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.148586+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYC7MAP",
@@ -9039,7 +9036,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-14T01:13:43.493477+00:00",
       "list_hash": "4c31cc693ff38dbde9776273e2cf2a934f2a131891ba1b545175b1978e58c9d8",
-      "last_listed_at": "2026-11-16T00:40:34.060215+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.148776+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYBxMAP",
@@ -9088,7 +9085,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-14T01:13:44.981727+00:00",
       "list_hash": "49e08dba281f6ba7293725ed225ebe39d2160f3278df33447c0c6161bbe9eca6",
-      "last_listed_at": "2026-11-16T00:40:34.060400+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.148945+00:00"
     },
     {
       "id": "jg-a0WJ200000CDY9BMAX",
@@ -9137,7 +9134,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-14T01:13:49.059514+00:00",
       "list_hash": "8a5ab563932adbaaec1a6a116cd3886a82867ee27b66195a1f625469b0ec9f32",
-      "last_listed_at": "2026-11-16T00:40:34.060571+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.149133+00:00"
     },
     {
       "id": "jg-a0WJ200000CDY96MAH",
@@ -9186,7 +9183,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-14T01:13:51.655595+00:00",
       "list_hash": "34206569091f191e0d92f4020903656811449a08d8ea8a2657473cfdf512fe73",
-      "last_listed_at": "2026-11-16T00:40:34.060736+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.149305+00:00"
     },
     {
       "id": "jg-a0WJ200000CDY91MAH",
@@ -9235,7 +9232,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-14T01:13:54.323010+00:00",
       "list_hash": "aee43cfa791f94e995d4262fff5819864c6b6b1014ae2d9655fa0f7e581aa4b6",
-      "last_listed_at": "2026-11-16T00:40:34.061016+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.149577+00:00"
     },
     {
       "id": "jg-a0WJ200000CDY89MAH",
@@ -9284,7 +9281,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-14T01:13:56.953837+00:00",
       "list_hash": "074214d45b62863c0206284954786b98dcf81e8cd5c4f27854a44e8435683856",
-      "last_listed_at": "2026-11-16T00:40:34.061182+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.149764+00:00"
     },
     {
       "id": "jg-a0WJ200000CDY8DMAX",
@@ -9333,7 +9330,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-14T01:13:59.622401+00:00",
       "list_hash": "990c28a539977b9fab76153ca485ed6ada643fb5f056613ba4675efd96fb7dd9",
-      "last_listed_at": "2026-11-16T00:40:34.061361+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.149940+00:00"
     },
     {
       "id": "jg-a0WJ200000CDY88MAH",
@@ -9382,7 +9379,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-14T01:14:02.260066+00:00",
       "list_hash": "932c2f71472c4c9764ed01336d6b652a879d066cb38d07d57123908579529abf",
-      "last_listed_at": "2026-11-16T00:40:34.061522+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.150111+00:00"
     },
     {
       "id": "jg-a0WJ200000CDY7yMAH",
@@ -9431,7 +9428,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-14T01:14:04.832397+00:00",
       "list_hash": "bfcb862352b650ed0cb9f4420de73bbf999f961b4105ccd6961c9241460a1ada",
-      "last_listed_at": "2026-11-16T00:40:34.061682+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.150283+00:00"
     },
     {
       "id": "jg-a0WJ200000CDY7tMAH",
@@ -9480,7 +9477,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-14T01:14:07.583599+00:00",
       "list_hash": "58b080decfee7590ed2d8dc42bcbaaa961ab48d64d5ed70df3c23f662f69b287",
-      "last_listed_at": "2026-11-16T00:40:34.061849+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.150450+00:00"
     },
     {
       "id": "jg-a0WJ200000CDY7KMAX",
@@ -9529,7 +9526,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-14T01:14:09.126168+00:00",
       "list_hash": "f73732937ba6deca14357289643cd8351346d347b081743a13d5c20e62abae70",
-      "last_listed_at": "2026-11-16T00:40:34.062098+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.150715+00:00"
     },
     {
       "id": "jg-a0WJ200000CDY6KMAX",
@@ -9578,7 +9575,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-14T01:14:10.641376+00:00",
       "list_hash": "0d3ef7f756afbb19e2aa5de18107dff9d818983d68edc08ba6bc10dc1485ef03",
-      "last_listed_at": "2026-11-16T00:40:34.062274+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.150889+00:00"
     },
     {
       "id": "jg-a0WJ200000CDY5GMAX",
@@ -9627,7 +9624,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-14T01:14:12.109149+00:00",
       "list_hash": "3d8ab79f43bf6fd60246f2b5af23ec39e316db2d3e3609a303ee5f1315fac5b9",
-      "last_listed_at": "2026-11-16T00:40:34.062439+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.151060+00:00"
     },
     {
       "id": "jg-a0WJ200000CDY4mMAH",
@@ -9676,7 +9673,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-14T01:14:13.605514+00:00",
       "list_hash": "5d2b4da99b8b0f0ad5bd8daba774b9a0652fe8e35fa1c1600b53a22040a3d1e7",
-      "last_listed_at": "2026-11-16T00:40:34.062600+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.151227+00:00"
     },
     {
       "id": "jg-a0WJ200000CDXscMAH",
@@ -9725,7 +9722,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-14T01:14:15.064406+00:00",
       "list_hash": "15b078c5a206a0cb1b71a45d0a927aec4ed2d7ee34a4d01f45b9ec96bdc25265",
-      "last_listed_at": "2026-11-16T00:40:34.062759+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.151396+00:00"
     },
     {
       "id": "jg-a0WJ200000CDXmVMAX",
@@ -9774,7 +9771,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-14T01:14:17.514579+00:00",
       "list_hash": "20ba8a157b103b87262178e63624414e0c471e8bd1fdaf12b6929ec47eefd9c7",
-      "last_listed_at": "2026-11-16T00:40:34.062920+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.151567+00:00"
     },
     {
       "id": "jg-a0WJ200000CDXRpMAP",
@@ -9824,7 +9821,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-14T01:14:20.660146+00:00",
       "list_hash": "aa83f0446e62f41b8ccb7a65be3617016243f4a2f91d553874c48942977c4fd0",
-      "last_listed_at": "2026-11-16T00:40:34.063080+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.151748+00:00"
     },
     {
       "id": "jg-a0WJ200000CDXORMA5",
@@ -9873,7 +9870,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-15T00:41:22.718815+00:00",
       "list_hash": "5daaab00f733389b13db03fc0308b7b1debeee502641bb9cee8466401886be3a",
-      "last_listed_at": "2026-11-16T00:40:34.067201+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.155961+00:00"
     },
     {
       "id": "jg-a0WJ200000CDXK4MAP",
@@ -9922,7 +9919,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-14T01:14:22.162737+00:00",
       "list_hash": "0167b02be2e6a3b42a93da24d2200c63ca3b7caec7dc1618b8a644fe1648d517",
-      "last_listed_at": "2026-11-16T00:40:34.063393+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.152026+00:00"
     },
     {
       "id": "jg-a0WJ200000CDXFjMAP",
@@ -9971,7 +9968,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-14T01:14:25.537071+00:00",
       "list_hash": "13ec61d5abaa2e5e4cfa9f58535f6e4eb62f3409a7137761fd6822e801fa3797",
-      "last_listed_at": "2026-11-16T00:40:34.063561+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.152199+00:00"
     },
     {
       "id": "jg-a0WJ200000CDXFiMAP",
@@ -10021,7 +10018,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-15T00:40:44.139608+00:00",
       "list_hash": "09db03b6e9b57b3b62b55777553db58649fb5ccbaca37e80a494927be9c4a813",
-      "last_listed_at": "2026-11-16T00:40:34.064215+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.152371+00:00"
     },
     {
       "id": "jg-a0WJ200000CDXFhMAP",
@@ -10071,7 +10068,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-15T00:40:45.612830+00:00",
       "list_hash": "c84058e39ca2a21b08b5b1860b3ad16b5275c6f51c6164d457f7a0886935208f",
-      "last_listed_at": "2026-11-16T00:40:34.063723+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.152539+00:00"
     },
     {
       "id": "jg-a0WJ200000CDXFgMAP",
@@ -10121,7 +10118,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-15T00:40:47.110502+00:00",
       "list_hash": "f383fc98d0f6c30184af144756baa7318d7ba64a08f177c9f42f11c1c3364d6f",
-      "last_listed_at": "2026-11-16T00:40:34.063884+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.152718+00:00"
     },
     {
       "id": "jg-a0WJ200000CDXFfMAP",
@@ -10171,7 +10168,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-14T01:14:27.088096+00:00",
       "list_hash": "01e4e0fed7bae6848f5e2ee1033bc80922fd882e0eba5159f99bf3bdbcbb9fe9",
-      "last_listed_at": "2026-11-16T00:40:34.064052+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.152892+00:00"
     },
     {
       "id": "jg-a0WJ200000CDXENMA5",
@@ -10222,7 +10219,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-15T00:40:51.158929+00:00",
       "list_hash": "b76037417d935da4aa290e95db6a03f0feac2c4bfd608c597d9af4c6aa0544f7",
-      "last_listed_at": "2026-11-16T00:40:34.064491+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.153166+00:00"
     },
     {
       "id": "jg-a0WJ200000CDWZ9MAP",
@@ -10271,7 +10268,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-15T00:40:52.918495+00:00",
       "list_hash": "d1d126c7f616e9875663cc99b4f03a73b07998b05cfd952a44a1f13253e6e89c",
-      "last_listed_at": "2026-11-16T00:40:34.064658+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.153337+00:00"
     },
     {
       "id": "jg-a0WJ200000CDVkeMAH",
@@ -10320,7 +10317,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-12T10:27:03.800446+00:00",
       "list_hash": "dcadbe3bc5519f84f7b505d3b8b29edd84171402ff5b3bc757c364fd5e5a3bae",
-      "last_listed_at": "2026-11-16T00:40:34.066607+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.155343+00:00"
     },
     {
       "id": "jg-a0WJ200000CDTzMMAX",
@@ -10369,7 +10366,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-15T00:40:54.402655+00:00",
       "list_hash": "f26ab5a18f521c3feb742d591b5f446b9cb166c4f085eb87cefa20c489321e0c",
-      "last_listed_at": "2026-11-16T00:40:34.064820+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.153502+00:00"
     },
     {
       "id": "jg-a0WJ200000CDQEJMA5",
@@ -10418,7 +10415,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-15T00:41:01.962123+00:00",
       "list_hash": "39c46976cdb65902467eaaf437fe2ffd826e53fbb373c78b3227e6e5f69e94d3",
-      "last_listed_at": "2026-11-16T00:40:34.064988+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.153671+00:00"
     },
     {
       "id": "jg-a0WJ200000CDPyeMAH",
@@ -10467,7 +10464,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-15T00:41:03.462039+00:00",
       "list_hash": "56df4675a0972037f0bf32a2bff4496566a905fd5698f2a1fd59a93280d828e6",
-      "last_listed_at": "2026-11-16T00:40:34.065151+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.153857+00:00"
     },
     {
       "id": "jg-a0WJ200000CDPbMMAX",
@@ -10516,7 +10513,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-15T00:41:04.959992+00:00",
       "list_hash": "b9131d4319b676e23cc098951424c4a8454df2556c7bc64ede6a9ecca7e0dce6",
-      "last_listed_at": "2026-11-16T00:40:34.065329+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.154031+00:00"
     },
     {
       "id": "jg-a0WJ200000CDOuuMAH",
@@ -10565,7 +10562,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-15T00:41:07.306964+00:00",
       "list_hash": "431b704d2ee4faf4192b292f97d196fc0733c9e18cc4b1b93914dfddbdce41ad",
-      "last_listed_at": "2026-11-16T00:40:34.065492+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.154200+00:00"
     },
     {
       "id": "jg-a0WJ200000CDOsKMAX",
@@ -10616,7 +10613,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-15T00:41:08.791045+00:00",
       "list_hash": "2b02b644151ca4bad89a6e912ef708f2f004be063d05dc4a387c65c5792ffe5a",
-      "last_listed_at": "2026-11-16T00:40:34.065751+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.154459+00:00"
     },
     {
       "id": "jg-a0WJ200000CDO8eMAH",
@@ -10665,7 +10662,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-16T00:40:59.822141+00:00",
       "list_hash": "775246c65248d3e3fa2248900562b5eaa419b69d19047be6d2db50344e72c074",
-      "last_listed_at": "2026-11-16T00:40:59.822141+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.154646+00:00"
     },
     {
       "id": "jg-a0WJ200000CDNDnMAP",
@@ -10716,7 +10713,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-15T00:41:12.062955+00:00",
       "list_hash": "e8fd6c8bdb96d0019aeca646a5bf04cd2b18cbd9fb4e580e66804aa0cd203702",
-      "last_listed_at": "2026-11-16T00:40:34.066098+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.154839+00:00"
     },
     {
       "id": "jg-a0WJ200000CDL8JMAX",
@@ -10765,7 +10762,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-15T00:41:13.841649+00:00",
       "list_hash": "3ca8d6587b3fc4f6d1e6a39f8c4559d45a44d5ffcd4b5adefa15fafaf16037ab",
-      "last_listed_at": "2026-11-16T00:40:34.066278+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.155008+00:00"
     },
     {
       "id": "jg-a0WJ2000000qhOQMAY",
@@ -10814,7 +10811,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-15T00:41:17.494760+00:00",
       "list_hash": "232329430eb453f1be0415f266e68e05556d2348adcad9a9dd62143769cf13bc",
-      "last_listed_at": "2026-11-16T00:40:34.066869+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.155604+00:00"
     },
     {
       "id": "jg-a0W5h00000UaiqSEAR",
@@ -10863,7 +10860,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-15T00:41:18.987407+00:00",
       "list_hash": "6201b4e471fcf121e925f7fdfa09fbcf88af2ccfdd7705ad59bce145a792ac21",
-      "last_listed_at": "2026-11-16T00:40:34.067033+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.155786+00:00"
     },
     {
       "id": "jg-a0W5h00000UbU66EAF",
@@ -10912,7 +10909,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-15T00:41:24.204785+00:00",
       "list_hash": "0f67a2afe278ad673ceff636962c2a482f0ff630f12961f208d71e0ed95177b5",
-      "last_listed_at": "2026-11-16T00:40:34.067383+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.156136+00:00"
     },
     {
       "id": "jg-a0WJ200000CDX4vMAH",
@@ -10961,7 +10958,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-15T00:41:25.695402+00:00",
       "list_hash": "1251bd73f3eb853b03107c289af36a4e4eab230e1adca300486199c361a65e1f",
-      "last_listed_at": "2026-11-16T00:40:34.067549+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.156306+00:00"
     },
     {
       "id": "jg-a0WJ200000CDY72MAH",
@@ -11010,7 +11007,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-15T00:41:29.278486+00:00",
       "list_hash": "bd9e49c1419a35cbc3c0a34791575e57dde4393a8ab7d2776225f8ba5c0eb384",
-      "last_listed_at": "2026-11-16T00:40:34.067719+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.156501+00:00"
     },
     {
       "id": "jg-a0WJ200000CDdjfMAD",
@@ -11060,7 +11057,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-15T00:41:30.774929+00:00",
       "list_hash": "75d9902b84b25f062b0f3762aae697b9839c67ff8684b460b0bf725b3a39acab",
-      "last_listed_at": "2026-11-16T00:40:34.067974+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.156804+00:00"
     },
     {
       "id": "jg-a0W5h00000GMgXBEA1",
@@ -11109,7 +11106,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-15T00:41:32.249619+00:00",
       "list_hash": "24d91c939479e60cb5f5d4e17b539e4269a7dca991394e718e0f766d1c30b4df",
-      "last_listed_at": "2026-11-16T00:40:34.068144+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.157005+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYcpMAH",
@@ -11158,7 +11155,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-15T00:41:36.476814+00:00",
       "list_hash": "3c70cb7eb0b85e370ecb6ab99576417991b17fb16dcfe7f3790d837ae256362d",
-      "last_listed_at": "2026-11-16T00:40:34.068319+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.157188+00:00"
     },
     {
       "id": "jg-a0WJ200000CDcfDMAT",
@@ -11207,7 +11204,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-15T00:41:41.082269+00:00",
       "list_hash": "f1c7ef0855960dbe8c74a8e1524f93a722b95e7352eb9e93068362e432cd8c1b",
-      "last_listed_at": "2026-11-16T00:40:34.068481+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.157361+00:00"
     },
     {
       "id": "jg-a0WJ200000CDa1gMAD",
@@ -11258,7 +11255,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-15T00:41:44.114553+00:00",
       "list_hash": "81fa08a629f692b69f1ddff3287d8a204722ce5840938c75ae3a8dc5fa78a870",
-      "last_listed_at": "2026-11-16T00:40:34.068647+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.157543+00:00"
     },
     {
       "id": "jg-a0WJ200000CDKZFMA5",
@@ -11307,7 +11304,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-15T00:41:15.982987+00:00",
       "list_hash": "3ed6485f60c1aebd00e264ff77871d8bebc6516f451a3e8b83ce918e36ba2267",
-      "last_listed_at": "2026-11-16T00:40:34.066443+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.155176+00:00"
     },
     {
       "id": "jg-a0WJ200000CDeSJMA1",
@@ -11315,7 +11312,7 @@
       "url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDeSJMA1",
       "title": "令和8年度当初予算　二次公募　民間企業等による再エネの導入及び地域共生加速化事業のうち、ストレージパリティの達成に向けた太陽光発電設備等の価格低減促進事業",
       "hash": "8d3c44e5bcaa20be5495c72e9dc717325fac5f76dc3c6b26ad62a9fbafe3917a",
-      "fetched_at": "2026-11-11T21:04:18.912961+00:00",
+      "fetched_at": "2026-11-17T03:23:41.235049+00:00",
       "source_updated_at": null,
       "source_id": "jgrants",
       "source_name": "Jグランツ（デジタル庁）",
@@ -11356,9 +11353,9 @@
       "evidence": [],
       "api_url": "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/a0WJ200000CDeSJMA1",
       "data_detail": "full",
-      "api_detail_at": "2026-11-11T21:04:18.912961+00:00",
+      "api_detail_at": "2026-11-17T03:23:41.235049+00:00",
       "list_hash": "1a947a61792f6e77bfa59f8e2daa49ccf30936ff2a7847d700461580d25049bd",
-      "last_listed_at": "2026-11-16T00:40:34.042651+00:00"
+      "last_listed_at": "2026-11-17T03:23:41.235049+00:00"
     },
     {
       "id": "jg-a0WJ200000CDHQZMA5",
@@ -11407,7 +11404,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-15T00:41:51.185633+00:00",
       "list_hash": "753fa7cf144f99c585e6e09437718a6f6252d9cae31331ba13ed9d64a3539784",
-      "last_listed_at": "2026-11-16T00:40:34.068982+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.157925+00:00"
     },
     {
       "id": "jg-a0WJ200000CDJWIMA5",
@@ -11456,7 +11453,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-15T00:41:52.703497+00:00",
       "list_hash": "4603ff8f294f5a5882be1e276d1975c8422de93cf0d162212fa570abd1fb6ba3",
-      "last_listed_at": "2026-11-16T00:40:34.069259+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.158190+00:00"
     },
     {
       "id": "jg-a0W2x000007Cos5EAC",
@@ -11505,7 +11502,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-16T00:40:44.547261+00:00",
       "list_hash": "abc96fb773872927889a0b839ddb0a269ef9990c85f7933e941f4fe644e24c84",
-      "last_listed_at": "2026-11-16T00:40:44.547261+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.158365+00:00"
     },
     {
       "id": "jg-a0WJ200000CDeRiMAL",
@@ -11554,7 +11551,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-16T00:40:34.583552+00:00",
       "list_hash": "1e3b3b0773a930845d3fe5036e2d66a7e218ad8ea6070a5235c94552b17d35d5",
-      "last_listed_at": "2026-11-16T00:40:34.583552+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.158526+00:00"
     },
     {
       "id": "jg-a0WJ200000CDe6UMAT",
@@ -11603,7 +11600,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-16T00:40:36.033473+00:00",
       "list_hash": "335024c2639abf14ebe5c358bed9fdc955c00df1bbcfca84ae757baaffa3cab5",
-      "last_listed_at": "2026-11-16T00:40:36.033473+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.158709+00:00"
     },
     {
       "id": "jg-a0WJ200000CDdjkMAD",
@@ -11652,15 +11649,15 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-16T00:40:37.448258+00:00",
       "list_hash": "63de420dba61f2d00ee5cd15e8fe548d34a9b7fe4dcb83091656070d65ee79d1",
-      "last_listed_at": "2026-11-16T00:40:37.448258+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.158887+00:00"
     },
     {
       "id": "jg-a0WJ200000CDYDCMA5",
       "external_id": "a0WJ200000CDYDCMA5",
       "url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDYDCMA5",
       "title": "【農林水産省】中山間地域所得確保推進事業",
-      "hash": "8bcf2cc5a85e864d2e7c7854eff7495ffe295c3fa9f9c603c13b3957e5918c7c",
-      "fetched_at": "2026-11-16T00:40:38.899376+00:00",
+      "hash": "246be1a53382c1fd5a4bbf85a4c0f503dbd7cc92055e1cfb0b4fb3007204c989",
+      "fetched_at": "2026-11-17T03:22:55.659876+00:00",
       "source_updated_at": null,
       "source_id": "jgrants",
       "source_name": "Jグランツ（デジタル庁）",
@@ -11692,7 +11689,7 @@
         {
           "label": "API掲載の募集回",
           "start": "2025-12-16T00:00Z",
-          "end": "2026-12-01T08:15Z",
+          "end": "2026-11-25T08:15Z",
           "confirmed_open": true
         }
       ],
@@ -11700,9 +11697,9 @@
       "evidence": [],
       "api_url": "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/a0WJ200000CDYDCMA5",
       "data_detail": "full",
-      "api_detail_at": "2026-11-16T00:40:38.899376+00:00",
-      "list_hash": "766bd8561f0bc1f8563109de6f36abd2cac9e738e2da9fc3f8c608801a0fe13e",
-      "last_listed_at": "2026-11-16T00:40:38.899376+00:00"
+      "api_detail_at": "2026-11-17T03:22:55.659876+00:00",
+      "list_hash": "661aab80bf03dbd045c05498ec4cd57e13e10075b5e4ea41ba5f2888c0d38b7e",
+      "last_listed_at": "2026-11-17T03:22:55.659876+00:00"
     },
     {
       "id": "2dd12e887b64ab90",
@@ -11715,7 +11712,7 @@
         "住まい"
       ],
       "source_updated_at": "更新日：2026年4月1日更新",
-      "fetched_at": "2026-11-13T04:08:25.658375+00:00",
+      "fetched_at": "2026-11-17T03:24:46.711073+00:00",
       "hash": "105fa92fc3c1b9a8248269845bbc47edeea63cec6c0ca29560798174b53d02cf",
       "pdfs": [
         {
@@ -11743,7 +11740,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "105fa92fc3c1b9a8248269845bbc47edeea63cec6c0ca29560798174b53d02cf",
-        "fetched_at": "2026-11-13T04:08:25.658375+00:00",
+        "fetched_at": "2026-11-17T03:24:46.711073+00:00",
         "sections": [
           {
             "heading": "令和8年度の申請期間について​",
@@ -11765,8 +11762,7 @@
             "kind": "conditions",
             "text": "・移住支援金は、所得税と個人住民税の課税の対象となります。このため、一時所得としてその他の所得と合算し、確定申告をする必要がありますので、忘れず申告をしてください。\n・このほか、社会保障制度等の保険料などや各種手当などにも影響が出る可能性がありますので、それぞれの制度の実施主体まで確認ください。\n・確定申告等の情報は、国税庁のホームぺージをご参照ください。"
           }
-        ],
-        "reused_snapshot": false
+        ]
       },
       "review_scope": "公式HTMLの見出し・表から自動抽出。人による内容確認と現在の受付状況は未確認。"
     },
@@ -12778,7 +12774,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-16T00:40:40.310325+00:00",
       "list_hash": "c51a8801268c9aa2f6dc5754ac6224641f835f1aac245e6c474725c0eb61fda4",
-      "last_listed_at": "2026-11-16T00:40:40.310325+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.159313+00:00"
     },
     {
       "id": "4801fa80bb7c5070",
@@ -12882,7 +12878,7 @@
         "その他"
       ],
       "source_updated_at": "更新日：2025年10月14日",
-      "fetched_at": "2026-11-15T00:42:29.155399+00:00",
+      "fetched_at": "2026-11-17T03:25:39.669185+00:00",
       "hash": "d2ea143a5221fdf170d99db81d9a2fff2404630d6607e2ad18b0dd24222db4ea",
       "pdfs": [
         {
@@ -12906,7 +12902,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "d2ea143a5221fdf170d99db81d9a2fff2404630d6607e2ad18b0dd24222db4ea",
-        "fetched_at": "2026-11-15T00:42:29.155399+00:00",
+        "fetched_at": "2026-11-17T03:25:39.669185+00:00",
         "sections": [
           {
             "heading": "高知県放置自動車適正処理推進事業費補助金交付要綱について",
@@ -12928,7 +12924,7 @@
         "創業・事業支援"
       ],
       "source_updated_at": null,
-      "fetched_at": "2026-11-16T00:41:59.812090+00:00",
+      "fetched_at": "2026-11-17T03:24:42.334350+00:00",
       "hash": "40295bc8e611da339a2a5e9f3b0e64fe011700916e4b1784fa3ad79215ae632a",
       "pdfs": [
         {
@@ -12964,7 +12960,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "40295bc8e611da339a2a5e9f3b0e64fe011700916e4b1784fa3ad79215ae632a",
-        "fetched_at": "2026-11-16T00:41:59.812090+00:00",
+        "fetched_at": "2026-11-17T03:24:42.334350+00:00",
         "sections": [
           {
             "heading": "募集期間",
@@ -13006,7 +13002,7 @@
         "創業・事業支援"
       ],
       "source_updated_at": null,
-      "fetched_at": "2026-11-16T00:42:05.735340+00:00",
+      "fetched_at": "2026-11-17T03:24:47.939633+00:00",
       "hash": "f7a91eb15ad809229c3b2697ff53a67ca77eb710c70807c6874240e6078ca9df",
       "pdfs": [
         {
@@ -13042,7 +13038,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "f7a91eb15ad809229c3b2697ff53a67ca77eb710c70807c6874240e6078ca9df",
-        "fetched_at": "2026-11-16T00:42:05.735340+00:00",
+        "fetched_at": "2026-11-17T03:24:47.939633+00:00",
         "sections": [
           {
             "heading": "補助制度概要",
@@ -13313,7 +13309,7 @@
         "創業・事業支援"
       ],
       "source_updated_at": null,
-      "fetched_at": "2026-11-16T00:42:10.710504+00:00",
+      "fetched_at": "2026-11-17T03:24:54.181905+00:00",
       "hash": "72cf5bd3ad5a6b1406185378c40ac9324cf9d6060156e562f104026cb1098de1",
       "pdfs": [
         {
@@ -13377,7 +13373,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "72cf5bd3ad5a6b1406185378c40ac9324cf9d6060156e562f104026cb1098de1",
-        "fetched_at": "2026-11-16T00:42:10.710504+00:00",
+        "fetched_at": "2026-11-17T03:24:54.181905+00:00",
         "sections": [
           {
             "heading": "電力・ガス・食料品等の価格高騰によって実質的な賃金が減少している中、給与等の増額を行う県内中小企業者等のデジタル技術への投資を通じた生産性を向上させる取り組みを支援します。",
@@ -13471,7 +13467,7 @@
         "創業・事業支援"
       ],
       "source_updated_at": null,
-      "fetched_at": "2026-11-16T00:42:16.101574+00:00",
+      "fetched_at": "2026-11-17T03:25:00.431604+00:00",
       "hash": "10c2039b21e6e06ca6d885c5c621850c0b31f3cb33dd373629ce77c6cb545dd3",
       "pdfs": [
         {
@@ -13523,7 +13519,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "10c2039b21e6e06ca6d885c5c621850c0b31f3cb33dd373629ce77c6cb545dd3",
-        "fetched_at": "2026-11-16T00:42:16.101574+00:00",
+        "fetched_at": "2026-11-17T03:25:00.431604+00:00",
         "sections": [
           {
             "heading": "２．補助対象者について",
@@ -13738,7 +13734,7 @@
         "創業・事業支援"
       ],
       "source_updated_at": null,
-      "fetched_at": "2026-11-16T00:42:19.125206+00:00",
+      "fetched_at": "2026-11-17T03:25:04.310664+00:00",
       "hash": "2264fcabf96107538e5d89b3b550ab3d1e0551c8fed5c171737eacf6e1f45785",
       "pdfs": [
         {
@@ -13790,7 +13786,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "2264fcabf96107538e5d89b3b550ab3d1e0551c8fed5c171737eacf6e1f45785",
-        "fetched_at": "2026-11-16T00:42:19.125206+00:00",
+        "fetched_at": "2026-11-17T03:25:04.310664+00:00",
         "sections": [
           {
             "heading": "本補助金には、「再構築枠」と「一般枠」の２つの補助メニューがあります。同一事業者が同時に両方の枠に申請することはできませんので、いずれか１つに申請してください。",
@@ -13915,7 +13911,7 @@
         "創業・事業支援"
       ],
       "source_updated_at": null,
-      "fetched_at": "2026-11-16T00:42:22.676398+00:00",
+      "fetched_at": "2026-11-17T03:25:08.193523+00:00",
       "hash": "62254db4803d9d51c483282fc1e7b547d2776e701d0bc402500eb23af2ed863b",
       "pdfs": [],
       "review_state": "pending",
@@ -13934,7 +13930,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "62254db4803d9d51c483282fc1e7b547d2776e701d0bc402500eb23af2ed863b",
-        "fetched_at": "2026-11-16T00:42:22.676398+00:00",
+        "fetched_at": "2026-11-17T03:25:08.193523+00:00",
         "sections": [
           {
             "heading": "製造業を対象に、中小企業者等が行う「生産性の向上や業務の効率化をめざした設備投資」を支援します",
@@ -14039,7 +14035,7 @@
         "創業・事業支援"
       ],
       "source_updated_at": null,
-      "fetched_at": "2026-11-16T00:42:24.430067+00:00",
+      "fetched_at": "2026-11-17T03:25:09.850358+00:00",
       "hash": "84018d85f5fa325aefb5323b6ec91bf11dcc74f0b1166fa3b6e6f6d5f9f01a38",
       "pdfs": [
         {
@@ -14071,7 +14067,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "84018d85f5fa325aefb5323b6ec91bf11dcc74f0b1166fa3b6e6f6d5f9f01a38",
-        "fetched_at": "2026-11-16T00:42:24.430067+00:00",
+        "fetched_at": "2026-11-17T03:25:09.850358+00:00",
         "sections": [
           {
             "heading": "補助対象者",
@@ -14113,7 +14109,7 @@
         "創業・事業支援"
       ],
       "source_updated_at": null,
-      "fetched_at": "2026-11-16T00:42:26.400642+00:00",
+      "fetched_at": "2026-11-17T03:25:11.502573+00:00",
       "hash": "c4c4239f1f648fcf9860a449f119be63a8d24454d51aa8290a105ad81cd2149e",
       "pdfs": [
         {
@@ -14145,7 +14141,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "c4c4239f1f648fcf9860a449f119be63a8d24454d51aa8290a105ad81cd2149e",
-        "fetched_at": "2026-11-16T00:42:26.400642+00:00",
+        "fetched_at": "2026-11-17T03:25:11.502573+00:00",
         "sections": [
           {
             "heading": "補助対象者",
@@ -14515,7 +14511,7 @@
         "その他"
       ],
       "source_updated_at": "更新日：2024年03月27日",
-      "fetched_at": "2026-11-14T01:15:19.717569+00:00",
+      "fetched_at": "2026-11-17T03:24:41.471115+00:00",
       "hash": "20f35129676bea34dabffd54fe7548f2624dd733f8c8207512eaef1a2386639e",
       "pdfs": [],
       "review_state": "pending",
@@ -14534,7 +14530,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "20f35129676bea34dabffd54fe7548f2624dd733f8c8207512eaef1a2386639e",
-        "fetched_at": "2026-11-14T01:15:19.717569+00:00",
+        "fetched_at": "2026-11-17T03:24:41.471115+00:00",
         "sections": []
       },
       "review_scope": "公式HTMLの見出し・表から自動抽出。人による内容確認と現在の受付状況は未確認。"
@@ -14550,7 +14546,7 @@
         "地域・防災"
       ],
       "source_updated_at": null,
-      "fetched_at": "2026-11-14T01:15:36.182851+00:00",
+      "fetched_at": "2026-11-17T03:24:59.474866+00:00",
       "hash": "e1f774e1920776f5ac83aa5533e1c103271bc52c0cb64ecc6f4973e0c2133433",
       "pdfs": [
         {
@@ -14586,7 +14582,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "e1f774e1920776f5ac83aa5533e1c103271bc52c0cb64ecc6f4973e0c2133433",
-        "fetched_at": "2026-11-14T01:15:36.182851+00:00",
+        "fetched_at": "2026-11-17T03:24:59.474866+00:00",
         "sections": []
       },
       "review_scope": "公式HTMLの見出し・表から自動抽出。人による内容確認と現在の受付状況は未確認。"
@@ -14602,7 +14598,7 @@
         "その他"
       ],
       "source_updated_at": "公開日 2026年10月29日",
-      "fetched_at": "2026-11-14T01:15:44.714974+00:00",
+      "fetched_at": "2026-11-17T03:25:10.772532+00:00",
       "hash": "3a066ab4f4b019549f6f43ecc11d4461eee0be051b563dd48a8a01906d684722",
       "pdfs": [
         {
@@ -14634,7 +14630,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "3a066ab4f4b019549f6f43ecc11d4461eee0be051b563dd48a8a01906d684722",
-        "fetched_at": "2026-11-14T01:15:44.714974+00:00",
+        "fetched_at": "2026-11-17T03:25:10.772532+00:00",
         "sections": [
           {
             "heading": "１　補助対象経費及び補助率等",
@@ -14657,7 +14653,7 @@
         "省エネ・環境"
       ],
       "source_updated_at": "更新日：2026年04月21日",
-      "fetched_at": "2026-11-14T01:15:53.894822+00:00",
+      "fetched_at": "2026-11-17T03:25:20.492945+00:00",
       "hash": "d134ec394ac07ea7aabb57c12ba7bc4e12b270a27e9f84242b35b8afe0c901d7",
       "pdfs": [
         {
@@ -14689,7 +14685,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "d134ec394ac07ea7aabb57c12ba7bc4e12b270a27e9f84242b35b8afe0c901d7",
-        "fetched_at": "2026-11-14T01:15:53.894822+00:00",
+        "fetched_at": "2026-11-17T03:25:20.492945+00:00",
         "sections": [
           {
             "heading": "4 規則等の概要",
@@ -15212,7 +15208,7 @@
         "その他"
       ],
       "source_updated_at": "更新日：2026年05月07日",
-      "fetched_at": "2026-11-14T01:15:25.714781+00:00",
+      "fetched_at": "2026-11-17T03:24:47.217912+00:00",
       "hash": "18834ad793a88492d3f7813d6a3a8280500db490ebb9bb54bddd4ca9456ff215",
       "pdfs": [
         {
@@ -15248,7 +15244,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "18834ad793a88492d3f7813d6a3a8280500db490ebb9bb54bddd4ca9456ff215",
-        "fetched_at": "2026-11-14T01:15:25.714781+00:00",
+        "fetched_at": "2026-11-17T03:24:47.217912+00:00",
         "sections": [
           {
             "heading": "5 規則等の概要",
@@ -15272,7 +15268,7 @@
         "子育て・教育"
       ],
       "source_updated_at": "更新日：2026年05月14日",
-      "fetched_at": "2026-11-15T00:42:17.159840+00:00",
+      "fetched_at": "2026-11-17T03:25:30.204372+00:00",
       "hash": "83a30cac0022e2a405d3400cb58a59bbcf9f85d738f9988a8c2b054eeb3b8a40",
       "pdfs": [
         {
@@ -15304,7 +15300,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "83a30cac0022e2a405d3400cb58a59bbcf9f85d738f9988a8c2b054eeb3b8a40",
-        "fetched_at": "2026-11-15T00:42:17.159840+00:00",
+        "fetched_at": "2026-11-17T03:25:30.204372+00:00",
         "sections": [
           {
             "heading": "１．事業概要",
@@ -15786,7 +15782,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-14T01:13:46.439546+00:00",
       "list_hash": "9ce4192c2efe5bf14dbd05ff3738d61d260b9b20f3a04d422297d1215451aeae",
-      "last_listed_at": "2026-11-16T00:40:34.021451+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.111887+00:00"
     },
     {
       "id": "16727a2c8b17f7bd",
@@ -15799,7 +15795,7 @@
         "創業・事業支援"
       ],
       "source_updated_at": "更新日：2026年10月23日",
-      "fetched_at": "2026-11-14T01:15:30.925104+00:00",
+      "fetched_at": "2026-11-17T03:24:53.405786+00:00",
       "hash": "c57ab39f96e8fbd4779161112ab54f0870ecfd827a51e11e7c8c3aa0bdd9b571",
       "pdfs": [
         {
@@ -15879,7 +15875,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "c57ab39f96e8fbd4779161112ab54f0870ecfd827a51e11e7c8c3aa0bdd9b571",
-        "fetched_at": "2026-11-14T01:15:30.925104+00:00",
+        "fetched_at": "2026-11-17T03:24:53.405786+00:00",
         "sections": [
           {
             "heading": "制度の概要",
@@ -15911,7 +15907,7 @@
         "その他"
       ],
       "source_updated_at": "更新日：2026年07月06日",
-      "fetched_at": "2026-11-14T01:15:40.383811+00:00",
+      "fetched_at": "2026-11-17T03:25:05.679483+00:00",
       "hash": "a467a9ce3a6fe10aea4ea434ce50844fdd5ebd41f9ebd955a80476aec0d783d5",
       "pdfs": [],
       "review_state": "pending",
@@ -15930,7 +15926,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "a467a9ce3a6fe10aea4ea434ce50844fdd5ebd41f9ebd955a80476aec0d783d5",
-        "fetched_at": "2026-11-14T01:15:40.383811+00:00",
+        "fetched_at": "2026-11-17T03:25:05.679483+00:00",
         "sections": [
           {
             "heading": "制度の概要",
@@ -15952,7 +15948,7 @@
         "創業・事業支援"
       ],
       "source_updated_at": "公開日 2026年03月30日",
-      "fetched_at": "2026-11-14T01:15:49.426107+00:00",
+      "fetched_at": "2026-11-17T03:25:15.760175+00:00",
       "hash": "ace75057f73cb2a6e12910f96d5dedb61ca20ef1ea975df1b7033302db5a73de",
       "pdfs": [
         {
@@ -15976,7 +15972,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "ace75057f73cb2a6e12910f96d5dedb61ca20ef1ea975df1b7033302db5a73de",
-        "fetched_at": "2026-11-14T01:15:49.426107+00:00",
+        "fetched_at": "2026-11-17T03:25:15.760175+00:00",
         "sections": [
           {
             "heading": "制度の概要",
@@ -16018,7 +16014,7 @@
         "その他"
       ],
       "source_updated_at": "更新日：2026年07月06日",
-      "fetched_at": "2026-11-14T01:15:59.110661+00:00",
+      "fetched_at": "2026-11-17T03:25:25.027168+00:00",
       "hash": "c6d4f335b50f7521d4c4d0a15482da737e81abc55fbcb18c4086922e8f6a314a",
       "pdfs": [
         {
@@ -16042,7 +16038,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "c6d4f335b50f7521d4c4d0a15482da737e81abc55fbcb18c4086922e8f6a314a",
-        "fetched_at": "2026-11-14T01:15:59.110661+00:00",
+        "fetched_at": "2026-11-17T03:25:25.027168+00:00",
         "sections": [
           {
             "heading": "制度の概要",
@@ -16064,7 +16060,7 @@
         "その他"
       ],
       "source_updated_at": "公開日 2026年04月06日",
-      "fetched_at": "2026-11-15T00:42:23.308666+00:00",
+      "fetched_at": "2026-11-17T03:25:34.680637+00:00",
       "hash": "499abbaa3b121bd81ff834195cf71e67d024e4d970c8b110089b636c789538b0",
       "pdfs": [
         {
@@ -16100,7 +16096,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "499abbaa3b121bd81ff834195cf71e67d024e4d970c8b110089b636c789538b0",
-        "fetched_at": "2026-11-15T00:42:23.308666+00:00",
+        "fetched_at": "2026-11-17T03:25:34.680637+00:00",
         "sections": [
           {
             "heading": "7 規則等の概要",
@@ -16122,7 +16118,7 @@
         "その他"
       ],
       "source_updated_at": "更新日：2026年06月25日",
-      "fetched_at": "2026-11-15T00:42:35.642159+00:00",
+      "fetched_at": "2026-11-17T03:25:43.925305+00:00",
       "hash": "7d50771f5b73c582e536a85250ce5df67741f67f50e60006ebbf0a5f9588f9c1",
       "pdfs": [
         {
@@ -16166,7 +16162,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "7d50771f5b73c582e536a85250ce5df67741f67f50e60006ebbf0a5f9588f9c1",
-        "fetched_at": "2026-11-15T00:42:35.642159+00:00",
+        "fetched_at": "2026-11-17T03:25:43.925305+00:00",
         "sections": []
       },
       "review_scope": "公式HTMLの見出し・表から自動抽出。人による内容確認と現在の受付状況は未確認。"
@@ -16843,7 +16839,7 @@
         "その他"
       ],
       "source_updated_at": "更新日：2020年9月30日更新",
-      "fetched_at": "2026-11-13T04:08:24.013909+00:00",
+      "fetched_at": "2026-11-17T03:24:40.499770+00:00",
       "hash": "ae0d4c200b8be3897d306cc370ac7d887717396306ece670370845d5c46b63be",
       "pdfs": [
         {
@@ -16867,9 +16863,8 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "ae0d4c200b8be3897d306cc370ac7d887717396306ece670370845d5c46b63be",
-        "fetched_at": "2026-11-13T04:08:24.013909+00:00",
-        "sections": [],
-        "reused_snapshot": false
+        "fetched_at": "2026-11-17T03:24:40.499770+00:00",
+        "sections": []
       },
       "review_scope": "公式HTMLの見出し・表から自動抽出。人による内容確認と現在の受付状況は未確認。"
     },
@@ -16884,7 +16879,7 @@
         "その他"
       ],
       "source_updated_at": "更新日：2020年4月2日更新",
-      "fetched_at": "2026-11-13T04:08:28.789527+00:00",
+      "fetched_at": "2026-11-17T03:24:58.915954+00:00",
       "hash": "09211f55ba7900d0156b683d9bdb687b04f98767f2ed78fb05d34c38bfe5a312",
       "pdfs": [
         {
@@ -16908,9 +16903,8 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "09211f55ba7900d0156b683d9bdb687b04f98767f2ed78fb05d34c38bfe5a312",
-        "fetched_at": "2026-11-13T04:08:28.789527+00:00",
-        "sections": [],
-        "reused_snapshot": false
+        "fetched_at": "2026-11-17T03:24:58.915954+00:00",
+        "sections": []
       },
       "review_scope": "公式HTMLの見出し・表から自動抽出。人による内容確認と現在の受付状況は未確認。"
     },
@@ -16925,7 +16919,7 @@
         "その他"
       ],
       "source_updated_at": "更新日：2019年10月2日更新",
-      "fetched_at": "2026-11-13T04:08:36.078870+00:00",
+      "fetched_at": "2026-11-17T03:25:24.278125+00:00",
       "hash": "1e772d55e6c0ec1e7e0c65906e4f49e15fbd1af34620bd12129f9d44afe95a9d",
       "pdfs": [
         {
@@ -16949,9 +16943,8 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "1e772d55e6c0ec1e7e0c65906e4f49e15fbd1af34620bd12129f9d44afe95a9d",
-        "fetched_at": "2026-11-13T04:08:36.078870+00:00",
-        "sections": [],
-        "reused_snapshot": false
+        "fetched_at": "2026-11-17T03:25:24.278125+00:00",
+        "sections": []
       },
       "review_scope": "公式HTMLの見出し・表から自動抽出。人による内容確認と現在の受付状況は未確認。"
     },
@@ -16966,7 +16959,7 @@
         "その他"
       ],
       "source_updated_at": "更新日：2019年4月2日更新",
-      "fetched_at": "2026-11-13T04:08:40.526485+00:00",
+      "fetched_at": "2026-11-17T03:25:38.647748+00:00",
       "hash": "922f33495d27316275c3ab860719c6cd9f49e38a788f1da84527d3426133f9a5",
       "pdfs": [
         {
@@ -16990,9 +16983,8 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "922f33495d27316275c3ab860719c6cd9f49e38a788f1da84527d3426133f9a5",
-        "fetched_at": "2026-11-13T04:08:40.526485+00:00",
-        "sections": [],
-        "reused_snapshot": false
+        "fetched_at": "2026-11-17T03:25:38.647748+00:00",
+        "sections": []
       },
       "review_scope": "公式HTMLの見出し・表から自動抽出。人による内容確認と現在の受付状況は未確認。"
     },
@@ -17289,7 +17281,7 @@
       "url": "https://www.jgrants-portal.go.jp/subsidy/a0WfQ000003kEuHUAU",
       "title": "小規模事業者持続化補助金＜創業型＞ 第４回受付締切",
       "hash": "a3542b393f32808a49f288a3cd88548c67024a74e2aef53357b386fb03d24b99",
-      "fetched_at": "2026-11-11T21:04:07.472984+00:00",
+      "fetched_at": "2026-11-17T03:23:38.244876+00:00",
       "source_updated_at": null,
       "source_id": "jgrants",
       "source_name": "Jグランツ（デジタル庁）",
@@ -17328,9 +17320,9 @@
       "evidence": [],
       "api_url": "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/a0WfQ000003kEuHUAU",
       "data_detail": "full",
-      "api_detail_at": "2026-11-11T21:04:07.472984+00:00",
+      "api_detail_at": "2026-11-17T03:23:38.244876+00:00",
       "list_hash": "48250adecc8001a89de52aaefcfe93b628d801741009c4d27c88cb1c913ed8dc",
-      "last_listed_at": "2026-11-16T00:40:34.022168+00:00"
+      "last_listed_at": "2026-11-17T03:23:38.244876+00:00"
     },
     {
       "id": "727f18fcded545d9",
@@ -18261,7 +18253,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-12T10:26:58.364616+00:00",
       "list_hash": "c41d19381243a18e0c743309e24d0782d8f640f6c136345b99510e0e54d6898a",
-      "last_listed_at": "2026-11-16T00:40:34.018866+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.109516+00:00"
     },
     {
       "id": "jg-a0WfQ000003znYLUAY",
@@ -18310,7 +18302,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-12T10:27:02.236635+00:00",
       "list_hash": "d54093cade4c1f8ff579ab4cefb454734fbdc10c6ed115242b8f07cd57eaabe4",
-      "last_listed_at": "2026-11-16T00:40:34.019108+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.109752+00:00"
     },
     {
       "id": "54da7aebdab46ff9",
@@ -19856,7 +19848,7 @@
         "子育て・教育"
       ],
       "source_updated_at": "更新日：2026年11月9日更新",
-      "fetched_at": "2026-11-13T04:08:27.339885+00:00",
+      "fetched_at": "2026-11-17T03:24:52.880391+00:00",
       "hash": "431032ae902e90a473900dabcc4fdf903f5535a945d3280ff072679322c316a8",
       "pdfs": [
         {
@@ -19896,7 +19888,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "431032ae902e90a473900dabcc4fdf903f5535a945d3280ff072679322c316a8",
-        "fetched_at": "2026-11-13T04:08:27.339885+00:00",
+        "fetched_at": "2026-11-17T03:24:52.880391+00:00",
         "sections": [
           {
             "heading": "◎申請にあたっての注意事項",
@@ -19933,8 +19925,7 @@
             "kind": "conditions",
             "text": "令和9年3月下旬予定　※ 保護者指定口座に振り込みます。支給日は審査結果通知でご確認ください。"
           }
-        ],
-        "reused_snapshot": false
+        ]
       },
       "review_scope": "公式HTMLの見出し・表から自動抽出。人による内容確認と現在の受付状況は未確認。"
     },
@@ -19950,7 +19941,7 @@
         "子育て・教育"
       ],
       "source_updated_at": "更新日：2026年10月1日更新",
-      "fetched_at": "2026-11-13T04:08:30.044221+00:00",
+      "fetched_at": "2026-11-17T03:25:04.761761+00:00",
       "hash": "28132e56d40a9ae714d3077ed87317b00bc1e7de8292b8bdb0deba1feb1b13a6",
       "pdfs": [
         {
@@ -19998,7 +19989,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "28132e56d40a9ae714d3077ed87317b00bc1e7de8292b8bdb0deba1feb1b13a6",
-        "fetched_at": "2026-11-13T04:08:30.044221+00:00",
+        "fetched_at": "2026-11-17T03:25:04.761761+00:00",
         "sections": [
           {
             "heading": "【令和8年度・公立学校対象】高知市就学援助の新規申請について",
@@ -20020,8 +20011,7 @@
             "kind": "overview",
             "text": "青少年・事務管理課より、電話回線を使用したSMS（ショートメッセージサービス）を利用して、申請内容の確認等の連絡をさせていただくことがあります。携帯電話のキャリアごとに以下の番号でショートメッセージが届きます。\n携帯電話のキャリア ｜ 表示される発信元番号\ndocomo／au／Rakuten ｜ 0888239468\nSoftbank ｜ 247296\n高知市教育委員会が実施する就学援助をご希望の方は、下記の表やお知らせをよくお読みいただき、申請してください。\n項目 ｜ 内容\n援助内容 ｜ 令和8年度　就学援助制度のお知らせ（公立用） [PDFファイル／387KB]　をご覧ください。\n申請方法 ｜ ◎次の2つのうち、いずれか一方の方法で申請してください。電子申請と書面申請の両方で申請する必要はありません。​\n1.電子申請フォームで申請\n以下の申請フォームから申請できます。\n（システムメンテナンスにより、申請ができなくなることがありますので、あらかじめ余裕をもってご申請いただきますようお願いします。）\n※このリンクをクリックすると、高知市電子申請サービス（外部サイト）が開きます。\n申請期間外はアクセスしても申請画面が表示されない場合があります。​\n2.書面で申請\n以下からダウンロード、印刷し、必要事項を記入のうえ、高知市教育委員会青少年・事務管理課に郵送もしくは窓口に提出してください。印刷が難しい場合はご連絡ください。\n(1) 令和8年度高知市就学援助認定申請書（世帯票） [PDFファイル／193KB]\n(2)【記入例】高知市就学援助認定申請書（世帯票） [PDFファイル／207KB]\n〈送付先〉\n〒780-8571\n高知市鷹匠町2丁目1番43号\n高知市教育委員会　青少年・事務管理課\n・郵送する際の封筒と切手代110円はご負担ください。\n申請期間 ｜ ◆当初認定受付分（4月1日分から支給）\n令和8年4月10日から 令和8年5月31日\n・書面で郵送申請される場合は、令和8年5月29日（金曜日）必着\n・郵送の場合、到達までに日数がかかることがあります。お早目の投函をお願いします。\n◆随時受付分（申請を受け付けた月の1日分から支給）\n令和8年6月1日 から 令和9年3月25日　※必着\n・申請内容によっては開始日が変わる場合もあります。\n・郵送の場合、到達までに日数がかかることがあります。お早目の投函をお願いします。​\n結果の通知 ｜ 審査結果の通知は、ご自宅へ郵送します。また、在籍の学校にも通知します。\n・当初認定受付分　：　令和8年7月上旬（予定）に審査結果を通知\n・随時受付分　　　：　6月受付分以降は、翌々月中旬頃までに審査結果を通知\n支給時期 ｜ 援助の内容によって異なります。　令和8年度　就学援助制度のお知らせ（公立用）　をご覧ください。\n令和8年度　就学援助制度のお知らせ（公立用）\n [PDFファイル／387KB]\n令和8年度　高知市就学援助認定申請書（世帯票）\n [PDFファイル／193KB]\n【記入例】高知市就学援助認定申請書（世帯票）\n [PDFファイル／207KB]\n[[add-template-windowsmediaplayer]]\nページの評価ここから\nページの評価ここまで"
           }
-        ],
-        "reused_snapshot": false
+        ]
       },
       "review_scope": "公式HTMLの見出し・表から自動抽出。人による内容確認と現在の受付状況は未確認。"
     },
@@ -20037,7 +20027,7 @@
         "子育て・教育"
       ],
       "source_updated_at": "更新日：2026年5月27日更新",
-      "fetched_at": "2026-11-13T04:08:33.035584+00:00",
+      "fetched_at": "2026-11-17T03:25:14.964007+00:00",
       "hash": "d74721ba71aca25dba80dc36f0e4199845d66065aeda6f995c15fe7435a32df3",
       "pdfs": [
         {
@@ -20061,7 +20051,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "d74721ba71aca25dba80dc36f0e4199845d66065aeda6f995c15fe7435a32df3",
-        "fetched_at": "2026-11-13T04:08:33.035584+00:00",
+        "fetched_at": "2026-11-17T03:25:14.964007+00:00",
         "sections": [
           {
             "heading": "令和8年度　高知市就学援助制度について",
@@ -20088,8 +20078,7 @@
             "kind": "conditions",
             "text": "援助の内容によって異なります\n※私立の小・中学校の場合は、申請の受付や支給時期も異なります"
           }
-        ],
-        "reused_snapshot": false
+        ]
       },
       "review_scope": "公式HTMLの見出し・表から自動抽出。人による内容確認と現在の受付状況は未確認。"
     },
@@ -20140,7 +20129,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-15T00:40:57.383445+00:00",
       "list_hash": "42855cd77e61d4ef04bda662a4af8218994aa1c79218eca9d9ac808357037f07",
-      "last_listed_at": "2026-11-16T00:40:34.022538+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.113040+00:00"
     },
     {
       "id": "ecb9b2b149ebc897",
@@ -20154,7 +20143,7 @@
         "子育て・教育"
       ],
       "source_updated_at": "更新日：2026年5月27日更新",
-      "fetched_at": "2026-11-13T04:08:34.907656+00:00",
+      "fetched_at": "2026-11-17T03:25:19.986101+00:00",
       "hash": "b8b08ceb85787ffc85429129797c3ed9be689a672c4ba65ba8d05af3ad6e1aae",
       "pdfs": [
         {
@@ -20178,7 +20167,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "b8b08ceb85787ffc85429129797c3ed9be689a672c4ba65ba8d05af3ad6e1aae",
-        "fetched_at": "2026-11-13T04:08:34.907656+00:00",
+        "fetched_at": "2026-11-17T03:25:19.986101+00:00",
         "sections": [
           {
             "heading": "◆公立学校の高知市就学援助の対象について​",
@@ -20200,8 +20189,7 @@
             "kind": "overview",
             "text": "鏡・土佐山・春野地区の高知市立学校に通学する場合の対象要件及び援助の額については、次のとおりです。\n【鏡小学校】【義務教育学校土佐山学舎（前期課程）】\n＜対象要件＞\n学校長が指定した通学路による児童の住居から学校又は最寄りの高知市が運営する通学バスもしくは乗車無料の デマンド型乗合タクシーの乗車地点までの片道の距離のいずれか近い距離のキロ数（以下「通学距離」という）が3km以上の場合\n＜援助費の額＞\n通学距離（小数点第2位以下切り捨て） × 10円 × 授業日数\n【鏡中学校】【義務教育学校土佐山学舎（後期課程）】\n＜対象要件＞\n学校長が指定した通学路による生徒の住居から学校又は最寄りの高知市が運営する通学バスもしくは乗車無料の デマンド型乗合タクシーの乗車地点までの片道の距離のいずれか近い距離のキロ数（以下「通学距離」という）が5km以上の場合\n＜援助費の額＞\n通学距離（小数点第2位以下切り捨て） × 20円 × 授業日数\n【春野東小学校】【春野西小学校】\n＜対象要件＞\n学校長が指定した通学路による児童の住居から学校までの片道の距離のキロ数（以下「通学距離」という）が、2年生以下は3.5kmを超える、3年生以上は4kmを超える場合で、徒歩又は公共交通機関（鉄道、路面電車、 定期運行の路線バス及びデマンド型乗合タクシー）を利用し定期券を購入している場合\n＜援助費の額＞\n・ 徒歩の場合\n2年生以下で通学距離が3.5kmを超え4km以下 ：年額 2,400円\n3年生以下で通学距離が4kmを超える　　    　 ：年額 5,000円\n4年生以上で通学距離が4kmを超える 　　    　：年額 2,500円\n・公共交通機関を利用する場合\n2年生以下で通学距離が3.5kmを超える ：実費（定期券の購入費）\n3年生以上で通学距離が4kmを超える     ：実費（定期券の購入費）\n【春野中学校】\n＜対象要件＞\n学校長が指定した通学路による生徒の住居から学校までの片道の距離のキロ数（以下「通学距離」という。）が6km以上で、公共交通機関を利用しなければ通学することが著しく困難と認められる生徒が定期券を購入している場合\n＜援助費の額＞\n実費（定期券の購入費）\n[[add-template-windowsmediaplayer]]\nページの評価ここから\nページの評価ここまで"
           }
-        ],
-        "reused_snapshot": false
+        ]
       },
       "review_scope": "公式HTMLの見出し・表から自動抽出。人による内容確認と現在の受付状況は未確認。"
     },
@@ -20217,7 +20205,7 @@
         "子育て・教育"
       ],
       "source_updated_at": "更新日：2026年4月3日更新",
-      "fetched_at": "2026-11-13T04:08:37.536781+00:00",
+      "fetched_at": "2026-11-17T03:25:29.682352+00:00",
       "hash": "361bc9c3ae890a88ac2d2666342028e6593ccf6212a226607cad9c9d315550b3",
       "pdfs": [
         {
@@ -20245,7 +20233,7 @@
       "html_extraction": {
         "version": 3,
         "source_hash": "361bc9c3ae890a88ac2d2666342028e6593ccf6212a226607cad9c9d315550b3",
-        "fetched_at": "2026-11-13T04:08:37.536781+00:00",
+        "fetched_at": "2026-11-17T03:25:29.682352+00:00",
         "sections": [
           {
             "heading": "【令和8年度・私立学校対象】高知市就学援助の新規申請について",
@@ -20262,8 +20250,7 @@
             "kind": "overview",
             "text": "青少年・事務管理課より、電話回線を使用したSMS（ショートメッセージサービス）を利用して、申請内容の確認等の連絡をさせていただくことがあります。携帯電話のキャリアごとに以下の番号でショートメッセージが届きます。\n携帯電話のキャリア ｜ 表示される発信元番号\ndocomo／au／Rakuten ｜ 0888239468\nSoftbank ｜ 247296\n令和8年度　就学援助制度のお知らせ（私立用）\n [PDFファイル／307KB]\n[[add-template-windowsmediaplayer]]\nページの評価ここから\nページの評価ここまで"
           }
-        ],
-        "reused_snapshot": false
+        ]
       },
       "review_scope": "公式HTMLの見出し・表から自動抽出。人による内容確認と現在の受付状況は未確認。"
     },
@@ -20504,7 +20491,7 @@
       "url": "https://www.jgrants-portal.go.jp/subsidy/a0WfQ0000049swXUAQ",
       "title": "令和７年度補正「次世代革新炉の開発・建設に向けた技術開発・サプライチェーン構築支援事業補助金」【三次公募】",
       "hash": "e93ad1bf60d65a6e8e3847e37a2aaedeb9a5dfebc65877c87a9c22584ccac641",
-      "fetched_at": "2026-11-11T21:03:17.198999+00:00",
+      "fetched_at": "2026-11-17T03:23:10.528795+00:00",
       "source_updated_at": null,
       "source_id": "jgrants",
       "source_name": "Jグランツ（デジタル庁）",
@@ -20543,9 +20530,9 @@
       "evidence": [],
       "api_url": "https://api.jgrants-portal.go.jp/exp/v2/public/subsidies/id/a0WfQ0000049swXUAQ",
       "data_detail": "full",
-      "api_detail_at": "2026-11-11T21:03:17.198999+00:00",
+      "api_detail_at": "2026-11-17T03:23:10.528795+00:00",
       "list_hash": "4ae75ec52fe87f1d0c7dc0f667a022924146d328a8bd563f495b3b0d182254d7",
-      "last_listed_at": "2026-11-16T00:40:34.016635+00:00"
+      "last_listed_at": "2026-11-17T03:23:10.528795+00:00"
     },
     {
       "id": "jn-87125946dad15a3c",
@@ -20842,7 +20829,7 @@
       "data_detail": "full",
       "api_detail_at": "2026-11-14T01:13:24.570530+00:00",
       "list_hash": "d58547f37f78aae0b2a6a57ee9faf5e7756616b5c1fb2f7388763fe54f13b312",
-      "last_listed_at": "2026-11-16T00:40:34.019338+00:00"
+      "last_listed_at": "2026-11-17T03:22:55.109954+00:00"
     },
     {
       "id": "jn-e4132a06203518a7",
@@ -21598,6 +21585,405 @@
         "source_hash": "37e435e0e3709904a304982662f949bfd02fbefe364746845290789822e17b31",
         "fetched_at": "2026-11-16T00:42:26.770558+00:00",
         "sections": []
+      },
+      "review_scope": "公式HTMLの見出し・表から自動抽出。人による内容確認と現在の受付状況は未確認。"
+    },
+    {
+      "id": "1f406ca99f0251c6",
+      "url": "https://www.city.kochi.kochi.jp/soshiki/2/rinjikouhukin.html",
+      "title": "地方創生臨時交付金活用事業について",
+      "audiences": [
+        "対象者を確認"
+      ],
+      "purposes": [
+        "その他"
+      ],
+      "source_updated_at": "更新日：2026年9月28日更新",
+      "fetched_at": "2026-11-17T03:25:01.179225+00:00",
+      "hash": "a90ca3e6c0c90ff011ecec8d8bb2dc97147eb305c61adc9712742b141a0edb41",
+      "pdfs": [
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/174215.pdf",
+          "title": "令和6年度実施計画（最終版）"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/174216.pdf",
+          "title": "令和7年度実施計画（最終版）"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/183200.pdf",
+          "title": "令和8年度実施計画（第2回）"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/184189.pdf",
+          "title": "交付金の活用状況 [PDFファイル／103KB]"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/life/270753_1167124_misc.pdf",
+          "title": "令和6年度　特定事業者支援に関する公表様式（公共交通緊急支援事業費補助金）"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/life/270753_1167125_misc.pdf",
+          "title": "令和6年度　特定事業者支援に関する公表様式（鉄道軌道輸送対策緊急支援事業費補助金）"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/life/270753_1167127_misc.pdf",
+          "title": "令和7年度　特定事業者支援に関する公表様式（公共交通施設整備等緊急支援事業費補助金）"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/life/270753_1167129_misc.pdf",
+          "title": "令和8年度　特定事業者支援に関する公表様式（公共交通施設等整備緊急支援事業費補助金）"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/life/270753_1167113_misc.pdf",
+          "title": "令和2年度　新型コロナウイルス感染症対応地方創生臨時交付金活用事業の実施状況・効果検証"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/life/270753_1167114_misc.pdf",
+          "title": "令和3年度　新型コロナウイルス感染症対応地方創生臨時交付金活用事業の実施状況・効果検証"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/life/270753_1167115_misc.pdf",
+          "title": "令和4年度　新型コロナウイルス感染症対応地方創生臨時交付金活用事業の実施状況・効果検証"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/life/270753_1167116_misc.pdf",
+          "title": "令和5年度　新型コロナウイルス感染症対応地方創生臨時交付金活用事業の実施状況・効果検証"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/life/270753_1167126_misc.pdf",
+          "title": "令和5年度　物価高騰対応重点支援地方創生臨時交付金活用事業の実施状況・効果検証"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/life/270753_1167128_misc.pdf",
+          "title": "令和6年度　物価高騰対応重点支援地方創生臨時交付金活用事業の実施状況・効果検証"
+        }
+      ],
+      "review_state": "pending",
+      "retrieval_state": "fetched",
+      "summary": "",
+      "amount": null,
+      "eligibility": null,
+      "rounds": [],
+      "evidence": [],
+      "checked_at": null,
+      "issuer_level": null,
+      "issuer_name": null,
+      "source_id": "kochi_city",
+      "source_level": "市",
+      "source_name": "高知市",
+      "html_extraction": {
+        "version": 3,
+        "source_hash": "a90ca3e6c0c90ff011ecec8d8bb2dc97147eb305c61adc9712742b141a0edb41",
+        "fetched_at": "2026-11-17T03:25:01.179225+00:00",
+        "sections": []
+      },
+      "review_scope": "公式HTMLの見出し・表から自動抽出。人による内容確認と現在の受付状況は未確認。"
+    },
+    {
+      "id": "bbf602b918e5d5be",
+      "url": "https://www.city.kochi.kochi.jp/soshiki/104/r7jissizyokyo-hokoku.html",
+      "title": "令和7年度高知市中山間地域等直接支払交付金集落協定の概要及び実施状況の公表について",
+      "audiences": [
+        "対象者を確認"
+      ],
+      "purposes": [
+        "地域・防災"
+      ],
+      "source_updated_at": "更新日：2026年8月31日更新",
+      "fetched_at": "2026-11-17T03:25:06.962425+00:00",
+      "hash": "1c6346b67b81039d15abd892ba1fc2390f22c8ea77078526da5ddcae78f3258b",
+      "pdfs": [
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/life/270820_1167481_misc.pdf",
+          "title": "1_集落協定の概要及び交付面積・交付額"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/life/270820_1170233_misc.pdf",
+          "title": "2_集落ごとの実施状況一覧"
+        }
+      ],
+      "review_state": "pending",
+      "retrieval_state": "fetched",
+      "summary": "",
+      "amount": null,
+      "eligibility": null,
+      "rounds": [],
+      "evidence": [],
+      "checked_at": null,
+      "issuer_level": null,
+      "issuer_name": null,
+      "source_id": "kochi_city",
+      "source_level": "市",
+      "source_name": "高知市",
+      "html_extraction": {
+        "version": 3,
+        "source_hash": "1c6346b67b81039d15abd892ba1fc2390f22c8ea77078526da5ddcae78f3258b",
+        "fetched_at": "2026-11-17T03:25:06.962425+00:00",
+        "sections": []
+      },
+      "review_scope": "公式HTMLの見出し・表から自動抽出。人による内容確認と現在の受付状況は未確認。"
+    },
+    {
+      "id": "a6db48044f427301",
+      "url": "https://www.city.kochi.kochi.jp/soshiki/186/r8tikudenti.html",
+      "title": "【三次募集受付終了】令和8年度高知市住宅用蓄電池設備等導入促進事業費補助金について",
+      "audiences": [
+        "事業者"
+      ],
+      "purposes": [
+        "住まい",
+        "省エネ・環境",
+        "創業・事業支援"
+      ],
+      "source_updated_at": "更新日：2026年8月20日更新",
+      "fetched_at": "2026-11-17T03:25:25.755901+00:00",
+      "hash": "17a0fe39a4d87ef29bf0b3debb9b6b7821759ece18bcc3dd076b375fc018746b",
+      "pdfs": [
+        {
+          "url": "https://www.pref.kochi.lg.jp/doc/2025033100099/file_contents/file_20264175105138_1.pdf",
+          "title": "https://www.pref.kochi.lg.jp/doc/2025033100099/file_contents/file_20264175105138_1.pdf"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/182529.pdf",
+          "title": "交付要綱 [PDFファイル／177KB]"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/182588.pdf",
+          "title": "募集要領 [PDFファイル／321KB]"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/180868.pdf",
+          "title": "チェックリスト [PDFファイル／112KB]"
+        },
+        {
+          "url": "https://www.pref.kochi.lg.jp/doc/2025033100099/file_contents/file_2026421293643_1.pdf",
+          "title": "https://www.cev-pc.or.jp/hojo/v2h-v2lpdf/R6ho/R6h v2hmeigaragotojougen.pdf"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/182589.pdf",
+          "title": "募集要領 [PDFファイル／321KB]"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/182591.pdf",
+          "title": "募集要領 [PDFファイル／321KB]"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/182530.pdf",
+          "title": "交付要綱 [PDFファイル／177KB]"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/182592.pdf",
+          "title": "募集要領 [PDFファイル／321KB]"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/183250.pdf",
+          "title": "よくあるご質問 [PDFファイル／80KB]"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/176372.pdf",
+          "title": "PDF [PDFファイル／69KB]"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/176373.pdf",
+          "title": "PDF [PDFファイル／51KB]"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/176386.pdf",
+          "title": "PDF [PDFファイル／312KB]"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/180866.pdf",
+          "title": "PDF [PDFファイル／112KB]"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/180867.pdf",
+          "title": "PDF [PDFファイル／354KB]"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/176378.pdf",
+          "title": "PDF [PDFファイル／61KB]"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/176380.pdf",
+          "title": "PDF [PDFファイル／47KB]"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/176382.pdf",
+          "title": "PDF [PDFファイル／59KB]"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/176388.pdf",
+          "title": "PDF [PDFファイル／75KB]"
+        }
+      ],
+      "review_state": "pending",
+      "retrieval_state": "fetched",
+      "summary": "高知市では、家庭部門における温室効果ガスの排出量の削減を図るため、高知県の「高知県住宅用太陽光発電設備等導入推進事業費補助金」(財源:「物価高騰対応重点支援地方創生臨時交付金」)を活用し、「住宅用蓄電設備」又は「V2H充放電設備」導入の補助を実施します。",
+      "amount": "4　補助金額\n補助率及び補助上限額は、下表に掲げるものとします。\n補助対象設備 ｜ 補助率及び補助上限額\n住宅用蓄電池設備 ｜ 蓄電池設備の設備容量（小数点第3位以下を切り捨てた数）のKwh×4万円以内\n※上限額は40万円（ただし、当該年度において既に「高知市住宅用自家消費型太陽光発電設備導入促進事業費補助金」の交付決定を受けている場合は、上限額25万円とする。）\n※千円未満は切り捨て\nＶ2Ｈ充放電設備 ｜ 一般社団法人次世代自動車振興センターが行うＶ2Ｈ充放電設備導入に係る補助金において補助対象であるものを対象とする。\n補助金額は、以下(1)、(2)のいずれか少ない方とする。\n※上限額は30万円\n※千円未満は切り捨て​\n【補助率(1)】\n一般社団法人次世代自動車振興センターが行うＶ2Ｈ充放電設備導入に係る補助金（令和6年度補正予算・令和7年度当初予算分）における型式ごとの補助金交付額（災害拠点公共施設補助率2分の1の欄に定める額）(※1)に0.4を乗じて得た金額\n※一般社団法人次世代自動車振興センターが行うＶ2Ｈ充放電設備導入に係る補助金（令和7年度補正予算分）から新たに補助対象となったＶ2Ｈ充放電設備についての補助金額は、当該補助金における型式ごとの補助金交付額（補助率2分の1の欄に定める額）(※2)に0.4を乗じて得た金額\n【補助率(2)】\nＶ2Ｈ充放電設備の購入費用（消費税及び地方消費税を除く。）に0.2を乗じて得た金額​\n※1https://www.cev-pc.or.jp/hojo/v2h-v2lpdf/R6ho/R6h v2hmeigaragotojougen.pdf\n※2https://www.cev-pc.or.jp/hojo/v2h-v2l_pdf/R7ho/R7h_v2h_katashikiichiran.pdf\n（参考）補助金の計算例は募集要領 [PDFファイル／321KB]P2～3をご確認ください。",
+      "eligibility": "1　補助対象事業\n既に太陽光発電設備を設置し発電を行っている自ら居住する住宅に対して、「住宅用蓄電池設備」又は「Ｖ2Ｈ充放電設備」のいずれか一方を設置する事業とします。\nなお、補助金の交付決定後に補助対象事業に着手（契約・発注）し、事業完了日から起算して30日を経過する日又は令和9年1月29日（金曜日）のいずれか早い日までに事業完了及び実績報告書の提出を行ってください。​\n※　1つの太陽光発電設備に接続する補助対象設備について、同一年度内に本補助金の交付決定を受けられるのは、「住宅用蓄電池」又は「Ｖ2Ｈ充放電設備」のいずれか一方とし、かつ、1回に限ります。​\n\n※　補助金の交付決定日より前に、設置工事に着手（契約・発注）した場合、補助対象となりません。​\n※　当該年度において、既に「高知市住宅用自家消費型太陽光発電設備導入促進事業費補助金」における蓄電池の補助金交付決定を受けている場合、当該蓄電池に対して、本補助金を重ねて申請することはできません。​\n\n2　申請できる方\n以下の⑴～⑸の要件を全て満たす方が対象となります。\n⑴ 　県税、市税及びその他の徴収金を滞納していない者であること。\n⑵ 　住宅が所在する土地に住所を有し、当該住所が住民基本台帳に記録されている者であること。\n⑶ 　高知市事業等からの暴力団の排除に関する規則（平成23年規則第28号）第4条各号のいずれにも該当しない者であること。\n⑷　高知県からの交付金、補助金及び助成金等について不正受給をしていない者であること。\n⑸ 　補助が適当でないと市長が認める者でないこと。​​\n\n3　補助対象設備\n下表に掲げる設備及び要件を満たすものを補助対象設備とします。\n補助対象設備 ｜ 設備の要件\n住宅用蓄電池設備 ｜ ・商用化され、導入実績があること。\n・中古設備でないこと。\n・リース設備でないこと。\n・定置用であること。（ポータブルは補助金の対象となりません。）\n・市内の事業者（※1）から調達すること。\nV2H充放電設備\n※1 ここでいう「市内の事業者」とは、「（契約書に記載する）契約の相手」又は「（請書に記載する）請負者」が「高知市内の本社若しくは本店又は支店若しくは営業所等の代表者」である事業者を指します。",
+      "rounds": [],
+      "evidence": [],
+      "checked_at": null,
+      "issuer_level": null,
+      "issuer_name": null,
+      "source_id": "kochi_city",
+      "source_level": "市",
+      "source_name": "高知市",
+      "html_extraction": {
+        "version": 3,
+        "source_hash": "17a0fe39a4d87ef29bf0b3debb9b6b7821759ece18bcc3dd076b375fc018746b",
+        "fetched_at": "2026-11-17T03:25:25.755901+00:00",
+        "sections": [
+          {
+            "heading": "制度の概要",
+            "kind": "overview",
+            "text": "高知市では、家庭部門における温室効果ガスの排出量の削減を図るため、高知県の「高知県住宅用太陽光発電設備等導入推進事業費補助金」(財源:「物価高騰対応重点支援地方創生臨時交付金」)を活用し、「住宅用蓄電設備」又は「V2H充放電設備」導入の補助を実施します。\n※県の「高知県住宅用太陽光発電設備等導入推進事業費補助金」については、こちらをご確認ください。\nhttps://www.pref.kochi.lg.jp/doc/2025033100099/file_contents/file_20264175105138_1.pdf\n申請を希望される方は、必ず交付要綱 [PDFファイル／177KB]、募集要領 [PDFファイル／321KB]をご確認ください。\nなお、今年度から新たにチェックリスト [PDFファイル／112KB]の提出が必要となりますので、あわせてご確認ください。\n※二次募集終了時点の予算残額は、8,978千円です。"
+          },
+          {
+            "heading": "1　補助対象事業",
+            "kind": "eligibility",
+            "text": "既に太陽光発電設備を設置し発電を行っている自ら居住する住宅に対して、「住宅用蓄電池設備」又は「Ｖ2Ｈ充放電設備」のいずれか一方を設置する事業とします。\nなお、補助金の交付決定後に補助対象事業に着手（契約・発注）し、事業完了日から起算して30日を経過する日又は令和9年1月29日（金曜日）のいずれか早い日までに事業完了及び実績報告書の提出を行ってください。​\n※　1つの太陽光発電設備に接続する補助対象設備について、同一年度内に本補助金の交付決定を受けられるのは、「住宅用蓄電池」又は「Ｖ2Ｈ充放電設備」のいずれか一方とし、かつ、1回に限ります。​"
+          },
+          {
+            "heading": "※　補助金の交付決定日より前に、設置工事に着手（契約・発注）した場合、補助対象となりません。​",
+            "kind": "eligibility",
+            "text": "※　当該年度において、既に「高知市住宅用自家消費型太陽光発電設備導入促進事業費補助金」における蓄電池の補助金交付決定を受けている場合、当該蓄電池に対して、本補助金を重ねて申請することはできません。​"
+          },
+          {
+            "heading": "2　申請できる方",
+            "kind": "eligibility",
+            "text": "以下の⑴～⑸の要件を全て満たす方が対象となります。\n⑴ 　県税、市税及びその他の徴収金を滞納していない者であること。\n⑵ 　住宅が所在する土地に住所を有し、当該住所が住民基本台帳に記録されている者であること。\n⑶ 　高知市事業等からの暴力団の排除に関する規則（平成23年規則第28号）第4条各号のいずれにも該当しない者であること。\n⑷　高知県からの交付金、補助金及び助成金等について不正受給をしていない者であること。\n⑸ 　補助が適当でないと市長が認める者でないこと。​​"
+          },
+          {
+            "heading": "3　補助対象設備",
+            "kind": "eligibility",
+            "text": "下表に掲げる設備及び要件を満たすものを補助対象設備とします。\n補助対象設備 ｜ 設備の要件\n住宅用蓄電池設備 ｜ ・商用化され、導入実績があること。\n・中古設備でないこと。\n・リース設備でないこと。\n・定置用であること。（ポータブルは補助金の対象となりません。）\n・市内の事業者（※1）から調達すること。\nV2H充放電設備\n※1 ここでいう「市内の事業者」とは、「（契約書に記載する）契約の相手」又は「（請書に記載する）請負者」が「高知市内の本社若しくは本店又は支店若しくは営業所等の代表者」である事業者を指します。"
+          },
+          {
+            "heading": "4　補助金額",
+            "kind": "amount",
+            "text": "補助率及び補助上限額は、下表に掲げるものとします。\n補助対象設備 ｜ 補助率及び補助上限額\n住宅用蓄電池設備 ｜ 蓄電池設備の設備容量（小数点第3位以下を切り捨てた数）のKwh×4万円以内\n※上限額は40万円（ただし、当該年度において既に「高知市住宅用自家消費型太陽光発電設備導入促進事業費補助金」の交付決定を受けている場合は、上限額25万円とする。）\n※千円未満は切り捨て\nＶ2Ｈ充放電設備 ｜ 一般社団法人次世代自動車振興センターが行うＶ2Ｈ充放電設備導入に係る補助金において補助対象であるものを対象とする。\n補助金額は、以下(1)、(2)のいずれか少ない方とする。\n※上限額は30万円\n※千円未満は切り捨て​\n【補助率(1)】\n一般社団法人次世代自動車振興センターが行うＶ2Ｈ充放電設備導入に係る補助金（令和6年度補正予算・令和7年度当初予算分）における型式ごとの補助金交付額（災害拠点公共施設補助率2分の1の欄に定める額）(※1)に0.4を乗じて得た金額\n※一般社団法人次世代自動車振興センターが行うＶ2Ｈ充放電設備導入に係る補助金（令和7年度補正予算分）から新たに補助対象となったＶ2Ｈ充放電設備についての補助金額は、当該補助金における型式ごとの補助金交付額（補助率2分の1の欄に定める額）(※2)に0.4を乗じて得た金額\n【補助率(2)】\nＶ2Ｈ充放電設備の購入費用（消費税及び地方消費税を除く。）に0.2を乗じて得た金額​\n※1https://www.cev-pc.or.jp/hojo/v2h-v2lpdf/R6ho/R6h v2hmeigaragotojougen.pdf\n※2https://www.cev-pc.or.jp/hojo/v2h-v2l_pdf/R7ho/R7h_v2h_katashikiichiran.pdf\n（参考）補助金の計算例は募集要領 [PDFファイル／321KB]P2～3をご確認ください。"
+          }
+        ]
+      },
+      "review_scope": "公式HTMLの見出し・表から自動抽出。人による内容確認と現在の受付状況は未確認。"
+    },
+    {
+      "id": "4905f2fedf6dfec7",
+      "url": "https://www.city.kochi.kochi.jp/soshiki/186/r8koukouritu.html",
+      "title": "【受付は終了しました】令和8年度高知市事業者用高効率機器導入促進事業費補助金について",
+      "audiences": [
+        "事業者"
+      ],
+      "purposes": [
+        "省エネ・環境",
+        "創業・事業支援"
+      ],
+      "source_updated_at": "更新日：2026年6月12日更新",
+      "fetched_at": "2026-11-17T03:25:30.617455+00:00",
+      "hash": "bd654f059514f118613c9d6391062599440005a27aa8535274340036ca0aa43c",
+      "pdfs": [
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/176407.pdf",
+          "title": "交付要綱 [PDFファイル／170KB]"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/177092.pdf",
+          "title": "募集要領 [PDFファイル／450KB]"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/177153.pdf",
+          "title": "チェックリスト [PDFファイル／178KB]"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/176408.pdf",
+          "title": "交付要綱 [PDFファイル／170KB]"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/177094.pdf",
+          "title": "募集要領 [PDFファイル／450KB]"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/176555.pdf",
+          "title": "「（給湯器用）省Co2効果算定資料（例）」 [PDFファイル／289KB]"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/176556.pdf",
+          "title": "「（空調用）省Co2効果算定資料（例） [PDFファイル／276KB]"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/177095.pdf",
+          "title": "募集要領 [PDFファイル／450KB]"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/177098.pdf",
+          "title": "募集要領 [PDFファイル／450KB]"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/176429.pdf",
+          "title": "見積書作成例（参考） [PDFファイル／465KB]"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/177096.pdf",
+          "title": "募集要領 [PDFファイル／450KB]"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/176431.pdf",
+          "title": "交付要綱 [PDFファイル／170KB]"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/177097.pdf",
+          "title": "募集要領 [PDFファイル／450KB]"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/176774.pdf",
+          "title": "高知市事業者用高効率機器導入促進事業Q＆A [PDFファイル／467KB]"
+        },
+        {
+          "url": "https://www.city.kochi.kochi.jp/uploaded/attachment/177157.pdf",
+          "title": "令和8年度高知市事業者用高効率機器導入促進事業費補助金チェックリスト [PDFファイル／178KB]"
+        }
+      ],
+      "review_state": "pending",
+      "retrieval_state": "fetched",
+      "summary": "本補助金は、市域の温室効果ガスを削減するため、環境省の「地域脱炭素移行・再エネ推進交付金（重点対策加速化事業）」を活用し、市内の事業所の省エネルギー化を支援するものです。",
+      "amount": "3　補助金額\n補助対象経費の2分の1とします（1,000円未満の端数切り捨て）。なお、1事業者当たりの補助金上限額は500,000円です（補助金及び補助対象経費についての詳細は、「募集要領 [PDFファイル／450KB]」P2~3をご参照ください。）。\n※補助対象経費（機器の購入費及び設置工事費）の合計が200,000円以上の事業に限ります。\n※消費税及び地方消費税は補助対象経費に含まれませんが、事業全体の確認のため、これらの経費につきましても見積書に計上してください。\n※市内事業者から購入するものに限ります（リースやレンタル等所有権を持たないものを除く。）。",
+      "eligibility": "1　申請できる方と補助対象事業\n3年間以上事業を継続して行っている中小企業者が、自己の所有する高知市内の事業所において、自己が所有し、自己が過去1年間以上継続して使用する既設機器の入替えを行う場合を対象とします（工場・店舗・事務所など、業種は問いません。）。\n※補助対象者は中小企業者（中小企業基本法第2条第1項に規定する中小企業者をいう。）とします。\n「中小企業者の定義」については、中小企業庁 「中小企業の定義に関するよくある質問」でご確認ください。\nhttps://www.chusho.meti.go.jp/faq/faq/faq01_teigi.html　　​\n※テナントは対象となりません。\n※補助対象機器について、別途国等の補助金の交付を受けている場合は対象となりません。\n※申請は事業者単位とし、補助金の交付決定は同一年度につき1回限りとします。\n※上記以外にも要件がございます。必ず「交付要綱 [PDFファイル／170KB]」、「募集要領 [PDFファイル／450KB]」をご確認ください。\n\n2　補助対象機器\n下表に定める機器とします。\n補助対象機器 ｜ 機器の要件\n高効率照明機器 ｜ 調光制御機能（※1）を有するLEDに限る。\n高効率空調機器 ｜ 対象施設内に設置するものであり、従来の空調機器に対して30％以上省Co2効果（※2）が得られるもの。\n高効率給湯機器 ｜ 従来の給湯機器に対して30％以上省Co2効果が得られるもの。\n（※1） 以下の制御のうち、一つ以上の制御を採用すること。\n(1) スケジュール制御\nあらかじめ設定したタイムスケジュールに従い、個別回路、グループ化又はパターン化した回路を自動的に点滅又は調光制御する。\n(2) 明るさセンサによる一定照度制御\n明るさセンサからの信号により、あらかじめ設定した照度に調光制御する。\n(3) 在／不在調光制御\n人感センサ又は微動検知人感センサからの信号により、あらかじめ設定した個別回路を点滅又は調光制御する。なお、調光制御にあたっては、緩やかに調光できるものとする。\n（※2）算定の仕方について、以下の省Co2効果算定資料（例）をご参考ください。\n（参考）「（給湯器用）省Co2効果算定資料（例）」 [PDFファイル／289KB]\n「（空調用）省Co2効果算定資料（例） [PDFファイル／276KB]",
+      "rounds": [],
+      "evidence": [],
+      "checked_at": null,
+      "issuer_level": null,
+      "issuer_name": null,
+      "source_id": "kochi_city",
+      "source_level": "市",
+      "source_name": "高知市",
+      "html_extraction": {
+        "version": 3,
+        "source_hash": "bd654f059514f118613c9d6391062599440005a27aa8535274340036ca0aa43c",
+        "fetched_at": "2026-11-17T03:25:30.617455+00:00",
+        "sections": [
+          {
+            "heading": "制度の概要",
+            "kind": "overview",
+            "text": "本補助金は、市域の温室効果ガスを削減するため、環境省の「地域脱炭素移行・再エネ推進交付金（重点対策加速化事業）」を活用し、市内の事業所の省エネルギー化を支援するものです。\n※国の「地域脱炭素移行・再エネ推進交付金」については、こちらをご確認ください。　↠https://policies.env.go.jp/policy/roadmap/grants/\n申請を希望される方は、必ず「交付要綱 [PDFファイル／170KB]」、「募集要領 [PDFファイル／450KB]」をご確認ください。\nなお、今年度から新たに「チェックリスト [PDFファイル／178KB]」の提出が必要となりますので、あわせてご確認ください。"
+          },
+          {
+            "heading": "1　申請できる方と補助対象事業",
+            "kind": "eligibility",
+            "text": "3年間以上事業を継続して行っている中小企業者が、自己の所有する高知市内の事業所において、自己が所有し、自己が過去1年間以上継続して使用する既設機器の入替えを行う場合を対象とします（工場・店舗・事務所など、業種は問いません。）。\n※補助対象者は中小企業者（中小企業基本法第2条第1項に規定する中小企業者をいう。）とします。\n「中小企業者の定義」については、中小企業庁 「中小企業の定義に関するよくある質問」でご確認ください。\nhttps://www.chusho.meti.go.jp/faq/faq/faq01_teigi.html　　​\n※テナントは対象となりません。\n※補助対象機器について、別途国等の補助金の交付を受けている場合は対象となりません。\n※申請は事業者単位とし、補助金の交付決定は同一年度につき1回限りとします。\n※上記以外にも要件がございます。必ず「交付要綱 [PDFファイル／170KB]」、「募集要領 [PDFファイル／450KB]」をご確認ください。"
+          },
+          {
+            "heading": "2　補助対象機器",
+            "kind": "eligibility",
+            "text": "下表に定める機器とします。\n補助対象機器 ｜ 機器の要件\n高効率照明機器 ｜ 調光制御機能（※1）を有するLEDに限る。\n高効率空調機器 ｜ 対象施設内に設置するものであり、従来の空調機器に対して30％以上省Co2効果（※2）が得られるもの。\n高効率給湯機器 ｜ 従来の給湯機器に対して30％以上省Co2効果が得られるもの。\n（※1） 以下の制御のうち、一つ以上の制御を採用すること。\n(1) スケジュール制御\nあらかじめ設定したタイムスケジュールに従い、個別回路、グループ化又はパターン化した回路を自動的に点滅又は調光制御する。\n(2) 明るさセンサによる一定照度制御\n明るさセンサからの信号により、あらかじめ設定した照度に調光制御する。\n(3) 在／不在調光制御\n人感センサ又は微動検知人感センサからの信号により、あらかじめ設定した個別回路を点滅又は調光制御する。なお、調光制御にあたっては、緩やかに調光できるものとする。\n（※2）算定の仕方について、以下の省Co2効果算定資料（例）をご参考ください。\n（参考）「（給湯器用）省Co2効果算定資料（例）」 [PDFファイル／289KB]\n「（空調用）省Co2効果算定資料（例） [PDFファイル／276KB]"
+          },
+          {
+            "heading": "3　補助金額",
+            "kind": "amount",
+            "text": "補助対象経費の2分の1とします（1,000円未満の端数切り捨て）。なお、1事業者当たりの補助金上限額は500,000円です（補助金及び補助対象経費についての詳細は、「募集要領 [PDFファイル／450KB]」P2~3をご参照ください。）。\n※補助対象経費（機器の購入費及び設置工事費）の合計が200,000円以上の事業に限ります。\n※消費税及び地方消費税は補助対象経費に含まれませんが、事業全体の確認のため、これらの経費につきましても見積書に計上してください。\n※市内事業者から購入するものに限ります（リースやレンタル等所有権を持たないものを除く。）。"
+          }
+        ]
       },
       "review_scope": "公式HTMLの見出し・表から自動抽出。人による内容確認と現在の受付状況は未確認。"
     }

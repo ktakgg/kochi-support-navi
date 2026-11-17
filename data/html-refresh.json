@@ -1,15 +1,15 @@
 {
-  "started_at": "2026-11-16T00:43:26.803141+00:00",
+  "started_at": "2026-11-17T03:26:18.598042+00:00",
   "version": 3,
   "selected": 0,
-  "already_current": 174,
+  "already_current": 178,
   "succeeded": 0,
   "reused_snapshots": 0,
   "with_sections": 0,
   "errors": [],
-  "total_html_records": 174,
-  "current_version": 174,
+  "total_html_records": 178,
+  "current_version": 178,
   "remaining": 0,
-  "with_sections_total": 133,
-  "without_sections_total": 41
+  "with_sections_total": 135,
+  "without_sections_total": 43
 }
