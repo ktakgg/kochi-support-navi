@@ -50,7 +50,7 @@ jobs:
         run: python scripts/collect_structured.py --max-details 30
       - name: Collect HTML
         if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.refresh)
-        run: python scripts/crawl.py --max-pages 160 --per-source 40 --time-budget 600 --delay 1.5
+        run: python scripts/crawl.py --max-pages 240 --per-source 60 --time-budget 900 --max-depth 5 --delay 1.5
       - name: Collect PDF evidence
         if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.refresh)
         run: python scripts/collect_pdfs.py --max-files 20

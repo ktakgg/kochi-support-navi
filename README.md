@@ -34,7 +34,7 @@ python -m venv .venv
 . .venv/bin/activate
 python -m pip install -r requirements.txt
 python scripts/collect_structured.py --max-details 30
-python scripts/crawl.py --max-pages 160 --per-source 40 --time-budget 600 --delay 1.5
+python scripts/crawl.py --max-pages 240 --per-source 60 --time-budget 900 --max-depth 5 --delay 1.5
 python scripts/collect_pdfs.py --max-files 20
 BASE_PATH=/kochi-support-navi python scripts/build.py
 python -m unittest discover -s tests -p 'test_*.py'

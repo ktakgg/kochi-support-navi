@@ -3,7 +3,24 @@ import re
 import unicodedata
 from bs4 import BeautifulSoup, NavigableString, Tag
 from sources import source_for
-VERSION = 3
+VERSION = 4
+
+# Words that appear only in an article body (not its title) but are common search needs.
+TOPICS = ('産業団地', '工業団地', '企業立地', '企業誘致', '立地', '工場', '設備投資', '新規雇用', '雇用', '賃上げ', '人材育成',
+          '事業承継', '創業', '販路開拓', '海外展開', '研究開発', 'DX', 'デジタル', '省エネ', '脱炭素', '太陽光', '蓄電',
+          '空き家', '移住', '耐震', '子育て', '介護', '障害', '農業', '林業', '漁業', '観光', '商店街', 'テレワーク', 'サテライトオフィス')
+
+
+def body_keywords(url, html):
+    soup = BeautifulSoup(html, 'html.parser')
+    source = source_for(url) or {}
+    body = next((soup.select_one(s) for s in source.get('selectors', ['main']) if soup.select_one(s)), None)
+    if body is None:
+        return []
+    for el in body.select('script,style,nav,header,footer,#section_footer,#hyouka_area_box,#content_footer'):
+        el.decompose()
+    text = unicodedata.normalize('NFKC', body.get_text(' ', strip=True))
+    return [word for word in TOPICS if unicodedata.normalize('NFKC', word) in text]
 
 
 def section_kind(heading):
@@ -100,6 +117,7 @@ def apply_extraction(record, html):
     sections = extract_sections(record['url'], html)
     record['html_extraction'] = {'version': VERSION, 'source_hash': record['hash'],
                                  'fetched_at': record['fetched_at'], 'sections': sections}
+    record['keywords'] = body_keywords(record['url'], html)
     project_sections(record)
     return record
 

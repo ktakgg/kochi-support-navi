@@ -10,7 +10,7 @@ from extract_html import VERSION, apply_extraction
 from sources import SOURCES,Fetcher,canonical,source_for,source_meta,safe_url
 ROOT=Path(__file__).resolve().parents[1]
 ORIGIN=SOURCES[0]['origin'];SEEDS=SOURCES[0]['seeds']
-TERMS=re.compile(r'補助金|助成金|給付金|支援金|奨励金|交付金|貸付|融資|利子補給|負担軽減|手当|医療費助成|就学援助|補助制度|助成制度|費用助成|補助事業|診断費補助')
+TERMS=re.compile(r'補助金|助成金|給付金|支援金|奨励金|交付金|優遇制度|立地促進|立地支援|貸付|融資|利子補給|負担軽減|手当|医療費助成|就学援助|補助制度|助成制度|費用助成|補助事業|診断費補助')
 EXCLUDE=re.compile(r'提出書類[（(]様式|財産処分|交付要綱等の公表|交付状況|抽選結果|交付決定について|報告について|様式について|注意事項|実績報告|募集結果|選定結果|要綱の.*改正|要綱の制定')
 def now():return datetime.now(timezone.utc).isoformat()
 def write(path,obj):
@@ -18,10 +18,10 @@ def write(path,obj):
 def read(name,default):
  p=ROOT/'data'/name;return json.loads(p.read_text()) if p.exists() else default
 def classify(title):
- rules=[('子育て・教育',r'子ども|子育て|児童|保育|就学|教育|ひとり親|母子'),('住まい',r'住宅|住まい|家賃|空き家|耐震|除却|解体|ブロック塀|移住|定住|ターン'),('省エネ・環境',r'太陽光|蓄電|省エネ|高効率|環境|浄化槽|木材|生ごみ'),('創業・事業支援',r'企業|事業者|創業|設備導入|商店|商業|経営|店舗'),('健康・福祉',r'医療|障害|障がい|高齢|介護|福祉|健康|結核'),('農林水産',r'農業|農地|林業|漁業|水産|農林'),('地域・防災',r'地域|町内|自治会|防災|災害|コミュニティ|耐震|ブロック塀')]
+ rules=[('子育て・教育',r'子ども|子育て|児童|保育|就学|教育|ひとり親|母子'),('住まい',r'住宅|住まい|家賃|空き家|耐震|除却|解体|ブロック塀|移住|定住|ターン'),('省エネ・環境',r'太陽光|蓄電|省エネ|高効率|環境|浄化槽|木材|生ごみ'),('創業・事業支援',r'企業|事業者|創業|設備導入|商店|商業|経営|店舗|立地|誘致|産業団地|工業団地|工場'),('健康・福祉',r'医療|障害|障がい|高齢|介護|福祉|健康|結核'),('農林水産',r'農業|農地|林業|漁業|水産|農林'),('地域・防災',r'地域|町内|自治会|防災|災害|コミュニティ|耐震|ブロック塀')]
  purposes=[label for label,pat in rules if re.search(pat,title)] or ['その他']
  audiences=[]
- if re.search('企業|事業者|創業|設備導入|商店|商業|経営|店舗',title):audiences.append('事業者')
+ if re.search('企業|事業者|創業|設備導入|商店|商業|経営|店舗|立地|誘致|産業団地|工業団地|工場',title):audiences.append('事業者')
  if re.search('農業|農地|林業|漁業|水産|農林',title):audiences.extend(['事業者','農林水産業者'])
  if re.search('町内|自治会|団体|コミュニティ',title):audiences.append('地域団体')
  if re.search('子ども|子育て|児童|保育|就学|ひとり親|母子',title):audiences.extend(['個人・世帯','子育て世帯'])
@@ -58,7 +58,7 @@ def is_candidate(title,url):
 
 def discover_link(url,label):
  # Department and classification indexes must be traversed even without grant terms.
- return bool(TERMS.search(label) or re.search('支援|補助|助成|募集|移住|定住|制度',label) or re.fullmatch(r'/soshiki/(?:[0-9]+/|$)',urlsplit(url).path) or re.fullmatch(r'/life/(?:[0-9]+/)+',urlsplit(url).path))
+ return bool(TERMS.search(label) or re.search('支援|補助|助成|募集|移住|定住|制度|立地|誘致|優遇|奨励|団地',label) or re.fullmatch(r'/soshiki/(?:[0-9]+/|$)',urlsplit(url).path) or re.fullmatch(r'/life/(?:[0-9]+/)+',urlsplit(url).path))
 
 def balanced_queue(existing,seeds,pending,registry):
  # Reserve alternating slots for discovery and oldest known records. No starvation.
@@ -103,7 +103,7 @@ def coverage_report(registry,records):
  return {'generated_at':now(),'unresolved_count':len(missing),'unresolved':missing}
 
 def main():
- ap=argparse.ArgumentParser();ap.add_argument('--max-pages',type=int,default=160);ap.add_argument('--per-source',type=int,default=40);ap.add_argument('--time-budget',type=float,default=600);ap.add_argument('--delay',type=float,default=1.5);ap.add_argument('--resume',action='store_true');ap.add_argument('--sources',default=','.join(s['id'] for s in SOURCES));args=ap.parse_args()
+ ap=argparse.ArgumentParser();ap.add_argument('--max-pages',type=int,default=160);ap.add_argument('--per-source',type=int,default=40);ap.add_argument('--time-budget',type=float,default=600);ap.add_argument('--delay',type=float,default=1.5);ap.add_argument('--resume',action='store_true');ap.add_argument('--max-depth',type=int,default=5);ap.add_argument('--sources',default=','.join(s['id'] for s in SOURCES));args=ap.parse_args()
  selected=[s for s in SOURCES if s.get('transport','html')=='html' and s['id'] in args.sources.split(',')]
  if not selected:ap.error('unknown source selection')
  raw=ROOT/'private/snapshots';raw.mkdir(parents=True,exist_ok=True)
@@ -164,7 +164,7 @@ def main():
       registry[url]['html_extraction_version']=VERSION
       records[key]=r;run['candidates']+=1;stat['candidates']+=1
      remember_links(url,links,registry)
-     if depth<3:
+     if depth<args.max_depth:
       for u,label in links:
        target=source_for(u)
        if target and target['id'] in queues and discover_link(u,label) and u not in seen and not any(v[0]==u for v in queues[target['id']]):queues[target['id']].append((u,depth+1))

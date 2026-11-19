@@ -20,3 +20,11 @@ test('API期間は構造化データとして判定し、RSS概要は受付中�
  assert.equal(statusOf({...r,review_state:'pending'},new Date('2026-10-29T00:00Z')),'要確認');
  assert.equal(statusOf(r,new Date('2026-11-01T08:30:01Z')),'受付終了');
 });
+test('産業団地は工業団地・企業立地の言い換えと本文の重要語で検索できる',()=>{
+ const html={title:'企業立地助成金',summary:'',audiences:[],purposes:[],hash:'a',html_extraction:{source_hash:'a',sections:[]}};
+ assert.ok(queryMatches(html,'産業団地'));
+ assert.ok(queryMatches({...html,title:'助成金',keywords:['工業団地']},'産業団地'));
+ assert.ok(queryMatches({...html,title:'助成金',html_extraction:{source_hash:'a',sections:[{heading:'対象',text:'市内の産業団地に立地する企業'}]}},'産業団地'));
+ assert.ok(!queryMatches({...html,title:'助成金',html_extraction:{source_hash:'old',sections:[{heading:'対象',text:'産業団地'}]}},'産業団地'));
+ assert.ok(!queryMatches({...html,title:'電源立地地域対策交付金'},'産業団地'));
+});

@@ -50,6 +50,20 @@ class DiscoveryRegressionTests(unittest.TestCase):
   self.assertTrue(discover_link('https://www.city.kochi.kochi.jp/soshiki/117/','移住・定住促進課'))
   self.assertTrue(discover_link('https://www.city.kochi.kochi.jp/soshiki/40/','商業振興・外商支援課'))
   self.assertFalse(discover_link('https://www.city.kochi.kochi.jp/soshiki/117/news.html','職員紹介'))
+  self.assertTrue(discover_link('https://www.city.kochi.kochi.jp/life/2/196/1534/','産業団地の一覧'))
+  self.assertTrue(discover_link('https://www.pref.kochi.lg.jp/doc/x/','企業立地の優遇制度'))
+
+ def test_industrial_location_support_is_business_candidate(self):
+  from crawl import is_candidate,classify
+  self.assertTrue(is_candidate('企業立地の優遇制度','https://www.pref.kochi.lg.jp/doc/x/'))
+  audiences,purposes=classify('工業団地への企業立地支援')
+  self.assertIn('事業者',audiences);self.assertIn('創業・事業支援',purposes)
+
+ def test_body_keywords_find_terms_missing_from_title(self):
+  from extract_html import body_keywords
+  html='<html><body><nav>産業団地</nav><div id="main_body"><h1>企業立地助成金</h1><p>市内の工業団地に新たに立地する企業の設備投資を支援</p></div></body></html>'
+  words=body_keywords('https://www.city.kochi.kochi.jp/soshiki/40/josei.html',html)
+  self.assertIn('工業団地',words);self.assertIn('設備投資',words);self.assertNotIn('産業団地',words)
  def test_discovery_not_starved_by_existing_records(self):
   from crawl import balanced_queue
   existing=[('known'+str(i),0) for i in range(100)]

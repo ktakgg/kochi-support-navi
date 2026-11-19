@@ -7,8 +7,8 @@ test('カードの省略後も詳細データに元の認証条件と金額を�
  const records=JSON.parse(readFileSync(new URL('../dist/data.json',import.meta.url))).records;
  const r=records.find(r=>r.id==='6a16f5f36647c945'),card=cardDetails(r);
  assert.match(card.summary.text,/男性従業員の育児休業/);
- assert.match(card.support.text,/男性育休推進部門の認証 ｜ 10万円/);
- assert.ok(card.support.text.endsWith('…'));
+ assert.equal(card.support.text,'10万円・30万円（区分により異なる）');
+ assert.equal(card.support.partial,true);
  assert.match(r.amount,/いずれかの認定 ｜ 30万円/);
  assert.match(card.eligibility.text,/常時雇用する労働者/);
  assert.deepEqual(r.audiences,['事業者']);
@@ -33,7 +33,7 @@ test('金額専用項目が空でも取得済みの支援内容と対象条件�
 test('表の抜粋は明示し、長文の省略と過去の出典を区別する',()=>{
  const r={hash:'a',html_extraction:{source_hash:'a',sections:[{kind:'amount',text:'種類 ｜ 金額\n認証A ｜ 10万円\n※追加条件があります。'}]},eligibility:'あ'.repeat(300)};
  const card=cardDetails(r);
- assert.equal(card.support.text,'認証A ｜ 10万円');
+ assert.equal(card.support.text,'認証A：10万円');
  assert.equal(card.support.partial,true);
  assert.equal(card.eligibility.partial,true);
  assert.equal(cardDetails({...r,hash:'new',eligibility:null}).support.text,'');
@@ -60,9 +60,26 @@ test('結婚新生活支援の条件を省略表示し、詳細データは全�
  for(const word of ['30万円','同居または近居','45万円'])assert.ok(card.support.text.includes(word));
  for(const word of ['39歳以下','500万円未満'])assert.ok(r.eligibility.includes(word));
  assert.ok(card.eligibility.text.endsWith('…'));
- assert.ok(Array.from(card.eligibility.text).length<=61);
+ assert.ok(Array.from(card.eligibility.text).length<=41);
+ assert.doesNotMatch(card.eligibility.text,/すべてを満たす/);
  assert.deepEqual(r.audiences,['個人・世帯']);
  assert.ok(r.purposes.includes('住まい'));
  assert.equal(card.eligibility.partial,true);
  assert.equal(statusOf(r),'要確認');
+});
+
+test('カードは要点だけを短く表示し、ページの付属文言を概要にしない',()=>{
+ const r={hash:'a',title:'企業立地助成金',html_extraction:{source_hash:'a',sections:[
+  {kind:'overview',text:'公開日 2026年06月01日\n特設サイトはこちら！\n誘致支援\n市内に工場を新設する企業の設備投資を支援します。詳しくは要綱をご覧ください。'},
+  {heading:'助成額',kind:'amount',text:'対象経費の説明です。\n上限1億円。投下固定資産額の10％'},
+  {heading:'対象者',kind:'eligibility',text:'次の要件をすべて満たす事業者\n・市内に工場を新設する事業者\n・市税を滞納していない者\n・その他'}]},
+  rounds:[{end:'2026-12-25T17:00:00+09:00'},{end:'2026-01-01T00:00:00+09:00'}]};
+ const card=cardDetails(r,new Date('2026-11-19T00:00:00+09:00'));
+ assert.equal(card.summary.text,'市内に工場を新設する企業の設備投資を支援します。');
+ assert.equal(card.support.text,'上限1億円。投下固定資産額の10％');
+ assert.equal(card.support.partial,true);
+ assert.equal(card.eligibility.text,'市内に工場を新設する事業者／市税を滞納していない者');
+ assert.equal(card.eligibility.partial,true);
+ assert.equal(card.deadline,'2026/12/25まで');
+ assert.equal(cardDetails(r,new Date('2027-01-01')).deadline,'');
 });
