@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-18T02:46:03.910266+00:00",
-  "unresolved_count": 37,
+  "generated_at": "2026-11-19T02:15:59.866677+00:00",
+  "unresolved_count": 32,
   "unresolved": [
     {
       "url": "https://www.joho-kochi.or.jp/center/kochi-fund-top.php",
       "title": "令和8年度事業戦略等推進事業費補助金のご案内",
       "discovered_from": "https://www.joho-kochi.or.jp/",
-      "fetched_at": "2026-11-18T02:45:05.238947+00:00",
+      "fetched_at": "2026-11-19T02:14:55.249835+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -17,110 +17,6 @@
       "fetched_at": null,
       "state": "fetch_failed",
       "error": "HTTP Error 404: Not Found"
-    },
-    {
-      "url": "https://www.city.kochi.kochi.jp/soshiki/33/genndogaku4.html",
-      "title": "就学支度資金・修学資金等貸付限度額一覧表",
-      "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/33/",
-      "fetched_at": null,
-      "state": "not_fetched",
-      "error": null
-    },
-    {
-      "url": "https://www.city.kochi.kochi.jp/soshiki/33/kochi-jidofuyoteate-info-reiwa7.html",
-      "title": "児童扶養手当支払通知書の廃止",
-      "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/33/",
-      "fetched_at": null,
-      "state": "not_fetched",
-      "error": null
-    },
-    {
-      "url": "https://www.city.kochi.kochi.jp/site/bukkakoutoushien/buttan.html",
-      "title": "高知市物価高騰対策等短期継続融資のご案内",
-      "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/40/",
-      "fetched_at": null,
-      "state": "not_fetched",
-      "error": null
-    },
-    {
-      "url": "https://www.city.kochi.kochi.jp/soshiki/40/yuusi-20210401.html",
-      "title": "高知市産業活性化融資制度のご案内",
-      "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/40/",
-      "fetched_at": null,
-      "state": "not_fetched",
-      "error": null
-    },
-    {
-      "url": "https://www.city.kochi.kochi.jp/soshiki/40/tankiyuushi-kikin.html",
-      "title": "新型コロナウイルス感染症対応地方創生臨時交付金基金事業の公表について",
-      "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/40/",
-      "fetched_at": null,
-      "state": "not_fetched",
-      "error": null
-    },
-    {
-      "url": "https://www.city.kochi.kochi.jp/soshiki/40/20181201-2.html",
-      "title": "高知市産業活性化融資制度新メニュー「リピート型スピード融資」のご案内",
-      "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/40/",
-      "fetched_at": null,
-      "state": "not_fetched",
-      "error": null
-    },
-    {
-      "url": "https://www.city.kochi.kochi.jp/soshiki/186/nijiyotei.html",
-      "title": "【二次募集の予定について】令和8年度高知市住宅用蓄電池設備等導入促進事業費補助金",
-      "discovered_from": "https://www.city.kochi.kochi.jp/life/2/196/1532/",
-      "fetched_at": null,
-      "state": "not_fetched",
-      "error": null
-    },
-    {
-      "url": "https://www.city.kochi.kochi.jp/soshiki/204/dento-hojo.html",
-      "title": "令和8年度　高知市伝統産業推進事業費補助金",
-      "discovered_from": "https://www.city.kochi.kochi.jp/life/2/196/1532/",
-      "fetched_at": null,
-      "state": "not_fetched",
-      "error": null
-    },
-    {
-      "url": "https://www.city.kochi.kochi.jp/soshiki/104/r6jissizyokyo-hokoku.html",
-      "title": "令和6年度高知市中山間地域等直接支払交付金集落協定の概要及び実施状況の公表について",
-      "discovered_from": "https://www.city.kochi.kochi.jp/life/2/196/1536/",
-      "fetched_at": null,
-      "state": "not_fetched",
-      "error": null
-    },
-    {
-      "url": "https://www.city.kochi.kochi.jp/soshiki/104/r5jissizyokyo-hokoku.html",
-      "title": "令和5年度高知市中山間地域等直接支払交付金集落協定の概要及び実施状況の公表について",
-      "discovered_from": "https://www.city.kochi.kochi.jp/life/2/196/1536/",
-      "fetched_at": null,
-      "state": "not_fetched",
-      "error": null
-    },
-    {
-      "url": "https://www.city.kochi.kochi.jp/soshiki/104/jissizyokyo-hokoku.html",
-      "title": "令和4年度高知市中山間地域等直接支払交付金集落協定の概要及び実施状況の公表について",
-      "discovered_from": "https://www.city.kochi.kochi.jp/life/2/196/1536/",
-      "fetched_at": null,
-      "state": "not_fetched",
-      "error": null
-    },
-    {
-      "url": "https://www.city.kochi.kochi.jp/soshiki/104/tyokubarai-kouhyou.html",
-      "title": "令和3年度高知市中山間地域等直接支払交付金集落協定の概要及び実施状況の公表について",
-      "discovered_from": "https://www.city.kochi.kochi.jp/life/2/196/1536/",
-      "fetched_at": null,
-      "state": "not_fetched",
-      "error": null
-    },
-    {
-      "url": "https://www.city.kochi.kochi.jp/soshiki/104/r2chokubarai.html",
-      "title": "令和2年度高知市中山間地域等直接支払交付金集落協定の概要及び実施状況の公表について",
-      "discovered_from": "https://www.city.kochi.kochi.jp/life/2/196/1536/",
-      "fetched_at": null,
-      "state": "not_fetched",
-      "error": null
     },
     {
       "url": "https://www.pref.kochi.lg.jp/doc/2026072100125/",
@@ -142,7 +38,7 @@
       "url": "https://www.joho-kochi.or.jp/digital/hojokin_r4b.php",
       "title": "R4補正デジタル技術活用促進事業費補助金のページこちらから（現在受付終了）",
       "discovered_from": "https://www.joho-kochi.or.jp/digital/hojokin.php",
-      "fetched_at": "2026-11-18T02:45:14.973369+00:00",
+      "fetched_at": "2026-11-19T02:15:06.358901+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -182,7 +78,7 @@
       "url": "https://www.pref.kochi.lg.jp/doc/2026072800025/",
       "title": "令和８年度間伐補助制度の概要（PR版）",
       "discovered_from": "https://www.pref.kochi.lg.jp/soshiki/030301/",
-      "fetched_at": "2026-11-10T21:07:28.991357+00:00",
+      "fetched_at": "2026-11-19T02:15:56.705803+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -291,9 +187,73 @@
       "error": null
     },
     {
-      "url": "https://www.city.kochi.kochi.jp/soshiki/33/jidou-teate-oss.html",
-      "title": "児童手当に関する子育てワンストップサービス（ぴったりサービス）について",
-      "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/33/jidou-teate2013.html",
+      "url": "https://www.pref.kochi.lg.jp/soshiki/150401/",
+      "title": "高知県制度融資（高知県商工労働部経営支援課）",
+      "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/40/yuusi-20210401.html",
+      "fetched_at": "2026-11-19T02:15:12.678520+00:00",
+      "state": "fetched_not_listed",
+      "error": null
+    },
+    {
+      "url": "https://www.pref.kochi.lg.jp/doc/2026030500479/",
+      "title": "高知県事業承継奨励給付金について",
+      "discovered_from": "https://www.pref.kochi.lg.jp/soshiki/150401/",
+      "fetched_at": "2026-11-19T02:15:33.434117+00:00",
+      "state": "fetched_not_listed",
+      "error": null
+    },
+    {
+      "url": "https://www.pref.kochi.lg.jp/doc/2026030900385/",
+      "title": "高知県事業承継等推進事業費補助金について",
+      "discovered_from": "https://www.pref.kochi.lg.jp/soshiki/150401/",
+      "fetched_at": "2026-11-19T02:15:39.200355+00:00",
+      "state": "fetched_not_listed",
+      "error": null
+    },
+    {
+      "url": "https://www.pref.kochi.lg.jp/doc/2025040100228/",
+      "title": "高知県空き店舗対策事業費補助金交付要綱について",
+      "discovered_from": "https://www.pref.kochi.lg.jp/soshiki/150401/",
+      "fetched_at": "2026-11-19T02:15:48.083501+00:00",
+      "state": "fetched_not_listed",
+      "error": null
+    },
+    {
+      "url": "https://www.pref.kochi.lg.jp/doc/2025040100211/",
+      "title": "高知県中山間地域商業等機能維持支援事業費補助金交付要綱について",
+      "discovered_from": "https://www.pref.kochi.lg.jp/soshiki/150401/",
+      "fetched_at": "2026-11-19T02:15:53.099953+00:00",
+      "state": "fetched_not_listed",
+      "error": null
+    },
+    {
+      "url": "https://www.pref.kochi.lg.jp/doc/2022022200327/",
+      "title": "商店街等振興計画推進事業費補助金について",
+      "discovered_from": "https://www.pref.kochi.lg.jp/soshiki/150401/",
+      "fetched_at": null,
+      "state": "not_fetched",
+      "error": null
+    },
+    {
+      "url": "https://www.pref.kochi.lg.jp/doc/2026020900067/",
+      "title": "補助金及び委託業務の実績等の公表",
+      "discovered_from": "https://www.pref.kochi.lg.jp/soshiki/150401/",
+      "fetched_at": null,
+      "state": "not_fetched",
+      "error": null
+    },
+    {
+      "url": "https://www.pref.kochi.lg.jp/doc/2023090100120/",
+      "title": "業務改善助成金の制度拡充について",
+      "discovered_from": "https://www.pref.kochi.lg.jp/soshiki/150401/",
+      "fetched_at": null,
+      "state": "not_fetched",
+      "error": null
+    },
+    {
+      "url": "https://www.pref.kochi.lg.jp/doc/2026012800191/",
+      "title": "令和８年度高知県中小企業設備資金利子補給制度について",
+      "discovered_from": "https://www.pref.kochi.lg.jp/doc/2026033100430/",
       "fetched_at": null,
       "state": "not_fetched",
       "error": null
