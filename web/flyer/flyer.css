@@ -218,3 +218,24 @@ body.placing .sheet,body.placing .sheet .blk{cursor:crosshair}
 .program.flyer .p-qr{grid-row:1 / span 2;align-self:end}
 .program.flyer .p-foot{grid-column:1;grid-row:2}
 .program.flyer .p-figures:empty{display:none}
+/* ---- 文字の書式（部分指定・項目ごとの大きさ/色/行間） ---- */
+.m-blue{color:#1f5fa8}.m-green{color:#2a7a3f}.m-white{color:#fff}.m-black{color:#222}.m-huge{font-size:1.6em}.m-tiny{font-size:.55em}
+.program .p-title{color:var(--tc,inherit)}
+.program.flyer .p-title{font-size:calc(1.68em * var(--ts,1));color:var(--tc,#222)}
+.program.flyer .p-catch{font-size:calc(1.2em * var(--cs,1));color:var(--cc,#222)}
+.program.flyer .p-body{font-size:calc(1em * var(--bs,1));line-height:var(--bl,1.38);color:var(--bc,inherit)}
+.program.flyer .p-amount{font-size:calc(1.25em * var(--as,1))}
+.program:not(.flyer) .p-title{font-size:calc(1.55em * var(--ts,1))}
+.program:not(.flyer) .p-catch{font-size:calc(1.15em * var(--cs,1));color:var(--cc,var(--c))}
+.program:not(.flyer) .p-body{font-size:calc(1em * var(--bs,1));line-height:var(--bl,1.45);color:var(--bc,inherit)}
+.program:not(.flyer) .p-amount{font-size:calc(2.4em * var(--as,1))}
+.fmt-bar{position:fixed;z-index:40;display:flex;gap:3px;flex-wrap:wrap;max-width:560px;background:#fff;border:1px solid #c9c0c0;border-radius:8px;box-shadow:0 6px 20px #0003;padding:5px}
+.fmt-bar button,.fmt-bar select{border:1px solid #ddd;background:#faf7f7;border-radius:5px;padding:3px 7px;font-size:12px;cursor:pointer}
+.right h3.sub{font-size:13px;margin:16px 0 0;padding-top:10px;border-top:1px solid var(--line)}
+.right input[type=range]{width:100%}
+.right label output{font-weight:400;color:var(--muted)}
+.swatches input[type=color]{width:28px;height:24px;padding:0;border:1px solid #bbb;border-radius:4px;background:#fff}
+.swatches .reset{width:auto!important;border-radius:5px!important;padding:0 8px;background:#fff!important;font-size:11px;box-shadow:0 0 0 1px #bbb}
+.blk.qr-covered{outline:.6mm dashed #f08a00;outline-offset:.4mm}
+@media print{.blk.qr-covered{outline:0}.fmt-bar{display:none!important}}
+.qr svg.qr-code,.program .p-qr svg.qr-code{background:#fff}

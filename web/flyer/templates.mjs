@@ -21,7 +21,7 @@ const slash=(x,y,w,accent,value)=>({...at(x,y,w,10.5),type:'heading',data:{text:
 const image=(x,y,w,h,file,fit='contain')=>({...at(x,y,w,h),type:'image',data:{src:'assets/'+file,fit}});
 const shape=(x,y,w,h,kind,color=ORANGE,rot=0)=>({...at(x,y,w,h,rot),type:'shape',data:{kind,color}});
 const sparkle=(x,y,w,h=w)=>shape(x,y,w,h,'sparkle',YELLOW);
-const program=(x,y,w,h,o)=>({...at(x,y,w,h),type:'program',data:{title:'',subtitle:'',catch:'',body:'',amount:'',amountNote:'',period:'',contact:'',tel:'',url:'',source:null,draft:false,color:ORANGE,scale:1,style:'flyer',align:'center',amountColor:INK,qrSize:15,...o}});
+const program=(x,y,w,h,o)=>({...at(x,y,w,h),type:'program',data:{title:'',subtitle:'',catch:'',body:'',amount:'',amountNote:'',period:'',contact:'',tel:'',url:'',source:null,draft:false,color:ORANGE,scale:1,style:'flyer',align:'center',amountColor:INK,qrSize:17,...o}});
 const stamp=(x,y,w,h,value,rot)=>({...at(x,y,w,h,rot),type:'stamp',data:{text:value,color:RED,shape:'rect'}});
 const qr=(x,y,s,url)=>({...at(x,y,s,s),type:'qr',data:{url,caption:''}});
 // 「高知市の主な」：文字ごとに大きさと高さが違う原稿の組み方。
@@ -43,25 +43,25 @@ function outside(){
   ribbon(118,36.5,72,'受付は令和[赤]９[/赤]年３月23日（[赤]火[/赤]）まで'),
   program(20,45,90,67,{title:'地方創生移住支援金',catch:'東京圏からの移住・就業を支援します！',
    body:'東京23区内に住んでいる方又は東京圏から23区へ通勤している方で、高知市へ移住し、県が開設・運営するマッチングサイトに掲載されている移住支援金対象求人へ応募し、就職、または起業した方等を対象に支援します。',
-   amount:'単身 60万円\n世帯100万円',url:CITY+'117/ijusienkin.html',qrSize:16}),
-  text(21,105.5,89,6,'※ 帯同する18歳未満の者1人につき100万円を加算',{size:3.3}),
+   amount:'単身 60万円\n世帯100万円',url:CITY+'117/ijusienkin.html',qrSize:18}),
+  text(21,104,68,9,'※ 帯同する18歳未満の者1人につき\n　100万円を加算',{size:3.2,line:1.3}),
   text(26,116.5,150,6,'高知市移住・定住促進課　　TEL：088－823－8813',{size:3.3,bold:true}),
   program(113,45,91,68,{title:'UI孫ターン支援事業費補助金',catch:'高知市へのUIターン者の移住・定住を支援します！',
    body:'高知市へUIターンし、高知県内の企業等に就職・転職する方の転入・定住費用等を補助します！また、孫ターン、三世代同居又は若者に該当し、要件を満たす場合は、さらに補助金額を加算します。\n【補助対象費用】\n・高知市への転入に係る荷物の運搬に要する費用\n・住宅の賃貸契約に係る仲介手数料　等',
-   amount:'補助率：10/10　最大 35万円',url:CITY+'117/uimagoturn.html',qrSize:16}),
+   amount:'補助率：10/10　最大 35万円',url:CITY+'117/uimagoturn.html',qrSize:18}),
   slash(25,127.5,90,'結婚','した方には'),sparkle(110,128,6,7),
   frame(17.5,140,187.5,52),
   ribbon(53,135.5,110,'受付は７月１日（水）から令和９年２月26日（金）まで'),
   program(20,143,155,47,{title:'結婚新生活支援事業補助金',align:'left',catch:'新生活をスタートするおふたりを応援するため、家賃や引越費用等を支援します！',
    body:'令和８年１月１日から令和９年２月26日の間に婚姻届を提出し、受理された夫婦または高知市パートナーシップ登録制度により登録証を交付された方を対象に、家賃や引越費用を支給します。\nおふたりともが39歳以下、おふたりの所得合計が500万円未満などの要件があります。',
    amount:'最大 30万円　[小]※ 親世帯と同居または近居の場合は最大45万円[/小]',contact:'高知市こども政策課',tel:'088－803－5067',scale:.95}),
-  image(176,152,19,15,'couple.png'),qr(177.5,169,16.5,CITY+'150/shinseikatsu.html'),sparkle(146,172,10,14),
+  image(176,152,19,15,'couple.png'),qr(176.25,167.75,19.0,CITY+'150/shinseikatsu.html'),sparkle(146,172,10,14),
   slash(25,194.5,90,'地域','に貢献したい！'),
   frame(19,204,98.5,81.5),
   program(21,206,94,52,{title:'企業（事業者）向けまちづくり相談窓口',catch:'高知市では、市民・事業者・NPO・行政による協働のまちづくりを推進しています！',
    body:'「社会貢献・地域貢献したい」けど、どんなことをすればよいか分からない、地域の特性や情報を知りたいなど、そんなこときはお気軽にご相談ください。',scale:1.02}),
-  image(61,255,28,11,'town.png'),qr(95.5,253,17,CITY+'21/kigyoumukematidukurisoudannmadoguti.html'),
-  text(24,269,90,16,'【福祉的分野】\n高知市地域共生社会推進課　　 TEL：088－821－6513\n【その他分野】\n高知市地域コミュニティ推進課　TEL：088－823－9080',{size:2.95,bold:true,line:1.35}),
+  image(61,255,28,11,'town.png'),qr(95,251,18,CITY+'21/kigyoumukematidukurisoudannmadoguti.html'),
+  text(24,270,90,15.5,'【福祉的分野】\n高知市地域共生社会推進課　　 TEL：088－821－6513\n【その他分野】\n高知市地域コミュニティ推進課　TEL：088－823－9080',{size:2.95,bold:true,line:1.35}),
   text(122,204,86,80,'発行元\n\n高知市商工振興部産業政策課\n〒780-8571　高知市本町５丁目１-45\n☎　(088)-823-9456\nkc-150600@city.kochi.lg.jp\n【開庁時間】平日8時30分～17時15分\n※R8.7～　平日9時00分～16時30分\n\n【令和８年[赤]12[/赤]月版】',{size:4.1,bold:true,align:'center',line:1.92}),
   // 右面：表紙
   shape(210,0,198,27,'wave-top'),
@@ -88,9 +88,9 @@ function outside(){
   text(318,215.5,82,18,'●日時　 令和８年11月26日（木）\n　　　　　13：30～15：30\n●会場　 かるぽーと９階　特別学習室',{size:4,line:1.38}),
   text(318,234.5,70,9,'セミナー終了後、希望者を対象に個別相談会を実施します。',{size:3.15,line:1.35}),
   text(318,245.5,64,5,'高知市産業政策課　TEL：088－823－9456',{size:2.7,bold:true}),
-  qr(383,240,14.5,CITY+'40/jigyousyoukei.html'),
+  qr(381.75,238.75,17.0,CITY+'40/jigyousyoukei.html'),
   shape(210,268,198,29,'wave-bottom'),
-  image(293,281,13,13,'kochi-emblem.jpg'),
+  image(293,281,13,13,'kochi-emblem.png'),
   text(306,279,40,15,'高知市',{size:8.8,bold:true,color:'#ffffff',line:1.6}),
  ];
 }
@@ -135,7 +135,7 @@ function inside(){
   text(17,258.5,58,16,'②厚生労働大臣のくるみん、くるみんプラス、\n　プラチナくるみん、プラチナくるみんプラス、\n　トライくるみん、トライくるみんプラス\n　のいずれかの認定',{size:2.8,line:1.3}),
   text(75,262,19,9,'30万円',{size:4.2,bold:true,align:'center',line:2}),
   text(20,279,74,5,'高知市産業政策課　TEL：088－823－9456',{size:3,bold:true}),
-  qr(94,269,15,CITY+'40/hataiku.html'),
+  qr(92.75,267.75,17.5,CITY+'40/hataiku.html'),
   text(118,199.5,90,6,'〈 令和８・９・１０年度新規採用者対象〉',{size:3.4,align:'center',bold:true}),
   program(115,205,93,78,{title:'こうち奨学金返還支援制度の\n企業登録募集！',catch:'新規採用者に対し、県・市・企業が協働して奨学金返還を支援します！',
    amount:'[小]企業の負担額：(例)４年制大学卒採用者で[/小]\n最大10万円/年・人',
@@ -158,7 +158,7 @@ function inside(){
   text(214,182,18,9,'R8.8～',{size:4.3,bold:true,italic:true,font:'maru'},-14),
   program(219,182,90,47,{title:'産業用地マッチング促進事業',catch:'製造業者の土地探し、一緒に考えます。',
    body:'移転・新設を考える製造業者と不動産業者をつなぎ、最適な産業用地探しをサポートする事業です。\n津波の影響を受けにくい安全な場所での事業展開を提案し、国の支援制度も活用できます。\n高知市が用地探しから事業開始まで伴走します。まずはお気軽にご相談ください。',
-   ...SEISAKU,url:CITY+'40/kochishi-sangyoyochimaching.html',scale:.8}),
+   ...SEISAKU,url:CITY+'40/kochishi-sangyoyochimaching.html',scale:.8,qrSize:15}),
   image(299,188,11,9,'handshake.png'),
   program(213,232,96,56,{title:'経営改善計画策定等助成金',catch:'経営改善計画等を策定した費用の一部を助成します！',
    body:'経営改善や事業再生は早期の着手が重要です。専門家の支援を受けて経営改善計画等を策定する際の費用の一部を助成し、早期改善の対策を支援します。\n[太]助成金額\n早期経営改善計画　　　：～２万円\n経営改善計画　　　　　：～10万円\nプレ再生・再生支援計画：～20万円[/太]',
@@ -173,7 +173,7 @@ function inside(){
   program(312,103,94,47,{title:'テレワーク導入支援事業費補助金',catch:'テレワーク環境整備費を補助します！',
    body:'ICT活用促進と人材確保力向上のため、テレワーク環境を整備する市内中小企業に対して、費用を一部を補助します。',
    amount:'補助率：1/2　最大30万円',amountNote:'予算上限に達し次第、終了となります。',...SEISAKU,url:CITY+'40/kochi-telwork.html',scale:.88}),
-  tag(384,123,18,12,'デジスマ\n補助金',10,{size:3}),
+  tag(385,116,18,11,'デジスマ\n補助金',10,{size:3}),
   stamp(320,117,82,16,'受付終了しました。',-12),
   pill(318,153,84,10.5,'経営相談・融資'),
   text(313,166.5,92,6,'創業や経営に関するご相談なんでも無料で対応！',{size:3.9,bold:true,align:'center'}),
@@ -181,10 +181,10 @@ function inside(){
    body:'高知県よろず支援拠点による経営相談を、\n高知市役所内で受けることができます。\n毎週月曜日　10：00～16：00　開設中\n（相談時間は、１事業者につき１時間程度）\n※月曜日以外をご希望の場合にも可能な限り\n　対応しますので、お気軽にご相談ください。',
    contact:'高知県よろず支援拠点',tel:'088－846－0175',url:CITY+'40/keieisoudan.html',scale:.86}),
   text(397,189,5,16,'※要予約',{size:2.9,vertical:true,line:1}),
-  image(386,205,10,17.5,'woman-board.png'),
+  image(374,208,9,15,'woman-board.png'),
   program(312,229,94,59,{title:'物価高騰対策等短期継続融資',catch:'事業の運転資金の確保を支援する制度融資です！',url:CITY+'40/yuusi-20210401.html',scale:.9,pack:'top'}),
   text(333,250.5,54,11,'低金利、保証料ゼロ[小]!![/小]',{size:5.3,bold:true,color:'#ffffff',bg:'#111111',align:'center',line:2,font:'maru'}),
-  text(316,262,74,25,'限度額1,500万円で事業に必要な\n運転資金調達を支援します。\n[太]（～12月末まで。予算上限に達し次第終了）\n※お問い合わせは次の金融機関の支店窓口へ\n四国銀行　高知銀行　高知信用金庫　幡多信用金庫[/太]',{size:3,align:'center',line:1.38}),
+  text(315,262,70,25,'限度額1,500万円で事業に必要な\n運転資金調達を支援します。\n[太]（～12月末まで。予算上限に達し次第終了）\n※お問い合わせは次の金融機関の支店窓口へ\n四国銀行　高知銀行　高知信用金庫　幡多信用金庫[/太]',{size:3,align:'center',line:1.38}),
   text(391,228,17,13,'延長\nしました！',{size:3.3,bold:true,bg:YELLOW,align:'center',line:1.25,radius:50,font:'maru'},12),
  ];
 }

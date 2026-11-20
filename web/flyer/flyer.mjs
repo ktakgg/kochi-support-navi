@@ -93,11 +93,21 @@ $('#place-auto').addEventListener('click',()=>{if(!pending)return;const {block,m
 $('#place-extra').addEventListener('click',()=>{if(!pending)return;const {block,message}=pending;cancelPlacement();snapshot();const extra=sendToExtra(doc,block);selected={page:extra.id,id:block.id};commit();status(message+'「その他の支援制度」ページに追加しました。');document.querySelectorAll('.page-wrap')[doc.pages.indexOf(extra)]?.scrollIntoView({behavior:'smooth',block:'start'});});
 function addBlock(block,page=activePage()){snapshot();page.blocks.push(block);selected={page:page.id,id:block.id};commit();}
 
+// QR code with the 4-module white quiet zone that phone readers need, drawn with crisp module edges.
+const SVGNS='http://www.w3.org/2000/svg',QUIET=2;
 function qrSvg(url){
  if(!url||typeof qrcode!=='function')return null;
- try{const q=qrcode(0,'M');q.addData(url,'Byte');q.make();
-  const wrap=document.createElement('div');wrap.innerHTML=q.createSvgTag({cellSize:2,margin:0,scalable:true});return wrap.firstElementChild;}
- catch{return null;}
+ try{
+  // Level L keeps the modules large enough for phones at flyer sizes (15–20mm).
+  const q=qrcode(0,'L');q.addData(url,'Byte');q.make();
+  const n=q.getModuleCount(),size=n+QUIET*2;let d='';
+  for(let r=0;r<n;r++)for(let c=0;c<n;c++)if(q.isDark(r,c))d+=`M${c+QUIET} ${r+QUIET}h1v1h-1z`;
+  const svg=document.createElementNS(SVGNS,'svg');
+  svg.setAttribute('viewBox',`0 0 ${size} ${size}`);svg.setAttribute('shape-rendering','crispEdges');svg.setAttribute('class','qr-code');
+  const bg=document.createElementNS(SVGNS,'rect');bg.setAttribute('width',size);bg.setAttribute('height',size);bg.setAttribute('fill','#ffffff');
+  const path=document.createElementNS(SVGNS,'path');path.setAttribute('d',d);path.setAttribute('fill','#000000');
+  svg.append(bg,path);return svg;
+ }catch{return null;}
 }
 
 // ---------- rendering ----------
@@ -136,20 +146,23 @@ function renderPage(page,index){
 function movePage(i,d){snapshot();const [p]=doc.pages.splice(i,1);doc.pages.splice(i+d,0,p);commit();}
 
 // Inline marks for parts of a line: [赤]12[/赤] [橙]…[/橙] [大]…[/大] [小]…[/小] [太]…[/太]. Rendered as text spans only.
-const MARK=/\[(赤|橙|大|小|太)\]([\s\S]*?)\[\/\1\]/g,MARK_CLASS={赤:'m-red',橙:'m-orange',大:'m-big',小:'m-small',太:'m-bold'};
+const MARK=/\[(赤|橙|青|緑|白|黒|特大|大|小|極小|太|\d{2,3}%)\]([\s\S]*?)\[\/\1\]/g;
+const MARK_CLASS={赤:'m-red',橙:'m-orange',青:'m-blue',緑:'m-green',白:'m-white',黒:'m-black',特大:'m-huge',大:'m-big',小:'m-small',極小:'m-tiny',太:'m-bold'};
+// One mark → one span. [150%]…[/150%] sets that part's size relative to the line.
+function markSpan(tag){const pct=/^(\d{2,3})%$/.exec(tag);return pct?el('span',{style:`font-size:${Math.min(300,Math.max(30,+pct[1]))}%`}):el('span',{class:MARK_CLASS[tag]});}
 function rich(n,value){
  const v=String(value||'');let last=0;
- for(const m of v.matchAll(MARK)){if(m.index>last)n.append(v.slice(last,m.index));n.append(rich(el('span',{class:MARK_CLASS[m[1]]}),m[2]));last=m.index+m[0].length;}
+ for(const m of v.matchAll(MARK)){if(m.index>last)n.append(v.slice(last,m.index));n.append(rich(markSpan(m[1]),m[2]));last=m.index+m[0].length;}
  if(last<v.length)n.append(v.slice(last));
  return n;
 }
 function field(tag,cls,name,value){return rich(el(tag,{class:cls,'data-field':name}),value);}
 // Emphasise figures in amounts (補助率 1/2・10万円) as on printed flyers. Text only, never HTML.
 function numbers(target,text){for(const part of String(text).split(/([0-9０-９][0-9０-９,，.．/／]*)/))if(part)target.append(/^[0-9０-９]/.test(part)?el('span',{class:'num',text:part}):document.createTextNode(part));return target;}
-function emphasizedInto(n,v){let last=0;for(const m of v.matchAll(MARK)){numbers(n,v.slice(last,m.index));n.append(emphasizedInto(el('span',{class:MARK_CLASS[m[1]]}),m[2]));last=m.index+m[0].length;}return numbers(n,v.slice(last));}
+function emphasizedInto(n,v){let last=0;for(const m of v.matchAll(MARK)){numbers(n,v.slice(last,m.index));n.append(emphasizedInto(markSpan(m[1]),m[2]));last=m.index+m[0].length;}return numbers(n,v.slice(last));}
 function emphasized(cls,name,value){
  const n=el('div',{class:cls,'data-field':name}),v=String(value||'');let last=0;
- for(const m of v.matchAll(MARK)){numbers(n,v.slice(last,m.index));n.append(emphasizedInto(el('span',{class:MARK_CLASS[m[1]]}),m[2]));last=m.index+m[0].length;}
+ for(const m of v.matchAll(MARK)){numbers(n,v.slice(last,m.index));n.append(emphasizedInto(markSpan(m[1]),m[2]));last=m.index+m[0].length;}
  return numbers(n,v.slice(last));
 }
 const SHAPE_SVG={
@@ -188,7 +201,8 @@ function renderBlock(b,page){
  const extra=b.type==='program'?' '+(d.style||'band')+(d.align==='left'?' align-left':'')+(d.pack==='top'?' pack-top':''):b.type==='heading'?' '+(d.style||'band'):b.data.shape==='circle'?' circle':'';
  const node=el('div',{class:`blk ${b.type}${extra}${isSel?' selected':''}`,'data-id':b.id,style:`left:${b.x}mm;top:${b.y}mm;width:${b.w}mm;height:${b.h}mm;transform:rotate(${b.rot||0}deg)`});
  if(b.type==='program'){
-  node.style.setProperty('--c',d.color);node.style.setProperty('--s',d.scale||1);node.style.setProperty('--a',d.amountColor||'#d7262e');node.style.setProperty('--q',(d.qrSize||17)+'mm');
+  node.style.setProperty('--c',d.color);node.style.setProperty('--s',d.scale||1);node.style.setProperty('--a',d.amountColor||'#d7262e');
+  for(const [k,v] of [['--ts',d.titleSize],['--cs',d.catchSize],['--bs',d.bodySize],['--as',d.amountSize],['--bl',d.bodyLine],['--tc',d.titleColor],['--cc',d.catchColor],['--bc',d.bodyColor]])if(v!=null&&v!=='none')node.style.setProperty(k,v);node.style.setProperty('--q',(d.qrSize||17)+'mm');
   const qr=qrSvg(d.url);
   if(d.style==='flyer'){
    // Printed-flyer layout: heading, catch, body, then figures with the QR beside them and the contact line last.
@@ -234,6 +248,20 @@ function renderBlock(b,page){
  node.addEventListener('dblclick',e=>startEdit(e,b,node));
  return node;
 }
+// A QR code hidden under a sticker, illustration or stamp cannot be scanned.
+// A QR code hidden under a sticker, illustration or stamp cannot be scanned. Sample what is really drawn on top.
+function coveredQrs(){
+ const hits=new Set();
+ document.querySelectorAll('.sheet svg.qr-code').forEach(svg=>{
+  const host=svg.closest('.blk'),r=svg.getBoundingClientRect();let covered=false;
+  for(let i=1;i<6&&!covered;i++)for(let j=1;j<6&&!covered;j++){
+   const top=document.elementsFromPoint(r.left+r.width*i/6,r.top+r.height*j/6).find(n=>n.classList?.contains('blk')&&!n.classList.contains('box')&&!n.classList.contains('shape'));
+   if(top&&top!==host)covered=true;
+  }
+  host.classList.toggle('qr-covered',covered);if(covered)hits.add(host);
+ });
+ return hits.size;
+}
 function checkOverflow(){
  let over=0;
  document.querySelectorAll('.blk.program,.blk.text,.blk.heading').forEach(n=>{
@@ -246,7 +274,8 @@ function checkOverflow(){
   if(lower){const above=[...n.children].filter(c=>c!==lower&&!c.classList.contains('p-qr')&&!c.classList.contains('handle')&&!c.classList.contains('draft-badge')).pop();if(above&&above.getBoundingClientRect().bottom>lower.getBoundingClientRect().top+1)o=true;}
   n.classList.toggle('overflow',o);if(o)over++;
  });
- if(over)status(`文字が枠からあふれている枠が${over}件あります（赤い点線）。枠を広げるか文字を減らしてください。`,true);
+ const covered=coveredQrs();
+ if(over||covered)status([over?`文字が枠からあふれている枠が${over}件あります（赤い点線）。枠を広げるか文字を減らしてください。`:'',covered?`QRコードに他の部品が重なっている枠が${covered}件あります（オレンジの点線）。重なると読み取れないため、部品をずらしてください。`:''].filter(Boolean).join(' '),true);
 }
 
 // ---------- drag, resize, inline edit ----------
@@ -271,21 +300,68 @@ function startDrag(e,b,page,node){
  const up=()=>{target.removeEventListener('pointermove',move);target.removeEventListener('pointerup',up);target.removeEventListener('pointercancel',up);if(moved){b.loose=false;commit();}};
  target.addEventListener('pointermove',move);target.addEventListener('pointerup',up);target.addEventListener('pointercancel',up);
 }
+function fieldAt(e,node){
+ // Dragging captures the pointer on the slot, so the event target is the slot itself; look under the pointer instead.
+ const direct=e.target.closest?.('[data-field]');if(direct&&node.contains(direct))return direct;
+ for(const n of document.elementsFromPoint(e.clientX,e.clientY)){const f=n.closest?.('[data-field]');if(f&&node.contains(f))return f;}
+ return null;
+}
 function startEdit(e,b,node){
- const f=e.target.closest('[data-field]');if(!f)return;
+ const f=fieldAt(e,node);if(!f)return;
  e.stopPropagation();editing=true;snapshot();
  const raw=b.data[f.dataset.field];if(typeof raw==='string')f.textContent=f.dataset.field==='tel'?'TEL：'+raw:raw;
  f.contentEditable='true';f.focus();
  const sel=getSelection();sel.selectAllChildren(f);sel.collapseToEnd();
+ showFormatBar(f);
  f.addEventListener('paste',ev=>{ev.preventDefault();document.execCommand('insertText',false,ev.clipboardData.getData('text/plain'));});
  f.addEventListener('blur',()=>{
   let v=f.innerText.replace(/\n$/,'');
   if(f.dataset.field==='tel')v=v.replace(/^TEL[：:]\s*/,'');
-  b.data[f.dataset.field]=v;f.contentEditable='false';editing=false;commit();
+  b.data[f.dataset.field]=v;f.contentEditable='false';editing=false;hideFormatBar();commit();
  },{once:true});
 }
 
+// ---------- formatting toolbar for the part of a line being edited ----------
+const FORMAT=[['赤','赤','#e60012'],['橙','橙','#e2701e'],['青','青','#1f5fa8'],['緑','緑','#2a7a3f'],['黒','黒','#222'],['白','白','#888'],['特大','特大'],['大','大'],['小','小'],['極小','極小'],['太','太字']];
+function showFormatBar(f){
+ const bar=$('#fmt-bar');bar.hidden=false;
+ const r=f.getBoundingClientRect();bar.style.left=Math.max(8,Math.min(innerWidth-bar.offsetWidth-8,r.left))+'px';bar.style.top=Math.max(60,r.top-bar.offsetHeight-8)+'px';
+}
+function hideFormatBar(){$('#fmt-bar').hidden=true;}
+function wrapSelection(tag){
+ const sel=getSelection(),f=document.activeElement;
+ if(!f?.isContentEditable||!sel.rangeCount||sel.isCollapsed){status('色や大きさを変えたい文字を選んでから押してください。');return;}
+ document.execCommand('insertText',false,`[${tag}]${sel.toString()}[/${tag}]`);
+}
+function clearMarks(){
+ const sel=getSelection(),f=document.activeElement;if(!f?.isContentEditable)return;
+ if(sel.isCollapsed)sel.selectAllChildren(f);
+ document.execCommand('insertText',false,sel.toString().replace(/\[\/?(?:赤|橙|青|緑|白|黒|特大|大|小|極小|太|\d{2,3}%)\]/g,''));
+}
+{
+ const bar=$('#fmt-bar');
+ bar.append(...FORMAT.map(([tag,label,color])=>el('button',{type:'button',title:`選んだ文字を「${label}」にする`,style:color?`color:${color};font-weight:700`:'',onclick:()=>wrapSelection(tag)},label)),
+  el('select',{'aria-label':'選んだ文字の大きさ',onchange:e=>{if(e.target.value)wrapSelection(e.target.value);e.target.value='';}},el('option',{value:''},'大きさ％'),...[50,70,80,90,110,120,140,160,200].map(v=>el('option',{value:v+'%'},v+'%'))),
+  el('button',{type:'button',title:'選んだ範囲（選んでいなければ全体）の色・大きさを元に戻す',onclick:clearMarks},'書式を消す'));
+ // Keep the text field focused while using the bar.
+ bar.addEventListener('pointerdown',e=>{if(e.target.tagName!=='SELECT')e.preventDefault();});
+}
+
 // ---------- properties panel ----------
+// Swatches plus a free colour picker. 'none' means the slot's normal colour.
+function colorRow(label,current,onPick,{allowNone=false}={}){
+ const pick=el('input',{type:'color',value:/^#[0-9a-f]{6}$/i.test(current||'')?current:'#222222','aria-label':label+'（自由に選ぶ）'});
+ pick.addEventListener('change',()=>{snapshot();onPick(pick.value);commit();});
+ return [el('label',{text:label}),el('div',{class:'swatches'},...COLORS.map(c=>el('button',{type:'button','aria-label':label+' '+c,'aria-pressed':String(c===current),style:`background:${c}`,onclick:()=>{snapshot();onPick(c);commit();}})),pick,
+  allowNone?el('button',{type:'button',class:'reset','aria-pressed':String(!current||current==='none'),onclick:()=>{snapshot();onPick('none');commit();}},'標準'):null)];
+}
+function rangeRow(label,value,min,max,step,onChange,fmt=v=>v){
+ const id=uid('f'),out=el('output',{for:id,text:fmt(value)}),r=el('input',{type:'range',id,min,max,step,value});
+ r.addEventListener('pointerdown',()=>snapshot(),{once:true});
+ r.addEventListener('input',()=>{onChange(Number(r.value));out.textContent=fmt(Number(r.value));persist();renderCanvasOnly();});
+ return [el('label',{for:id},label+'　',out),r];
+}
+const pct=v=>Math.round(v*100)+'%';
 function input(label,value,onChange,{type='text',multiline=false}={}){
  const id=uid('f');
  const control=multiline?el('textarea',{id}):el('input',{id,type});control.value=value??'';
@@ -314,15 +390,26 @@ function renderProps(){
    ...input('担当課',d.contact,v=>d.contact=v),...input('電話番号',d.tel,v=>d.tel=v),...input('二次元コードのURL',d.url,v=>d.url=v,{type:'url'}));
   const sizeId=uid('f');const size=el('select',{id:sizeId},...[[.8,'小さめ'],[.9,'やや小さめ'],[1,'標準'],[1.15,'やや大きめ'],[1.3,'大きめ']].map(([v,t])=>el('option',{value:v,selected:Number(d.scale||1)===v},t)));
   size.addEventListener('change',()=>{snapshot();d.scale=Number(size.value);commit();});
-  parts.push(el('label',{for:sizeId,text:'文字の大きさ'}),size,el('label',{text:'色'}),swatches(d.color,c=>d.color=c));
+  parts.push(el('label',{for:sizeId,text:'文字の大きさ（全体）'}),size,...colorRow('枠の色',d.color,c=>d.color=c),
+   el('h3',{class:'sub',text:'項目ごとの文字'}),
+   ...rangeRow('制度名の大きさ',d.titleSize??1,.6,1.8,.05,v=>d.titleSize=v,pct),...colorRow('制度名の色',d.titleColor,c=>d.titleColor=c,{allowNone:true}),
+   ...rangeRow('キャッチの大きさ',d.catchSize??1,.6,1.8,.05,v=>d.catchSize=v,pct),...colorRow('キャッチの色',d.catchColor,c=>d.catchColor=c,{allowNone:true}),
+   ...rangeRow('本文の大きさ',d.bodySize??1,.6,1.8,.05,v=>d.bodySize=v,pct),...colorRow('本文の色',d.bodyColor,c=>d.bodyColor=c,{allowNone:true}),
+   ...rangeRow('本文の行間',d.bodyLine??1.38,1,2.2,.04,v=>d.bodyLine=v,v=>v.toFixed(2)),
+   ...rangeRow('金額の大きさ',d.amountSize??1,.6,1.8,.05,v=>d.amountSize=v,pct),...colorRow('金額の色',d.amountColor,c=>d.amountColor=c),
+   ...rangeRow('QRコードの大きさ（mm）',d.qrSize??17,10,30,.5,v=>d.qrSize=v),
+   el('p',{class:'hint',text:'文字の一部だけ色や大きさを変えるときは、枠の文字をダブルクリックし、変えたい文字を選んで上に出るボタンを押します。'}));
   if(d.draft)parts.push(el('label',{},el('input',{type:'checkbox',checked:false,onchange:e=>{if(e.target.checked){snapshot();d.draft=false;commit();}}}),' 内容を確定した（下書き表示を消す）'));
   if(d.source)parts.push(el('div',{class:'source'},'元にした制度：'+d.source.title+(d.source.area?`（${d.source.area}）`:''),el('br'),d.source.url?el('a',{href:d.source.url,target:'_blank',rel:'noopener'},'公式情報を開く'):null));
- }else if(b.type==='heading'){parts.push(...input('文字',d.text,v=>d.text=v),el('label',{text:'色'}),swatches(d.color,c=>d.color=c));}
+ }else if(b.type==='heading'){parts.push(...input('文字',d.text,v=>d.text=v),...rangeRow('文字の大きさ（mm）',d.size??5.2,2,14,.1,v=>d.size=v,v=>v.toFixed(1)),...colorRow('色',d.color,c=>d.color=c));}
  else if(b.type==='text'){
-  parts.push(...input('文字',d.text,v=>d.text=v,{multiline:true}),...input('文字の大きさ（mm）',d.size,v=>d.size=Math.max(2,Math.min(40,Number(v)||5)),{type:'number'}),
+  parts.push(...input('文字',d.text,v=>d.text=v,{multiline:true}),
+   ...rangeRow('文字の大きさ（mm）',d.size,1.5,30,.1,v=>d.size=v,v=>v.toFixed(1)),
+   ...rangeRow('行間',d.line??1.35,.9,2.6,.05,v=>d.line=v,v=>v.toFixed(2)),
+   ...rangeRow('文字の間隔',d.spacing??0,0,1,.02,v=>d.spacing=v,v=>v.toFixed(2)+'字'),
    el('label',{},el('input',{type:'checkbox',checked:d.bold,onchange:e=>{snapshot();d.bold=e.target.checked;commit();}}),' 太字'),
    el('label',{text:'そろえ'}),el('div',{class:'swatches'},...[['left','左'],['center','中央'],['right','右']].map(([v,t])=>el('button',{type:'button','aria-pressed':String(d.align===v),style:'width:auto;border-radius:5px;padding:0 8px;background:#fff',onclick:()=>{snapshot();d.align=v;commit();}},t))),
-   el('label',{text:'色'}),swatches(d.color,c=>d.color=c),
+   ...colorRow('文字の色',d.color,c=>d.color=c),
    el('label',{text:'書体'}),el('div',{class:'swatches'},...[['maru','丸ゴシック'],['gothic','ゴシック'],['hand','手書き風']].map(([v,t])=>el('button',{type:'button','aria-pressed':String((d.font||'maru')===v),style:'width:auto;border-radius:5px;padding:0 8px;background:#fff',onclick:()=>{snapshot();d.font=v;commit();}},t))),
    el('label',{text:'背景'}),swatches(d.bg,c=>d.bg=d.bg===c?'none':c),
    el('label',{},el('input',{type:'checkbox',checked:d.tape&&d.tape!=='none',onchange:e=>{snapshot();d.tape=e.target.checked?'#e2701e':'none';if(e.target.checked&&(!d.bg||d.bg==='none'))d.bg='#ffffff';commit();}}),' 吹き出し札（テープ付き）'));
@@ -331,6 +418,8 @@ function renderProps(){
  else if(b.type==='box'){parts.push(el('label',{text:'塗り'}),swatches(d.fill,c=>{d.fill=c;d.border=c;}),el('p',{class:'hint',text:'元のチラシの不要な部分を隠すときに使います。白以外の色も選べます。'}));
   parts.push(el('button',{type:'button',class:'btn',onclick:()=>{snapshot();d.fill='#ffffff';d.border='#ffffff';commit();}},'白に戻す'));}
  else if(b.type==='qr'){parts.push(...input('URL',d.url,v=>d.url=v,{type:'url'}),...input('下の文字',d.caption,v=>d.caption=v));}
+ else if(b.type==='image'){parts.push(el('button',{type:'button',class:'btn',onclick:async()=>{status('透過処理中…');try{const src=await clearWhite(d.src);snapshot();d.src=src;commit();status('周りの白い背景を透明にしました（図形の内側の白は残します）。元に戻すで取り消せます。');}catch{status('この画像は透過処理できませんでした',true);}}},'周りの白い背景を透明にする'),
+  el('label',{},el('input',{type:'checkbox',checked:d.fit==='fill',onchange:e=>{snapshot();d.fit=e.target.checked?'fill':'contain';commit();}}),' 枠いっぱいに引き伸ばす'));}
  const pos=[['x','左(mm)'],['y','上(mm)'],['w','幅(mm)'],['h','高さ(mm)']].map(([k,t])=>{const n=el('input',{type:'number',step:'0.5',value:b[k],'aria-label':t});n.addEventListener('change',()=>{snapshot();b[k]=Number(n.value)||0;commit();});return el('div',{},el('span',{text:t}),n);});
  const rot=el('input',{type:'number',step:'1',value:b.rot||0,'aria-label':'回転(度)'});rot.addEventListener('change',()=>{snapshot();b.rot=Number(rot.value)||0;commit();});
  parts.push(el('label',{text:'位置と大きさ（A3上の実寸）'}),el('div',{class:'row'},...pos),el('label',{text:'回転（度）'}),rot);
@@ -366,6 +455,27 @@ function renderResults(){
 }
 
 // ---------- import / export ----------
+// Make the white background around a logo transparent while keeping white lines inside it (e.g. the city emblem).
+// The figure is first thickened so thin gaps cannot leak, the outside is flood-filled, then grown back over light pixels.
+async function clearWhite(src){
+ const img=await new Promise((res,rej)=>{const i=new Image();i.onload=()=>res(i);i.onerror=rej;i.src=src;});
+ const k=Math.min(4,2400/Math.max(img.naturalWidth,img.naturalHeight)),c=document.createElement('canvas');
+ c.width=Math.max(1,Math.round(img.naturalWidth*k));c.height=Math.max(1,Math.round(img.naturalHeight*k));
+ const g=c.getContext('2d');g.imageSmoothingQuality='high';g.drawImage(img,0,0,c.width,c.height);
+ const data=g.getImageData(0,0,c.width,c.height),px=data.data,w=c.width,h=c.height,N=w*h;
+ const light=new Uint8Array(N);for(let i=0;i<N;i++){const r=px[i*4],gg=px[i*4+1],b=px[i*4+2];light[i]=px[i*4+3]<16||(Math.min(r,gg,b)>=200&&Math.max(r,gg,b)-Math.min(r,gg,b)<=40)?1:0;}
+ const dilate=(src,R)=>{const a=new Uint8Array(N),out=new Uint8Array(N);
+  for(let y=0;y<h;y++){let run=-1e9;for(let x=0;x<w;x++){if(src[y*w+x])run=x;a[y*w+x]=x-run<=R?1:0;}run=1e9;for(let x=w-1;x>=0;x--){if(src[y*w+x])run=x;if(run-x<=R)a[y*w+x]=1;}}
+  for(let x=0;x<w;x++){let run=-1e9;for(let y=0;y<h;y++){if(a[y*w+x])run=y;out[y*w+x]=y-run<=R?1:0;}run=1e9;for(let y=h-1;y>=0;y--){if(a[y*w+x])run=y;if(run-y<=R)out[y*w+x]=1;}}
+  return out;};
+ const R=Math.max(2,Math.round(Math.min(w,h)*.012)),ink=new Uint8Array(N);for(let i=0;i<N;i++)ink[i]=light[i]?0:1;
+ const wall=dilate(ink,R),outside=new Uint8Array(N),stack=[];
+ for(let x=0;x<w;x++)stack.push(x,(h-1)*w+x);for(let y=0;y<h;y++)stack.push(y*w,y*w+w-1);
+ while(stack.length){const i=stack.pop();if(outside[i]||wall[i])continue;outside[i]=1;const x=i%w,y=(i-x)/w;if(x>0)stack.push(i-1);if(x<w-1)stack.push(i+1);if(y>0)stack.push(i-w);if(y<h-1)stack.push(i+w);}
+ const near=dilate(outside,R+1);
+ for(let i=0;i<N;i++)if(near[i]&&light[i])px[i*4+3]=0;
+ g.putImageData(data,0,0);return c.toDataURL('image/png');
+}
 function readAsDataURL(file){return new Promise((res,rej)=>{const fr=new FileReader();fr.onload=()=>res(fr.result);fr.onerror=rej;fr.readAsDataURL(file);});}
 async function downscale(src,max=3200,type='image/jpeg'){
  const img=await new Promise((res,rej)=>{const i=new Image();i.onload=()=>res(i);i.onerror=rej;i.src=src;});
@@ -455,7 +565,7 @@ $('#qr-place').addEventListener('click',()=>{const url=qrUpdate();if(!url)return
 $('#qr-to-program').addEventListener('click',()=>{const url=qrUpdate(),b=blockOf();if(!url||b?.type!=='program')return;snapshot();b.data.url=url;commit();$('#qr-dialog').close();status('選んだ制度の枠にQRコードを設定しました');});
 $('#qr-download').addEventListener('click',()=>{
  const url=qrUpdate();if(!url)return;
- const q=qrcode(0,'M');q.addData(url,'Byte');q.make();
+ const q=qrcode(0,'L');q.addData(url,'Byte');q.make();
  const n=q.getModuleCount(),cell=12,margin=4,c=document.createElement('canvas');c.width=c.height=(n+margin*2)*cell;
  const g=c.getContext('2d');g.fillStyle='#fff';g.fillRect(0,0,c.width,c.height);g.fillStyle='#000';
  for(let r=0;r<n;r++)for(let k=0;k<n;k++)if(q.isDark(r,k))g.fillRect((k+margin)*cell,(r+margin)*cell,cell,cell);

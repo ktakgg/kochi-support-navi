@@ -133,3 +133,18 @@ test('細い区切り線・黒板消しなどの部品が検査で太くなら�
  assert.ok(blocks.some(b=>b.type==='text'&&b.data.notch),'お知らせの吹き出し');
  assert.ok(blocks.some(b=>b.type==='image'&&b.data.fit==='fill'),'タイトル画像');
 });
+
+test('項目ごとの文字の大きさ・色・行間を保存でき、範囲外の値は丸める',()=>{
+ const doc=sanitizeDocument({pages:[{blocks:[{type:'program',x:0,y:0,w:90,h:60,data:{title:'t',titleSize:1.4,bodySize:9,bodyLine:1.8,titleColor:'#ff0000',bodyColor:'red;x',catchColor:'#00ff00'}},
+  {type:'text',x:0,y:0,w:50,h:10,data:{text:'[赤]12[/赤]月版',line:2,spacing:.3,color:'#123456'}}]}]});
+ const [p,t]=doc.pages[0].blocks;
+ assert.equal(p.data.titleSize,1.4);assert.equal(p.data.bodySize,2);assert.equal(p.data.bodyLine,1.8);
+ assert.equal(p.data.titleColor,'#ff0000');assert.equal(p.data.bodyColor,'none');assert.equal(p.data.catchColor,'#00ff00');
+ assert.equal(t.data.text,'[赤]12[/赤]月版');assert.equal(t.data.line,2);assert.equal(t.data.spacing,.3);assert.equal(t.data.color,'#123456');
+});
+
+test('市章は背景を透過したPNGを使う',()=>{
+ const blocks=sanitizeDocument(kochiBusinessFlyer()).pages.flatMap(p=>p.blocks);
+ assert.ok(blocks.some(b=>b.type==='image'&&b.data.src==='assets/kochi-emblem.png'));
+ assert.ok(!blocks.some(b=>b.type==='image'&&/\.jpe?g$/.test(b.data.src)),'JPEGは透過できないため使わない');
+});
