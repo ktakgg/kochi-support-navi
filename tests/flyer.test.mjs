@@ -148,3 +148,12 @@ test('市章は背景を透過したPNGを使う',()=>{
  assert.ok(blocks.some(b=>b.type==='image'&&b.data.src==='assets/kochi-emblem.png'));
  assert.ok(!blocks.some(b=>b.type==='image'&&/\.jpe?g$/.test(b.data.src)),'JPEGは透過できないため使わない');
 });
+
+test('ひな形の飾り（手持ちカード・雲形・額縁・星形）を部品で持つ',()=>{
+ const blocks=sanitizeDocument(kochiBusinessFlyer()).pages.flatMap(p=>p.blocks);
+ for(const f of ['hand-card.png','hands-frame.png','hand-point.png'])assert.ok(blocks.some(b=>b.type==='image'&&b.data.src==='assets/'+f),f);
+ assert.ok(blocks.some(b=>b.type==='shape'&&b.data.kind==='cloud'&&b.data.stroke!=='none'),'雲形');
+ assert.ok(blocks.some(b=>b.type==='shape'&&b.data.kind==='star'),'星形');
+ const p2=sanitizeDocument(kochiBusinessFlyer()).pages[1].blocks,stampAt=p2.findIndex(b=>b.type==='stamp'),frameAt=p2.findIndex(b=>b.type==='image'&&b.data.src.endsWith('hands-frame.png'));
+ assert.ok(frameAt>stampAt,'額縁はスタンプより手前');
+});

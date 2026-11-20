@@ -76,5 +76,14 @@
  </div>
 </dialog>
 <div class="fmt-bar" id="fmt-bar" role="toolbar" aria-label="選んだ文字の書式" hidden></div>
+<dialog id="print-dialog" class="dialog" aria-labelledby="print-title">
+ <h2 id="print-title">A3で印刷・PDF出力</h2>
+ <label class="check"><input type="checkbox" id="print-fit" checked> プリンターの余白に合わせて少し縮小する（おすすめ）</label>
+ <p class="hint">多くのプリンターは用紙の端まで印刷できず、上下左右の数mmが切れます。オンにすると全体を縮めて、周りに白い余白を残して印刷します。フチなし印刷できるプリンターや印刷会社に入稿するPDFでは、オフにしてください。</p>
+ <label for="print-margin">周りの余白</label>
+ <select id="print-margin"><option value="3">3mm</option><option value="5" selected>5mm（標準）</option><option value="8">8mm</option><option value="10">10mm</option></select>
+ <p class="hint">印刷画面では「用紙サイズ：A3」「余白：なし」「倍率：100%（実際のサイズ）」「背景のグラフィック：オン」を選んでください。</p>
+ <div class="buttons"><button type="button" class="btn" id="print-cancel">キャンセル</button><button type="button" class="btn primary" id="print-go">印刷画面を開く</button></div>
+</dialog>
 <noscript><p class="noscript">チラシ作成にはJavaScriptが必要です。</p></noscript>
 </body></html>

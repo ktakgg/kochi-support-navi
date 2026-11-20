@@ -3,7 +3,7 @@ import {cardDetails,queryMatches} from '../core.mjs';
 
 export const PAPER={landscape:{w:420,h:297},portrait:{w:297,h:420}};
 export const TYPES=['program','heading','text','stamp','image','qr','box','shape'];
-export const SHAPES=['wave-top','wave-bottom','sparkle','board','eraser','eraser-stack'];
+export const SHAPES=['wave-top','wave-bottom','sparkle','board','eraser','eraser-stack','cloud','star','burst'];
 export const STAMPS=[
  {text:'受付終了しました',color:'#d7262e',shape:'rect'},
  {text:'募集終了',color:'#d7262e',shape:'circle'},
@@ -237,7 +237,7 @@ function sanitizeBlock(b,paper){
   case 'image':return IMAGE.test(d.src||'')?{...base,data:{src:d.src,fit:d.fit==='fill'?'fill':'contain'}}:null;
   case 'qr':return {...base,data:{url:safeUrl(d.url),caption:text(d.caption,40)}};
   case 'box':return {...base,data:{fill:safeColor(d.fill,'#ffffff'),border:safeColor(d.border,'#ffffff'),width:num(d.width,0,5,.4),dash:Boolean(d.dash),radius:num(d.radius,0,50,0)}};
-  case 'shape':return SHAPES.includes(d.kind)?{...base,data:{kind:d.kind,color:safeColor(d.color,'#e2701e')}}:null;
+  case 'shape':return SHAPES.includes(d.kind)?{...base,data:{kind:d.kind,color:safeColor(d.color,'#e2701e'),stroke:safeColor(d.stroke,'none')}}:null;
  }
  return null;
 }

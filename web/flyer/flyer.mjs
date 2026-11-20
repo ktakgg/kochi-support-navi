@@ -193,6 +193,19 @@ function drawn(kind,w,h){
    `<rect x="${f(w*.36)}" y="0" width="${f(w*.28)}" height="${f(h*.2)}" rx=".6" class="fill"/>`+
    `<rect x="${f(w*.1)}" y="${f(h*.28)}" width="${f(w*.18)}" height="${f(h*.18)}" class="pad"/><rect x="${f(w*.41)}" y="${f(h*.22)}" width="${f(w*.18)}" height="${f(h*.24)}" class="pad"/><rect x="${f(w*.72)}" y="${f(h*.28)}" width="${f(w*.18)}" height="${f(h*.18)}" class="pad"/></svg>`;
  }
+ if(kind==='cloud'){
+  // Bumps along an ellipse, each drawn as an outward arc.
+  const n=Math.max(11,Math.round((w+h)/6.5)),cx=w/2,cy=h/2,rx=w/2-1.6,ry=h/2-1.6,pts=[];
+  for(let i=0;i<n;i++){const a=Math.PI*2*i/n-Math.PI/2;pts.push([cx+rx*.9*Math.cos(a),cy+ry*.82*Math.sin(a)]);}
+  let d=`M${f(pts[0][0])} ${f(pts[0][1])}`;
+  for(let i=1;i<=n;i++){const [x0,y0]=pts[i-1],[x1,y1]=pts[i%n],r=Math.hypot(x1-x0,y1-y0)*.62;d+=`A${f(r)} ${f(r)} 0 0 1 ${f(x1)} ${f(y1)}`;}
+  return open+`<path d="${d}Z" class="body"/></svg>`;
+ }
+ if(kind==='star'||kind==='burst'){
+  const n=kind==='star'?5:12,inner=kind==='star'?.45:.72,cx=w/2,cy=h/2,pts=[];
+  for(let i=0;i<n*2;i++){const a=Math.PI*i/n-Math.PI/2,r=i%2?inner:1;pts.push(f(cx+cx*.98*r*Math.cos(a))+' '+f(cy+cy*.98*r*Math.sin(a)));}
+  return open+`<path d="M${pts.join('L')}Z" class="body"/></svg>`;
+ }
  return '';
 }
 function renderBlock(b,page){
@@ -240,7 +253,7 @@ function renderBlock(b,page){
  }
  else if(b.type==='stamp'){node.style.setProperty('--c',d.color);node.style.fontSize=Math.max(2,Math.min(b.h*(d.shape==='circle'?.3:.55),(b.w-5)*(d.shape==='circle'?.75:.95)/Math.max(2,[...d.text].length)))+'mm';add(node,field('div','s-text','text',d.text));}
  else if(b.type==='box'){Object.assign(node.style,{background:d.fill==='none'?'transparent':d.fill,borderColor:d.border==='none'?'transparent':d.border,borderWidth:(d.width??.4)+'mm',borderStyle:d.dash?'dashed':'solid',borderRadius:(d.radius||0)+'mm'});}
- else if(b.type==='shape'){node.style.setProperty('--c',d.color);node.classList.add('shape-'+d.kind);node.innerHTML=SHAPE_SVG[d.kind]||drawn(d.kind,b.w,b.h);}
+ else if(b.type==='shape'){node.style.setProperty('--c',d.color);if(d.stroke&&d.stroke!=='none')node.style.setProperty('--stroke',d.stroke);node.classList.add('shape-'+d.kind);node.innerHTML=SHAPE_SVG[d.kind]||drawn(d.kind,b.w,b.h);}
  else if(b.type==='qr'){const qr=qrSvg(d.url);add(node,qr||el('span',{text:'URLを入力'}),d.caption?el('span',{text:d.caption}):null);}
  else if(b.type==='image'){add(node,el('img',{src:d.src,alt:'',style:d.fit==='fill'?'object-fit:fill':''}));}
  add(node,el('span',{class:'handle','data-handle':'1'}));
@@ -535,7 +548,22 @@ $('#save-file').addEventListener('click',download);
 $('#add-page').addEventListener('click',()=>{snapshot();const p=newPage();doc.pages.push(p);selected=null;commit();});
 $('#undo').addEventListener('click',undo);
 function undo(){const last=history.pop();if(!last)return status('これ以上戻せません');doc=sanitizeDocument(JSON.parse(last));selected=null;commit();}
-$('#print').addEventListener('click',async()=>{selected=null;render();await document.fonts.ready;status('印刷画面で用紙サイズ「A3」、余白「なし」、「背景のグラフィック」をオンにしてください。PDFにする場合は送信先で「PDFに保存」を選びます。');setTimeout(()=>window.print(),300);});
+// Most office printers cannot print to the paper edge; shrink the sheet into the printable area unless turned off.
+const PRINT_PREF='kochi-flyer-print';
+function printPrefs(){try{return JSON.parse(localStorage.getItem(PRINT_PREF))||{fit:true,margin:5};}catch{return {fit:true,margin:5};}}
+$('#print').addEventListener('click',()=>{const pr=printPrefs();$('#print-fit').checked=pr.fit!==false;$('#print-margin').value=String(pr.margin||5);$('#print-dialog').showModal();});
+$('#print-cancel').addEventListener('click',()=>$('#print-dialog').close());
+$('#print-go').addEventListener('click',async()=>{
+ const fit=$('#print-fit').checked,margin=Number($('#print-margin').value)||5;
+ try{localStorage.setItem(PRINT_PREF,JSON.stringify({fit,margin}));}catch{}
+ $('#print-dialog').close();selected=null;render();await document.fonts.ready;
+ const {w,h}=paper(),k=fit?Math.min((w-2*margin)/w,(h-2*margin)/h):1;
+ document.body.classList.toggle('print-fit',fit);
+ document.body.style.setProperty('--ps',k);document.body.style.setProperty('--px',((w-w*k)/2)+'mm');document.body.style.setProperty('--py',((h-h*k)/2)+'mm');
+ document.body.style.setProperty('--ph',h+'mm');
+ status(fit?`周り${margin}mmの余白を残して印刷します。印刷画面で用紙A3・余白なし・倍率100%・背景のグラフィックをオンにしてください。`:'用紙いっぱいに印刷します。印刷画面で用紙A3・余白なし・倍率100%・背景のグラフィックをオンにしてください。');
+ setTimeout(()=>window.print(),300);
+});
 $('#doc-title').addEventListener('input',e=>{doc.title=e.target.value;persist();});
 $('#zoom').addEventListener('change',render);
 addEventListener('resize',()=>{if($('#zoom').value==='fit')render();});

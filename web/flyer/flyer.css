@@ -239,3 +239,12 @@ body.placing .sheet,body.placing .sheet .blk{cursor:crosshair}
 .blk.qr-covered{outline:.6mm dashed #f08a00;outline-offset:.4mm}
 @media print{.blk.qr-covered{outline:0}.fmt-bar{display:none!important}}
 .qr svg.qr-code,.program .p-qr svg.qr-code{background:#fff}
+.shape svg .body{fill:var(--c);stroke:var(--stroke,none);stroke-width:.45;stroke-linejoin:round}
+.shape-cloud,.shape-star,.shape-burst{overflow:visible}
+.dialog label.check{display:flex;gap:8px;align-items:center;font-size:13px}
+.dialog label.check input{width:auto}
+.dialog select{width:100%;border:1px solid #d9caca;border-radius:6px;padding:7px 9px}
+@media print{
+ .page-wrap{height:var(--ph,297mm);overflow:hidden}
+ body.print-fit .sheet{transform:translate(var(--px),var(--py)) scale(var(--ps))!important;transform-origin:0 0}
+}

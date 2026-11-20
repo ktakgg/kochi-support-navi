@@ -18,8 +18,8 @@ const line=(x,y,w,h,c)=>({...at(x,y,w,h),type:'box',data:{fill:c,border:c,width:
 const cell=(x,y,w,h)=>({...at(x,y,w,h),type:'box',data:{fill:'none',border:BLUE,width:.35,dash:false,radius:0}});
 const pill=(x,y,w,h,value,size=6.2)=>({...at(x,y,w,h),type:'heading',data:{text:value,accent:'',color:ORANGE,style:'pill',size}});
 const slash=(x,y,w,accent,value)=>({...at(x,y,w,10.5),type:'heading',data:{text:value,accent,color:ORANGE,style:'slash',size:4.7}});
-const image=(x,y,w,h,file,fit='contain')=>({...at(x,y,w,h),type:'image',data:{src:'assets/'+file,fit}});
-const shape=(x,y,w,h,kind,color=ORANGE,rot=0)=>({...at(x,y,w,h,rot),type:'shape',data:{kind,color}});
+const image=(x,y,w,h,file,fit='contain',rot=0)=>({...at(x,y,w,h,rot),type:'image',data:{src:'assets/'+file,fit}});
+const shape=(x,y,w,h,kind,color=ORANGE,rot=0,stroke='none')=>({...at(x,y,w,h,rot),type:'shape',data:{kind,color,stroke}});
 const sparkle=(x,y,w,h=w)=>shape(x,y,w,h,'sparkle',YELLOW);
 const program=(x,y,w,h,o)=>({...at(x,y,w,h),type:'program',data:{title:'',subtitle:'',catch:'',body:'',amount:'',amountNote:'',period:'',contact:'',tel:'',url:'',source:null,draft:false,color:ORANGE,scale:1,style:'flyer',align:'center',amountColor:INK,qrSize:17,...o}});
 const stamp=(x,y,w,h,value,rot)=>({...at(x,y,w,h,rot),type:'stamp',data:{text:value,color:RED,shape:'rect'}});
@@ -108,12 +108,15 @@ function inside(){
   text(15,41,22,17,'R8～\nNEW',{size:5,bold:true,italic:true,bg:YELLOW,align:'center',line:1.15,font:'maru'},-14),
   image(37,42,21,19,'woman-present.png'),
   tag(64,44,88,11,'はたらく、くらす若手を応援！',0,{size:5.4,radius:5,line:1.9,font:'maru'}),
-  text(154.5,42.5,55,16,'受講・受験の[赤][太]申込み前[/太][/赤]に\n市へ申請を！',{size:3.9,align:'center',bg:CREAM,border:INK,radius:8,line:1.4,font:'maru'}),
+  shape(153,40,58,18,'cloud','#fbd3ae',0,'#333333'),
+  text(160,43.5,44,12,'受講・受験の[赤][太]申込み前[/太][/赤]に\n市へ申請を！',{size:3.8,align:'center',line:1.45,font:'maru'}),
+  image(200,50,12,9,'hand-point.png',undefined,32),
   program(14,62,97,65,{title:'若手人材定着支援事業費補助金',subtitle:'（福利厚生費補助金）',catch:'福利厚生制度の新設・拡充に要する費用を助成します！',
    body:'若手人材の確保・定着のため、住宅補助や通勤費補助などの「福利厚生制度の新設・拡充」を行う中小企業に対して、費用の一部を補助します。',
    amount:'補助率：1/2　一人あたり10万円',amountNote:'【　１企業10名まで　】',...SEISAKU,url:CITY+'40/r8kochicity-wakatefukuri.html',scale:.97}),
   image(96,63,13,13,'oshi.png'),
-  tag(99,84,23,12,'はたくら\n補助金',-12,{size:3.5}),
+  image(93,80,31,24,'hand-card.png',undefined,-9),
+  text(101,84,21,13,'はたくら\n補助金',{size:3.8,bold:true,align:'center',line:1.35,font:'maru'},-9),
   program(113,62,97,65,{title:'若手人材定着支援事業資格取得助成金',subtitle:'（資格取得助成金）',catch:'業務に必要な資格取得費の一部を助成します！',
    body:'若手人材の定着に向けて、業務上必要な資格を取得させる際に要した資格取得費用の一部を助成します。',
    amount:'補助率：1/2　一人あたり10万円',amountNote:'【　１企業10名まで　】',...SEISAKU,url:CITY+'40/r8kochicity-wakateshikaku.html',scale:.97}),
@@ -173,8 +176,9 @@ function inside(){
   program(312,103,94,47,{title:'テレワーク導入支援事業費補助金',catch:'テレワーク環境整備費を補助します！',
    body:'ICT活用促進と人材確保力向上のため、テレワーク環境を整備する市内中小企業に対して、費用を一部を補助します。',
    amount:'補助率：1/2　最大30万円',amountNote:'予算上限に達し次第、終了となります。',...SEISAKU,url:CITY+'40/kochi-telwork.html',scale:.88}),
-  tag(385,116,18,11,'デジスマ\n補助金',10,{size:3}),
   stamp(320,117,82,16,'受付終了しました。',-12),
+  image(381,115.5,23,16,'hands-frame.png',undefined,-12),
+  text(384.5,118,16,10,'デジスマ\n補助金',{size:3.1,align:'center',line:1.3,font:'maru'},-12),
   pill(318,153,84,10.5,'経営相談・融資'),
   text(313,166.5,92,6,'創業や経営に関するご相談なんでも無料で対応！',{size:3.9,bold:true,align:'center'}),
   program(312,173,94,53,{title:'[小]高知県よろず支援拠点[/小]\n高知市役所　サテライト相談窓口',
@@ -185,7 +189,8 @@ function inside(){
   program(312,229,94,59,{title:'物価高騰対策等短期継続融資',catch:'事業の運転資金の確保を支援する制度融資です！',url:CITY+'40/yuusi-20210401.html',scale:.9,pack:'top'}),
   text(333,250.5,54,11,'低金利、保証料ゼロ[小]!![/小]',{size:5.3,bold:true,color:'#ffffff',bg:'#111111',align:'center',line:2,font:'maru'}),
   text(315,262,70,25,'限度額1,500万円で事業に必要な\n運転資金調達を支援します。\n[太]（～12月末まで。予算上限に達し次第終了）\n※お問い合わせは次の金融機関の支店窓口へ\n四国銀行　高知銀行　高知信用金庫　幡多信用金庫[/太]',{size:3,align:'center',line:1.38}),
-  text(391,228,17,13,'延長\nしました！',{size:3.3,bold:true,bg:YELLOW,align:'center',line:1.25,radius:50,font:'maru'},12),
+  shape(391,223,18,17,'star',YELLOW,12),
+  text(390,227,20,11,'延長\nしました！',{size:3.2,bold:true,color:'#1d2a5c',align:'center',line:1.2,font:'maru'},12),
  ];
 }
 
