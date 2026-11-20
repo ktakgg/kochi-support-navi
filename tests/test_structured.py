@@ -23,3 +23,20 @@ class StructuredTests(unittest.TestCase):
   d=self.data();d.update(d['workflow'][0]);r=summary_record(d,'now');self.assertFalse(r['rounds'][0]['confirmed_open'])
  def test_post_award_procedures_are_not_new_applications(self):
   d=self.data();d['title']='事業再構築補助金（交付申請等）';r=api_record(d,'now');self.assertFalse(r['rounds'][0]['confirmed_open'])
+
+
+class FlyerExamplesTest(unittest.TestCase):
+    def test_other_area_programs_are_kept_as_examples_only(self):
+        from collect_structured import remember_example, prune_examples
+        examples = {}
+        remember_example(examples, {'id': 'a0WJ200000CDXFfMAP', 'title': '京都市企業立地促進制度補助金', 'target_area_search': '京都府',
+                                    'subsidy_max_limit': 70000000, 'acceptance_end_datetime': '2099-03-31T08:00:00.000Z'}, '2026-11-20T00:00:00+00:00')
+        remember_example(examples, {'id': 'bad id', 'title': 'x'}, '2026-11-20T00:00:00+00:00')
+        remember_example(examples, {'id': 'a0WJ200000CDXOLDXX', 'title': '古い制度', 'target_area_search': '大阪府',
+                                    'acceptance_end_datetime': '2020-03-31T08:00:00.000Z'}, '2026-11-20T00:00:00+00:00')
+        kept = prune_examples(examples)
+        self.assertEqual(list(kept), ['jg-a0WJ200000CDXFfMAP'])
+        record = kept['jg-a0WJ200000CDXFfMAP']
+        self.assertEqual(record['amount'], '上限 70,000,000円')
+        self.assertEqual(record['target_area'], '京都府')
+        self.assertTrue(record['url'].startswith('https://www.jgrants-portal.go.jp/subsidy/'))

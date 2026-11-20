@@ -66,11 +66,28 @@ def rss_records(blob,stamp):
   audiences,purposes=classify(title)
   out.append({'id':'jn-'+hashlib.sha256(url.encode()).hexdigest()[:16],'url':url,'title':title,'hash':digest(ET.tostring(item,encoding='unicode')),'summary':plain(item.findtext('description'))[:650],'source_updated_at':item.findtext('dc:date',namespaces=NS),'fetched_at':stamp,'data_kind':'rss','review_state':'pending','checked_at':None,'review_scope':'公式RSSの見出し・概要・地域情報を取得。詳細条件は未確認。','target_area':' / '.join(areas),'amount':None,'eligibility':None,'audiences':['事業者'] if audiences==['対象者を確認'] else audiences,'purposes':purposes,'rounds':[],'pdfs':[],'evidence':[],'issuer_name':None,'issuer_level':None,**source_meta(url)})
  return out,len(items)
+EXAMPLE_SCOPE='Jグランツ一覧APIのうち高知県・四国・全国以外が対象の制度。チラシ作成時の他地域の参考事例。一覧項目のみで詳細条件は未確認。'
+def remember_example(examples,d,stamp):
+ # Other-area programs are kept only as reference examples for flyers, never published as Kochi programs.
+ if not re.fullmatch(r'[A-Za-z0-9]{15,18}',d.get('id','')):return
+ title=plain(d.get('title'))
+ if not title:return
+ cap=d.get('subsidy_max_limit');start,end=d.get('acceptance_start_datetime'),d.get('acceptance_end_datetime')
+ examples['jg-'+d['id']]={'id':'ex-'+d['id'],'url':'https://www.jgrants-portal.go.jp/subsidy/'+d['id'],'title':title,'target_area':plain(d.get('target_area_search'))[:200],
+  'amount':'上限 '+format(cap,',')+'円' if isinstance(cap,(int,float)) and not isinstance(cap,bool) and cap>0 else None,
+  'rounds':[{'start':start if valid_date(start) else None,'end':end if valid_date(end) else None}],'source_name':'Jグランツ（デジタル庁）','last_listed_at':stamp}
+def prune_examples(examples,limit=3000):
+ # Keep open, future and recently closed programs; newest deadlines first.
+ threshold=(datetime.now(timezone.utc)-timedelta(days=365)).isoformat()
+ kept=[v for v in examples.values() if not v['rounds'][0]['end'] or (valid_date(v['rounds'][0]['end']) or datetime.min.replace(tzinfo=timezone.utc)).isoformat()>=threshold]
+ kept.sort(key=lambda v:v['rounds'][0]['end'] or '9999',reverse=True)
+ return {('jg-'+v['id'][3:]):v for v in kept[:limit]}
 def main():
  ap=argparse.ArgumentParser();ap.add_argument('--max-details',type=int,default=30);args=ap.parse_args()
  catalog=read('catalog.json',{'records':[]});records={r['id']:r for r in catalog['records']};statuses=read('source-status.json',{});run={'started_at':now(),'sources':{}};raw=ROOT/'private/structured';raw.mkdir(parents=True,exist_ok=True)
  def checkpoint():
   catalog.update(generated_at=now(),records=list(records.values()));write(ROOT/'data/catalog.json',catalog);write(ROOT/'data/source-status.json',statuses);write(ROOT/'data/structured-run.json',run)
+ examples=read('examples.json',{'records':{}})['records']
  sid='jgrants';stat={'state':'ready','transport':'api','visited':0,'items':0,'errors':[],'checked_at':now()};statuses[sid]=stat;run['sources'][sid]=stat
  try:
   found={}
@@ -82,6 +99,7 @@ def main():
    (raw/('list-'+keyword+'.json')).write_bytes(blob);stat['visited']+=1
    for d in j['result']:
     if relevant(d.get('target_area_search')):found[d['id']]=d
+    else:remember_example(examples,d,now())
    time.sleep(1)
   threshold=datetime.now(timezone.utc)-timedelta(days=90)
   candidates=[d for d in found.values() if not valid_date(d.get('acceptance_end_datetime')) or valid_date(d['acceptance_end_datetime'])>=threshold or 'jg-'+d['id'] in records]
@@ -117,5 +135,6 @@ def main():
    records[r['id']]=r
   stat.update(visited=1,feed_items=total,items=len(out),note='RSSは新着のみ。対象地域が全国・四国地方・高知県の補助金等を抽出。')
  except Exception as ex:stat.update(state='unavailable',error=str(ex)[:180])
+ write(ROOT/'data/examples.json',{'generated_at':now(),'scope':EXAMPLE_SCOPE,'records':prune_examples(examples)})
  run['finished_at']=now();checkpoint();print(json.dumps(run,ensure_ascii=False),flush=True)
 if __name__=='__main__':main()

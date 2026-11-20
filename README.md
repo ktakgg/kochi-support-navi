@@ -3,6 +3,7 @@
 国・高知県・高知市・支援機関の補助金・助成制度を検索する静的サイトです。
 
 - 公開サイト: https://ktakgg.github.io/kochi-support-navi/
+チラシ作成: https://ktakgg.github.io/kochi-support-navi/flyer/ （A3、元のチラシPDFへのスタンプ・差し替え、全国の事例から高知市版の下書き）
 - 更新・公開履歴: https://github.com/ktakgg/kochi-support-navi/actions
 - 公式API・RSSを優先し、登録した公式サイトのHTML・PDFで補完します。
 - 未確認の条件は推測しません。全制度の掲載・全PDFの日次確認は未達です。

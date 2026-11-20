@@ -81,6 +81,13 @@ def main():
  current=[r for r in html_records if (r.get('html_extraction') or {}).get('version',0)>=VERSION]
  outside=[{'id':r['id'],'title':r['title'],'reason':outside_reason(r)} for r in catalog['records'] if r['id'] not in exclusions and outside_reason(r)]
  public['outside_scope']={'count':len(outside),'note':'他の市町村・都道府県だけが対象の制度は、高知市内で利用できないため掲載していません。'}
+ # Flyer builder: other-area programs are reference examples only, never listed as Kochi programs.
+ keys=('id','url','title','summary','amount','eligibility','target_area','source_name','source_level','rounds','keywords','purposes','audiences')
+ stored=json.loads((ROOT/'data/examples.json').read_text()) if (ROOT/'data/examples.json').exists() else {'records':{}}
+ examples=[{**{k:r.get(k) for k in keys},'outside_reason':x['reason']} for x in outside for r in catalog['records'] if r['id']==x['id']]
+ examples+=[{**v,'outside_reason':'他地域の制度（'+(v.get('target_area') or '地域不明')+'）。高知市版を作る際の参考事例。'} for v in stored['records'].values()]
+ (DIST/'flyer').mkdir(exist_ok=True)
+ (DIST/'flyer/examples.json').write_text(json.dumps({'generated_at':stored.get('generated_at'),'note':'他地域の制度の参考事例。高知市内では利用できません。','records':examples},ensure_ascii=False,separators=(',',':')))
  public['html_extraction_status']={'version':VERSION,'total':len(html_records),'current':len(current),'pending':len(html_records)-len(current),'with_sections':sum(bool(r['html_extraction']['sections']) for r in current),'without_sections':sum(not r['html_extraction']['sections'] for r in current)}
  (DIST/'data.json').write_text(json.dumps(public,ensure_ascii=False))
  (DIST/'all').mkdir(exist_ok=True)

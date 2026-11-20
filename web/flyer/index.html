@@ -1,0 +1,59 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="補助金・支援制度のA3チラシを作成・編集・印刷します。全国の事例から高知市版の下書きを作れます。"><title>チラシ作成｜こうち支援ナビ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap">
+<link rel="stylesheet" href="/flyer/flyer.css"><style id="page-size">@page{size:A3 landscape;margin:0}</style>
+<script src="/vendor/qrcode.js"></script><script type="module" src="/flyer/flyer.mjs"></script></head><body>
+<header class="bar">
+ <a class="back" href="/">← こうち支援ナビ</a>
+ <input id="doc-title" class="doc-title" aria-label="チラシの名前" maxlength="120">
+ <div class="bar-actions">
+  <div class="menu"><button type="button" class="btn" data-menu="new">新しく作る ▾</button>
+   <div class="menu-list" id="menu-new" hidden>
+    <button type="button" data-new="template-landscape">ひな形「主な支援制度」A3横</button>
+    <button type="button" data-new="template-portrait">ひな形「主な支援制度」A3縦</button>
+    <button type="button" data-new="blank-landscape">白紙 A3横</button>
+    <button type="button" data-new="blank-portrait">白紙 A3縦</button>
+   </div></div>
+  <label class="btn">元のチラシを読み込む<input type="file" id="import-flyer" accept="application/pdf,image/png,image/jpeg,image/webp" hidden></label>
+  <button type="button" class="btn" id="add-page">ページ追加</button>
+  <button type="button" class="btn" id="undo" title="元に戻す（Ctrl+Z）">↶ 元に戻す</button>
+  <button type="button" class="btn" id="save-file">保存</button>
+  <label class="btn">開く<input type="file" id="open-file" accept="application/json,.json" hidden></label>
+  <button type="button" class="btn primary" id="print">A3で印刷・PDF出力</button>
+ </div>
+</header>
+<div class="layout">
+ <aside class="left" aria-label="制度と部品">
+  <div class="tabs" role="tablist"><button type="button" role="tab" data-tab="search" aria-selected="true">制度を探す</button><button type="button" role="tab" data-tab="parts" aria-selected="false">部品・スタンプ</button></div>
+  <section class="tab" id="tab-search">
+   <input id="q" type="search" placeholder="例：設備投資　移住　産業団地" aria-label="制度を検索">
+   <div class="scope" role="radiogroup" aria-label="検索範囲">
+    <label><input type="radio" name="scope" value="kochi" checked> 高知市内で使える</label>
+    <label><input type="radio" name="scope" value="example"> 他地域の事例</label>
+    <label><input type="radio" name="scope" value="all"> すべて</label>
+   </div>
+   <p class="hint" id="search-hint"></p>
+   <ol id="results" class="results"></ol>
+  </section>
+  <section class="tab" id="tab-parts" hidden>
+   <h3>枠を追加</h3>
+   <div class="parts">
+    <button type="button" data-part="program">制度の枠（空）</button>
+    <button type="button" data-part="heading">見出し帯</button>
+    <button type="button" data-part="text">文字</button>
+    <button type="button" data-part="qr">二次元コード</button>
+    <button type="button" data-part="box">白い四角（元の文字を隠す）</button>
+    <label class="part-file">画像<input type="file" id="add-image" accept="image/png,image/jpeg,image/webp" hidden></label>
+   </div>
+   <h3>スタンプ</h3>
+   <p class="hint">選んだ枠の上に押します。枠を選んでいないときはページ中央に押します。</p>
+   <div class="stamps" id="stamps"></div>
+  </section>
+ </aside>
+ <main class="canvas" id="canvas" aria-label="チラシの編集画面">
+  <div class="zoom"><label>表示倍率 <select id="zoom"><option value="fit">画面に合わせる</option><option value="0.5">50%</option><option value="0.75">75%</option><option value="1">100%</option></select></label><span id="status" class="status" role="status"></span></div>
+  <div id="pages" class="pages"></div>
+ </main>
+ <aside class="right" id="props" aria-label="選んだ枠の設定"></aside>
+</div>
+<noscript><p class="noscript">チラシ作成にはJavaScriptが必要です。</p></noscript>
+</body></html>

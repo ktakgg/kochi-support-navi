@@ -4,6 +4,7 @@
 
 ## 構成
 - `web/` 画面（index.html, app.js, core.mjs=検索・判定, autocomplete.mjs, motion.mjs, style.css）
+- `web/flyer/` A3チラシ作成（model.mjs=データ・高知市版変換・検査, flyer.mjs=編集画面）。`web/vendor/` 同梱ライブラリ（QR・pdf.js）
 - `scripts/scope.py` 掲載範囲（高知市内で利用できない他地域の制度を公開から除外）
 - `scripts/` 収集（collect_structured.py=JグランツAPI/J-Net21 RSS, crawl.py=HTML巡回, collect_pdfs.py, refresh_html.py）、抽出（extract_html.py）、生成（build.py）、検証（validate_site.py）、掲載元定義（sources.py）
 - `data/` 制度データ・台帳（catalog.json, registry.json, reviews.json, sources.json, exclusions.json 等）。Actionsが自動コミットする
