@@ -8,12 +8,14 @@
  <div class="bar-actions">
   <div class="menu"><button type="button" class="btn" data-menu="new">新しく作る ▾</button>
    <div class="menu-list" id="menu-new" hidden>
+    <button type="button" data-new="kochi-r8">ひな形「高知市の主な事業者支援制度」2ページ（令和8年12月版）</button>
     <button type="button" data-new="template-landscape">ひな形「主な支援制度」A3横</button>
     <button type="button" data-new="template-portrait">ひな形「主な支援制度」A3縦</button>
     <button type="button" data-new="blank-landscape">白紙 A3横</button>
     <button type="button" data-new="blank-portrait">白紙 A3縦</button>
    </div></div>
   <label class="btn">元のチラシを読み込む<input type="file" id="import-flyer" accept="application/pdf,image/png,image/jpeg,image/webp" hidden></label>
+  <button type="button" class="btn" id="qr-open">QRコード作成</button>
   <button type="button" class="btn" id="add-page">ページ追加</button>
   <button type="button" class="btn" id="undo" title="元に戻す（Ctrl+Z）">↶ 元に戻す</button>
   <button type="button" class="btn" id="save-file">保存</button>
@@ -55,5 +57,19 @@
  </main>
  <aside class="right" id="props" aria-label="選んだ枠の設定"></aside>
 </div>
+<dialog id="qr-dialog" class="dialog" aria-labelledby="qr-title">
+ <h2 id="qr-title">QRコード作成</h2>
+ <p class="hint">ホームページのURLを入力すると、二次元コード（QRコード）を作ります。チラシに配置するほか、画像として保存できます。</p>
+ <label for="qr-url">URL</label><input id="qr-url" type="url" placeholder="https://www.city.kochi.kochi.jp/..." inputmode="url">
+ <label for="qr-caption">コードの下に入れる文字（任意）</label><input id="qr-caption" type="text" maxlength="40" placeholder="詳しくはこちら">
+ <div class="qr-preview" id="qr-preview"><span class="hint">URLを入力してください</span></div>
+ <p class="hint" id="qr-message" role="status"></p>
+ <div class="buttons">
+  <button type="button" class="btn" id="qr-to-program" hidden>選んだ制度の枠に設定</button>
+  <button type="button" class="btn" id="qr-download">画像で保存（PNG）</button>
+  <button type="button" class="btn primary" id="qr-place">チラシに配置</button>
+  <button type="button" class="btn" id="qr-close">閉じる</button>
+ </div>
+</dialog>
 <noscript><p class="noscript">チラシ作成にはJavaScriptが必要です。</p></noscript>
 </body></html>

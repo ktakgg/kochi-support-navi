@@ -67,3 +67,17 @@ test('単価・端数処理の金額を大きな金額として表示しない',
  assert.equal(p('1世帯あたり30万円。ただし同居の場合は45万円。'),'30万円');
  assert.equal(p('上限 500,000円 ／ 補助率 2/3'),'最大 50万円');
 });
+
+import {kochiBusinessFlyer} from '../dist/flyer/templates.mjs';
+test('ひな形「高知市の主な事業者支援制度」はA3横2ページで、検査を通しても欠けない',()=>{
+ const raw=kochiBusinessFlyer(),doc=sanitizeDocument(raw);
+ assert.equal(doc.orientation,'landscape');assert.equal(doc.pages.length,2);
+ for(const [i,p] of doc.pages.entries()){
+  assert.equal(p.blocks.length,raw.pages[i].blocks.length);
+  for(const b of p.blocks)assert.ok(b.x>=0&&b.y>=0&&b.x+b.w<=420.5&&b.y+b.h<=297.5,JSON.stringify(b).slice(0,80));
+ }
+ const programs=doc.pages.flatMap(p=>p.blocks).filter(b=>b.type==='program');
+ assert.ok(programs.length>=19);
+ for(const b of programs)if(b.data.url)assert.match(b.data.url,/^https:\/\/www\.city\.kochi\.kochi\.jp\//);
+ assert.ok(doc.pages.flatMap(p=>p.blocks).some(b=>b.type==='stamp'&&b.data.text.startsWith('受付終了')));
+});

@@ -2,7 +2,8 @@
 import {cardDetails,queryMatches} from '../core.mjs';
 
 export const PAPER={landscape:{w:420,h:297},portrait:{w:297,h:420}};
-export const TYPES=['program','heading','text','stamp','image','qr','box'];
+export const TYPES=['program','heading','text','stamp','image','qr','box','shape'];
+export const SHAPES=['wave-top','wave-bottom','sparkle','board'];
 export const STAMPS=[
  {text:'受付終了しました',color:'#d7262e',shape:'rect'},
  {text:'募集終了',color:'#d7262e',shape:'circle'},
@@ -13,7 +14,7 @@ export const STAMPS=[
  {text:'追加募集',color:'#c0392b',shape:'rect'},
  {text:'受付中',color:'#1f5fa8',shape:'circle'},
 ];
-export const COLORS=['#e2701e','#a32126','#1f5fa8','#2a7a3f','#6b3fa0','#333333'];
+export const COLORS=['#e2701e','#a32126','#d7262e','#1f5fa8','#2a7a3f','#6b3fa0','#333333','#7f7f7f','#ffffff','#fdf0c8','#ffe600'];
 export const DRAFT_NOTE='他地域の事例をもとにした高知市版の下書きです。金額・対象・期間・担当課は必ず確定させてください。';
 
 let counter=0;
@@ -142,8 +143,8 @@ export function autoLayout(page,orientation='landscape',{top=36,bottom=18,margin
 const round=n=>Math.round(n*10)/10;
 
 // Saved files come from users; accept only known shapes, numbers and image data URLs.
-const IMAGE=/^data:image\/(?:png|jpeg|webp);base64,[A-Za-z0-9+/=]+$/;
-const COLOR=/^#[0-9a-fA-F]{6}$/;
+const IMAGE=/^(?:data:image\/(?:png|jpeg|webp);base64,[A-Za-z0-9+/=]+|assets\/[a-z0-9-]+\.(?:png|jpe?g|webp))$/;
+const COLOR=/^(?:#[0-9a-fA-F]{6}|none)$/;
 const safeColor=(v,fallback)=>COLOR.test(v)?v:fallback;
 const safeUrl=v=>{try{const u=new URL(String(v));return ['https:','http:'].includes(u.protocol)?u.href.slice(0,500):'';}catch{return '';}};
 export function sanitizeDocument(input){
@@ -157,14 +158,16 @@ export function sanitizeDocument(input){
 }
 function sanitizeBlock(b,paper){
  const d=b.data||{},base={id:text(b.id,60)||uid('b'),type:b.type,x:clamp(b.x,-paper.w,paper.w*2),y:clamp(b.y,-paper.h,paper.h*2),w:clamp(b.w,2,paper.w*2),h:clamp(b.h,2,paper.h*2),rot:clamp(b.rot,-180,180)};
+ const num=(v,lo,hi,dflt)=>v==null||v===''?dflt:clamp(v,lo,hi);
  switch(b.type){
-  case 'program':return {...base,data:{title:text(d.title,200),catch:text(d.catch,400),body:text(d.body,1200),amount:text(d.amount,80),amountNote:text(d.amountNote,400),period:text(d.period,120),contact:text(d.contact,120),tel:text(d.tel,60),url:safeUrl(d.url),source:d.source?{title:text(d.source.title,200),url:safeUrl(d.source.url),area:text(d.source.area,200)}:null,draft:Boolean(d.draft),color:safeColor(d.color,'#e2701e'),scale:clamp(d.scale??1,.5,2)}};
-  case 'heading':return {...base,data:{text:text(d.text,120),color:safeColor(d.color,'#e2701e')}};
-  case 'text':return {...base,data:{text:text(d.text,3000),size:clamp(d.size,2,40),color:safeColor(d.color,'#333333'),bold:Boolean(d.bold),align:['left','center','right'].includes(d.align)?d.align:'left'}};
+  case 'program':return {...base,data:{title:text(d.title,200),subtitle:text(d.subtitle,120),catch:text(d.catch,400),body:text(d.body,1200),amount:text(d.amount,200),amountNote:text(d.amountNote,400),period:text(d.period,120),contact:text(d.contact,120),tel:text(d.tel,60),url:safeUrl(d.url),source:d.source?{title:text(d.source.title,200),url:safeUrl(d.source.url),area:text(d.source.area,200)}:null,draft:Boolean(d.draft),color:safeColor(d.color,'#e2701e'),scale:clamp(d.scale??1,.5,2),style:['band','plain','flyer'].includes(d.style)?d.style:'band',amountColor:safeColor(d.amountColor,'#d7262e'),qrSize:num(d.qrSize,8,40,17)}};
+  case 'heading':return {...base,data:{text:text(d.text,120),accent:text(d.accent,40),color:safeColor(d.color,'#e2701e'),style:['band','pill','slash'].includes(d.style)?d.style:'band',size:num(d.size,2,30,5.2)}};
+  case 'text':return {...base,data:{text:text(d.text,3000),size:clamp(d.size,1.5,60),color:safeColor(d.color,'#333333'),bold:Boolean(d.bold),align:['left','center','right'].includes(d.align)?d.align:'left',bg:safeColor(d.bg,'none'),border:safeColor(d.border,'none'),shadow:safeColor(d.shadow,'none'),italic:Boolean(d.italic),vertical:Boolean(d.vertical),line:num(d.line,.9,2.5,1.4),spacing:num(d.spacing,0,2,0),radius:num(d.radius,0,50,0),underline:safeColor(d.underline,'none')}};
   case 'stamp':return {...base,data:{text:text(d.text,40),color:safeColor(d.color,'#d7262e'),shape:d.shape==='circle'?'circle':'rect'}};
   case 'image':return IMAGE.test(d.src||'')?{...base,data:{src:d.src}}:null;
   case 'qr':return {...base,data:{url:safeUrl(d.url),caption:text(d.caption,40)}};
-  case 'box':return {...base,data:{fill:safeColor(d.fill,'#ffffff'),border:safeColor(d.border,'#ffffff')}};
+  case 'box':return {...base,data:{fill:safeColor(d.fill,'#ffffff'),border:safeColor(d.border,'#ffffff'),width:num(d.width,0,5,.4),dash:Boolean(d.dash),radius:num(d.radius,0,50,0)}};
+  case 'shape':return SHAPES.includes(d.kind)?{...base,data:{kind:d.kind,color:safeColor(d.color,'#e2701e')}}:null;
  }
  return null;
 }

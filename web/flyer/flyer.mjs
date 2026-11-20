@@ -1,11 +1,12 @@
 import {PAPER,STAMPS,COLORS,DRAFT_NOTE,newDocument,newPage,templateDocument,programBlock,emptyProgram,stampBlock,headingBlock,textBlock,boxBlock,qrBlock,imageBlock,replaceContent,autoLayout,sanitizeDocument,searchRecords,uid} from './model.mjs';
+import {kochiBusinessFlyer} from './templates.mjs';
 
 const $=s=>document.querySelector(s);
 const MM=96/25.4; // CSS px per mm
 const STORE='kochi-flyer-v1';
 const el=(tag,attrs={},...children)=>{const n=document.createElement(tag);for(const [k,v] of Object.entries(attrs)){if(k==='class')n.className=v;else if(k==='text')n.textContent=v;else if(k.startsWith('on'))n.addEventListener(k.slice(2),v);else if(v!==false&&v!=null)n.setAttribute(k,v===true?'':v);}for(const c of children)if(c!=null)n.append(c);return n;};
 
-let doc=load()||templateDocument('landscape');
+let doc=load()||sanitizeDocument(kochiBusinessFlyer());
 let selected=null; // {page,id}
 let history=[];let records=[];let editing=false;
 
@@ -75,26 +76,61 @@ function field(tag,cls,name,value,block){
  const n=el(tag,{class:cls,'data-field':name});n.textContent=value||'';
  return n;
 }
+// Emphasise figures in amounts (補助率 1/2・10万円) as on printed flyers. Text only, never HTML.
+function emphasized(cls,name,value){
+ const n=el('div',{class:cls,'data-field':name});
+ for(const part of String(value||'').split(/([0-9０-９][0-9０-９,，.．/／]*)/))if(part)n.append(/^[0-9０-９]/.test(part)?el('span',{class:'num',text:part}):document.createTextNode(part));
+ return n;
+}
+const SHAPE_SVG={
+ 'wave-top':'<svg viewBox="0 0 100 30" preserveAspectRatio="none"><path d="M0 0H100V16C78 30 58 4 32 14S8 24 0 20Z"/></svg>',
+ 'wave-bottom':'<svg viewBox="0 0 100 30" preserveAspectRatio="none"><path d="M0 30H100V8C80 0 62 22 38 14S10 4 0 12Z"/></svg>',
+ 'sparkle':'<svg viewBox="0 0 100 100"><path d="M50 0C54 38 62 46 100 50C62 54 54 62 50 100C46 62 38 54 0 50C38 46 46 38 50 0Z"/></svg>',
+ 'board':'<svg viewBox="0 0 100 60" preserveAspectRatio="none"><rect x="1.5" y="1.5" width="97" height="53" rx="2" fill="#fff" stroke-width="1.2" vector-effect="non-scaling-stroke"/><rect x="0" y="56.5" width="100" height="2" rx=".6"/></svg>',
+};
+const add=(node,...parts)=>{node.append(...parts.filter(x=>x!=null));return node;};
 function renderBlock(b,page){
  const isSel=selected?.id===b.id;
- const node=el('div',{class:`blk ${b.type}${isSel?' selected':''}${b.data.shape==='circle'?' circle':''}`,'data-id':b.id,style:`left:${b.x}mm;top:${b.y}mm;width:${b.w}mm;height:${b.h}mm;transform:rotate(${b.rot||0}deg)`});
  const d=b.data;
+ const extra=b.type==='program'?' '+(d.style||'band'):b.type==='heading'?' '+(d.style||'band'):b.data.shape==='circle'?' circle':'';
+ const node=el('div',{class:`blk ${b.type}${extra}${isSel?' selected':''}`,'data-id':b.id,style:`left:${b.x}mm;top:${b.y}mm;width:${b.w}mm;height:${b.h}mm;transform:rotate(${b.rot||0}deg)`});
  if(b.type==='program'){
-  node.style.setProperty('--c',d.color);node.style.setProperty('--s',d.scale||1);
+  node.style.setProperty('--c',d.color);node.style.setProperty('--s',d.scale||1);node.style.setProperty('--a',d.amountColor||'#d7262e');node.style.setProperty('--q',(d.qrSize||17)+'mm');
   const qr=qrSvg(d.url);
-  node.append(field('div','p-title','title',d.title),
-   el('div',{class:'p-main'},el('div',{class:'p-text'},field('div','p-catch','catch',d.catch),field('div','p-body','body',d.body),
-     el('div',{class:'p-amount-row'},field('div','p-amount','amount',d.amount),field('div','p-note','amountNote',d.amountNote))),
-    qr?el('div',{class:'p-qr'},qr,el('span',{text:'詳しくはこちら'})):null),
-   el('div',{class:'p-foot'},d.period?field('span','p-period','period',d.period):null,field('span','p-contact','contact',d.contact),d.tel?field('span','p-tel','tel','TEL：'+d.tel.replace(/^TEL[：:]\s*/,'')):null));
-  if(d.draft)node.append(el('span',{class:'draft-badge',text:'他地域の事例から作成した下書き（要確認）'}));
- }else if(b.type==='heading'){node.style.setProperty('--c',d.color);node.append(field('div','h-text','text',d.text));}
- else if(b.type==='text'){Object.assign(node.style,{color:d.color,fontSize:d.size+'mm',fontWeight:d.bold?'700':'400',textAlign:d.align});node.append(field('div','t-text','text',d.text));}
- else if(b.type==='stamp'){node.style.setProperty('--c',d.color);node.style.fontSize=Math.max(2,Math.min(b.h*(d.shape==='circle'?.3:.55),(b.w-5)*(d.shape==='circle'?.75:.95)/Math.max(2,[...d.text].length)))+'mm';node.append(field('div','s-text','text',d.text));}
- else if(b.type==='box'){Object.assign(node.style,{background:d.fill,borderColor:d.border});}
- else if(b.type==='qr'){const qr=qrSvg(d.url);node.append(qr||el('span',{text:'URLを入力'}),el('span',{text:d.caption}));}
- else if(b.type==='image'){node.append(el('img',{src:d.src,alt:''}));}
- node.append(el('span',{class:'handle','data-handle':'1'}));
+  if(d.style==='flyer'){
+   add(node,field('div','p-title','title',d.title),d.subtitle?field('div','p-sub','subtitle',d.subtitle):null,d.catch?field('div','p-catch','catch',d.catch):null,d.body?field('div','p-body','body',d.body):null,
+    el('div',{class:'p-lower'},d.amount?emphasized('p-amount','amount',d.amount):null,d.amountNote?field('div','p-note','amountNote',d.amountNote):null,d.period?field('div','p-period','period',d.period):null,
+     el('div',{class:'p-foot'},field('span','p-contact','contact',d.contact),d.tel?field('span','p-tel','tel','TEL：'+d.tel.replace(/^TEL[：:]\s*/,'')):null)),
+    qr?el('div',{class:'p-qr'},qr):null);
+  }else{
+   add(node,field('div','p-title','title',d.title),
+    el('div',{class:'p-main'},el('div',{class:'p-text'},d.subtitle?field('div','p-sub','subtitle',d.subtitle):null,field('div','p-catch','catch',d.catch),field('div','p-body','body',d.body),
+      el('div',{class:'p-amount-row'},emphasized('p-amount','amount',d.amount),field('div','p-note','amountNote',d.amountNote))),
+     qr?el('div',{class:'p-qr'},qr,el('span',{text:'詳しくはこちら'})):null),
+    el('div',{class:'p-foot'},d.period?field('span','p-period','period',d.period):null,field('span','p-contact','contact',d.contact),d.tel?field('span','p-tel','tel','TEL：'+d.tel.replace(/^TEL[：:]\s*/,'')):null));
+  }
+  if(d.draft)add(node,el('span',{class:'draft-badge',text:'他地域の事例から作成した下書き（要確認）'}));
+ }else if(b.type==='heading'){
+  node.style.setProperty('--c',d.color);node.style.fontSize=(d.size||5.2)+'mm';
+  if(d.style==='slash')add(node,el('span',{class:'h-slash',text:'＼'}),d.accent?field('span','h-accent','accent',d.accent):null,field('span','h-text','text',d.text),el('span',{class:'h-slash',text:'／'}));
+  else add(node,field('div','h-text','text',d.text));
+ }
+ else if(b.type==='text'){
+  Object.assign(node.style,{color:d.color,fontSize:d.size+'mm',fontWeight:d.bold?'700':'400',textAlign:d.align,lineHeight:d.line||1.4,letterSpacing:(d.spacing||0)+'em',fontStyle:d.italic?'italic':'normal',borderRadius:(d.radius||0)+'mm'});
+  if(d.bg&&d.bg!=='none')node.style.background=d.bg;
+  if(d.border&&d.border!=='none')node.style.border='.35mm solid '+d.border;
+  if(d.shadow&&d.shadow!=='none')node.style.boxShadow=`1.2mm 1.2mm 0 ${d.shadow}`;
+  if(d.vertical)node.classList.add('vertical');
+  const t=field('div','t-text','text',d.text);
+  if(d.underline&&d.underline!=='none')Object.assign(t.style,{textDecoration:'underline',textDecorationColor:d.underline,textDecorationThickness:'.6mm',textUnderlineOffset:'.8mm'});
+  add(node,t);
+ }
+ else if(b.type==='stamp'){node.style.setProperty('--c',d.color);node.style.fontSize=Math.max(2,Math.min(b.h*(d.shape==='circle'?.3:.55),(b.w-5)*(d.shape==='circle'?.75:.95)/Math.max(2,[...d.text].length)))+'mm';add(node,field('div','s-text','text',d.text));}
+ else if(b.type==='box'){Object.assign(node.style,{background:d.fill==='none'?'transparent':d.fill,borderColor:d.border==='none'?'transparent':d.border,borderWidth:(d.width??.4)+'mm',borderStyle:d.dash?'dashed':'solid',borderRadius:(d.radius||0)+'mm'});}
+ else if(b.type==='shape'){node.style.setProperty('--c',d.color);node.innerHTML=SHAPE_SVG[d.kind]||'';}
+ else if(b.type==='qr'){const qr=qrSvg(d.url);add(node,qr||el('span',{text:'URLを入力'}),d.caption?el('span',{text:d.caption}):null);}
+ else if(b.type==='image'){add(node,el('img',{src:d.src,alt:''}));}
+ add(node,el('span',{class:'handle','data-handle':'1'}));
  node.addEventListener('pointerdown',e=>startDrag(e,b,page,node));
  node.addEventListener('dblclick',e=>startEdit(e,b,node));
  return node;
@@ -103,7 +139,10 @@ function checkOverflow(){
  let over=0;
  document.querySelectorAll('.blk.program,.blk.text,.blk.heading').forEach(n=>{
   const inner=n.classList.contains('program')?n.querySelector('.p-main'):n;
-  const o=n.scrollHeight>n.clientHeight+2||(inner&&inner.scrollHeight>inner.clientHeight+2);
+  let o=n.scrollHeight>n.clientHeight+2||(inner&&inner.scrollHeight>inner.clientHeight+2);
+  // Flyer-style slots pin the amount and contact to the bottom; the text above must not run into them.
+  const lower=n.querySelector(':scope>.p-lower');
+  if(lower){const above=[...n.children].filter(c=>c!==lower&&!c.classList.contains('p-qr')&&!c.classList.contains('handle')&&!c.classList.contains('draft-badge')).pop();if(above&&above.getBoundingClientRect().bottom>lower.getBoundingClientRect().top+1)o=true;}
   n.classList.toggle('overflow',o);if(o)over++;
  });
  if(over)status(`文字が枠からあふれている枠が${over}件あります（赤い点線）。枠を広げるか文字を減らしてください。`,true);
@@ -272,7 +311,7 @@ $('[data-menu=new]').addEventListener('click',()=>{$('#menu-new').hidden=!$('#me
 document.addEventListener('click',e=>{if(!e.target.closest('.menu'))$('#menu-new').hidden=true;});
 document.querySelectorAll('[data-new]').forEach(b=>b.addEventListener('click',()=>{
  if(!confirm('今のチラシを閉じて新しく作ります。保存していない内容は失われます。よろしいですか？'))return;
- snapshot();const [kind,orientation]=b.dataset.new.split('-');doc=kind==='template'?templateDocument(orientation):newDocument(orientation);selected=null;$('#menu-new').hidden=true;commit();
+ snapshot();const [kind,orientation]=b.dataset.new.split('-');doc=kind==='kochi'?sanitizeDocument(kochiBusinessFlyer()):kind==='template'?templateDocument(orientation):newDocument(orientation);selected=null;$('#menu-new').hidden=true;commit();
 }));
 $('#import-flyer').addEventListener('change',e=>{const f=e.target.files[0];e.target.value='';if(f)importFlyer(f).catch(err=>status('読み込めませんでした：'+err.message,true));});
 $('#open-file').addEventListener('change',async e=>{const f=e.target.files[0];e.target.value='';if(!f)return;try{snapshot();doc=sanitizeDocument(JSON.parse(await f.text()));selected=null;commit();status('保存したチラシを開きました');}catch{status('チラシのファイルとして読み込めませんでした',true);}});
@@ -294,5 +333,28 @@ document.addEventListener('keydown',e=>{
  if(moves[e.key]){e.preventDefault();snapshot();b.x+=moves[e.key][0];b.y+=moves[e.key][1];commit();}
  if((e.ctrlKey||e.metaKey)&&e.key==='d'){e.preventDefault();const c=structuredClone(b);c.id=uid('b');c.x+=5;c.y+=5;addBlock(c,pageOf(selected.page));}
 });
+// ---------- QR code maker ----------
+function validUrl(v){try{const u=new URL(v.trim());return ['http:','https:'].includes(u.protocol)?u.href:'';}catch{return '';}}
+function qrUpdate(){
+ const url=validUrl($('#qr-url').value),box=$('#qr-preview');
+ box.replaceChildren(url?(qrSvg(url)||el('span',{class:'hint',text:'長すぎてコードにできません'})):el('span',{class:'hint',text:$('#qr-url').value?'http(s):// で始まるURLを入力してください':'URLを入力してください'}));
+ $('#qr-to-program').hidden=blockOf()?.type!=='program';
+ return url;
+}
+$('#qr-open').addEventListener('click',()=>{const b=blockOf();$('#qr-url').value=b?.data?.url||'';$('#qr-caption').value=b?.type==='qr'?b.data.caption:'詳しくはこちら';$('#qr-message').textContent='';qrUpdate();$('#qr-dialog').showModal();$('#qr-url').focus();});
+$('#qr-url').addEventListener('input',qrUpdate);
+$('#qr-close').addEventListener('click',()=>$('#qr-dialog').close());
+$('#qr-place').addEventListener('click',()=>{const url=qrUpdate();if(!url)return;const b=qrBlock(url);b.data.caption=$('#qr-caption').value.slice(0,40);b.h=b.data.caption?26:22;const at=center(b.w,b.h);Object.assign(b,{x:Math.max(0,at.x),y:Math.max(0,at.y)});selected=null;addBlock(b);$('#qr-dialog').close();status('QRコードを配置しました。ドラッグで移動、右下の丸で大きさを変えられます。');});
+$('#qr-to-program').addEventListener('click',()=>{const url=qrUpdate(),b=blockOf();if(!url||b?.type!=='program')return;snapshot();b.data.url=url;commit();$('#qr-dialog').close();status('選んだ制度の枠にQRコードを設定しました');});
+$('#qr-download').addEventListener('click',()=>{
+ const url=qrUpdate();if(!url)return;
+ const q=qrcode(0,'M');q.addData(url,'Byte');q.make();
+ const n=q.getModuleCount(),cell=12,margin=4,c=document.createElement('canvas');c.width=c.height=(n+margin*2)*cell;
+ const g=c.getContext('2d');g.fillStyle='#fff';g.fillRect(0,0,c.width,c.height);g.fillStyle='#000';
+ for(let r=0;r<n;r++)for(let k=0;k<n;k++)if(q.isDark(r,k))g.fillRect((k+margin)*cell,(r+margin)*cell,cell,cell);
+ const a=el('a',{href:c.toDataURL('image/png'),download:'qrcode.png'});document.body.append(a);a.click();a.remove();
+ $('#qr-message').textContent='PNG画像を保存しました（印刷向けの高解像度）。';
+});
+
 render();
 loadRecords().catch(()=>{$('#search-hint').textContent='制度データを読み込めませんでした。';});

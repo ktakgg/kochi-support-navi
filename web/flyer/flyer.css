@@ -120,3 +120,48 @@ button{cursor:pointer}
 }
 .menu-list[hidden]{display:none}
 .stamp .s-text{white-space:nowrap}
+/* ---- flyer-style parts (令和8年12月版のチラシ表現) ---- */
+.stamp{background:#ffffff;mix-blend-mode:normal}
+.program .p-sub{font-weight:700;text-align:center;font-size:1.15em}
+.program .p-amount .num{font-size:1.55em;line-height:1}
+.program.flyer{background:transparent;border:0;border-radius:0;display:block;position:absolute;overflow:hidden;font-size:calc(2.9mm * var(--s,1));padding:1mm 1.5mm}
+.program.flyer .p-title{background:none;color:#222;text-align:center;font-size:1.75em;padding:0;letter-spacing:.03em;line-height:1.3}
+.program.flyer .p-sub{margin-top:-.3mm}
+.program.flyer .p-catch{color:#222;text-align:center;font-size:1.22em;margin:.8mm 0 1mm;line-height:1.35}
+.program.flyer .p-body{font-size:.95em;line-height:1.4;margin:0 1mm;white-space:pre-wrap}
+.program.flyer .p-lower{position:absolute;left:1.5mm;right:calc(var(--q) + 3mm);bottom:1.2mm;display:flex;flex-direction:column;gap:.6mm}
+.program.flyer .p-amount{color:var(--a);font-size:1.45em;font-weight:700;text-align:center;white-space:pre-wrap;line-height:1.3}
+.program.flyer .p-note{text-align:center;font-size:.92em}
+.program.flyer .p-period{background:none;color:#222;font-weight:400;text-align:center;font-size:.92em;padding:0}
+.program.flyer .p-foot{padding:0;font-size:.95em;gap:4mm;justify-content:flex-start}
+.program.flyer .p-qr{position:absolute;right:1.2mm;bottom:1.2mm;width:var(--q)}
+.program.flyer .p-qr svg{width:var(--q);height:var(--q)}
+.program.plain{border:.35mm solid #999;border-radius:1mm}
+.program.plain .p-title{background:none;color:#222;text-align:center}
+.program.plain .p-catch{color:#222;text-align:center}
+.heading.pill{border-radius:50vh;justify-content:center;font-weight:400;letter-spacing:.12em}
+.heading.slash{background:none;color:#222;padding:0;gap:.5em;justify-content:flex-start;letter-spacing:.35em}
+.heading.slash .h-slash{font-weight:700;letter-spacing:0;color:#222}
+.heading.slash .h-accent{color:var(--c);font-size:1.3em}
+.text.vertical .t-text{writing-mode:vertical-rl;height:100%}
+.shape svg{width:100%;height:100%;display:block;fill:var(--c);stroke:var(--c);overflow:visible}
+.shape svg path{stroke:none}
+.box{box-sizing:border-box}
+.dialog{border:1px solid var(--line);border-radius:12px;padding:20px;max-width:440px;width:calc(100% - 32px)}
+.dialog::backdrop{background:#0006}
+.dialog h2{font-size:17px;margin:0 0 10px}
+.dialog label{display:block;font-size:12px;font-weight:700;margin:10px 0 3px}
+.dialog input{width:100%;border:1px solid #d9caca;border-radius:6px;padding:7px 9px}
+.qr-preview{display:grid;place-items:center;margin:14px 0;min-height:180px;background:#faf7f7;border-radius:8px}
+.qr-preview svg{width:160px;height:160px}
+.dialog .buttons{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;margin-top:8px}
+.program .p-title,.program .p-catch,.program .p-sub{white-space:pre-wrap}
+.program.flyer{font-size:calc(3.15mm * var(--s,1))}
+.program.flyer .p-body{font-size:1em;line-height:1.42}
+.program.flyer .p-catch{font-size:1.2em}
+.program.flyer .p-title{font-size:1.7em}
+.stamp{border-width:.7mm;letter-spacing:.04em}
+.program.flyer .p-amount{font-size:1.3em}
+.program .p-amount .num{font-size:1.4em}
+.program.flyer .p-title{font-size:1.62em}
+[hidden]{display:none!important}
