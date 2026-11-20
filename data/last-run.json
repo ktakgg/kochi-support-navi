@@ -1,6 +1,6 @@
 {
-  "started_at": "2026-11-19T02:14:23.434297+00:00",
-  "visited": 96,
+  "started_at": "2026-11-20T02:00:52.431335+00:00",
+  "visited": 130,
   "candidates": 58,
   "errors": [
     {
@@ -12,6 +12,36 @@
       "source_id": "kochi_cci",
       "url": "http://www.cciweb.or.jp/robots.txt",
       "error": "<urlopen error timed out>"
+    },
+    {
+      "source_id": "kochi_city",
+      "url": "https://www.city.kochi.kochi.jp/soshiki/186/r7tikudenti.html",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "source_id": "kochi_pref",
+      "url": "https://www.pref.kochi.lg.jp/doc/2025050100225/",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "source_id": "kochi_pref",
+      "url": "https://www.pref.kochi.lg.jp/doc/2023090100120/",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "source_id": "kochi_city",
+      "url": "https://www.city.kochi.kochi.jp/soshiki/186/taiyoukoukouhukettei.html",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "source_id": "kochi_city",
+      "url": "https://www.city.kochi.kochi.jp/soshiki/186/r7tikudentikouhukettei.html",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "source_id": "kochi_city",
+      "url": "https://www.city.kochi.kochi.jp/soshiki/186/r7koukouritsu.html",
+      "error": "HTTP Error 404: Not Found"
     },
     {
       "source_id": "kochi_pref",
@@ -26,39 +56,28 @@
   ],
   "changed": [],
   "new": [
-    "23adab8eadedffc2",
-    "73b76bf9984724a2",
-    "b27f30ef2b393248",
-    "a66dd2191b9881ef",
-    "f140b8db4b1ef65e",
-    "14745f5808821800",
-    "bb2a023995e7b1df",
-    "432dae671253ffd7",
-    "6bf53cbcebdfdf01",
-    "75e16308dd77d32f",
-    "0a0cffd08e137a67",
-    "c9df4d8f5d6d328f",
-    "0d64cf0b2f6a8da4",
-    "50d220adea98064c",
-    "5725b91bbdcc0b23",
-    "fd50aead6bce332f",
-    "e9c52868d122f1ef",
-    "78d61d31b23cb7a2",
-    "5fe09a84fd17a2b1"
+    "7887a290cb405b8f",
+    "ad3a0a27c1ca5767",
+    "54b5a352b6742a3b",
+    "040dcdadc026a891",
+    "52c3038c4053e48d",
+    "1fe9f20a1cc59a76",
+    "9bcf9f95640fcc41",
+    "8af15aba93abad18"
   ],
   "scope": "高知市・高知県・中小企業庁・高知県産業振興センター・高知商工会議所の登録した巡回元。全件収集は確認中。",
   "sources": {
     "kochi_city": {
       "name": "高知市",
       "level": "市",
-      "attempted": 40,
-      "visited": 40,
-      "candidates": 27,
-      "started_at": "2026-11-19T02:14:23.437569+00:00",
+      "attempted": 60,
+      "visited": 56,
+      "candidates": 18,
+      "started_at": "2026-11-20T02:00:52.436679+00:00",
       "lane_counts": {
-        "new_candidate": 14,
-        "discovery": 13,
-        "existing": 13
+        "new_candidate": 2,
+        "discovery": 38,
+        "existing": 20
       },
       "state": "ready",
       "robots": "404（制限ファイルなし）"
@@ -66,14 +85,14 @@
     "kochi_pref": {
       "name": "高知県",
       "level": "県",
-      "attempted": 40,
-      "visited": 38,
-      "candidates": 18,
-      "started_at": "2026-11-19T02:14:25.243162+00:00",
+      "attempted": 60,
+      "visited": 56,
+      "candidates": 27,
+      "started_at": "2026-11-20T02:00:53.005443+00:00",
       "lane_counts": {
-        "new_candidate": 12,
-        "discovery": 15,
-        "existing": 13
+        "new_candidate": 18,
+        "discovery": 22,
+        "existing": 20
       },
       "state": "ready",
       "robots": "取得済み"
@@ -84,7 +103,7 @@
       "attempted": 0,
       "visited": 0,
       "candidates": 0,
-      "started_at": "2026-11-19T02:14:25.848537+00:00",
+      "started_at": "2026-11-20T02:00:53.680647+00:00",
       "lane_counts": {
         "new_candidate": 0,
         "discovery": 0,
@@ -99,7 +118,7 @@
       "attempted": 18,
       "visited": 18,
       "candidates": 13,
-      "started_at": "2026-11-19T02:14:26.017127+00:00",
+      "started_at": "2026-11-20T02:00:54.128175+00:00",
       "lane_counts": {
         "new_candidate": 0,
         "discovery": 5,
@@ -114,7 +133,7 @@
       "attempted": 0,
       "visited": 0,
       "candidates": 0,
-      "started_at": "2026-11-19T02:14:26.664259+00:00",
+      "started_at": "2026-11-20T02:00:54.717964+00:00",
       "lane_counts": {
         "new_candidate": 0,
         "discovery": 0,
@@ -124,8 +143,8 @@
       "error": "<urlopen error timed out>"
     }
   },
-  "finished_at": "2026-11-19T02:15:59.838380+00:00",
-  "attempted": 98,
-  "total_records": 416,
-  "remaining_queue": 357
+  "finished_at": "2026-11-20T02:02:46.227514+00:00",
+  "attempted": 138,
+  "total_records": 427,
+  "remaining_queue": 344
 }

@@ -1,22 +1,15 @@
 {
-  "started_at": "2026-11-19T23:32:52.404220+00:00",
+  "started_at": "2026-11-20T02:03:08.608956+00:00",
   "version": 4,
-  "selected": 212,
-  "already_current": 0,
-  "succeeded": 199,
+  "selected": 0,
+  "already_current": 220,
+  "succeeded": 0,
   "reused_snapshots": 0,
-  "with_sections": 151,
-  "errors": [
-    {
-      "id": "c08f6d4d0a49e277",
-      "url": "https://www.pref.kochi.lg.jp/doc/2016071400098/",
-      "error": "The read operation timed out"
-    }
-  ],
-  "finished_at": "2026-11-19T23:36:43.900649+00:00",
-  "remaining": 13,
-  "total_html_records": 212,
-  "current_version": 199,
-  "with_sections_total": 151,
-  "without_sections_total": 48
+  "with_sections": 0,
+  "errors": [],
+  "total_html_records": 220,
+  "current_version": 220,
+  "remaining": 0,
+  "with_sections_total": 165,
+  "without_sections_total": 55
 }
