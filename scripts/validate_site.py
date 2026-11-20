@@ -5,6 +5,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 from build import ROOT, DIST, base_path
+from scope import published
 
 
 class Links(HTMLParser):
@@ -20,7 +21,7 @@ def validate(baseline=None):
     public = json.loads((DIST / 'data.json').read_text())
     catalog = json.loads((ROOT / 'data/catalog.json').read_text())
     exclusions = json.loads((ROOT / 'data/exclusions.json').read_text())
-    expected = {r['id'] for r in catalog['records'] if r['id'] not in exclusions}
+    expected = {r['id'] for r in catalog['records'] if published(r, exclusions)}
     actual = [r['id'] for r in public['records']]
     if not actual or len(actual) != len(set(actual)) or set(actual) != expected:
         raise ValueError('Public record IDs are empty, duplicated, or inconsistent')

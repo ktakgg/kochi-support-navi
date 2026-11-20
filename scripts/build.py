@@ -4,6 +4,7 @@ from datetime import datetime,timezone
 from zoneinfo import ZoneInfo
 from sources import SOURCES,source_meta
 from extract_html import VERSION, project_sections
+from scope import outside_reason,published
 ROOT=Path(__file__).resolve().parents[1];DIST=ROOT/'dist'
 def e(s):return html.escape(str(s or ''))
 def local_date(value):
@@ -46,7 +47,7 @@ def main():
  records=[]
  for original in catalog['records']:
   r={**original,**source_meta(original['url'])}
-  if r['id'] in exclusions:continue
+  if not published(r,exclusions):continue
   project_sections(r)
   review=reviews.get(r['id'])
   pdf_changed=any(pdfdata.get(a['url'],{}).get('content_changed_at','')>(review or {}).get('checked_at','') for a in r.get('pdfs',[]))
@@ -78,6 +79,8 @@ def main():
  public={'pdf_status':pdf_status,'coverage':{'unresolved_count':coverage.get('unresolved_count',0),'generated_at':coverage.get('generated_at')},'structured_run':json.loads((ROOT/'data/structured-run.json').read_text()) if (ROOT/'data/structured-run.json').exists() else {},'sources':[{k:s[k] for k in ['id','name','level','origin','homepage_url'] if k in s}|({'path_prefix':s['path_prefix']} if s.get('path_prefix') else {}) for s in SOURCES],'source_status':source_status,'generated_at':catalog['generated_at'],'scope':catalog['scope'],'run':{'visited':run['visited'],'total_records':len(records),'errors':len(run['errors']),'finished_at':run['finished_at']},'records':records}
  html_records=[r for r in records if not r.get('data_kind')]
  current=[r for r in html_records if (r.get('html_extraction') or {}).get('version',0)>=VERSION]
+ outside=[{'id':r['id'],'title':r['title'],'reason':outside_reason(r)} for r in catalog['records'] if r['id'] not in exclusions and outside_reason(r)]
+ public['outside_scope']={'count':len(outside),'note':'他の市町村・都道府県だけが対象の制度は、高知市内で利用できないため掲載していません。'}
  public['html_extraction_status']={'version':VERSION,'total':len(html_records),'current':len(current),'pending':len(html_records)-len(current),'with_sections':sum(bool(r['html_extraction']['sections']) for r in current),'without_sections':sum(not r['html_extraction']['sections'] for r in current)}
  (DIST/'data.json').write_text(json.dumps(public,ensure_ascii=False))
  (DIST/'all').mkdir(exist_ok=True)
