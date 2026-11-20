@@ -248,3 +248,12 @@ body.placing .sheet,body.placing .sheet .blk{cursor:crosshair}
  .page-wrap{height:var(--ph,297mm);overflow:hidden}
  body.print-fit .sheet{transform:translate(var(--px),var(--py)) scale(var(--ps))!important;transform-origin:0 0}
 }
+/* ---- 枠の中の行間・項目の間隔（後の規則より優先させるため .sheet .blk を付ける） ---- */
+.sheet .blk.program .p-title,.sheet .blk.program .p-sub{line-height:var(--tl,1.25)}
+.sheet .blk.program .p-catch{line-height:var(--cl,1.35)}
+.sheet .blk.program .p-body{line-height:var(--bl,1.38)}
+.sheet .blk.program .p-amount{line-height:var(--al,1.25)}
+.sheet .blk.program .p-note,.sheet .blk.program .p-period{line-height:var(--nl,1.3)}
+.sheet .blk.program.flyer{row-gap:0}
+.sheet .blk.program.flyer.pack-top{row-gap:var(--gap,1.6mm)}
+.sheet .blk.program.flyer .p-figures{gap:calc(var(--gap,1.6mm) * .3)}

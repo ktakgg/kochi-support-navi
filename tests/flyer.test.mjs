@@ -157,3 +157,11 @@ test('ひな形の飾り（手持ちカード・雲形・額縁・星形）を�
  const p2=sanitizeDocument(kochiBusinessFlyer()).pages[1].blocks,stampAt=p2.findIndex(b=>b.type==='stamp'),frameAt=p2.findIndex(b=>b.type==='image'&&b.data.src.endsWith('hands-frame.png'));
  assert.ok(frameAt>stampAt,'額縁はスタンプより手前');
 });
+
+test('制度の枠の中の行間・項目の間隔を保存でき、入れ替えても保つ',()=>{
+ const doc=sanitizeDocument({pages:[{blocks:[{type:'program',x:0,y:0,w:90,h:60,data:{title:'t',titleLine:1.8,catchLine:5,amountLine:1.1,noteLine:1.6,gap:4,pack:'top'}}]}]});
+ const b=doc.pages[0].blocks[0];
+ assert.deepEqual([b.data.titleLine,b.data.catchLine,b.data.amountLine,b.data.noteLine,b.data.gap,b.data.pack],[1.8,2.6,1.1,1.6,4,'top']);
+ const r=swapData(b,{title:'別の制度'});
+ assert.deepEqual([r.data.titleLine,r.data.gap,r.data.pack],[1.8,4,'top']);
+});

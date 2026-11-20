@@ -215,7 +215,7 @@ function renderBlock(b,page){
  const node=el('div',{class:`blk ${b.type}${extra}${isSel?' selected':''}`,'data-id':b.id,style:`left:${b.x}mm;top:${b.y}mm;width:${b.w}mm;height:${b.h}mm;transform:rotate(${b.rot||0}deg)`});
  if(b.type==='program'){
   node.style.setProperty('--c',d.color);node.style.setProperty('--s',d.scale||1);node.style.setProperty('--a',d.amountColor||'#d7262e');
-  for(const [k,v] of [['--ts',d.titleSize],['--cs',d.catchSize],['--bs',d.bodySize],['--as',d.amountSize],['--bl',d.bodyLine],['--tc',d.titleColor],['--cc',d.catchColor],['--bc',d.bodyColor]])if(v!=null&&v!=='none')node.style.setProperty(k,v);node.style.setProperty('--q',(d.qrSize||17)+'mm');
+  for(const [k,v] of [['--ts',d.titleSize],['--cs',d.catchSize],['--bs',d.bodySize],['--as',d.amountSize],['--bl',d.bodyLine],['--tl',d.titleLine],['--cl',d.catchLine],['--al',d.amountLine],['--nl',d.noteLine],['--gap',d.gap!=null?d.gap+'mm':null],['--tc',d.titleColor],['--cc',d.catchColor],['--bc',d.bodyColor]])if(v!=null&&v!=='none')node.style.setProperty(k,v);node.style.setProperty('--q',(d.qrSize||17)+'mm');
   const qr=qrSvg(d.url);
   if(d.style==='flyer'){
    // Printed-flyer layout: heading, catch, body, then figures with the QR beside them and the contact line last.
@@ -408,7 +408,15 @@ function renderProps(){
    ...rangeRow('制度名の大きさ',d.titleSize??1,.6,1.8,.05,v=>d.titleSize=v,pct),...colorRow('制度名の色',d.titleColor,c=>d.titleColor=c,{allowNone:true}),
    ...rangeRow('キャッチの大きさ',d.catchSize??1,.6,1.8,.05,v=>d.catchSize=v,pct),...colorRow('キャッチの色',d.catchColor,c=>d.catchColor=c,{allowNone:true}),
    ...rangeRow('本文の大きさ',d.bodySize??1,.6,1.8,.05,v=>d.bodySize=v,pct),...colorRow('本文の色',d.bodyColor,c=>d.bodyColor=c,{allowNone:true}),
-   ...rangeRow('本文の行間',d.bodyLine??1.38,1,2.2,.04,v=>d.bodyLine=v,v=>v.toFixed(2)),
+   el('h3',{class:'sub',text:'枠の中の行間・間隔'}),
+   ...rangeRow('制度名の行間',d.titleLine??1.25,.9,2.4,.05,v=>d.titleLine=v,v=>v.toFixed(2)),
+   ...rangeRow('キャッチの行間',d.catchLine??1.35,.9,2.4,.05,v=>d.catchLine=v,v=>v.toFixed(2)),
+   ...rangeRow('本文の行間',d.bodyLine??1.38,.9,2.4,.05,v=>d.bodyLine=v,v=>v.toFixed(2)),
+   ...rangeRow('金額の行間',d.amountLine??1.25,.9,2.4,.05,v=>d.amountLine=v,v=>v.toFixed(2)),
+   ...rangeRow('補足・期間の行間',d.noteLine??1.3,.9,2.4,.05,v=>d.noteLine=v,v=>v.toFixed(2)),
+   el('label',{text:'項目の並べ方'}),el('div',{class:'swatches'},...[['spread','均等に並べる'],['top','上に詰める']].map(([v,t])=>el('button',{type:'button','aria-pressed':String((d.pack||'spread')===v),style:'width:auto;border-radius:5px;padding:0 8px;background:#fff',onclick:()=>{snapshot();d.pack=v;commit();}},t))),
+   ...rangeRow('項目どうしの間隔（mm）',d.gap??1.6,0,12,.2,v=>d.gap=v,v=>v.toFixed(1)),
+   el('p',{class:'hint',text:'「均等に並べる」は枠の高さに合わせて項目の間を自動で広げます。間隔を細かく決めたいときは「上に詰める」にして、項目どうしの間隔で調整します。'}),
    ...rangeRow('金額の大きさ',d.amountSize??1,.6,1.8,.05,v=>d.amountSize=v,pct),...colorRow('金額の色',d.amountColor,c=>d.amountColor=c),
    ...rangeRow('QRコードの大きさ（mm）',d.qrSize??17,10,30,.5,v=>d.qrSize=v),
    el('p',{class:'hint',text:'文字の一部だけ色や大きさを変えるときは、枠の文字をダブルクリックし、変えたい文字を選んで上に出るボタンを押します。'}));
