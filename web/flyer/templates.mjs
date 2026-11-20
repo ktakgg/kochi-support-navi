@@ -56,14 +56,14 @@ function outside(){
   text(122,204,86,80,'発行元\n\n高知市商工振興部産業政策課\n〒780-8571　高知市本町５丁目１-45\n☎ (088)-823-9456\nkc-150600@city.kochi.lg.jp\n【開庁時間】平日8時30分～17時15分\n※R8.7～　平日9時00分～16時30分\n\n【令和８年12月版】',{size:3.6,bold:true,align:'center',line:1.75}),
   // 右面：表紙
   shape(210,0,210,30,'wave-top'),
-  text(244,3,90,18,'高知市の主な',{size:10,line:1.4}),
+  text(244,3,90,18,'高知市の主な',{size:10.5,line:1.4,font:'hand'}),
   image(226,30,166,47,'title-jigyosha-shien.jpg'),
-  text(393,33,14,40,'制度',{size:11,vertical:true,line:1}),
+  text(393,33,14,40,'制度',{size:11.5,vertical:true,line:1,font:'hand'}),
   text(328,76,64,10,'【令和８年12月版】',{size:5.6,bold:true,align:'right'}),
   image(282,80,64,68,'cover-man.png'),
-  tag(217,96,54,10,'支援を受けたい！',-8,{size:4.6,border:'none',shadow:ORANGE,radius:0}),
-  tag(352,104,44,10,'相談したい！',-8,{size:4.6,border:'none',shadow:ORANGE,radius:0}),
-  tag(285,132,46,10,'向上したい！',-8,{size:4.6,border:'none',shadow:ORANGE,radius:0}),
+  tag(217,96,54,10,'支援を受けたい！',-8,{size:4.6,border:'none',radius:0,tape:ORANGE}),
+  tag(350,104,44,10,'相談したい！',-8,{size:4.6,border:'none',radius:0,tape:ORANGE}),
+  tag(285,134,46,10,'向上したい！',-8,{size:4.6,border:'none',radius:0,tape:ORANGE}),
   sparkle(222,128,8),sparkle(234,143,7),
   shape(214,162,182,104,'board'),
   tag(276,155,50,10,'お知らせ',0,{size:5,bold:false,radius:2}),
@@ -88,9 +88,9 @@ function outside(){
 function inside(){
  return [
   // 左面：人材確保・育成
-  text(26,8,44,10,'高知市の主な',{size:6,line:1.5}),
+  text(26,8,44,10,'高知市の主な',{size:6.2,line:1.5,font:'hand'}),
   image(70,3,62,19,'title-jigyosha-shien-small.jpg'),
-  text(133,3,9,19,'制度',{size:5.6,vertical:true,line:1}),
+  text(133,3,9,19,'制度',{size:5.8,vertical:true,line:1,font:'hand'}),
   image(158,2,32,24,'cheer-trio.png'),sparkle(194,4,9),
   tag(136,21,72,15,'高知市で頑張る\n事業者を応援します！',0,{size:4.4,radius:1}),
   pill(16,27,64,9,'人材確保・育成'),

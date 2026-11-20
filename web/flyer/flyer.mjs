@@ -1,4 +1,4 @@
-import {PAPER,STAMPS,COLORS,DRAFT_NOTE,newDocument,newPage,templateDocument,programBlock,emptyProgram,stampBlock,headingBlock,textBlock,boxBlock,qrBlock,imageBlock,replaceContent,autoLayout,sanitizeDocument,searchRecords,uid} from './model.mjs';
+import {PAPER,STAMPS,COLORS,DRAFT_NOTE,newDocument,newPage,templateDocument,programBlock,emptyProgram,stampBlock,headingBlock,textBlock,boxBlock,qrBlock,imageBlock,replaceContent,autoLayout,arrange,programLook,isDesigned,findFreeSpot,sendToExtra,layoutExtra,EXTRA_GRID,sanitizeDocument,searchRecords,uid} from './model.mjs';
 import {kochiBusinessFlyer} from './templates.mjs';
 
 const $=s=>document.querySelector(s);
@@ -19,7 +19,8 @@ function persist(){
 }
 function snapshot(){history.push(JSON.stringify(doc));if(history.length>60)history.shift();}
 function commit(){persist();render();}
-function status(message,warn=false){const s=$('#status');s.textContent=message;s.classList.toggle('warn',warn);}
+let lastMessage='';
+function status(message,warn=false){lastMessage=warn?lastMessage:message;const s=$('#status');s.textContent=warn&&lastMessage?lastMessage+' ／ '+message:message;s.classList.toggle('warn',warn);}
 
 // ---------- helpers ----------
 const paper=()=>PAPER[doc.orientation];
@@ -31,6 +32,19 @@ function center(w=0,h=0,page){
  return {x:paper().w/2-w/2,y:paper().h/2-h/2};
 }
 function activePage(){return pageOf(selected?.page)||doc.pages[doc.pages.length-1];}
+// Put a new program slot where it fits: an empty area of a designed page, or the continuation page.
+function placeProgram(blk,page=activePage(),message=''){
+ snapshot();
+ if(page.kind==='extra'&&page.blocks.filter(b=>b.type==='program').length<EXTRA_GRID[doc.orientation].cols*EXTRA_GRID[doc.orientation].rows){page.blocks.push(blk);layoutExtra(page,doc.orientation);selected={page:page.id,id:blk.id};commit();status(message+'「その他の支援制度」ページに追加しました。');return;}
+ if(isDesigned(page)){
+  const spot=findFreeSpot(page,blk.w,blk.h,doc.orientation);
+  if(spot){Object.assign(blk,spot);blk.loose=false;page.blocks.push(blk);selected={page:page.id,id:blk.id};commit();status(message+'空いている場所に追加しました。');return;}
+  const extra=sendToExtra(doc,blk);selected={page:extra.id,id:blk.id};commit();
+  status(message+'このページに空きがないため「その他の支援制度」ページ（'+(doc.pages.indexOf(extra)+1)+'枚目）に追加しました。既存の枠を選んで「この枠と入れ替え」を使うと、同じ場所で中身だけ差し替えられます。');
+  document.querySelectorAll('.page-wrap')[doc.pages.indexOf(extra)]?.scrollIntoView({behavior:'smooth',block:'start'});return;
+ }
+ const at=center(blk.w,blk.h,page);Object.assign(blk,{x:Math.max(0,at.x),y:Math.max(0,at.y)});page.blocks.push(blk);selected={page:page.id,id:blk.id};commit();status(message+'チラシに追加しました。「制度の枠を自動配置」で並べられます。');
+}
 function addBlock(block,page=activePage()){snapshot();page.blocks.push(block);selected={page:page.id,id:block.id};commit();}
 
 function qrSvg(url){
@@ -63,7 +77,7 @@ function renderPage(page,index){
  sheet.addEventListener('pointerdown',e=>{if(e.target===sheet||e.target.classList.contains('bg')){selected=null;editing=false;render();}});
  const head=el('div',{class:'page-head'},el('b',{text:`${index+1}枚目（A3${doc.orientation==='landscape'?'横':'縦'}）`}),
   el('span',{},
-   el('button',{type:'button',onclick:()=>{snapshot();autoLayout(page,doc.orientation);commit();status('制度の枠を自動で並べました');}},'制度の枠を自動配置'),' ',
+   el('button',{type:'button',title:isDesigned(page)?'ひな形の配置はそのままにして、新しく追加した枠だけを空いている場所（なければ追加ページ）へ移します':'制度の枠を格子状に並べます',onclick:()=>{snapshot();const r=arrange(doc,index);commit();status(isDesigned(page)?(r.moved||r.overflow?`新しい枠を整理しました（このページ：${r.moved}件、追加ページへ：${r.overflow}件）。ひな形の枠は動かしていません。`:'動かす必要のある新しい枠はありません。ひな形の枠はそのままです。'):'制度の枠を自動で並べました');}},'制度の枠を自動配置'),' ',
    page.background?el('button',{type:'button',onclick:()=>{snapshot();page.background=null;commit();}},'元のチラシ画像を外す'):null,' ',
    index>0?el('button',{type:'button',onclick:()=>movePage(index,-1)},'↑'):null,' ',
    index<doc.pages.length-1?el('button',{type:'button',onclick:()=>movePage(index,1)},'↓'):null,' ',
@@ -121,6 +135,8 @@ function renderBlock(b,page){
   if(d.border&&d.border!=='none')node.style.border='.35mm solid '+d.border;
   if(d.shadow&&d.shadow!=='none')node.style.boxShadow=`1.2mm 1.2mm 0 ${d.shadow}`;
   if(d.vertical)node.classList.add('vertical');
+  if(d.font==='hand'||d.font==='gothic')node.classList.add('font-'+d.font);
+  if(d.tape&&d.tape!=='none'){node.classList.add('taped');node.style.setProperty('--tape',d.tape);}
   const t=field('div','t-text','text',d.text);
   if(d.underline&&d.underline!=='none')Object.assign(t.style,{textDecoration:'underline',textDecorationColor:d.underline,textDecorationThickness:'.6mm',textUnderlineOffset:'.8mm'});
   add(node,t);
@@ -139,7 +155,9 @@ function checkOverflow(){
  let over=0;
  document.querySelectorAll('.blk.program,.blk.text,.blk.heading').forEach(n=>{
   const inner=n.classList.contains('program')?n.querySelector('.p-main'):n;
-  let o=n.scrollHeight>n.clientHeight+2||(inner&&inner.scrollHeight>inner.clientHeight+2);
+  // A taped slip draws its tape outside the box on purpose; measure its text instead.
+  const t=n.classList.contains('taped')?n.querySelector('.t-text'):null;
+  let o=t?t.scrollHeight>n.clientHeight+2:(n.scrollHeight>n.clientHeight+2||(inner&&inner.scrollHeight>inner.clientHeight+2));
   // Flyer-style slots pin the amount and contact to the bottom; the text above must not run into them.
   const lower=n.querySelector(':scope>.p-lower');
   if(lower){const above=[...n.children].filter(c=>c!==lower&&!c.classList.contains('p-qr')&&!c.classList.contains('handle')&&!c.classList.contains('draft-badge')).pop();if(above&&above.getBoundingClientRect().bottom>lower.getBoundingClientRect().top+1)o=true;}
@@ -167,7 +185,7 @@ function startDrag(e,b,page,node){
   if(resize){b.w=Math.max(5,snap(start.w+dx));b.h=Math.max(5,snap(start.h+dy));Object.assign(target.style,{width:b.w+'mm',height:b.h+'mm'});}
   else{b.x=snap(start.x+dx);b.y=snap(start.y+dy);Object.assign(target.style,{left:b.x+'mm',top:b.y+'mm'});}
  };
- const up=()=>{target.removeEventListener('pointermove',move);target.removeEventListener('pointerup',up);target.removeEventListener('pointercancel',up);if(moved)commit();};
+ const up=()=>{target.removeEventListener('pointermove',move);target.removeEventListener('pointerup',up);target.removeEventListener('pointercancel',up);if(moved){b.loose=false;commit();}};
  target.addEventListener('pointermove',move);target.addEventListener('pointerup',up);target.addEventListener('pointercancel',up);
 }
 function startEdit(e,b,node){
@@ -220,7 +238,10 @@ function renderProps(){
   parts.push(...input('文字',d.text,v=>d.text=v,{multiline:true}),...input('文字の大きさ（mm）',d.size,v=>d.size=Math.max(2,Math.min(40,Number(v)||5)),{type:'number'}),
    el('label',{},el('input',{type:'checkbox',checked:d.bold,onchange:e=>{snapshot();d.bold=e.target.checked;commit();}}),' 太字'),
    el('label',{text:'そろえ'}),el('div',{class:'swatches'},...[['left','左'],['center','中央'],['right','右']].map(([v,t])=>el('button',{type:'button','aria-pressed':String(d.align===v),style:'width:auto;border-radius:5px;padding:0 8px;background:#fff',onclick:()=>{snapshot();d.align=v;commit();}},t))),
-   el('label',{text:'色'}),swatches(d.color,c=>d.color=c));
+   el('label',{text:'色'}),swatches(d.color,c=>d.color=c),
+   el('label',{text:'書体'}),el('div',{class:'swatches'},...[['maru','丸ゴシック'],['gothic','ゴシック'],['hand','手書き風']].map(([v,t])=>el('button',{type:'button','aria-pressed':String((d.font||'maru')===v),style:'width:auto;border-radius:5px;padding:0 8px;background:#fff',onclick:()=>{snapshot();d.font=v;commit();}},t))),
+   el('label',{text:'背景'}),swatches(d.bg,c=>d.bg=d.bg===c?'none':c),
+   el('label',{},el('input',{type:'checkbox',checked:d.tape&&d.tape!=='none',onchange:e=>{snapshot();d.tape=e.target.checked?'#e2701e':'none';if(e.target.checked&&(!d.bg||d.bg==='none'))d.bg='#ffffff';commit();}}),' 吹き出し札（テープ付き）'));
  }else if(b.type==='stamp'){parts.push(...input('スタンプの文字',d.text,v=>d.text=v),el('label',{text:'色'}),swatches(d.color,c=>d.color=c),
   el('label',{},el('input',{type:'checkbox',checked:d.shape==='circle',onchange:e=>{snapshot();d.shape=e.target.checked?'circle':'rect';commit();}}),' 丸型'));}
  else if(b.type==='box'){parts.push(el('label',{text:'塗り'}),swatches(d.fill,c=>{d.fill=c;d.border=c;}),el('p',{class:'hint',text:'元のチラシの不要な部分を隠すときに使います。白以外の色も選べます。'}));
@@ -255,7 +276,7 @@ function renderResults(){
   el('div',{class:'r-title'},r.outside_reason?el('span',{class:'r-example',text:'他地域の事例'}):null,r.title),
   el('div',{class:'r-meta',text:[r.source_name,r.target_area&&r.outside_reason?r.target_area:null,r.amount?String(r.amount).split('\n')[0].slice(0,40):null].filter(Boolean).join(' ／ ')}),
   el('div',{class:'r-actions'},
-   el('button',{type:'button',onclick:()=>{const page=activePage();const blk=programBlock(r,{x:12,y:40});const at=center(blk.w,blk.h,page);Object.assign(blk,{x:Math.max(0,at.x),y:Math.max(0,at.y)});selected=null;addBlock(blk,page);status(r.outside_reason?'高知市版の下書きとして追加しました。内容を確定させてください。':'チラシに追加しました');}},'チラシに追加'),
+   el('button',{type:'button',onclick:()=>{placeProgram(programBlock(r,{x:12,y:40},undefined,programLook(doc)),activePage(),r.outside_reason?'高知市版の下書きとして':'');}},'チラシに追加'),
    b?.type==='program'?el('button',{type:'button',class:'swap',onclick:()=>{snapshot();const page=pageOf(selected.page);const i=page.blocks.findIndex(x=>x.id===b.id);page.blocks[i]=replaceContent(b,r);commit();status('選んだ枠の中身を入れ替えました');}},'この枠と入れ替え'):null,
    r.url?el('a',{href:r.url,target:'_blank',rel:'noopener',style:'font-size:11.5px;color:#a32126;align-self:center'},'公式情報'):null))));
 }
@@ -300,7 +321,8 @@ function download(){
 // ---------- wiring ----------
 $('#stamps').append(...STAMPS.map(s=>el('button',{type:'button',style:`color:${s.color}`,onclick:()=>{const b=stampBlock(s);const at=center(b.w,b.h);Object.assign(b,at);addBlock(b);}},s.text)));
 document.querySelectorAll('[data-part]').forEach(btn=>btn.addEventListener('click',()=>{
- const make={program:()=>emptyProgram(),heading:()=>headingBlock(),text:()=>textBlock(),qr:()=>qrBlock(),box:()=>boxBlock()}[btn.dataset.part]();
+ if(btn.dataset.part==='program')return placeProgram(emptyProgram({x:12,y:40},programLook(doc)));
+ const make={heading:()=>headingBlock(),text:()=>textBlock(),qr:()=>qrBlock(),box:()=>boxBlock()}[btn.dataset.part]();
  const at=center(make.w,make.h);Object.assign(make,{x:Math.max(0,at.x),y:Math.max(0,at.y)});selected=null;addBlock(make);
 }));
 $('#add-image').addEventListener('change',async e=>{const f=e.target.files[0];e.target.value='';if(!f)return;const img=await downscale(await readAsDataURL(f),1800,f.type==='image/png'?'image/png':'image/jpeg');addBlock(imageBlock(img.src,center(60,40),60,40));});
@@ -319,7 +341,7 @@ $('#save-file').addEventListener('click',download);
 $('#add-page').addEventListener('click',()=>{snapshot();const p=newPage();doc.pages.push(p);selected=null;commit();});
 $('#undo').addEventListener('click',undo);
 function undo(){const last=history.pop();if(!last)return status('これ以上戻せません');doc=sanitizeDocument(JSON.parse(last));selected=null;commit();}
-$('#print').addEventListener('click',()=>{selected=null;render();status('印刷画面で用紙サイズ「A3」、余白「なし」、「背景のグラフィック」をオンにしてください。PDFにする場合は送信先で「PDFに保存」を選びます。');setTimeout(()=>window.print(),300);});
+$('#print').addEventListener('click',async()=>{selected=null;render();await document.fonts.ready;status('印刷画面で用紙サイズ「A3」、余白「なし」、「背景のグラフィック」をオンにしてください。PDFにする場合は送信先で「PDFに保存」を選びます。');setTimeout(()=>window.print(),300);});
 $('#doc-title').addEventListener('input',e=>{doc.title=e.target.value;persist();});
 $('#zoom').addEventListener('change',render);
 addEventListener('resize',()=>{if($('#zoom').value==='fit')render();});

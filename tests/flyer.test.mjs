@@ -69,6 +69,7 @@ test('単価・端数処理の金額を大きな金額として表示しない',
 });
 
 import {kochiBusinessFlyer} from '../dist/flyer/templates.mjs';
+import {programLook,arrange,isDesigned,findFreeSpot,sendToExtra,EXTRA_GRID} from '../dist/flyer/model.mjs';
 test('ひな形「高知市の主な事業者支援制度」はA3横2ページで、検査を通しても欠けない',()=>{
  const raw=kochiBusinessFlyer(),doc=sanitizeDocument(raw);
  assert.equal(doc.orientation,'landscape');assert.equal(doc.pages.length,2);
@@ -80,4 +81,38 @@ test('ひな形「高知市の主な事業者支援制度」はA3横2ページ�
  assert.ok(programs.length>=19);
  for(const b of programs)if(b.data.url)assert.match(b.data.url,/^https:\/\/www\.city\.kochi\.kochi\.jp\//);
  assert.ok(doc.pages.flatMap(p=>p.blocks).some(b=>b.type==='stamp'&&b.data.text.startsWith('受付終了')));
+});
+
+test('ひな形に追加する枠は同じ様式になり、入れ替えても見た目を保つ',()=>{
+ const doc=sanitizeDocument(kochiBusinessFlyer()),look=programLook(doc);
+ assert.equal(look.style,'flyer');
+ const b=programBlock({title:'新制度',summary:'',amount:'上限 300,000円',purposes:[],audiences:[]},{x:0,y:0},undefined,look);
+ assert.equal(b.data.style,'flyer');assert.equal(b.w,look.w);assert.equal(b.h,look.h);assert.equal(b.data.qrSize,look.qrSize);
+ const slot=doc.pages[1].blocks.find(x=>x.type==='program');
+ const swapped=replaceContent(slot,{title:'別の制度',summary:'',purposes:[],audiences:[]});
+ for(const k of ['style','scale','qrSize','amountColor','color'])assert.equal(swapped.data[k],slot.data[k],k);
+ assert.equal(swapped.data.title,'別の制度');
+});
+
+test('ひな形のページで自動配置しても既存の枠は動かず、入りきらない枠は同じ様式の追加ページに並ぶ',()=>{
+ const doc=sanitizeDocument(kochiBusinessFlyer()),look=programLook(doc);
+ const before=JSON.stringify(doc.pages.map(p=>p.blocks.filter(b=>b.type==='program').map(b=>[b.x,b.y,b.w,b.h])));
+ assert.ok(isDesigned(doc.pages[0])&&isDesigned(doc.pages[1]));
+ for(let i=0;i<5;i++){const b=programBlock({title:'追加'+i,purposes:[],audiences:[]},{x:100,y:100},undefined,look);doc.pages[1].blocks.push(b);}
+ const r=arrange(doc,1);
+ assert.equal(r.overflow,5);assert.equal(doc.pages.length,3);
+ assert.equal(JSON.stringify(doc.pages.slice(0,2).map(p=>p.blocks.filter(b=>b.type==='program').map(b=>[b.x,b.y,b.w,b.h]))),before);
+ const extra=doc.pages[2];assert.equal(extra.kind,'extra');
+ const ps=extra.blocks.filter(b=>b.type==='program');assert.equal(ps.length,5);
+ for(const b of ps){assert.equal(b.data.style,'flyer');assert.ok(b.x>=8&&b.y>=15&&b.x+b.w<=412&&b.y+b.h<=289,JSON.stringify([b.x,b.y,b.w,b.h]));}
+ assert.equal(new Set(ps.map(b=>b.x+','+b.y)).size,5);
+ assert.equal(arrange(doc,0).moved,0);
+ for(let i=0;i<EXTRA_GRID.landscape.cols*EXTRA_GRID.landscape.rows;i++)sendToExtra(doc,programBlock({title:'x',purposes:[],audiences:[]},{x:0,y:0},undefined,look));
+ assert.equal(doc.pages.length,4);
+});
+
+test('白紙のページでは空き場所が見つかり、作り込んだページの読み込み画像の上には置かない',()=>{
+ const page={id:'p',background:null,blocks:[]};
+ assert.deepEqual(findFreeSpot(page,96,64),{x:4,y:4});
+ assert.equal(findFreeSpot({...page,background:{src:'data:image/png;base64,AA=='}},96,64),null);
 });

@@ -98,11 +98,28 @@ export function programData(record,{kochi=true}={}){
  };
 }
 
-export function programBlock(record,at={x:12,y:40},options){
- return {id:uid('b'),type:'program',x:at.x,y:at.y,w:128,h:78,rot:0,data:programData(record,options)};
+// The look of program slots already on the flyer (様式). New slots copy it so they match the template.
+const LOOK=['style','color','amountColor','qrSize','scale'];
+export function programLook(doc){
+ const ps=(doc?.pages||[]).flatMap(p=>p.blocks).filter(b=>b.type==='program');
+ if(!ps.length)return null;
+ const count=new Map();for(const b of ps)count.set(b.data.style||'band',(count.get(b.data.style||'band')||0)+1);
+ const style=[...count].sort((a,b)=>b[1]-a[1])[0][0],same=ps.filter(b=>(b.data.style||'band')===style);
+ const med=k=>{const v=same.map(b=>b[k]).sort((a,b)=>a-b);return v[Math.floor(v.length/2)];};
+ const ref=same[0].data;
+ return {style,color:ref.color,amountColor:ref.amountColor||'#d7262e',qrSize:ref.qrSize||17,scale:Math.min(1,ref.scale||1),w:med('w'),h:med('h')};
 }
-export function emptyProgram(at={x:12,y:40}){
- return {id:uid('b'),type:'program',x:at.x,y:at.y,w:128,h:78,rot:0,data:{title:'制度名',catch:'キャッチコピーを入力します！',body:'対象者や内容を入力します。',amount:'最大 ○○万円',amountNote:'',period:'受付は令和○年○月○日まで',contact:'高知市○○課',tel:'088-○○○-○○○○',url:'',source:null,draft:false,color:'#e2701e'}};
+function applyLook(block,look){
+ if(!look)return block;
+ for(const k of LOOK)if(look[k]!=null)block.data[k]=look[k];
+ if(look.w&&look.h){block.w=look.w;block.h=look.h;}
+ return block;
+}
+export function programBlock(record,at={x:12,y:40},options,look){
+ return applyLook({id:uid('b'),type:'program',x:at.x,y:at.y,w:128,h:78,rot:0,loose:true,data:programData(record,options)},look);
+}
+export function emptyProgram(at={x:12,y:40},look){
+ return applyLook({id:uid('b'),type:'program',x:at.x,y:at.y,w:128,h:78,rot:0,loose:true,data:{title:'制度名',subtitle:'',catch:'キャッチコピーを入力します！',body:'対象者や内容を入力します。',amount:'最大 ○○万円',amountNote:'',period:'受付は令和○年○月○日まで',contact:'高知市○○課',tel:'088-○○○-○○○○',url:'',source:null,draft:false,color:'#e2701e',scale:1,style:'band',amountColor:'#d7262e',qrSize:17}},look);
 }
 export function stampBlock(preset,at={x:150,y:100}){
  const circle=preset.shape==='circle';
@@ -116,7 +133,10 @@ export function imageBlock(src,at={x:20,y:20},w=60,h=40){return {id:uid('b'),typ
 
 // Swap contents but keep the slot (position, size, rotation) on the sheet.
 export function replaceContent(block,record,options){
- return {...block,data:programData(record,options)};
+ // Keep the slot's look (様式・文字の大きさ・QRの大きさ) and only swap the wording.
+ const data=programData(record,options);
+ for(const k of LOOK)if(block.data[k]!=null)data[k]=block.data[k];
+ return {...block,data};
 }
 
 // The standard "主な支援制度" layout: header, then programs in an even grid.
@@ -129,16 +149,59 @@ export function templateDocument(orientation='landscape',title='高知市の主�
  return doc;
 }
 
-// Arrange program blocks into a grid between the header and footer.
-export function autoLayout(page,orientation='landscape',{top=36,bottom=18,margin=10,gap=5}={}){
+// Arrange program blocks into a grid between the header and footer (plain pages only).
+export function autoLayout(page,orientation='landscape',{top=36,bottom=18,margin=10,gap=5,cols,rows:fixedRows}={}){
  const paper=PAPER[orientation];
  const programs=page.blocks.filter(b=>b.type==='program');
  if(!programs.length)return page;
- const cols=orientation==='landscape'?(programs.length<=4?2:3):2;
- const rows=Math.ceil(programs.length/cols);
+ cols??=orientation==='landscape'?(programs.length<=4?2:programs.length<=9?3:4):2;
+ const rows=fixedRows||Math.ceil(programs.length/cols);
  const w=(paper.w-margin*2-gap*(cols-1))/cols,h=(paper.h-top-bottom-gap*(rows-1))/rows;
- programs.forEach((b,i)=>{Object.assign(b,{x:round(margin+(i%cols)*(w+gap)),y:round(top+Math.floor(i/cols)*(h+gap)),w:round(w),h:round(h),rot:0});});
+ programs.forEach((b,i)=>{Object.assign(b,{x:round(margin+(i%cols)*(w+gap)),y:round(top+Math.floor(i/cols)*(h+gap)),w:round(w),h:round(h),rot:0});b.loose=false;});
  return page;
+}
+// Blocks that carry content; frames, dotted lines and decorative shapes may sit under a slot.
+const SOLID=['program','text','image','qr','heading','stamp'];
+const hits=(a,b,m=0)=>a.x<b.x+b.w+m&&b.x<a.x+a.w+m&&a.y<b.y+b.h+m&&b.y<a.y+a.h+m;
+export function isDesigned(page){
+ return Boolean(page.background)||page.kind==='extra'||page.blocks.some(b=>b.type==='image'||b.type==='shape'||(b.type==='heading'&&b.data.style!=='band'));
+}
+export function findFreeSpot(page,w,h,orientation='landscape',ignore=null,margin=4){
+ const paper=PAPER[orientation],obstacles=page.blocks.filter(b=>SOLID.includes(b.type)&&b.id!==ignore);
+ if(page.background)return null; // the scanned flyer itself fills the page
+ for(let y=margin;y+h<=paper.h-margin;y+=2)for(let x=margin;x+w<=paper.w-margin;x+=2){const r={x,y,w,h};if(!obstacles.some(o=>hits(r,o,1)))return {x,y};}
+ return null;
+}
+// A continuation page in the same style for slots that no longer fit (その他の支援制度).
+export function extraPage(orientation='landscape',color='#e2701e'){
+ const paper=PAPER[orientation],page=newPage();page.kind='extra';
+ page.blocks.push({id:uid('b'),type:'heading',x:12,y:4,w:84,h:9,rot:0,data:{text:'その他の支援制度',accent:'',color,style:'pill',size:5.6}});
+ page.blocks.push({id:uid('b'),type:'box',x:8,y:15,w:paper.w-16,h:paper.h-24,rot:0,data:{fill:'none',border:'#7f7f7f',width:.9,dash:false,radius:0}});
+ return page;
+}
+export const EXTRA_GRID={landscape:{cols:4,rows:4},portrait:{cols:3,rows:5}};
+export function layoutExtra(page,orientation='landscape'){
+ const g=EXTRA_GRID[orientation];
+ return autoLayout(page,orientation,{top:18,bottom:11,margin:10,gap:2,cols:g.cols,rows:g.rows});
+}
+// Place loose slots: keep the template's own slots where they are, move only new ones.
+export function arrange(doc,pageIndex){
+ const page=doc.pages[pageIndex],o=doc.orientation;
+ if(!isDesigned(page)){autoLayout(page,o);return {moved:page.blocks.filter(b=>b.type==='program').length,overflow:0};}
+ if(page.kind==='extra'){layoutExtra(page,o);return {moved:page.blocks.filter(b=>b.type==='program').length,overflow:0};}
+ let moved=0,overflow=0;
+ for(const b of page.blocks.filter(b=>b.type==='program'&&b.loose)){
+  const spot=findFreeSpot(page,b.w,b.h,o,b.id);
+  if(spot){Object.assign(b,spot,{rot:0});b.loose=false;moved++;continue;}
+  page.blocks=page.blocks.filter(x=>x!==b);sendToExtra(doc,b);overflow++;
+ }
+ return {moved,overflow};
+}
+export function sendToExtra(doc,block){
+ const o=doc.orientation,cap=EXTRA_GRID[o].cols*EXTRA_GRID[o].rows;
+ let page=doc.pages.find(p=>p.kind==='extra'&&p.blocks.filter(b=>b.type==='program').length<cap);
+ if(!page){page=extraPage(o,block.data.color);doc.pages.push(page);}
+ page.blocks.push(block);layoutExtra(page,o);return page;
 }
 const round=n=>Math.round(n*10)/10;
 
@@ -151,18 +214,19 @@ export function sanitizeDocument(input){
  const orientation=input?.orientation==='portrait'?'portrait':'landscape',paper=PAPER[orientation];
  const pages=(Array.isArray(input?.pages)?input.pages:[]).slice(0,12).map(p=>({
   id:text(p.id,40)||uid('page'),
+  kind:p.kind==='extra'?'extra':undefined,
   background:p.background&&IMAGE.test(p.background.src||'')?{src:p.background.src,name:text(p.background.name,120)}:null,
   blocks:(Array.isArray(p.blocks)?p.blocks:[]).filter(b=>TYPES.includes(b?.type)).slice(0,300).map(b=>sanitizeBlock(b,paper)).filter(Boolean),
  }));
  return {version:1,title:text(input?.title,120)||'チラシ',orientation,pages:pages.length?pages:[newPage()]};
 }
 function sanitizeBlock(b,paper){
- const d=b.data||{},base={id:text(b.id,60)||uid('b'),type:b.type,x:clamp(b.x,-paper.w,paper.w*2),y:clamp(b.y,-paper.h,paper.h*2),w:clamp(b.w,2,paper.w*2),h:clamp(b.h,2,paper.h*2),rot:clamp(b.rot,-180,180)};
+ const d=b.data||{},base={id:text(b.id,60)||uid('b'),type:b.type,loose:b.loose===true||undefined,x:clamp(b.x,-paper.w,paper.w*2),y:clamp(b.y,-paper.h,paper.h*2),w:clamp(b.w,2,paper.w*2),h:clamp(b.h,2,paper.h*2),rot:clamp(b.rot,-180,180)};
  const num=(v,lo,hi,dflt)=>v==null||v===''?dflt:clamp(v,lo,hi);
  switch(b.type){
   case 'program':return {...base,data:{title:text(d.title,200),subtitle:text(d.subtitle,120),catch:text(d.catch,400),body:text(d.body,1200),amount:text(d.amount,200),amountNote:text(d.amountNote,400),period:text(d.period,120),contact:text(d.contact,120),tel:text(d.tel,60),url:safeUrl(d.url),source:d.source?{title:text(d.source.title,200),url:safeUrl(d.source.url),area:text(d.source.area,200)}:null,draft:Boolean(d.draft),color:safeColor(d.color,'#e2701e'),scale:clamp(d.scale??1,.5,2),style:['band','plain','flyer'].includes(d.style)?d.style:'band',amountColor:safeColor(d.amountColor,'#d7262e'),qrSize:num(d.qrSize,8,40,17)}};
   case 'heading':return {...base,data:{text:text(d.text,120),accent:text(d.accent,40),color:safeColor(d.color,'#e2701e'),style:['band','pill','slash'].includes(d.style)?d.style:'band',size:num(d.size,2,30,5.2)}};
-  case 'text':return {...base,data:{text:text(d.text,3000),size:clamp(d.size,1.5,60),color:safeColor(d.color,'#333333'),bold:Boolean(d.bold),align:['left','center','right'].includes(d.align)?d.align:'left',bg:safeColor(d.bg,'none'),border:safeColor(d.border,'none'),shadow:safeColor(d.shadow,'none'),italic:Boolean(d.italic),vertical:Boolean(d.vertical),line:num(d.line,.9,2.5,1.4),spacing:num(d.spacing,0,2,0),radius:num(d.radius,0,50,0),underline:safeColor(d.underline,'none')}};
+  case 'text':return {...base,data:{text:text(d.text,3000),size:clamp(d.size,1.5,60),color:safeColor(d.color,'#333333'),bold:Boolean(d.bold),align:['left','center','right'].includes(d.align)?d.align:'left',bg:safeColor(d.bg,'none'),border:safeColor(d.border,'none'),shadow:safeColor(d.shadow,'none'),italic:Boolean(d.italic),vertical:Boolean(d.vertical),line:num(d.line,.9,2.5,1.4),spacing:num(d.spacing,0,2,0),radius:num(d.radius,0,50,0),underline:safeColor(d.underline,'none'),font:['maru','gothic','hand'].includes(d.font)?d.font:'maru',tape:safeColor(d.tape,'none')}};
   case 'stamp':return {...base,data:{text:text(d.text,40),color:safeColor(d.color,'#d7262e'),shape:d.shape==='circle'?'circle':'rect'}};
   case 'image':return IMAGE.test(d.src||'')?{...base,data:{src:d.src}}:null;
   case 'qr':return {...base,data:{url:safeUrl(d.url),caption:text(d.caption,40)}};
