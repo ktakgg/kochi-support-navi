@@ -1,4 +1,4 @@
-import {PAPER,STAMPS,COLORS,DRAFT_NOTE,newDocument,newPage,templateDocument,programBlock,emptyProgram,stampBlock,headingBlock,textBlock,boxBlock,qrBlock,imageBlock,replaceContent,autoLayout,arrange,programLook,isDesigned,findFreeSpot,sendToExtra,layoutExtra,EXTRA_GRID,sanitizeDocument,searchRecords,uid} from './model.mjs';
+import {PAPER,STAMPS,COLORS,DRAFT_NOTE,newDocument,newPage,templateDocument,programBlock,emptyProgram,stampBlock,headingBlock,textBlock,boxBlock,qrBlock,imageBlock,replaceContent,swapData,autoLayout,arrange,programLook,isDesigned,findFreeSpot,sendToExtra,layoutExtra,EXTRA_GRID,sanitizeDocument,searchRecords,uid} from './model.mjs';
 import {kochiBusinessFlyer} from './templates.mjs';
 
 const $=s=>document.querySelector(s);
@@ -15,7 +15,7 @@ function load(){try{const raw=localStorage.getItem(STORE);return raw?sanitizeDoc
 let saveTimer;
 function persist(){
  clearTimeout(saveTimer);
- saveTimer=setTimeout(()=>{try{localStorage.setItem(STORE,JSON.stringify(doc));status('このブラウザに自動保存しました');}catch{status('自動保存できません（画像が大きい可能性）。「保存」でファイルに保存してください。',true);}},400);
+ saveTimer=setTimeout(()=>{try{localStorage.setItem(STORE,JSON.stringify(doc));if(!lastMessage||lastMessage==='このブラウザに自動保存しました')status('このブラウザに自動保存しました');}catch{status('自動保存できません（画像が大きい可能性）。「保存」でファイルに保存してください。',true);}},400);
 }
 function snapshot(){history.push(JSON.stringify(doc));if(history.length>60)history.shift();}
 function commit(){persist();render();}
@@ -45,6 +45,52 @@ function placeProgram(blk,page=activePage(),message=''){
  }
  const at=center(blk.w,blk.h,page);Object.assign(blk,{x:Math.max(0,at.x),y:Math.max(0,at.y)});page.blocks.push(blk);selected={page:page.id,id:blk.id};commit();status(message+'チラシに追加しました。「制度の枠を自動配置」で並べられます。');
 }
+// ---------- click to choose where a new slot goes ----------
+let pending=null; // {block,message}
+function startPlacement(block,message=''){
+ pending={block,message};document.body.classList.add('placing');
+ $('#place-text').textContent=`「${(block.data.title||'制度の枠').split('\n')[0].slice(0,30)}」を置く場所をクリックしてください。既存の制度の枠をクリックすると、その枠の見た目のまま中身を入れ替えます。`;
+ $('#place-banner').hidden=false;
+}
+function cancelPlacement(){pending=null;document.body.classList.remove('placing');$('#place-banner').hidden=true;document.querySelectorAll('.ghost').forEach(g=>g.remove());document.querySelectorAll('.swap-target').forEach(n=>n.classList.remove('swap-target'));}
+// The program slot under the pointer, even when a sticker or illustration sits on top of it.
+function slotAt(page,m){return [...page.blocks].reverse().find(b=>b.type==='program'&&m.x>=b.x&&m.x<=b.x+b.w&&m.y>=b.y&&m.y<=b.y+b.h)||null;}
+// Shrink the wording of a slot step by step until it fits (down to 60%), after new text arrives.
+function autoFit(id){
+ requestAnimationFrame(()=>{
+  const b=doc.pages.flatMap(p=>p.blocks).find(x=>x.id===id);if(!b||b.type!=='program')return;
+  const node=()=>document.querySelector(`.blk[data-id="${CSS.escape(id)}"]`);
+  const over=n=>n&&(n.scrollHeight>n.clientHeight+2);
+  let n=node(),scale=b.data.scale||1;
+  while(over(n)&&scale>.62){scale=Math.round((scale-.04)*100)/100;n.style.setProperty('--s',scale);}
+  if(scale!==(b.data.scale||1)){b.data.scale=scale;persist();checkOverflow();status(lastMessage+(over(n)?'':'（文字の大きさを'+Math.round(scale*100)+'%に自動調整しました）'));}
+ });
+}
+function pointerMm(e,sheet){const r=sheet.getBoundingClientRect();return {x:(e.clientX-r.left)/(MM*zoom),y:(e.clientY-r.top)/(MM*zoom)};}
+function placementMove(e,sheet){
+ if(!pending)return;
+ const page=pageOf(sheet.dataset.page),hit=page&&slotAt(page,pointerMm(e,sheet));
+ const slot=hit?sheet.querySelector(`.blk[data-id="${CSS.escape(hit.id)}"]`):null;
+ document.querySelectorAll('.swap-target').forEach(n=>n!==slot&&n.classList.remove('swap-target'));
+ let g=sheet.querySelector('.ghost');
+ if(slot){slot.classList.add('swap-target');g?.remove();return;}
+ if(!g){g=el('div',{class:'ghost'});sheet.append(g);}
+ const b=pending.block,{w,h}=paper(),m=pointerMm(e,sheet);
+ Object.assign(g.style,{left:Math.min(w-b.w,Math.max(0,m.x-b.w/2))+'mm',top:Math.min(h-b.h,Math.max(0,m.y-b.h/2))+'mm',width:b.w+'mm',height:b.h+'mm'});
+}
+function placementClick(e,sheet,page){
+ if(!pending)return;
+ e.preventDefault();e.stopPropagation();
+ const {block,message}=pending;cancelPlacement();snapshot();
+ const slot=slotAt(page,pointerMm(e,sheet));
+ if(slot){const i=page.blocks.indexOf(slot);page.blocks[i]=swapData(slot,block.data);selected={page:page.id,id:slot.id};commit();autoFit(slot.id);status(message+'選んだ枠の中身を入れ替えました（元に戻すで取り消せます）。');return;}
+ const {w,h}=paper(),m=pointerMm(e,sheet);
+ Object.assign(block,{x:Math.round(Math.min(w-block.w,Math.max(0,m.x-block.w/2))*2)/2,y:Math.round(Math.min(h-block.h,Math.max(0,m.y-block.h/2))*2)/2});block.loose=false;
+ page.blocks.push(block);selected={page:page.id,id:block.id};commit();status(message+'クリックした場所に追加しました。ドラッグで微調整できます。');autoFit(block.id);
+}
+$('#place-cancel').addEventListener('click',cancelPlacement);
+$('#place-auto').addEventListener('click',()=>{if(!pending)return;const {block,message}=pending;cancelPlacement();placeProgram(block,activePage(),message);});
+$('#place-extra').addEventListener('click',()=>{if(!pending)return;const {block,message}=pending;cancelPlacement();snapshot();const extra=sendToExtra(doc,block);selected={page:extra.id,id:block.id};commit();status(message+'「その他の支援制度」ページに追加しました。');document.querySelectorAll('.page-wrap')[doc.pages.indexOf(extra)]?.scrollIntoView({behavior:'smooth',block:'start'});});
 function addBlock(block,page=activePage()){snapshot();page.blocks.push(block);selected={page:page.id,id:block.id};commit();}
 
 function qrSvg(url){
@@ -74,6 +120,9 @@ function renderPage(page,index){
  const sheet=el('div',{class:'sheet','data-page':page.id,style:`width:${w}mm;height:${h}mm;transform:scale(${zoom})`});
  if(page.background)sheet.append(el('img',{class:'bg',src:page.background.src,alt:''}));
  page.blocks.forEach(b=>sheet.append(renderBlock(b,page)));
+ sheet.addEventListener('pointerdown',e=>placementClick(e,sheet,page),{capture:true});
+ sheet.addEventListener('pointermove',e=>placementMove(e,sheet));
+ sheet.addEventListener('pointerleave',()=>sheet.querySelector('.ghost')?.remove());
  sheet.addEventListener('pointerdown',e=>{if(e.target===sheet||e.target.classList.contains('bg')){selected=null;editing=false;render();}});
  const head=el('div',{class:'page-head'},el('b',{text:`${index+1}枚目（A3${doc.orientation==='landscape'?'横':'縦'}）`}),
   el('span',{},
@@ -86,36 +135,68 @@ function renderPage(page,index){
 }
 function movePage(i,d){snapshot();const [p]=doc.pages.splice(i,1);doc.pages.splice(i+d,0,p);commit();}
 
-function field(tag,cls,name,value,block){
- const n=el(tag,{class:cls,'data-field':name});n.textContent=value||'';
+// Inline marks for parts of a line: [赤]12[/赤] [橙]…[/橙] [大]…[/大] [小]…[/小] [太]…[/太]. Rendered as text spans only.
+const MARK=/\[(赤|橙|大|小|太)\]([\s\S]*?)\[\/\1\]/g,MARK_CLASS={赤:'m-red',橙:'m-orange',大:'m-big',小:'m-small',太:'m-bold'};
+function rich(n,value){
+ const v=String(value||'');let last=0;
+ for(const m of v.matchAll(MARK)){if(m.index>last)n.append(v.slice(last,m.index));n.append(rich(el('span',{class:MARK_CLASS[m[1]]}),m[2]));last=m.index+m[0].length;}
+ if(last<v.length)n.append(v.slice(last));
  return n;
 }
+function field(tag,cls,name,value){return rich(el(tag,{class:cls,'data-field':name}),value);}
 // Emphasise figures in amounts (補助率 1/2・10万円) as on printed flyers. Text only, never HTML.
+function numbers(target,text){for(const part of String(text).split(/([0-9０-９][0-9０-９,，.．/／]*)/))if(part)target.append(/^[0-9０-９]/.test(part)?el('span',{class:'num',text:part}):document.createTextNode(part));return target;}
+function emphasizedInto(n,v){let last=0;for(const m of v.matchAll(MARK)){numbers(n,v.slice(last,m.index));n.append(emphasizedInto(el('span',{class:MARK_CLASS[m[1]]}),m[2]));last=m.index+m[0].length;}return numbers(n,v.slice(last));}
 function emphasized(cls,name,value){
- const n=el('div',{class:cls,'data-field':name});
- for(const part of String(value||'').split(/([0-9０-９][0-9０-９,，.．/／]*)/))if(part)n.append(/^[0-9０-９]/.test(part)?el('span',{class:'num',text:part}):document.createTextNode(part));
- return n;
+ const n=el('div',{class:cls,'data-field':name}),v=String(value||'');let last=0;
+ for(const m of v.matchAll(MARK)){numbers(n,v.slice(last,m.index));n.append(emphasizedInto(el('span',{class:MARK_CLASS[m[1]]}),m[2]));last=m.index+m[0].length;}
+ return numbers(n,v.slice(last));
 }
 const SHAPE_SVG={
- 'wave-top':'<svg viewBox="0 0 100 30" preserveAspectRatio="none"><path d="M0 0H100V16C78 30 58 4 32 14S8 24 0 20Z"/></svg>',
- 'wave-bottom':'<svg viewBox="0 0 100 30" preserveAspectRatio="none"><path d="M0 30H100V8C80 0 62 22 38 14S10 4 0 12Z"/></svg>',
+ 'wave-top':'<svg viewBox="0 0 100 30" preserveAspectRatio="none"><path d="M0 0H100V9C74 11 40 19 0 30Z"/></svg>',
+ 'wave-bottom':'<svg viewBox="0 0 100 30" preserveAspectRatio="none"><path d="M0 30H100V0C70 3 36 11 0 20Z"/></svg>',
  'sparkle':'<svg viewBox="0 0 100 100"><path d="M50 0C54 38 62 46 100 50C62 54 54 62 50 100C46 62 38 54 0 50C38 46 46 38 50 0Z"/></svg>',
- 'board':'<svg viewBox="0 0 100 60" preserveAspectRatio="none"><rect x="1.5" y="1.5" width="97" height="53" rx="2" fill="#fff" stroke-width="1.2" vector-effect="non-scaling-stroke"/><rect x="0" y="56.5" width="100" height="2" rx=".6"/></svg>',
 };
 const add=(node,...parts)=>{node.append(...parts.filter(x=>x!=null));return node;};
+// Shapes drawn in real millimetres so strokes keep their thickness at any size (numbers only).
+const f=n=>Math.round(n*100)/100;
+function drawn(kind,w,h){
+ const s=1.1,open=`<svg viewBox="0 0 ${f(w)} ${f(h)}" width="100%" height="100%">`;
+ if(kind==='board'){
+  const ty=h*.86,th=Math.min(4,h*.05);
+  return open+`<rect x="${s/2}" y="${s/2}" width="${f(w-s)}" height="${f(ty-s)}" rx="2.6" fill="#fff" stroke-width="${s}"/>`+
+   `<line x1="${s/2}" y1="${f(ty+th)}" x2="${s/2}" y2="${f(h)}" stroke-width="${s}"/><line x1="${f(w-s/2)}" y1="${f(ty+th)}" x2="${f(w-s/2)}" y2="${f(h)}" stroke-width="${s}"/>`+
+   `<rect x="${s/2}" y="${f(ty)}" width="${f(w-s)}" height="${f(th)}" rx=".8" fill="#fff" stroke-width="${s}"/>`+
+   `<line x1="6" y1="${f(ty+th+2.6)}" x2="${f(w-3)}" y2="${f(ty+th+2.6)}" stroke-width="${s}" stroke-linecap="round"/></svg>`;
+ }
+ if(kind==='eraser'){
+  return open+`<rect x="${s/2}" y="${s/2}" width="${f(w-s)}" height="${f(h-s)}" rx=".5" fill="#fff" stroke-width="${s}"/>`+
+   `<rect x="${f(w*.12)}" y="${f(h*.34)}" width="${f(w*.14)}" height="${f(h*.34)}" class="pad"/><rect x="${f(w*.34)}" y="${f(h*.34)}" width="${f(w*.56)}" height="${f(h*.34)}" class="pad"/></svg>`;
+ }
+ if(kind==='eraser-stack'){
+  const top=h*.58;
+  return open+`<rect x="${f(w*.04)}" y="${f(top)}" width="${f(w*.92)}" height="${f(h-top-s/2)}" rx=".5" fill="#fff" stroke-width="${s}"/>`+
+   `<rect x="0" y="${f(h*.12)}" width="${f(w)}" height="${f(top-h*.12)}" rx=".8" class="fill"/>`+
+   `<rect x="${f(w*.36)}" y="0" width="${f(w*.28)}" height="${f(h*.2)}" rx=".6" class="fill"/>`+
+   `<rect x="${f(w*.1)}" y="${f(h*.28)}" width="${f(w*.18)}" height="${f(h*.18)}" class="pad"/><rect x="${f(w*.41)}" y="${f(h*.22)}" width="${f(w*.18)}" height="${f(h*.24)}" class="pad"/><rect x="${f(w*.72)}" y="${f(h*.28)}" width="${f(w*.18)}" height="${f(h*.18)}" class="pad"/></svg>`;
+ }
+ return '';
+}
 function renderBlock(b,page){
  const isSel=selected?.id===b.id;
  const d=b.data;
- const extra=b.type==='program'?' '+(d.style||'band'):b.type==='heading'?' '+(d.style||'band'):b.data.shape==='circle'?' circle':'';
+ const extra=b.type==='program'?' '+(d.style||'band')+(d.align==='left'?' align-left':'')+(d.pack==='top'?' pack-top':''):b.type==='heading'?' '+(d.style||'band'):b.data.shape==='circle'?' circle':'';
  const node=el('div',{class:`blk ${b.type}${extra}${isSel?' selected':''}`,'data-id':b.id,style:`left:${b.x}mm;top:${b.y}mm;width:${b.w}mm;height:${b.h}mm;transform:rotate(${b.rot||0}deg)`});
  if(b.type==='program'){
   node.style.setProperty('--c',d.color);node.style.setProperty('--s',d.scale||1);node.style.setProperty('--a',d.amountColor||'#d7262e');node.style.setProperty('--q',(d.qrSize||17)+'mm');
   const qr=qrSvg(d.url);
   if(d.style==='flyer'){
-   add(node,field('div','p-title','title',d.title),d.subtitle?field('div','p-sub','subtitle',d.subtitle):null,d.catch?field('div','p-catch','catch',d.catch):null,d.body?field('div','p-body','body',d.body):null,
-    el('div',{class:'p-lower'},d.amount?emphasized('p-amount','amount',d.amount):null,d.amountNote?field('div','p-note','amountNote',d.amountNote):null,d.period?field('div','p-period','period',d.period):null,
-     el('div',{class:'p-foot'},field('span','p-contact','contact',d.contact),d.tel?field('span','p-tel','tel','TEL：'+d.tel.replace(/^TEL[：:]\s*/,'')):null)),
-    qr?el('div',{class:'p-qr'},qr):null);
+   // Printed-flyer layout: heading, catch, body, then figures with the QR beside them and the contact line last.
+   add(node,add(el('div',{class:'p-head'}),field('div','p-title','title',d.title),d.subtitle?field('div','p-sub','subtitle',d.subtitle):null),
+    d.catch?field('div','p-catch','catch',d.catch):null,d.body?field('div','p-body','body',d.body):null,
+    add(el('div',{class:'p-lower'}),add(el('div',{class:'p-figures'}),d.amount?emphasized('p-amount','amount',d.amount):null,d.amountNote?field('div','p-note','amountNote',d.amountNote):null,d.period?field('div','p-period','period',d.period):null),
+     qr?el('div',{class:'p-qr'},qr):null,
+     d.contact||d.tel?add(el('div',{class:'p-foot'}),field('span','p-contact','contact',d.contact),d.tel?field('span','p-tel','tel','TEL：'+d.tel.replace(/^TEL[：:]\s*/,'')):null):null));
   }else{
    add(node,field('div','p-title','title',d.title),
     el('div',{class:'p-main'},el('div',{class:'p-text'},d.subtitle?field('div','p-sub','subtitle',d.subtitle):null,field('div','p-catch','catch',d.catch),field('div','p-body','body',d.body),
@@ -135,17 +216,19 @@ function renderBlock(b,page){
   if(d.border&&d.border!=='none')node.style.border='.35mm solid '+d.border;
   if(d.shadow&&d.shadow!=='none')node.style.boxShadow=`1.2mm 1.2mm 0 ${d.shadow}`;
   if(d.vertical)node.classList.add('vertical');
-  if(d.font==='hand'||d.font==='gothic')node.classList.add('font-'+d.font);
+  node.classList.add('font-'+(d.font||'maru'));
   if(d.tape&&d.tape!=='none'){node.classList.add('taped');node.style.setProperty('--tape',d.tape);}
+  if(d.glow&&d.glow!=='none')node.style.textShadow=['0 0 .5mm','0 0 .5mm','.25mm .25mm .3mm'].map(x=>x+' '+d.glow).join(',');
+  if(d.notch){node.classList.add('notched');node.style.setProperty('--edge',d.border&&d.border!=='none'?d.border:'#333');}
   const t=field('div','t-text','text',d.text);
   if(d.underline&&d.underline!=='none')Object.assign(t.style,{textDecoration:'underline',textDecorationColor:d.underline,textDecorationThickness:'.6mm',textUnderlineOffset:'.8mm'});
   add(node,t);
  }
  else if(b.type==='stamp'){node.style.setProperty('--c',d.color);node.style.fontSize=Math.max(2,Math.min(b.h*(d.shape==='circle'?.3:.55),(b.w-5)*(d.shape==='circle'?.75:.95)/Math.max(2,[...d.text].length)))+'mm';add(node,field('div','s-text','text',d.text));}
  else if(b.type==='box'){Object.assign(node.style,{background:d.fill==='none'?'transparent':d.fill,borderColor:d.border==='none'?'transparent':d.border,borderWidth:(d.width??.4)+'mm',borderStyle:d.dash?'dashed':'solid',borderRadius:(d.radius||0)+'mm'});}
- else if(b.type==='shape'){node.style.setProperty('--c',d.color);node.innerHTML=SHAPE_SVG[d.kind]||'';}
+ else if(b.type==='shape'){node.style.setProperty('--c',d.color);node.classList.add('shape-'+d.kind);node.innerHTML=SHAPE_SVG[d.kind]||drawn(d.kind,b.w,b.h);}
  else if(b.type==='qr'){const qr=qrSvg(d.url);add(node,qr||el('span',{text:'URLを入力'}),d.caption?el('span',{text:d.caption}):null);}
- else if(b.type==='image'){add(node,el('img',{src:d.src,alt:''}));}
+ else if(b.type==='image'){add(node,el('img',{src:d.src,alt:'',style:d.fit==='fill'?'object-fit:fill':''}));}
  add(node,el('span',{class:'handle','data-handle':'1'}));
  node.addEventListener('pointerdown',e=>startDrag(e,b,page,node));
  node.addEventListener('dblclick',e=>startEdit(e,b,node));
@@ -156,7 +239,7 @@ function checkOverflow(){
  document.querySelectorAll('.blk.program,.blk.text,.blk.heading').forEach(n=>{
   const inner=n.classList.contains('program')?n.querySelector('.p-main'):n;
   // A taped slip draws its tape outside the box on purpose; measure its text instead.
-  const t=n.classList.contains('taped')?n.querySelector('.t-text'):null;
+  const t=n.classList.contains('taped')||n.classList.contains('notched')?n.querySelector('.t-text'):null;
   let o=t?t.scrollHeight>n.clientHeight+2:(n.scrollHeight>n.clientHeight+2||(inner&&inner.scrollHeight>inner.clientHeight+2));
   // Flyer-style slots pin the amount and contact to the bottom; the text above must not run into them.
   const lower=n.querySelector(':scope>.p-lower');
@@ -191,6 +274,7 @@ function startDrag(e,b,page,node){
 function startEdit(e,b,node){
  const f=e.target.closest('[data-field]');if(!f)return;
  e.stopPropagation();editing=true;snapshot();
+ const raw=b.data[f.dataset.field];if(typeof raw==='string')f.textContent=f.dataset.field==='tel'?'TEL：'+raw:raw;
  f.contentEditable='true';f.focus();
  const sel=getSelection();sel.selectAllChildren(f);sel.collapseToEnd();
  f.addEventListener('paste',ev=>{ev.preventDefault();document.execCommand('insertText',false,ev.clipboardData.getData('text/plain'));});
@@ -276,7 +360,7 @@ function renderResults(){
   el('div',{class:'r-title'},r.outside_reason?el('span',{class:'r-example',text:'他地域の事例'}):null,r.title),
   el('div',{class:'r-meta',text:[r.source_name,r.target_area&&r.outside_reason?r.target_area:null,r.amount?String(r.amount).split('\n')[0].slice(0,40):null].filter(Boolean).join(' ／ ')}),
   el('div',{class:'r-actions'},
-   el('button',{type:'button',onclick:()=>{placeProgram(programBlock(r,{x:12,y:40},undefined,programLook(doc)),activePage(),r.outside_reason?'高知市版の下書きとして':'');}},'チラシに追加'),
+   el('button',{type:'button',onclick:()=>{startPlacement(programBlock(r,{x:12,y:40},undefined,programLook(doc)),r.outside_reason?'高知市版の下書きとして':'');}},'チラシに追加'),
    b?.type==='program'?el('button',{type:'button',class:'swap',onclick:()=>{snapshot();const page=pageOf(selected.page);const i=page.blocks.findIndex(x=>x.id===b.id);page.blocks[i]=replaceContent(b,r);commit();status('選んだ枠の中身を入れ替えました');}},'この枠と入れ替え'):null,
    r.url?el('a',{href:r.url,target:'_blank',rel:'noopener',style:'font-size:11.5px;color:#a32126;align-self:center'},'公式情報'):null))));
 }
@@ -321,7 +405,7 @@ function download(){
 // ---------- wiring ----------
 $('#stamps').append(...STAMPS.map(s=>el('button',{type:'button',style:`color:${s.color}`,onclick:()=>{const b=stampBlock(s);const at=center(b.w,b.h);Object.assign(b,at);addBlock(b);}},s.text)));
 document.querySelectorAll('[data-part]').forEach(btn=>btn.addEventListener('click',()=>{
- if(btn.dataset.part==='program')return placeProgram(emptyProgram({x:12,y:40},programLook(doc)));
+ if(btn.dataset.part==='program')return startPlacement(emptyProgram({x:12,y:40},programLook(doc)));
  const make={heading:()=>headingBlock(),text:()=>textBlock(),qr:()=>qrBlock(),box:()=>boxBlock()}[btn.dataset.part]();
  const at=center(make.w,make.h);Object.assign(make,{x:Math.max(0,at.x),y:Math.max(0,at.y)});selected=null;addBlock(make);
 }));
@@ -345,6 +429,7 @@ $('#print').addEventListener('click',async()=>{selected=null;render();await docu
 $('#doc-title').addEventListener('input',e=>{doc.title=e.target.value;persist();});
 $('#zoom').addEventListener('change',render);
 addEventListener('resize',()=>{if($('#zoom').value==='fit')render();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&pending){cancelPlacement();return;}},true);
 document.addEventListener('keydown',e=>{
  if(editing||/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName))return;
  const b=blockOf();

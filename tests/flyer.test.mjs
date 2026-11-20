@@ -69,7 +69,7 @@ test('単価・端数処理の金額を大きな金額として表示しない',
 });
 
 import {kochiBusinessFlyer} from '../dist/flyer/templates.mjs';
-import {programLook,arrange,isDesigned,findFreeSpot,sendToExtra,EXTRA_GRID} from '../dist/flyer/model.mjs';
+import {programLook,arrange,isDesigned,findFreeSpot,sendToExtra,EXTRA_GRID,swapData} from '../dist/flyer/model.mjs';
 test('ひな形「高知市の主な事業者支援制度」はA3横2ページで、検査を通しても欠けない',()=>{
  const raw=kochiBusinessFlyer(),doc=sanitizeDocument(raw);
  assert.equal(doc.orientation,'landscape');assert.equal(doc.pages.length,2);
@@ -115,4 +115,21 @@ test('白紙のページでは空き場所が見つかり、作り込んだペ�
  const page={id:'p',background:null,blocks:[]};
  assert.deepEqual(findFreeSpot(page,96,64),{x:4,y:4});
  assert.equal(findFreeSpot({...page,background:{src:'data:image/png;base64,AA=='}},96,64),null);
+});
+
+test('クリックで既存の枠に入れると見た目を保ったまま文章だけ替わる',()=>{
+ const doc=sanitizeDocument(kochiBusinessFlyer()),slot=doc.pages[1].blocks.find(b=>b.type==='program');
+ const incoming=programBlock({title:'新しい制度',summary:'説明',purposes:[],audiences:[]},{x:0,y:0});
+ const r=swapData(slot,incoming.data);
+ assert.deepEqual([r.x,r.y,r.w,r.h,r.id],[slot.x,slot.y,slot.w,slot.h,slot.id]);
+ for(const k of ['style','scale','qrSize','align','pack'])assert.equal(r.data[k],slot.data[k],k);
+ assert.equal(r.data.title,'新しい制度');
+});
+
+test('細い区切り線・黒板消しなどの部品が検査で太くならない',()=>{
+ const doc=sanitizeDocument(kochiBusinessFlyer()),blocks=doc.pages.flatMap(p=>p.blocks);
+ assert.ok(blocks.some(b=>b.type==='box'&&b.w<1),'点線の幅が保たれる');
+ for(const k of ['board','eraser','eraser-stack'])assert.ok(blocks.some(b=>b.type==='shape'&&b.data.kind===k),k);
+ assert.ok(blocks.some(b=>b.type==='text'&&b.data.notch),'お知らせの吹き出し');
+ assert.ok(blocks.some(b=>b.type==='image'&&b.data.fit==='fill'),'タイトル画像');
 });

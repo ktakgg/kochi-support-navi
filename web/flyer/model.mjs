@@ -3,7 +3,7 @@ import {cardDetails,queryMatches} from '../core.mjs';
 
 export const PAPER={landscape:{w:420,h:297},portrait:{w:297,h:420}};
 export const TYPES=['program','heading','text','stamp','image','qr','box','shape'];
-export const SHAPES=['wave-top','wave-bottom','sparkle','board'];
+export const SHAPES=['wave-top','wave-bottom','sparkle','board','eraser','eraser-stack'];
 export const STAMPS=[
  {text:'受付終了しました',color:'#d7262e',shape:'rect'},
  {text:'募集終了',color:'#d7262e',shape:'circle'},
@@ -99,7 +99,7 @@ export function programData(record,{kochi=true}={}){
 }
 
 // The look of program slots already on the flyer (様式). New slots copy it so they match the template.
-const LOOK=['style','color','amountColor','qrSize','scale'];
+const LOOK=['style','color','amountColor','qrSize','scale','align','pack'];
 export function programLook(doc){
  const ps=(doc?.pages||[]).flatMap(p=>p.blocks).filter(b=>b.type==='program');
  if(!ps.length)return null;
@@ -132,6 +132,12 @@ export function qrBlock(url='',at={x:20,y:20}){return {id:uid('b'),type:'qr',x:a
 export function imageBlock(src,at={x:20,y:20},w=60,h=40){return {id:uid('b'),type:'image',x:at.x,y:at.y,w,h,rot:0,data:{src}};}
 
 // Swap contents but keep the slot (position, size, rotation) on the sheet.
+// Put new wording into an existing slot while keeping the slot's look.
+export function swapData(block,data){
+ const next={...data};
+ for(const k of LOOK)if(block.data[k]!=null)next[k]=block.data[k];
+ return {...block,data:next};
+}
 export function replaceContent(block,record,options){
  // Keep the slot's look (様式・文字の大きさ・QRの大きさ) and only swap the wording.
  const data=programData(record,options);
@@ -221,14 +227,14 @@ export function sanitizeDocument(input){
  return {version:1,title:text(input?.title,120)||'チラシ',orientation,pages:pages.length?pages:[newPage()]};
 }
 function sanitizeBlock(b,paper){
- const d=b.data||{},base={id:text(b.id,60)||uid('b'),type:b.type,loose:b.loose===true||undefined,x:clamp(b.x,-paper.w,paper.w*2),y:clamp(b.y,-paper.h,paper.h*2),w:clamp(b.w,2,paper.w*2),h:clamp(b.h,2,paper.h*2),rot:clamp(b.rot,-180,180)};
+ const d=b.data||{},base={id:text(b.id,60)||uid('b'),type:b.type,loose:b.loose===true||undefined,x:clamp(b.x,-paper.w,paper.w*2),y:clamp(b.y,-paper.h,paper.h*2),w:clamp(b.w,.2,paper.w*2),h:clamp(b.h,.2,paper.h*2),rot:clamp(b.rot,-180,180)};
  const num=(v,lo,hi,dflt)=>v==null||v===''?dflt:clamp(v,lo,hi);
  switch(b.type){
-  case 'program':return {...base,data:{title:text(d.title,200),subtitle:text(d.subtitle,120),catch:text(d.catch,400),body:text(d.body,1200),amount:text(d.amount,200),amountNote:text(d.amountNote,400),period:text(d.period,120),contact:text(d.contact,120),tel:text(d.tel,60),url:safeUrl(d.url),source:d.source?{title:text(d.source.title,200),url:safeUrl(d.source.url),area:text(d.source.area,200)}:null,draft:Boolean(d.draft),color:safeColor(d.color,'#e2701e'),scale:clamp(d.scale??1,.5,2),style:['band','plain','flyer'].includes(d.style)?d.style:'band',amountColor:safeColor(d.amountColor,'#d7262e'),qrSize:num(d.qrSize,8,40,17)}};
+  case 'program':return {...base,data:{title:text(d.title,200),subtitle:text(d.subtitle,120),catch:text(d.catch,400),body:text(d.body,1200),amount:text(d.amount,200),amountNote:text(d.amountNote,400),period:text(d.period,120),contact:text(d.contact,120),tel:text(d.tel,60),url:safeUrl(d.url),source:d.source?{title:text(d.source.title,200),url:safeUrl(d.source.url),area:text(d.source.area,200)}:null,draft:Boolean(d.draft),color:safeColor(d.color,'#e2701e'),scale:clamp(d.scale??1,.5,2),style:['band','plain','flyer'].includes(d.style)?d.style:'band',align:d.align==='left'?'left':'center',pack:d.pack==='top'?'top':'spread',amountColor:safeColor(d.amountColor,'#d7262e'),qrSize:num(d.qrSize,8,40,17)}};
   case 'heading':return {...base,data:{text:text(d.text,120),accent:text(d.accent,40),color:safeColor(d.color,'#e2701e'),style:['band','pill','slash'].includes(d.style)?d.style:'band',size:num(d.size,2,30,5.2)}};
-  case 'text':return {...base,data:{text:text(d.text,3000),size:clamp(d.size,1.5,60),color:safeColor(d.color,'#333333'),bold:Boolean(d.bold),align:['left','center','right'].includes(d.align)?d.align:'left',bg:safeColor(d.bg,'none'),border:safeColor(d.border,'none'),shadow:safeColor(d.shadow,'none'),italic:Boolean(d.italic),vertical:Boolean(d.vertical),line:num(d.line,.9,2.5,1.4),spacing:num(d.spacing,0,2,0),radius:num(d.radius,0,50,0),underline:safeColor(d.underline,'none'),font:['maru','gothic','hand'].includes(d.font)?d.font:'maru',tape:safeColor(d.tape,'none')}};
+  case 'text':return {...base,data:{text:text(d.text,3000),size:clamp(d.size,1.5,60),color:safeColor(d.color,'#333333'),bold:Boolean(d.bold),align:['left','center','right'].includes(d.align)?d.align:'left',bg:safeColor(d.bg,'none'),border:safeColor(d.border,'none'),shadow:safeColor(d.shadow,'none'),italic:Boolean(d.italic),vertical:Boolean(d.vertical),line:num(d.line,.9,2.5,1.4),spacing:num(d.spacing,0,2,0),radius:num(d.radius,0,50,0),underline:safeColor(d.underline,'none'),font:['maru','gothic','hand'].includes(d.font)?d.font:'gothic',tape:safeColor(d.tape,'none'),glow:safeColor(d.glow,'none'),notch:Boolean(d.notch)}};
   case 'stamp':return {...base,data:{text:text(d.text,40),color:safeColor(d.color,'#d7262e'),shape:d.shape==='circle'?'circle':'rect'}};
-  case 'image':return IMAGE.test(d.src||'')?{...base,data:{src:d.src}}:null;
+  case 'image':return IMAGE.test(d.src||'')?{...base,data:{src:d.src,fit:d.fit==='fill'?'fill':'contain'}}:null;
   case 'qr':return {...base,data:{url:safeUrl(d.url),caption:text(d.caption,40)}};
   case 'box':return {...base,data:{fill:safeColor(d.fill,'#ffffff'),border:safeColor(d.border,'#ffffff'),width:num(d.width,0,5,.4),dash:Boolean(d.dash),radius:num(d.radius,0,50,0)}};
   case 'shape':return SHAPES.includes(d.kind)?{...base,data:{kind:d.kind,color:safeColor(d.color,'#e2701e')}}:null;

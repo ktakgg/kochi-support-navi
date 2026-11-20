@@ -175,3 +175,46 @@ button{cursor:pointer}
 .program.flyer{font-size:calc(3mm * var(--s,1))}
 .program.flyer .p-catch{font-size:1.16em}
 .program.flyer .p-title{font-size:1.6em;letter-spacing:.01em}
+.shape-board svg,.shape-eraser svg,.shape-eraser-stack svg{fill:none;stroke:var(--c)}
+.shape-board{filter:drop-shadow(0 0 .9mm color-mix(in srgb,var(--c) 55%,transparent))}
+.shape svg .pad{fill:#f2b48a;stroke:none}
+.shape svg .fill{fill:var(--c);stroke:none}
+.shape-board svg rect[fill="#fff"],.shape-eraser svg rect[fill="#fff"],.shape-eraser-stack svg rect[fill="#fff"]{fill:#fff}
+.text.notched{overflow:visible}
+.text.notched::before{content:"";position:absolute;left:50%;bottom:-2.6mm;margin-left:-1.6mm;border:1.6mm solid transparent;border-top:1.4mm solid var(--edge)}
+.text.notched::after{content:"";position:absolute;left:50%;bottom:-2.1mm;margin-left:-1.25mm;border:1.25mm solid transparent;border-top:1.1mm solid #fff}
+.place-banner{position:sticky;top:53px;z-index:19;display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:#e8f0fe;border-bottom:1px solid #b7cdf5;padding:8px 14px;font-size:13px;font-weight:700;color:#1d3b73}
+.place-actions{display:flex;gap:6px;flex-wrap:wrap}
+body.placing .sheet,body.placing .sheet .blk{cursor:crosshair}
+.ghost{position:absolute;border:.6mm dashed var(--sel);background:#1f6feb14;pointer-events:none;border-radius:1mm;z-index:50}
+.blk.swap-target{outline:.8mm solid #f4b400;outline-offset:.4mm;background-color:#fff8d6}
+/* ---- 再現度向上（R8.12月版の実寸比較で調整） ---- */
+.m-red{color:#e60012}.m-orange{color:#e2701e}.m-big{font-size:1.3em}.m-small{font-size:.72em}.m-bold{font-weight:800}
+.program.flyer{display:flex;flex-direction:column;justify-content:space-between;font-family:"BIZ UDPGothic","M PLUS Rounded 1c",sans-serif;font-weight:400;font-size:calc(3.15mm * var(--s,1));padding:1.2mm 2mm 1mm}
+.program.flyer .p-title{font-size:1.68em;font-weight:700;letter-spacing:.02em;line-height:1.25}
+.program.flyer .p-sub{font-size:1.25em;font-weight:700}
+.program.flyer .p-catch{font-size:1.2em;font-weight:700;margin:0}
+.program.flyer .p-body{font-size:1em;line-height:1.38;margin:0 .5mm}
+.program.flyer .p-lower{position:static;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;column-gap:2mm;row-gap:1.2mm;left:auto;right:auto;bottom:auto}
+.program.flyer .p-figures{display:flex;flex-direction:column;gap:.5mm;grid-column:1}
+.program.flyer .p-qr{position:static;grid-column:2;grid-row:1;width:var(--q)}
+.program.flyer .p-foot{grid-column:1/-1;font-weight:700;font-size:.98em;gap:5mm;padding:0 0 0 1mm}
+.program.flyer .p-tel{font-weight:700}
+.program.flyer .p-amount{font-family:"M PLUS Rounded 1c","BIZ UDPGothic",sans-serif;font-weight:800;font-size:1.25em;line-height:1.25}
+.program.flyer .p-amount .num{font-size:1.75em;letter-spacing:.02em}
+.program.flyer .p-note{font-size:.98em}
+.program.flyer .p-period{font-size:.98em}
+.stamp:not(.circle){border:.45mm solid #777;border-radius:0;background:#fff;color:var(--c);font-family:"BIZ UDPGothic",sans-serif;font-weight:700;box-shadow:.3mm .5mm 1mm #0002}
+.heading.slash .h-slash{font-size:1.5em;font-weight:800;transform:scaleY(1.1)}
+.heading.slash{font-family:"BIZ UDPGothic",sans-serif;font-weight:700}
+.text{font-family:"BIZ UDPGothic","M PLUS Rounded 1c",sans-serif}
+.text.font-maru{font-family:"M PLUS Rounded 1c","BIZ UDPGothic",sans-serif}
+.program.flyer.align-left .p-title,.program.flyer.align-left .p-catch,.program.flyer.align-left .p-sub{text-align:left}
+.program.flyer.align-left .p-amount,.program.flyer.align-left .p-note,.program.flyer.align-left .p-period{text-align:left}
+.program.flyer .p-body{margin:0 2.5mm}
+.heading.slash{line-height:1}
+.program.flyer.pack-top{justify-content:flex-start;gap:1.6mm}
+.program.flyer.pack-top .p-lower{margin-top:auto}
+.program.flyer .p-qr{grid-row:1 / span 2;align-self:end}
+.program.flyer .p-foot{grid-column:1;grid-row:2}
+.program.flyer .p-figures:empty{display:none}
