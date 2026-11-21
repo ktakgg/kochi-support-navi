@@ -1,7 +1,7 @@
 {
-  "started_at": "2026-11-20T02:00:52.431335+00:00",
-  "visited": 130,
-  "candidates": 58,
+  "started_at": "2026-11-21T01:57:49.444334+00:00",
+  "visited": 134,
+  "candidates": 55,
   "errors": [
     {
       "source_id": "chusho",
@@ -20,27 +20,7 @@
     },
     {
       "source_id": "kochi_pref",
-      "url": "https://www.pref.kochi.lg.jp/doc/2025050100225/",
-      "error": "HTTP Error 404: Not Found"
-    },
-    {
-      "source_id": "kochi_pref",
       "url": "https://www.pref.kochi.lg.jp/doc/2023090100120/",
-      "error": "HTTP Error 404: Not Found"
-    },
-    {
-      "source_id": "kochi_city",
-      "url": "https://www.city.kochi.kochi.jp/soshiki/186/taiyoukoukouhukettei.html",
-      "error": "HTTP Error 404: Not Found"
-    },
-    {
-      "source_id": "kochi_city",
-      "url": "https://www.city.kochi.kochi.jp/soshiki/186/r7tikudentikouhukettei.html",
-      "error": "HTTP Error 404: Not Found"
-    },
-    {
-      "source_id": "kochi_city",
-      "url": "https://www.city.kochi.kochi.jp/soshiki/186/r7koukouritsu.html",
       "error": "HTTP Error 404: Not Found"
     },
     {
@@ -56,14 +36,8 @@
   ],
   "changed": [],
   "new": [
-    "7887a290cb405b8f",
-    "ad3a0a27c1ca5767",
-    "54b5a352b6742a3b",
-    "040dcdadc026a891",
-    "52c3038c4053e48d",
-    "1fe9f20a1cc59a76",
-    "9bcf9f95640fcc41",
-    "8af15aba93abad18"
+    "4f1a4b665cfa7ba4",
+    "a4f323ca2420f909"
   ],
   "scope": "高知市・高知県・中小企業庁・高知県産業振興センター・高知商工会議所の登録した巡回元。全件収集は確認中。",
   "sources": {
@@ -71,12 +45,12 @@
       "name": "高知市",
       "level": "市",
       "attempted": 60,
-      "visited": 56,
-      "candidates": 18,
-      "started_at": "2026-11-20T02:00:52.436679+00:00",
+      "visited": 59,
+      "candidates": 21,
+      "started_at": "2026-11-21T01:57:49.448855+00:00",
       "lane_counts": {
-        "new_candidate": 2,
-        "discovery": 38,
+        "new_candidate": 1,
+        "discovery": 39,
         "existing": 20
       },
       "state": "ready",
@@ -86,12 +60,12 @@
       "name": "高知県",
       "level": "県",
       "attempted": 60,
-      "visited": 56,
-      "candidates": 27,
-      "started_at": "2026-11-20T02:00:53.005443+00:00",
+      "visited": 57,
+      "candidates": 21,
+      "started_at": "2026-11-21T01:57:50.049933+00:00",
       "lane_counts": {
-        "new_candidate": 18,
-        "discovery": 22,
+        "new_candidate": 7,
+        "discovery": 33,
         "existing": 20
       },
       "state": "ready",
@@ -103,7 +77,7 @@
       "attempted": 0,
       "visited": 0,
       "candidates": 0,
-      "started_at": "2026-11-20T02:00:53.680647+00:00",
+      "started_at": "2026-11-21T01:57:50.714220+00:00",
       "lane_counts": {
         "new_candidate": 0,
         "discovery": 0,
@@ -118,7 +92,7 @@
       "attempted": 18,
       "visited": 18,
       "candidates": 13,
-      "started_at": "2026-11-20T02:00:54.128175+00:00",
+      "started_at": "2026-11-21T01:57:50.750059+00:00",
       "lane_counts": {
         "new_candidate": 0,
         "discovery": 5,
@@ -133,7 +107,7 @@
       "attempted": 0,
       "visited": 0,
       "candidates": 0,
-      "started_at": "2026-11-20T02:00:54.717964+00:00",
+      "started_at": "2026-11-21T01:57:51.327339+00:00",
       "lane_counts": {
         "new_candidate": 0,
         "discovery": 0,
@@ -143,8 +117,8 @@
       "error": "<urlopen error timed out>"
     }
   },
-  "finished_at": "2026-11-20T02:02:46.227514+00:00",
+  "finished_at": "2026-11-21T01:59:41.738666+00:00",
   "attempted": 138,
-  "total_records": 427,
-  "remaining_queue": 344
+  "total_records": 429,
+  "remaining_queue": 327
 }
