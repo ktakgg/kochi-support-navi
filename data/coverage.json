@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-21T01:59:41.772768+00:00",
-  "unresolved_count": 34,
+  "generated_at": "2026-11-22T00:56:53.373761+00:00",
+  "unresolved_count": 32,
   "unresolved": [
     {
       "url": "https://www.joho-kochi.or.jp/center/kochi-fund-top.php",
       "title": "令和8年度事業戦略等推進事業費補助金のご案内",
       "discovered_from": "https://www.joho-kochi.or.jp/",
-      "fetched_at": "2026-11-21T01:58:16.326706+00:00",
+      "fetched_at": "2026-11-22T00:55:13.119055+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -19,18 +19,10 @@
       "error": "HTTP Error 404: Not Found"
     },
     {
-      "url": "https://www.pref.kochi.lg.jp/doc/2026072100125/",
-      "title": "補助金の詳細（要綱等）はこちら！",
-      "discovered_from": "https://www.pref.kochi.lg.jp/category/mokuteki/shinsei_todokede_hojokin/",
-      "fetched_at": "2026-11-21T01:58:53.496094+00:00",
-      "state": "fetched_not_listed",
-      "error": null
-    },
-    {
       "url": "https://www.joho-kochi.or.jp/digital/hojokin_r4b.php",
       "title": "R4補正デジタル技術活用促進事業費補助金のページこちらから（現在受付終了）",
       "discovered_from": "https://www.joho-kochi.or.jp/digital/hojokin.php",
-      "fetched_at": "2026-11-21T01:58:25.207313+00:00",
+      "fetched_at": "2026-11-22T00:55:25.452863+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -72,14 +64,6 @@
       "discovered_from": "https://www.pref.kochi.lg.jp/soshiki/030301/",
       "fetched_at": "2026-11-19T02:15:56.705803+00:00",
       "state": "fetched_not_listed",
-      "error": null
-    },
-    {
-      "url": "https://www.city.kochi.kochi.jp/soshiki/104/r5-dengenricchi.html",
-      "title": "電源立地地域対策交付金事業について",
-      "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/104/",
-      "fetched_at": null,
-      "state": "not_fetched",
       "error": null
     },
     {
