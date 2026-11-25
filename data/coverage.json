@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-24T05:11:13.486160+00:00",
-  "unresolved_count": 33,
+  "generated_at": "2026-11-25T03:59:13.207878+00:00",
+  "unresolved_count": 30,
   "unresolved": [
     {
       "url": "https://www.joho-kochi.or.jp/center/kochi-fund-top.php",
       "title": "令和8年度事業戦略等推進事業費補助金のご案内",
       "discovered_from": "https://www.joho-kochi.or.jp/",
-      "fetched_at": "2026-11-24T05:09:43.511882+00:00",
+      "fetched_at": "2026-11-25T03:57:39.821700+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -19,18 +19,10 @@
       "error": "HTTP Error 404: Not Found"
     },
     {
-      "url": "https://www.pref.kochi.lg.jp/doc/2026072100125/",
-      "title": "補助金の詳細（要綱等）はこちら！",
-      "discovered_from": "https://www.pref.kochi.lg.jp/category/mokuteki/shinsei_todokede_hojokin/",
-      "fetched_at": "2026-11-21T01:58:53.496094+00:00",
-      "state": "fetched_not_listed",
-      "error": null
-    },
-    {
       "url": "https://www.joho-kochi.or.jp/digital/hojokin_r4b.php",
       "title": "R4補正デジタル技術活用促進事業費補助金のページこちらから（現在受付終了）",
       "discovered_from": "https://www.joho-kochi.or.jp/digital/hojokin.php",
-      "fetched_at": "2026-11-24T05:09:52.814208+00:00",
+      "fetched_at": "2026-11-25T03:57:50.429812+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -54,7 +46,7 @@
       "url": "https://www.pref.kochi.lg.jp/doc/2015031700247/",
       "title": "［過去の補助金の活用例の紹介］",
       "discovered_from": "https://www.pref.kochi.lg.jp/doc/2024011100113/",
-      "fetched_at": "2026-11-21T01:59:12.742711+00:00",
+      "fetched_at": "2026-11-25T03:58:03.379977+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -79,14 +71,6 @@
       "title": "高知県大学生等交流促進事業費補助金交付要綱",
       "discovered_from": "https://www.pref.kochi.lg.jp/doc/2026032500538/",
       "fetched_at": "2026-11-23T01:25:54.913100+00:00",
-      "state": "fetched_not_listed",
-      "error": null
-    },
-    {
-      "url": "https://www.city.kochi.kochi.jp/soshiki/37/id-.html",
-      "title": "医療費助成",
-      "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/37/",
-      "fetched_at": "2026-11-11T21:09:57.015216+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -230,7 +214,7 @@
       "url": "https://www.pref.kochi.lg.jp/doc/2026012800191/",
       "title": "令和８年度高知県中小企業設備資金利子補給制度について",
       "discovered_from": "https://www.pref.kochi.lg.jp/doc/2026033100430/",
-      "fetched_at": "2026-11-21T01:59:25.187611+00:00",
+      "fetched_at": "2026-11-25T03:58:16.777867+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -256,14 +240,6 @@
       "discovered_from": "https://www.pref.kochi.lg.jp/doc/2026020900081/",
       "fetched_at": "2026-11-24T05:10:28.439172+00:00",
       "state": "fetched_not_listed",
-      "error": null
-    },
-    {
-      "url": "https://www.city.kochi.kochi.jp/site/bukkakoutoushien/bukkakoutou-kyuhukin7.html",
-      "title": "高知市医療施設等物価高騰緊急対策給付金について",
-      "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/35/",
-      "fetched_at": null,
-      "state": "not_fetched",
       "error": null
     }
   ]

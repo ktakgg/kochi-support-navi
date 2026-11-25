@@ -1,5 +1,5 @@
 {
-  "started_at": "2026-11-24T05:09:15.794271+00:00",
+  "started_at": "2026-11-25T03:57:10.453211+00:00",
   "visited": 133,
   "candidates": 54,
   "errors": [
@@ -14,13 +14,13 @@
       "error": "<urlopen error timed out>"
     },
     {
-      "source_id": "kochi_city",
-      "url": "https://www.city.kochi.kochi.jp/soshiki/186/r7tikudenti.html",
+      "source_id": "kochi_pref",
+      "url": "https://www.pref.kochi.lg.jp/doc/2023090100120/",
       "error": "HTTP Error 404: Not Found"
     },
     {
-      "source_id": "kochi_pref",
-      "url": "https://www.pref.kochi.lg.jp/doc/2023090100120/",
+      "source_id": "kochi_city",
+      "url": "https://www.city.kochi.kochi.jp/soshiki/186/r7tikudenti.html",
       "error": "HTTP Error 404: Not Found"
     },
     {
@@ -35,13 +35,13 @@
     },
     {
       "source_id": "kochi_pref",
-      "url": "https://www.pref.kochi.lg.jp/doc/2025050100225/",
+      "url": "https://www.pref.kochi.lg.jp/doc/2019061100114/",
       "error": "HTTP Error 404: Not Found"
     }
   ],
   "changed": [],
   "new": [
-    "f222a49b4dc68a70"
+    "b735f4269624a9be"
   ],
   "scope": "高知市・高知県・中小企業庁・高知県産業振興センター・高知商工会議所の登録した巡回元。全件収集は確認中。",
   "sources": {
@@ -51,7 +51,7 @@
       "attempted": 60,
       "visited": 59,
       "candidates": 21,
-      "started_at": "2026-11-24T05:09:15.799851+00:00",
+      "started_at": "2026-11-25T03:57:10.459450+00:00",
       "lane_counts": {
         "new_candidate": 2,
         "discovery": 38,
@@ -66,7 +66,7 @@
       "attempted": 60,
       "visited": 56,
       "candidates": 20,
-      "started_at": "2026-11-24T05:09:16.554975+00:00",
+      "started_at": "2026-11-25T03:57:11.035195+00:00",
       "lane_counts": {
         "new_candidate": 3,
         "discovery": 37,
@@ -81,7 +81,7 @@
       "attempted": 0,
       "visited": 0,
       "candidates": 0,
-      "started_at": "2026-11-24T05:09:17.246927+00:00",
+      "started_at": "2026-11-25T03:57:12.157893+00:00",
       "lane_counts": {
         "new_candidate": 0,
         "discovery": 0,
@@ -96,7 +96,7 @@
       "attempted": 18,
       "visited": 18,
       "candidates": 13,
-      "started_at": "2026-11-24T05:09:17.500100+00:00",
+      "started_at": "2026-11-25T03:57:12.277826+00:00",
       "lane_counts": {
         "new_candidate": 0,
         "discovery": 5,
@@ -111,7 +111,7 @@
       "attempted": 0,
       "visited": 0,
       "candidates": 0,
-      "started_at": "2026-11-24T05:09:18.080638+00:00",
+      "started_at": "2026-11-25T03:57:12.930972+00:00",
       "lane_counts": {
         "new_candidate": 0,
         "discovery": 0,
@@ -121,8 +121,8 @@
       "error": "<urlopen error timed out>"
     }
   },
-  "finished_at": "2026-11-24T05:11:13.446321+00:00",
+  "finished_at": "2026-11-25T03:59:13.167144+00:00",
   "attempted": 138,
-  "total_records": 436,
-  "remaining_queue": 399
+  "total_records": 437,
+  "remaining_queue": 434
 }
