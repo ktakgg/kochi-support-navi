@@ -1,13 +1,18 @@
 {
-  "started_at": "2026-11-26T03:21:36.565830+00:00",
+  "started_at": "2026-11-27T03:27:22.529645+00:00",
   "sources": {
     "jgrants": {
-      "state": "ready",
+      "state": "partial",
       "transport": "api",
-      "visited": 34,
-      "items": 30,
-      "errors": [],
-      "checked_at": "2026-11-26T03:21:36.568472+00:00",
+      "visited": 33,
+      "items": 29,
+      "errors": [
+        {
+          "id": "a0WJ200000CDXENMA5",
+          "error": "HTTP Error 429: Too Many Requests"
+        }
+      ],
+      "checked_at": "2026-11-27T03:27:22.531826+00:00",
       "listed_relevant": 1932,
       "pending_details": 0,
       "published_items": 193
@@ -16,11 +21,11 @@
       "state": "ready",
       "transport": "rss",
       "visited": 1,
-      "items": 1,
-      "checked_at": "2026-11-26T03:22:57.068327+00:00",
-      "feed_items": 10,
+      "items": 0,
+      "checked_at": "2026-11-27T03:28:23.907204+00:00",
+      "feed_items": 8,
       "note": "RSSは新着のみ。対象地域が全国・四国地方・高知県の補助金等を抽出。"
     }
   },
-  "finished_at": "2026-11-26T03:22:57.876982+00:00"
+  "finished_at": "2026-11-27T03:28:24.668411+00:00"
 }
