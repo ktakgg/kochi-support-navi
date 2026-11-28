@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-27T03:30:18.594413+00:00",
-  "unresolved_count": 31,
+  "generated_at": "2026-11-28T03:06:17.759848+00:00",
+  "unresolved_count": 32,
   "unresolved": [
     {
       "url": "https://www.joho-kochi.or.jp/center/kochi-fund-top.php",
       "title": "令和8年度事業戦略等推進事業費補助金のご案内",
       "discovered_from": "https://www.joho-kochi.or.jp/",
-      "fetched_at": "2026-11-27T03:28:50.453899+00:00",
+      "fetched_at": "2026-11-28T03:04:38.159651+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -22,7 +22,7 @@
       "url": "https://www.pref.kochi.lg.jp/doc/2026072100125/",
       "title": "補助金の詳細（要綱等）はこちら！",
       "discovered_from": "https://www.pref.kochi.lg.jp/category/mokuteki/shinsei_todokede_hojokin/",
-      "fetched_at": "2026-11-25T03:57:32.481916+00:00",
+      "fetched_at": "2026-11-28T03:06:14.326148+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -30,7 +30,7 @@
       "url": "https://www.joho-kochi.or.jp/digital/hojokin_r4b.php",
       "title": "R4補正デジタル技術活用促進事業費補助金のページこちらから（現在受付終了）",
       "discovered_from": "https://www.joho-kochi.or.jp/digital/hojokin.php",
-      "fetched_at": "2026-11-27T03:28:57.869705+00:00",
+      "fetched_at": "2026-11-28T03:04:48.612915+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -83,6 +83,14 @@
       "error": null
     },
     {
+      "url": "https://www.city.kochi.kochi.jp/soshiki/37/id-.html",
+      "title": "医療費助成",
+      "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/37/",
+      "fetched_at": "2026-11-28T03:05:02.517589+00:00",
+      "state": "fetched_not_listed",
+      "error": null
+    },
+    {
       "url": "https://www.pref.kochi.lg.jp/soshiki/162201/2014051900187.html",
       "title": "高知県農業政策課（多面的機能支払交付金）",
       "discovered_from": "https://www.city.kochi.kochi.jp/soshiki/105/tamenteki.html",
@@ -110,7 +118,7 @@
       "url": "https://www.pref.kochi.lg.jp/doc/2022022000026/",
       "title": "高知県重度心身障害児・者歯科診療事業費補助金交付要綱",
       "discovered_from": "https://www.pref.kochi.lg.jp/doc/2019072500064/",
-      "fetched_at": "2026-11-24T05:10:38.733333+00:00",
+      "fetched_at": "2026-11-28T03:05:36.929499+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -118,7 +126,7 @@
       "url": "https://www.pref.kochi.lg.jp/doc/yokoto-4/",
       "title": "高知県在宅障害者支援事業費補助金交付要綱",
       "discovered_from": "https://www.pref.kochi.lg.jp/doc/2019072500064/",
-      "fetched_at": "2026-11-24T05:10:42.280850+00:00",
+      "fetched_at": "2026-11-28T03:05:38.841365+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -126,7 +134,7 @@
       "url": "https://www.pref.kochi.lg.jp/doc/2026022600057/",
       "title": "高知県社会福祉活動費補助金交付要綱",
       "discovered_from": "https://www.pref.kochi.lg.jp/doc/2019072500064/",
-      "fetched_at": "2026-11-24T05:10:44.254470+00:00",
+      "fetched_at": "2026-11-28T03:05:41.960859+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -134,7 +142,7 @@
       "url": "https://www.pref.kochi.lg.jp/doc/2024030700332/",
       "title": "高知県障害児・者福祉振興事業費補助金交付要綱",
       "discovered_from": "https://www.pref.kochi.lg.jp/doc/2019072500064/",
-      "fetched_at": "2026-11-24T05:10:46.922028+00:00",
+      "fetched_at": "2026-11-28T03:05:43.683830+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -142,7 +150,7 @@
       "url": "https://www.pref.kochi.lg.jp/doc/2024030600120/",
       "title": "高知県身体障害者福祉団体育成事業費補助金交付要綱",
       "discovered_from": "https://www.pref.kochi.lg.jp/doc/2019072500064/",
-      "fetched_at": "2026-11-24T05:10:48.419543+00:00",
+      "fetched_at": "2026-11-28T03:05:46.579326+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -150,7 +158,7 @@
       "url": "https://www.pref.kochi.lg.jp/doc/2024030700431/",
       "title": "高知県聴覚障害者情報提供施設運営費補助金交付要綱",
       "discovered_from": "https://www.pref.kochi.lg.jp/doc/2019072500064/",
-      "fetched_at": "2026-11-24T05:10:51.652487+00:00",
+      "fetched_at": "2026-11-28T03:05:48.135817+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -158,7 +166,7 @@
       "url": "https://www.pref.kochi.lg.jp/doc/yokoto-18/",
       "title": "高知県障害児施設等入所者支援事業実施要綱及び高知県障害児施設等入所者支援事業費補助金交付要綱",
       "discovered_from": "https://www.pref.kochi.lg.jp/doc/2019072500064/",
-      "fetched_at": "2026-11-24T05:10:52.940893+00:00",
+      "fetched_at": "2026-11-28T03:05:51.136324+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -230,7 +238,7 @@
       "url": "https://www.pref.kochi.lg.jp/doc/2020021000245/",
       "title": "商店街等振興組合指導事業費補助金",
       "discovered_from": "https://www.pref.kochi.lg.jp/doc/2026020900067/",
-      "fetched_at": "2026-11-24T05:10:09.614166+00:00",
+      "fetched_at": "2026-11-28T03:05:00.833141+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -238,7 +246,7 @@
       "url": "https://www.pref.kochi.lg.jp/doc/2025063000215/",
       "title": "高知県中小企業制度金融貸付金保証料補給要綱",
       "discovered_from": "https://www.pref.kochi.lg.jp/doc/2026020900074/",
-      "fetched_at": "2026-11-24T05:10:20.884679+00:00",
+      "fetched_at": "2026-11-28T03:05:18.867037+00:00",
       "state": "fetched_not_listed",
       "error": null
     },
@@ -246,7 +254,7 @@
       "url": "https://www.pref.kochi.lg.jp/doc/2025022600050/",
       "title": "・令和７年度高知県中小企業設備資金利子補給制度要綱 ・令和７年度高知県中小企業設備資金利子補給金交付要綱",
       "discovered_from": "https://www.pref.kochi.lg.jp/doc/2026020900081/",
-      "fetched_at": "2026-11-24T05:10:28.439172+00:00",
+      "fetched_at": "2026-11-28T03:05:25.032108+00:00",
       "state": "fetched_not_listed",
       "error": null
     }
